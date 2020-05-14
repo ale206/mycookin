@@ -12,7 +12,7 @@ workflows:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
           dockerfile: Dockerfile
-          path: .
+          path: ./API
           region: AWS_REGION
           repo: mycookin
           tag: "$CIRCLE_BUILD_NUM"
