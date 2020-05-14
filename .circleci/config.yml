@@ -14,5 +14,5 @@ workflows:
           dockerfile: Dockerfile
           path: ./API
           region: AWS_REGION
-          repo: circleci-ecr-orb-demo
+          repo: mycookin
           tag: "$CIRCLE_BUILD_NUM"
