@@ -4,5 +4,14 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MyCookin.Business\MyCookin.Business.csproj" />
+      <ProjectReference Include="..\MyCookin.IoC\MyCookin.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    </ItemGroup>
+
 
 </Project>
