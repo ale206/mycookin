@@ -2,11 +2,11 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS build
 WORKDIR /MyCookin.API
 
 # copy csproj and restore as distinct layers
-COPY MyCookin.API/*.csproj ./
+COPY /. ./
 RUN dotnet restore
 
 # copy everything else and build app
-COPY MyCookin.API/. ./
+#COPY MyCookin.API/. ./
 RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
