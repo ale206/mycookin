@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using MyCookin.Business.Interfaces;
 using MyCookin.Domain.Entities;
 using MyCookin.Domain.Repositories;
@@ -17,6 +19,11 @@ namespace MyCookin.Business.Implementations
         public async Task<Recipe> GetRecipeById(long recipeId)
         {
             return await _recipeRepository.GetRecipeById(recipeId);
+        }
+
+        public async Task<IEnumerable<Language>> GetSupportedLanguages()
+        {
+            return await _recipeRepository.GetSupportedLanguages();
         }
     }
 }

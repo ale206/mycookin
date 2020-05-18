@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyCookin.Business.Interfaces;
@@ -16,13 +18,25 @@ namespace MyCookin.API.Controllers
             _recipeService = recipeService;
         }
 
-        [HttpGet("{id}", Name = "Get Recipe By ID")]
+        [HttpGet("{id}", Name = "GetRecipeById")]
+        [Description("Get Recipe By Id")]
         [ProducesResponseType(typeof(Recipe), 200)]
+        
         public async Task<IActionResult> GetRecipeById(long id)
         {
             var recipe = await _recipeService.GetRecipeById(id);
 
             return Ok(recipe);
+        }
+        
+        //TODO: Change Route
+        [HttpGet(Name = "Get Supported Languages")]
+        [ProducesResponseType(typeof(IEnumerable<Language>), 200)]
+        public async Task<IActionResult> GetSupportedLanguages()
+        {
+            var supportedLanguages = await _recipeService.GetSupportedLanguages();
+
+            return Ok(supportedLanguages);
         }
     }
 }

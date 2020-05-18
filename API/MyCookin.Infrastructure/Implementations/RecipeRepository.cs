@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
 using Microsoft.Extensions.Configuration;
 using MyCookin.Domain.Entities;
 using MyCookin.Domain.Repositories;
@@ -24,6 +28,20 @@ namespace MyCookin.Infrastructure.Implementations
             }
 
             return new Task<Recipe>(() => new Recipe {Id = 1, Name = "Spaghetti"});
+        }
+
+        public async Task<IEnumerable<Language>> GetSupportedLanguages()
+        {
+            Task<IEnumerable<Language>> languages;
+            const string sql = "SELECT * FROM `Recipes`.`Language` WHERE Enabled = 1;";
+
+            await using (var connection = _dbConnectionFactory.GetConnection(_connectionString))
+            {
+                var multi = connection.QueryMultipleAsync(sql).Result;
+                languages = multi.ReadAsync<Language>();
+            }
+
+            return await languages;
         }
     }
 }
