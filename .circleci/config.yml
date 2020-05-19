@@ -12,14 +12,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Install project dependencies"
-          command: dotnet.exe restore ./API
-      - run:
           name: "Run Application Tests"
           command: dotnet.exe test ./API/MyCookin.UnitTests -v n --results-directory:test_coverage --collect:"Code Coverage"
-      - run:
-          name: "Print Working Directory"
-          command: pwd
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
 
