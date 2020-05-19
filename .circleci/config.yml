@@ -2,20 +2,25 @@ version: 2.1
 
 orbs:
   windows: circleci/windows@2.2.0
-  aws-ecr: circleci/aws-ecr@6.7.0
+  aws-ecr: circleci/aws-ecr@6.8.2
 
 jobs:
-  build:
+  run-unit-test:
     description: Run Unit Tests
     executor:
       name: windows/default
     steps:
       - checkout
       - run:
-          name: "Run Application Tests"
+          name: "Run Unit Tests"
           command: dotnet.exe test ./API/MyCookin.UnitTests -v n --results-directory:test_coverage --collect:"Code Coverage"
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
+
+workflows:
+  build_and_push_image:
+    jobs:
+      - test
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           aws-access-key-id: AWS_ACCESS_KEY_ID
@@ -25,4 +30,4 @@ jobs:
           path: ./API
           region: AWS_REGION
           repo: mycookin
-          tag: "$CIRCLE_BUILD_NUM"
+          tag: "latest"
