@@ -5,8 +5,8 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.7.0
 
 jobs:
-  test-and-push-image:
-    description: Run Unit Tests and push to ECR
+  build:
+    description: Run Unit Tests
     executor:
       name: windows/default
     steps:
@@ -25,4 +25,4 @@ jobs:
           path: ./API
           region: AWS_REGION
           repo: mycookin
-          tag: "latest"
+          tag: "$CIRCLE_BUILD_NUM"
