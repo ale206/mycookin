@@ -21,16 +21,14 @@ namespace MyCookin.API.Controllers
         [HttpGet("{id}", Name = "GetRecipeById")]
         [Description("Get Recipe By Id")]
         [ProducesResponseType(typeof(Recipe), 200)]
-        
         public async Task<IActionResult> GetRecipeById(long id)
         {
             var recipe = await _recipeService.GetRecipeById(id);
 
             return Ok(recipe);
         }
-        
-        //TODO: Change Route
-        [HttpGet(Name = "Get Supported Languages")]
+
+        [HttpGet("languages", Name = "Get Supported Languages")]
         [ProducesResponseType(typeof(IEnumerable<Language>), 200)]
         public async Task<IActionResult> GetSupportedLanguages()
         {
