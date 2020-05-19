@@ -7,8 +7,6 @@ orbs:
 jobs:
   build:
     description: Run Unit Tests
-    executor:
-      name: windows/default
     steps:
       - checkout
       - run:
