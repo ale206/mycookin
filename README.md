@@ -1,12 +1,13 @@
 # MyCookin API
 The international Social Network about recipes
 
-Requirements
+*Requirements*
 1. MySQL
 2. Docker
 3. JetBrains Rider or Visual Studio
 4. .NET Core 3.1
 
+*How to start it*
 1. Clone the repository
 2. Import the Recipes.sql dump script into your local MySQL
 3. Change the connection string in API/MyCookin.API/appsettings.Development.json
