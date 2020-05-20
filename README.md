@@ -21,3 +21,7 @@ Have a look at the Wiki to get more information about the concept.
 
 ## Architecture
 ![MyCookin Architecture](/Docs/mycookin-architecture.png)
+
+## Coggle Diagram
+![Coggle Diagram](/Docs/mycookin-coggle.png)
+[Updated Coggle Diagram](https://embed.coggle.it/diagram/XUXs1lj7ldW6rfhw/t/mycookin-2020/fa72437bc406a7f9193d7c8afba842555bef9b0f594befc3956bcc50a34c79fa)
