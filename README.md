@@ -1,5 +1,6 @@
 # MyCookin API
-The international Social Network about recipes
+MyCookin is a social network for food and cooking lovers. It is a unique worldwide meeting point for people with different tastes and diets, where the recipes are added by users. It is the community who elects the best recipe.
+Have a look at the Wiki to get more information about the concept.
 
 ## Requirements
 1. MySQL
