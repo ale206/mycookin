@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="MyCookinWeb.Styles.SiteStyle.Public" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MyCookin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <!-- CSS -->
+    <link rel="Stylesheet" href="/Styles/SiteStyle/reset.min.css" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/Styles/jQueryUiCss/mycookin-theme/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/JQueryUIOverride.min.css" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/style.min.css?ver=140302" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/PublicStyle.min.css?ver=140302" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Styles/Tipsy/tipsy.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Styles/bigvideo.min.css" type="text/css" />
+
+    <%--For the Scrollbar--%>
+    <link href="/Styles/jQueryUiCss/Scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="/Styles/jQueryUiCss/Scrollbar/Scrollbar.min.css" rel="stylesheet" type="text/css" />
+    <meta name="msvalidate.01" content="50B3E1E1D715E13BA1B8CC04E4EEDEAC" />
+    <meta name="google-site-verification" content="HEaDx7X6A-KFU3cTha9FQFoZB1HUdYmh1DJwHuSKaH8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body" runat="server">
+    <form id="form1" runat="server">
+    <%--Offset--%>
+    <asp:HiddenField ID="hfOffset" ClientIDMode="Static" runat="server" />
+    <asp:HiddenField ID="hfIDLangage" ClientIDMode="Static" runat="server" />
+    <asp:HiddenField ID="hfBgPath" ClientIDMode="Static" runat="server" />
+    <script type="text/javascript" language="javascript">
+        try {
+            if (document.getElementById("hfOffset").value == "") {
+                var d = new Date();
+                document.getElementById("hfOffset").value = d.getTimezoneOffset();
+                $.get('/Utilities/SetOffsetSessionVariable.ashx?Offset=' + document.getElementById("hfOffset").value, function () { });
+            }
+        }
+        catch (err) {
+        }
+        if ($('#hfBgPath').val() == "") {
+            try {
+                $.get('/Utilities/GetBackgroundPath.ashx?OffSet=' + document.getElementById("hfOffset").value, function (data) {
+                    $('.result').html(data);
+                    if (data != "") {
+                        try {
+                            $('#hfBgPath').val(data);
+                            $.get('/Utilities/SetBgSessionVariable.ashx?BgPath=' + data, function () { });
+                        }
+                        catch (err) {
+                        }
+                        if (data.toLowerCase().indexOf(".jpg") > -1 || data.toLowerCase().indexOf(".jepg") > -1) {
+                            $.backstretch(data, { fade: 2000 });
+                        }
+                        else if (data.toLowerCase().indexOf(".mp4") > -1 || data.toLowerCase().indexOf(".ogv") > -1) {
+                            var BV = new $.BigVideo();
+                            BV.init();
+                            BV.show(data, { doLoop: true, ambient: true });
+                            //BV.show('/Photo/Background/river.mp4', { doLoop: true, ambient: true });
+                            $('#big-video-wrap').hide().fadeIn(2000);
+                        }
+                    }
+                    else {
+                        $.backstretch('/Photo/Background/spuntino5.jpg', { fade: 2000 });
+                    }
+                });
+            }
+            catch (err) {
+                try {
+                    $.backstretch('/Photo/Background/spuntino5.jpg', { fade: 2000 });
+                } catch (err) {
+                    $('body').css({ "background": 'url(/Photo/Background/ciliegia.jpg) no-repeat center center fixed' });
+                    $('body').css({ "margin": '0' });
+                    $('body').css({ "padding": '80px 0 20px 0' });
+                    $('body').css({ "-webkit-background-size": 'cover' });
+                    $('body').css({ "-moz-background-size": 'cover' });
+                    $('body').css({ "-o-background-size": 'cover' });
+                    $('body').css({ "background-size": 'cover' });
+                }
+            }
+        }
+        else {
+            try {
+                $.backstretch($('#hfBgPath').val());
+            }
+            catch (err) {
+                $('body').css({ "background": 'url(' + $('#hfBgPath').val() + ') no-repeat center center fixed' });
+                $('body').css({ "margin": '0' });
+                $('body').css({ "padding": '80px 0 20px 0' });
+                $('body').css({ "-webkit-background-size": 'cover' });
+                $('body').css({ "-moz-background-size": 'cover' });
+                $('body').css({ "-o-background-size": 'cover' });
+                $('body').css({ "background-size": 'cover' });
+            }
+        }
+    </script>
+    <asp:ScriptManager ID="MainScriptManager" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="/Js/jquery-1.10.1.min.js"/>
+            <asp:ScriptReference Path="/Js/jquery-ui-1.10.3.custom.min.js" />
+            <asp:ScriptReference Path="/Js/Pages/PublicMaster.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.core.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.widget.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.mouse.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.draggable.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.position.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.autocomplete.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.dialog.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.resizable.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.tabs.min.js" />
+            <asp:ScriptReference Path="/Js/Forms/jquery.autosize.min.js" />
+            <asp:ScriptReference Path="/Js/jquery-migrate-1.1.0.min.js" />
+            <asp:ScriptReference Path="/Js/IEPatch/jquery.placeholder.min.js" />
+            <%--<asp:ScriptReference Path="/Js/jquery.tools.min.js" />--%>
+            <%--PopBox--%>
+            <asp:ScriptReference Path="/Js/PopBox/popbox.min.js" />
+            <%--Noty--%>
+            <asp:ScriptReference Path="/Js/noty/jquery.noty.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/bottomRight.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/centerRight.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/bottomCenter.min.js" />
+            <asp:ScriptReference Path="/Js/noty/themes/MyCookinNoty.min.js" />
+            <%--Tipsy--%>
+            <asp:ScriptReference Path="/Js/Tipsy/jquery.tipsy.min.js" />
+            <%--BigVideo--%>
+            <asp:ScriptReference Path="/Js/BigVideo/bigvideo.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/jquery.imagesloaded.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/video.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/jquery.backstretch.min.js" />
+            <%--MyCookinFunctions--%>
+            <asp:ScriptReference Path="/Js/MyCookinFunctions_1.0.min.js?ver=140316" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div>
+        <div id="header" class="header">
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('input, textarea').placeholder();
+                });     
+            </script>
+            <div id="pnlCenterHeader">
+                <div id="logo">
+                    <a href="/Default.aspx">
+                        <img src="/Images/MyCookin-Logo.png" id="btnLogo" border="0" alt="MyCookin" width="326" height="55" /></a></div>
+                <asp:Panel ID="pnlLoginOrRegistration" ClientIDMode="Static" runat="server" 
+                    meta:resourcekey="pnlLoginOrRegistrationResource1">
+                    <asp:Panel ID="containerLoginButton" ClientIDMode="Static" runat="server" 
+                        meta:resourcekey="containerLoginButtonResource1">
+                        <asp:Panel ID="loginMyCookin" class="loginbox" ClientIDMode="Static" 
+                            runat="server" meta:resourcekey="loginMyCookinResource1">
+                            <asp:HyperLink ID="hlRegisterLogin" runat="server" meta:resourcekey="hlRegisterLoginResource" 
+                            ToolTip="Registrati o effettua il login" class="MyTooltip LoginRegisterLink"
+                             NavigateUrl="/user/login.aspx">Inserisci la tua ricetta</asp:HyperLink>
+                            <asp:ImageButton ID="loginFacebook" class="loginbox MyTooltip" ImageUrl="/Images/fb_icon_64.png"
+                                ToolTip="Facebook Login"  Width="26px" Height="26px" runat="server" CausesValidation="False"
+                                OnClick="btnFacebook_Click" meta:resourcekey="loginFacebookResource1"></asp:ImageButton>
+                            <asp:ImageButton ID="loginGoogle" class="loginbox MyTooltip" ImageUrl="/Images/google_icon_64.png"
+                                ToolTip="Google Login"  Width="26px" Height="26px" runat="server" 
+                                CausesValidation="False" OnClick="btnGoogle_Click" 
+                                meta:resourcekey="loginGoogleResource1">
+                            </asp:ImageButton>
+                        </asp:Panel>
+                    </asp:Panel>
+                    <asp:Panel ID="containerRegisterButton" ClientIDMode="Static" runat="server" 
+                        meta:resourcekey="containerRegisterButtonResource1">
+                        <asp:Panel ID="registerMyCookin" class="loginbox" ClientIDMode="Static" 
+                            runat="server" meta:resourcekey="registerMyCookinResource1">
+                            <asp:HyperLink ID="hlRegisterForFree" NavigateUrl="/user/register.aspx" runat="server"
+                            meta:resourcekey="hlRegisterForFreeResource1">Registrati. E' gratis.</asp:HyperLink>
+                        </asp:Panel>
+                    </asp:Panel>
+                </asp:Panel>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <div id="pnlCenterFooter">
+                <asp:Label ID="lblCopyright" runat="server" 
+                    meta:resourcekey="lblCopyrightResource1"></asp:Label>
+                -
+                <div id="policy">
+                    <asp:HyperLink ID="hlPrivacyIubenda" NavigateUrl="https://www.iubenda.com/privacy-policy/264657"
+                        CssClass="iubenda-nostyle no-brand iubenda-embed" runat="server" 
+                        meta:resourcekey="hlPrivacyIubendaResource1">Privacy</asp:HyperLink>
+                </div>
+                -
+                <asp:HyperLink ID="hlConditions" runat="server" 
+                    NavigateUrl="/User/TermsAndConditions.aspx" Text="Termini e Condizioni" 
+                    meta:resourcekey="hlConditionsResource1"></asp:HyperLink>
+                -
+                <asp:HyperLink ID="hlContact" runat="server" NavigateUrl="/user/contact.aspx" 
+                    Text="Contattaci" meta:resourcekey="hlContactResource1"></asp:HyperLink>
+            </div>
+        </div>
+    </div>
+    <asp:HiddenField ID="hfIpAddress" ClientIDMode="Static" runat="server" />
+    </form>
+    <script type="text/javascript">
+        (function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-39281629-1', 'mycookin.com');
+        ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

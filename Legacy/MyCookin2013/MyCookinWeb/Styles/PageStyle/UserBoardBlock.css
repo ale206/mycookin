@@ -1,0 +1,102 @@
+﻿.pnlShare
+{
+}
+.pnlRight
+{ 
+    margin-left:65px;
+}
+.pnlCountComments
+{
+   float:left;
+   margin-left:30px;
+   margin-top:10px;
+}
+.pnlCommentsAndLike
+{
+    display:inline-block;
+}
+.pnlLikes
+{
+    float:left;
+    margin-left:10px;
+}
+.pnlAddComment
+{
+    height:36px;
+    padding-top:5px;
+    margin-left:75px;
+}
+.hlCountLikes:LINK
+{
+    padding:2px;
+    background-color:#F8931D;
+    box-shadow: 1px 1px 5px #CCC;
+    opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    font-family:Verdana;
+    font-size:12px;
+    color:#FFF;
+}
+.hlCountLikes:VISITED
+{
+    padding:2px;
+    background-color:#F8931D;
+    box-shadow: 1px 1px 5px #CCC;
+    opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    font-family:Verdana;
+    font-size:12px;
+    color:#FFF;
+}
+.pnlUserBoardBlock
+{
+    border-style:solid;
+    border-width:1px;
+    border-radius: 15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    background:#FFF;
+    margin-bottom:5px;
+    padding:5px;
+	width:800px;
+	border-color:#70644F;
+	background-color:#fff;
+    box-shadow: 0px 0px 10px #888888;
+}
+.pnlComments
+{
+    margin-left:55px;
+    padding-top:2px;
+}
+.commentSeparator
+{
+     width:600px; 
+     height:1px; 
+     border-bottom-color:#70644F; 
+     border-bottom-style:dashed; 
+     border-bottom-width:1px; 
+     display:block;
+}
+.ibtnDelete
+{
+    float:right;
+    margin-top:-10px;
+}
+.lblMessage
+{
+    width:710px;
+    float:left;
+    margin-bottom:5px;
+}
+.pnlDateAndDelete
+{
+    display:block;
+    width:790px;
+    height:12px;
+}

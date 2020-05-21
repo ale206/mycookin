@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>http://www.mycookin.com</loc>
+    <image:image>
+      <image:loc>http://www.mycookin.com/images/mycookinlogo-200x200.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/en/recipe/all</loc>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/en/ingredient/all</loc>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/it/ricetta/tutte</loc>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/it/ingrediente/tutti</loc>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/es/receta/todos</loc>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>http://www.mycookin.com/es/elemento/todos</loc>
+    <changefreq>always</changefreq>
+  </url>
+</urlset>

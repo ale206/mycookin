@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-static.xml</loc>
+    <lastmod>2014-03-04</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-recipes.aspx?lang=1</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-recipes.aspx?lang=2</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-recipes.aspx?lang=3</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-ingredients.aspx?lang=1</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-ingredients.aspx?lang=2</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.mycookin.com/sitemap-ingredients.aspx?lang=3</loc>
+  </sitemap>
+</sitemapindex>

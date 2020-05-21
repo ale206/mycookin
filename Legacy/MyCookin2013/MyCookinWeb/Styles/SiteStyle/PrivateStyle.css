@@ -1,0 +1,256 @@
+﻿input[type='text'], .AutoSizeTextArea {
+	width: 400px;
+	/*height: 20px;*/
+	border-radius: 8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+	border: 1px solid #CCC;
+	padding: 3px;
+	font-weight: 200;
+	font-size: 18px;
+	font-family: Verdana;
+	box-shadow: 1px 1px 5px #CCC;
+	color: #196f37;
+}
+
+input[type='password'], .AutoSizeTextArea {
+	width: 400px;
+	height: 20px;
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+    -moz-border-radius:8px;
+	border: 1px solid #CCC;
+	padding: 3px;
+	font-weight: 200;
+	font-size: 18px;
+	font-family: Verdana;
+	box-shadow: 1px 1px 5px #CCC;
+	color: #196f37;
+}
+
+.pnlContainerNotificationList 
+{
+    font-size: 0.8em; 
+    list-style-type: none;
+    vertical-align:top;
+    line-height: 1.4em;
+    text-align:left;
+    padding:5px;
+    width:300px;
+}
+    
+    
+.pnlButtonsForLogged
+{
+    float:left;
+    margin-left:15px;
+    height:75px;
+}
+#upnlNotifications
+{ 
+  float:left; 
+  padding-top:9px;  
+  height:70px;
+  width:45px;
+  padding-right:5px;
+}
+.pnlNotifications
+{
+   
+}
+.lblCountNotificationsOn
+{
+    float:left;
+    margin-top:-15px;
+    margin-left:25px;
+    background-color:#F8931D;
+    box-shadow: 1px 1px 5px #CCC;
+    opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    height:22px;
+    width:22px;
+    line-height:17px;
+    font-family: Verdana;
+    font-size:14px;
+    color: White;
+}
+
+.lblCountNotificationsOff
+{
+    float:left;
+    margin-top:-15px;
+    margin-left:25px;
+    height:22px;
+    width:22px;
+    line-height:17px;
+    font-family: Verdana;
+    font-size:14px;
+}
+
+#upnlMessagesNotifications
+{ 
+  float:left; 
+  padding-top:9px; 
+  height:70px;
+  width:45px;
+  padding-right:5px;
+}
+
+.lblCountMessagesOn
+{
+    float:left;
+    margin-top:-15px;
+    margin-left:25px;
+    background-color:#F8931D;
+    box-shadow: 1px 1px 5px #CCC;
+    opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    height:22px;
+    width:22px;
+    line-height:17px;
+    font-family: Verdana;
+    font-size:14px;
+    color: White;
+}
+
+.lblCountMessagesOff
+{
+    float:left;
+    margin-top:-15px;
+    margin-left:25px;
+    height:22px;
+    width:22px;
+    line-height:17px;
+    font-family: Verdana;
+    font-size:14px;
+}
+
+.pnlSearch
+{ 
+    float:left;
+    height:75px;
+    margin-top:8px;
+    margin-left:0px;
+    margin-right:10px;
+}
+
+.pnlUserPicAndName
+{   
+    display:inline-block;
+	float:right;
+	margin-top:7px;
+	height:40px; 
+	width:250px;
+	border:2px solid;
+	border-color:#CCC;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+    -moz-border-radius:5px;
+	vertical-align: middle;
+	line-height: 40px; 
+}
+
+.pnlUserPicAndName img
+{
+    margin: 5px 5px 5px 5px;
+}
+
+#pnlUserPicAndName a:LINK{
+    text-decoration: none;
+    color: #e78f08;
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+ }
+ 
+ #pnlUserPicAndName a:VISITED{
+    text-decoration: none;
+    color: #e78f08;
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+ }
+ 
+ .hlUser
+ {
+     float:left;
+     display:inline-block;
+     float:left;
+     width:160px;
+     height:35px;
+     text-align:left;
+     margin-left:0px;
+     padding-right:5px;
+     z-index:200;
+ }
+ .hlUserImage
+ {
+     display:inline-block;
+     float:left;
+     width:35px;
+     height:35px;
+     margin-left:0px;
+     padding-right:5px;
+     z-index:200;
+ }
+ .pnlUserSettings
+ {
+    /* position:relative;
+     margin-left:200px;*/
+ }
+ .pnlUserSettingsPopBox
+ {
+     /*margin-left:-206px;*/
+ }
+ .pnlButtonContainer
+ {
+     width:220px;
+ }
+  .hlSettings
+ {
+     display:inline-block;
+     width:40px;
+     height:40px;
+     margin-left:-75px;
+ }
+ .UserSettingsButtonsImage
+ {
+     float:left;
+     padding-left:10px;
+     padding-right:5px;
+     padding-bottom:15px;
+ }
+.pnlOptions
+{
+    display:block;
+    padding:5px;
+}
+.UserSettingsLink
+{
+    float:left;
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+    font-size:14px;
+    width:150px;
+    text-align:left;
+    padding-bottom:15px;
+}
+
+
+.pnlContact
+{
+    font-size:0.9em;
+     color: #70644F;
+    }
+
+.pnlConditions
+{
+    font-size:0.9em;
+     color: #70644F;
+    }
+    
+.lblPrivacyLink
+{
+    font-size:0.9em;   
+    }

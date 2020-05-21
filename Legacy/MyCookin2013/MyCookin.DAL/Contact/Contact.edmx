@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBErrorsAndMessagesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DBErrorsAndMessagesModelStoreContainer">
+          <EntitySet Name="ContactRequests" EntityType="DBErrorsAndMessagesModel.Store.ContactRequests" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactRequestsReply" EntityType="DBErrorsAndMessagesModel.Store.ContactRequestsReply" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactRequestsType" EntityType="DBErrorsAndMessagesModel.Store.ContactRequestsType" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ContactRequests">
+          <Key>
+            <PropertyRef Name="IDContactRequest" />
+          </Key>
+          <Property Name="IDContactRequest" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDLanguage" Type="int" Nullable="false" />
+          <Property Name="IDContactRequestType" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="RequestText" Type="nvarchar" Nullable="false" MaxLength="2000" />
+          <Property Name="PrivacyAccept" Type="bit" Nullable="false" />
+          <Property Name="RequestDate" Type="datetime" Nullable="false" />
+          <Property Name="IpAddress" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="IsRequestClosed" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactRequestsReply">
+          <Key>
+            <PropertyRef Name="IDContactRequestReply" />
+          </Key>
+          <Property Name="IDContactRequestReply" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDContactRequest" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDUserWhoReplied" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Reply" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ReplyDate" Type="datetime" Nullable="false" />
+          <Property Name="IpAddress" Type="nvarchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="ContactRequestsType">
+          <Key>
+            <PropertyRef Name="IDContactRequestType" />
+          </Key>
+          <Property Name="IDContactRequestType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RequestType" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="RequestTypeAddedOn" Type="datetime" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="USP_GetContactRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDContactRequestType" Type="int" Mode="In" />
+          <Parameter Name="JustNotClosedRequests" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_InsertContactRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDLanguage" Type="int" Mode="In" />
+          <Parameter Name="IDContactRequestType" Type="int" Mode="In" />
+          <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="RequestText" Type="nvarchar" Mode="In" />
+          <Parameter Name="PrivacyAccept" Type="bit" Mode="In" />
+          <Parameter Name="RequestDate" Type="datetime" Mode="In" />
+          <Parameter Name="IpAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsRequestClosed" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_InsertContactRequestReply" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDContactRequest" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="IDUserWhoReplied" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Reply" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ReplyDate" Type="datetime" Mode="In" />
+          <Parameter Name="IpAddress" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBErrorsAndMessagesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ContactEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ContactRequests" EntityType="DBErrorsAndMessagesModel.ContactRequests" />
+          <EntitySet Name="ContactRequestsReply" EntityType="DBErrorsAndMessagesModel.ContactRequestsReply" />
+          <EntitySet Name="ContactRequestsType" EntityType="DBErrorsAndMessagesModel.ContactRequestsType" />
+          <FunctionImport Name="USP_InsertContactRequest" ReturnType="Collection(DBErrorsAndMessagesModel.USPResult)">
+            <Parameter Name="IDLanguage" Mode="In" Type="Int32" />
+            <Parameter Name="IDContactRequestType" Mode="In" Type="Int32" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="RequestText" Mode="In" Type="String" />
+            <Parameter Name="PrivacyAccept" Mode="In" Type="Boolean" />
+            <Parameter Name="RequestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="IpAddress" Mode="In" Type="String" />
+            <Parameter Name="IsRequestClosed" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="USP_InsertContactRequestReply" ReturnType="Collection(DBErrorsAndMessagesModel.USPResult)">
+            <Parameter Name="IDContactRequest" Mode="In" Type="Guid" />
+            <Parameter Name="IDUserWhoReplied" Mode="In" Type="Guid" />
+            <Parameter Name="Reply" Mode="In" Type="String" />
+            <Parameter Name="ReplyDate" Mode="In" Type="DateTime" />
+            <Parameter Name="IpAddress" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_GetContactRequests" ReturnType="Collection(DBErrorsAndMessagesModel.RequestMessages)">
+            <Parameter Name="IDContactRequestType" Mode="In" Type="Int32" />
+            <Parameter Name="JustNotClosedRequests" Mode="In" Type="Boolean" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ContactRequests">
+          <Key>
+            <PropertyRef Name="IDContactRequest" />
+          </Key>
+          <Property Name="IDContactRequest" Type="Guid" Nullable="false" />
+          <Property Name="IDLanguage" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="RequestText" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="PrivacyAccept" Type="Boolean" Nullable="false" />
+          <Property Name="RequestDate" Type="DateTime" Nullable="false" />
+          <Property Name="IpAddress" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="IDContactRequestType" Nullable="false" />
+          <Property Type="Boolean" Name="IsRequestClosed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactRequestsReply">
+          <Key>
+            <PropertyRef Name="IDContactRequestReply" />
+          </Key>
+          <Property Name="IDContactRequestReply" Type="Guid" Nullable="false" />
+          <Property Name="IDContactRequest" Type="Guid" Nullable="false" />
+          <Property Name="IDUserWhoReplied" Type="Guid" Nullable="false" />
+          <Property Name="Reply" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ReplyDate" Type="DateTime" Nullable="false" />
+          <Property Name="IpAddress" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ContactRequestsType">
+          <Key>
+            <PropertyRef Name="IDContactRequestType" />
+          </Key>
+          <Property Name="IDContactRequestType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RequestType" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="RequestTypeAddedOn" Type="DateTime" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="USPResult" >
+          <Property Type="Boolean" Name="isError" Nullable="false" />
+          <Property Type="String" Name="ResultExecutionCode" Nullable="false" />
+          <Property Type="String" Name="USPReturnValue" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RequestMessages" >
+          <Property Type="Guid" Name="IDContactRequest" Nullable="false" />
+          <Property Type="Int32" Name="IDLanguage" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="false" />
+          <Property Type="String" Name="RequestText" Nullable="false" />
+          <Property Type="DateTime" Name="RequestDate" Nullable="false" />
+          <Property Type="String" Name="IpAddress" Nullable="false" />
+          <Property Type="Int32" Name="IDContactRequestType" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBErrorsAndMessagesModelStoreContainer" CdmEntityContainer="ContactEntities">
+          <EntitySetMapping Name="ContactRequests">
+            <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequests">
+              <MappingFragment StoreEntitySet="ContactRequests">
+                <ScalarProperty Name="IsRequestClosed" ColumnName="IsRequestClosed" />
+                <ScalarProperty Name="IDContactRequestType" ColumnName="IDContactRequestType" />
+                <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+                <ScalarProperty Name="IDLanguage" ColumnName="IDLanguage" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+                <ScalarProperty Name="PrivacyAccept" ColumnName="PrivacyAccept" />
+                <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactRequestsReply">
+            <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequestsReply">
+              <MappingFragment StoreEntitySet="ContactRequestsReply">
+                <ScalarProperty Name="IDContactRequestReply" ColumnName="IDContactRequestReply" />
+                <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+                <ScalarProperty Name="IDUserWhoReplied" ColumnName="IDUserWhoReplied" />
+                <ScalarProperty Name="Reply" ColumnName="Reply" />
+                <ScalarProperty Name="ReplyDate" ColumnName="ReplyDate" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactRequestsType">
+            <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequestsType">
+              <MappingFragment StoreEntitySet="ContactRequestsType">
+                <ScalarProperty Name="IDContactRequestType" ColumnName="IDContactRequestType" />
+                <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+                <ScalarProperty Name="RequestTypeAddedOn" ColumnName="RequestTypeAddedOn" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_InsertContactRequest" FunctionName="DBErrorsAndMessagesModel.Store.USP_InsertContactRequest">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.USPResult">
+                <ScalarProperty Name="isError" ColumnName="isError" />
+                <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+                <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_InsertContactRequestReply" FunctionName="DBErrorsAndMessagesModel.Store.USP_InsertContactRequestReply">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.USPResult">
+                <ScalarProperty Name="isError" ColumnName="isError" />
+                <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+                <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_GetContactRequests" FunctionName="DBErrorsAndMessagesModel.Store.USP_GetContactRequests">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.RequestMessages">
+                <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+                <ScalarProperty Name="IDLanguage" ColumnName="IDLanguage" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+                <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Contact">
+        <EntityTypeShape EntityType="DBErrorsAndMessagesModel.ContactRequests" Width="1.5" PointX="0.75" PointY="0.75" Height="3.1340950520833331" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBErrorsAndMessagesModel.ContactRequestsReply" Width="1.5" PointX="2.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBErrorsAndMessagesModel.ContactRequestsType" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

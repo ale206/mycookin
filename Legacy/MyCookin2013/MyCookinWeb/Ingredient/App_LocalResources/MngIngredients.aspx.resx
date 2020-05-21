@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BoundFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundFieldResource1.HeaderText" xml:space="preserve">
+    <value>Tipo Quantità</value>
+  </data>
+  <data name="btnAddAltIngrResource1.Text" xml:space="preserve">
+    <value>Aggiungi Alternativa</value>
+  </data>
+  <data name="btnAddAltIngrResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAddIngredientAllowedQuantityTypeResource1.Text" xml:space="preserve">
+    <value>Aggiungi tipo di quantità di misura</value>
+  </data>
+  <data name="btnAddIngredientAllowedQuantityTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDeleteQtaResource1.Text" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="btnEditIngredientResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEditIngredientResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAprilResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAprilResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAugustResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAugustResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkDecemberResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkDecemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkFebruaryResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkFebruaryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIngrEnabledResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIngrEnabledResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsGlutenFreeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsGlutenFreeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsHotSpicyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsVeganResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsVeganResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsVegetarianResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsVegetarianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJanuaryResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJanuaryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJulyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJulyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJuneResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkJuneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMarchResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMarchResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMayResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkMayResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkNovemberResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkNovemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkOctoberResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkOctoberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSeptemberResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSeptemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlIngredientCategoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlIngredientPreparationRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlIngredientQuantityTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvIngredientAllowedQuantityTypeResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvIngredientAllowedQuantityTypeResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvIngredientAllowedQuantityTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlFoodInfoResource1.Text" xml:space="preserve">
+    <value>Clicca qui per visualizzare un sito con i Valori Alimentari di migliaia di ingredienti ;)</value>
+  </data>
+  <data name="hlFoodInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAprilResource1.Text" xml:space="preserve">
+    <value>Aprile</value>
+  </data>
+  <data name="lblAprilResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAugustResource1.Text" xml:space="preserve">
+    <value>Agosto</value>
+  </data>
+  <data name="lblAugustResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAverageWeightOfOnePieceResource1.Text" xml:space="preserve">
+    <value>Peso Medio di 1 pezzo</value>
+  </data>
+  <data name="lblAverageWeightOfOnePieceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDecemberResource1.Text" xml:space="preserve">
+    <value>Dicembre</value>
+  </data>
+  <data name="lblDecemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFebruaryResource1.Text" xml:space="preserve">
+    <value>Febbraio</value>
+  </data>
+  <data name="lblFebruaryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIDIngredientQuantityTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIDIngredientResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIDIngredientResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIDLanguageResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIDLanguageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientCategoryResource1.Text" xml:space="preserve">
+    <value>Categoria dell'Ingrediente</value>
+  </data>
+  <data name="lblIngredientCategoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientDescriptionResource1.Text" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="lblIngredientDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientPluralResource1.Text" xml:space="preserve">
+    <value>Nome Ingrediente al Plurale</value>
+  </data>
+  <data name="lblIngredientPluralResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientPreparationRecipeResource1.Text" xml:space="preserve">
+    <value>Ricetta di Preparazione (se presente):</value>
+  </data>
+  <data name="lblIngredientPreparationRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientSingularResource1.Text" xml:space="preserve">
+    <value>Nome Ingrediente al Singolare</value>
+  </data>
+  <data name="lblIngredientSingularResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitle2Resource1.Text" xml:space="preserve">
+    <value>Unità di misura utilizzabili per questo ingrediente</value>
+  </data>
+  <data name="lblIngredientTitle2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitleResource1.Text" xml:space="preserve">
+    <value>Stai modificando:</value>
+  </data>
+  <data name="lblIngredientTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitleValue2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitleValue2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitleValueResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredientTitleValueResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngrEnabledResource1.Text" xml:space="preserve">
+    <value>Ingrediente valido?</value>
+  </data>
+  <data name="lblIngrEnabledResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIsGlutenFreeResource1.Text" xml:space="preserve">
+    <value>Senza Glutine</value>
+  </data>
+  <data name="lblIsGlutenFreeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIsHotSpicyResource1.Text" xml:space="preserve">
+    <value>Piccante</value>
+  </data>
+  <data name="lblIsHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIsVeganResource1.Text" xml:space="preserve">
+    <value>Alimento Vegano</value>
+  </data>
+  <data name="lblIsVeganResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIsVegetarianResource1.Text" xml:space="preserve">
+    <value>Alimento Vegetariano</value>
+  </data>
+  <data name="lblIsVegetarianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblJanuaryResource1.Text" xml:space="preserve">
+    <value>Gennaio</value>
+  </data>
+  <data name="lblJanuaryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblJulyResource1.Text" xml:space="preserve">
+    <value>Luglio</value>
+  </data>
+  <data name="lblJulyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblJuneResource1.Text" xml:space="preserve">
+    <value>Giugno</value>
+  </data>
+  <data name="lblJuneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblKcal100grResource1.Text" xml:space="preserve">
+    <value>Kcal per 100gr</value>
+  </data>
+  <data name="lblKcal100grResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMarchResource1.Text" xml:space="preserve">
+    <value>Marzo</value>
+  </data>
+  <data name="lblMarchResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMayResource1.Text" xml:space="preserve">
+    <value>Maggio</value>
+  </data>
+  <data name="lblMayResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoAuthResource1.Text" xml:space="preserve">
+    <value>Non sei autorizzato a visualizzare questa pagina.</value>
+  </data>
+  <data name="lblNoAuthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoDataQtaResource1.Text" xml:space="preserve">
+    <value>Tipi di quantità non ancora definiti</value>
+  </data>
+  <data name="lblNoDataQtaResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNovemberResource1.Text" xml:space="preserve">
+    <value>Novembre</value>
+  </data>
+  <data name="lblNovemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOctoberResource1.Text" xml:space="preserve">
+    <value>Ottobre</value>
+  </data>
+  <data name="lblOctoberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPercKcalAlcoholResource1.Text" xml:space="preserve">
+    <value>Quantità di Alcool (g)</value>
+  </data>
+  <data name="lblPercKcalAlcoholResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPercKcalFatsResource1.Text" xml:space="preserve">
+    <value>Quantità di Grassi (g)</value>
+  </data>
+  <data name="lblPercKcalFatsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPercKcalProteinsResource1.Text" xml:space="preserve">
+    <value>Quantità di Proteine (g)</value>
+  </data>
+  <data name="lblPercKcalProteinsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPerKcalCarbohydratesResource1.Text" xml:space="preserve">
+    <value>Quantità di Carboidrati (g)</value>
+  </data>
+  <data name="lblPerKcalCarbohydratesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblQuantityTypeDescriptionResource1.Text" xml:space="preserve">
+    <value> Se ad esempio l'ingrediente è un liquido sarà misurabile in Cl (centilitri), in bicchieri o tazze; 
+                una salsa, come la maionese, sarà misurabile in Cl, in g (grammi) o in cucchiai; 
+                un pollo sarà misurabile in grammi o in pezzi e così via. </value>
+  </data>
+  <data name="lblQuantityTypeDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSeptemberResource1.Text" xml:space="preserve">
+    <value>Settembre</value>
+  </data>
+  <data name="lblSeptemberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleInfoRecipeResource1.Text" xml:space="preserve">
+    <value>Ricetta di Preparazione</value>
+  </data>
+  <data name="lblTitleInfoRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkBackToHomeResource1.Text" xml:space="preserve">
+    <value>Torna a MyCookin</value>
+  </data>
+  <data name="lnkBackToHomeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkDashboardResource1.Text" xml:space="preserve">
+    <value> &lt; &lt; Clicca QUI per Tornare Indietro - 
+                        Ricordati di cliccare sul pulsante SALVA in fondo alla pagina</value>
+  </data>
+  <data name="lnkDashboardResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkIngrMainResource1.Text" xml:space="preserve">
+    <value>ManageIngredient</value>
+  </data>
+  <data name="lnkIngrMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Manage Ingredients</value>
+  </data>
+  <data name="pnlIngrAlternativeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngrAlternativeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngredientResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngredientResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngrNutrictionalInfoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngrNutrictionalInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainTabResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainTabResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNoAuthResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNoAuthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationRecipeInfoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationRecipeInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource1.HeaderText" xml:space="preserve">
+    <value>IDIngredientQuantityType</value>
+  </data>
+  <data name="TemplateFieldResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TemplateFieldResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAverageWeightOfOnePieceResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAverageWeightOfOnePieceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientDescriptionResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientPluralResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientPluralResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientSingularResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngredientSingularResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtKcal100grResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtKcal100grResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalAlcoholResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalAlcoholResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalFatsResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalFatsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalProteinsResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPercKcalProteinsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPerKcalCarbohydratesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPerKcalCarbohydratesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrepRecipeInfoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrepRecipeInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

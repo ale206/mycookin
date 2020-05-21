@@ -1,0 +1,338 @@
+﻿.pnlContent
+{
+   display:block;
+    position:absolute;
+    top:140px;
+    width:910px;
+	border-radius: 5px;
+    -moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	vertical-align: middle;
+	z-index:11;
+ }
+.pnlBackground{
+	display:inline-block;
+	position:relative;
+	margin: 0px auto;
+    height:1550px; 
+	width:910px;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	vertical-align: middle;
+	line-height: 300px; 
+	z-index:0;
+	opacity:0.95;
+	filter:alpha(opacity=95); /* For IE8 and earlier */
+ }
+.pnlMain{
+	width: 910px;
+	margin: 0 auto;
+ }
+.bgHead
+ {
+     display:block;
+     width:100%;
+     height:128px;
+ }
+ .bgHeadBottom
+ {
+     position:absolute;
+     width:100%;
+     margin-top:24px;
+     height:128px;
+     background-color:#fff;
+     z-index:-1;
+ }
+ .bgHeadLeft
+ {
+     float:left;
+     height:100%;
+     width:333px;
+     background-image: url(/Images/Backgrounds/bg_row_sheetTopLeft.png); 
+ }
+ .bgHeadRight
+ {
+     float:right;
+     height:100%;
+     width:349px;
+     background-image: url(/Images/Backgrounds/bg_row_sheetTopRight.png);
+ }
+  .bgCenter
+ {
+     display:block;
+     width:100%;
+     height:100%;
+     background-color:#fff;
+ }
+ .bgCenterLeft
+ {
+     float:left;
+     height:100%;
+     width:333px;
+     background-image: url(/Images/Backgrounds/bg_row_sheetCenterLeft.png);
+ }
+ .bgCenterRight
+ {
+     float:right;
+     height:100%;
+     width:349px;
+     background-image: url(/Images/Backgrounds/bg_row_sheetCenterRight.png);
+ }
+.pnlSearchResults {
+    display: block;
+    margin-top: 25px;
+    margin-left: 67px;
+    margin-right: auto;
+    width: 690px;
+}
+.imgPostit
+{
+    position: relative;
+    top: -100px;
+    left: -47px;
+    opacity:0.9;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
+}
+.pnlUserInfo
+{
+    position:absolute;
+    width:280px;
+    height:220px;
+    top: -25px;
+    left: 40px;
+}
+.imgUserImage
+{
+    float:right;
+    margin: 0 10px;
+    width:80px;
+    height:80px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#70644F;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+}
+.lblUserName
+{
+    display:block;
+    margin-top:30px;
+    font-family:Verdana;
+    font-size:21px;
+    color:#F15723;
+    margin-left:15px;
+}
+.lblUserRecipesDetails
+{
+    display:block;
+    margin-top:10px;
+    font-family:Verdana;
+    font-size:14px;
+    color:#65C3A9;
+    margin-left:15px;
+}
+.pnlMyRecipeBookBlockSmall
+{
+    width:700px;
+    height:100px;
+}
+.pnlRecipePhotoSmall
+{
+    float:left;
+    width:100px;
+    height:100px;
+}
+.imgRecipeSmall
+{
+    margin-left:10px;
+    width:80px;
+    height:80px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#BD141B;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+}
+.imgRecipeNoPhotoSmall
+{
+    margin: 0 10px;
+    width:80px;
+    height:80px;
+}
+.pnlRecipeNameSmall
+{
+    float:left;
+    width:340px;
+    height:100px;
+    overflow:hidden;
+}
+.pnlRecipeInfoSmall
+{
+    float:left;
+    width:240px;
+    height:100px;
+    margin-left:20px;
+}
+.imgIconColor
+{
+    float:left;
+    margin-right:20px;
+    margin-top:3px;
+}
+.lnkRecipeNameSmall:LINK, .lnkRecipeNameSmall:VISITED
+{
+    display:block;
+    font-family:Verdana;
+    font-size:18px;
+    color:#70644F;
+    font-weight:bold;
+}
+.lnkRecipeOwnerSmall:LINK, .lnkRecipeOwnerSmall:VISITED
+{
+    display:block;
+    margin-top:10px;
+    font-family:Verdana;
+    font-size:14px;
+    color:#F15723;
+}
+.pnlRecipeFound
+{
+    margin-top:-70px;
+}
+.btnDeleteFromRecipeBook
+{
+    display:block;
+    margin-top:5px;
+    width:20px;
+    height:20px;
+}
+.MyRecipeBookBlockHide
+{
+    display:none;
+}
+.pnlFilterRecipes
+{
+    display:block;
+    position:absolute;
+    top:-30px;
+    left:430px;
+    width:380px;
+    height:220px;
+}
+.txtRecipeFilter
+{
+    width:350px;
+}
+.FilterLabel
+{
+    display:block;
+    margin-top:20px;
+    margin-bottom:5px;
+    font-family:Verdana;
+    font-size:14px;
+}
+.lnkFilter:LINK, .lnkFilter:VISITED
+{
+    display:block;
+    margin-top:20px;
+    font-family:Verdana;
+    font-size:18px;
+    color:#444;
+    text-decoration:underline;
+}
+.boxRecipeList
+ {
+     display:inline-block;
+     width:250px;
+     height:90px;
+     padding:5px;
+     margin:5px;
+ }
+ #RecipesListContainer
+ {
+     display:block;
+     margin-left:45px;
+     margin-right:40px;
+     overflow:hidden;
+ }
+ .boxIntRecipeImage
+ {
+     float:left;
+     width:90px;
+     margin:5px;
+ }
+ .imgRecipeInList
+ {
+     width:80px;
+     height:80px;
+     border-style:solid;
+     border-width:3px;
+     border-color:#BD141B;
+     -moz-border-radius: 10px;
+     -webkit-border-radius:10px;
+	 border-radius: 10px;
+ }
+ .boxIntRecipeInfo
+ {
+     float:left;
+ }
+  .boxIntRecipeName, .boxIntRecipeOwner
+ {
+     width:150px;
+     margin-top:5px;
+     margin-bottom:5px;
+ }
+ .spanRecipeName
+ {
+     font-size: 18px;
+     font-family: Verdana; 
+     color:#70644F;
+ }
+ .spanRecipeOwner
+ {
+     font-size: 10px;
+     font-family: Verdana; 
+     color:#70644F;
+ }
+ A:link,A:hover,A:visited
+ {
+     text-decoration:none;
+ }
+
+
+#boxLoadMoreRecipe
+ {
+     display:block;
+     margin-top:10px;
+     width:220px;
+     margin-left:auto;
+     margin-right:80px;
+ }
+#pnlPrevPage
+{
+    float:left;
+}
+#pnlNextPage
+{
+    float:right;
+}
+#pnlNoSearchResult
+{
+    display:none;
+}
+ .dd-selected
+ {
+     height:50px;
+     padding:2px !important;
+ }
+ .dd-option
+ {
+    padding:2px !important;
+ }
+ .dd-select
+ {
+     margin-top:5px;
+ }

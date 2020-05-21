@@ -1,0 +1,139 @@
+﻿.pnlIngredientGroupSeparator
+{
+    padding-top:10px;
+    padding-bottom:5px;
+}
+.lblRecipeIngredientQtaTitle
+{
+	font-weight:normal;
+	font-size: 12pt;
+	color:#70644F;
+	font-family:Verdana; 
+}
+.lblRecipeIngredientNote
+{
+	font-weight:normal;
+	font-size: 10pt;
+	color:#70644F;
+	font-family: Verdana; 
+}
+.imgIngredientPhoto
+{
+    float:left;
+    margin-left:5px;
+    margin-top:5px;
+    width:80px;
+    height:80px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#22AA20;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+	-webkit-border-radius:10px; 
+}
+.lblRecipeIngredientLink
+{
+	font-weight: bold;
+	font-size: 14pt;
+	color:#f15723;
+	text-decoration:underline;
+	font-family: Verdana; 
+}
+.lblIngredientGroup
+{
+    font-weight: bold;
+	font-size: 12pt;
+	color:#70644F;
+	font-family: Verdana; 
+}
+.lblRecipeIngredientNote
+{
+	font-weight:normal;
+	font-size: 10pt;
+	color:Black;
+	font-family: Verdana; 
+}
+.lnkIngredient:HOVER
+{
+	font-size: 12pt !important;
+	color:#F15723 !important;
+	font-family: Verdana !important;
+	text-decoration:underline !important;
+}
+.lnkIngredient,.lnkIngredient:LINK,.lnkIngredient:VISITED
+{
+    font-size: 12pt !important;
+	color:#F15723 !important;
+	font-family: Verdana !important;
+	text-decoration:underline !important;
+}
+.lnkGoToIngredient:VISITED
+{
+   font-size: 14pt;
+	color:#b6d532;
+	font-family: Verdana; 
+	padding:10px;
+}
+.lnkGoToIngredient:HOVER
+{
+    font-size: 14pt;
+	color:#b6d532;
+	font-family: Verdana; 
+	padding:10px;
+}
+.lnkGoToIngredient:LINK
+{
+	font-size: 14pt;
+	color:#b6d532;
+	font-family: Verdana; 
+	padding:10px;
+}
+.pnlIngredientBasicInfo
+{
+	 display:block;
+	 padding:5px;
+}
+.pnlInfoHead
+{
+	 display:block;
+	 padding:5px;
+	 height:85px;
+}
+.pnlInfoHeadLeft
+{
+    float:left;
+    height:80px;
+}
+.pnlInfoHeadRight
+{
+    float:left;
+    height:65px;
+    margin-top:15px;
+}
+.lblKcal
+{
+    padding:10px;
+    line-height:40px;
+}
+.pnlAltIngredient
+{
+    padding:5px;
+}
+.pnlIngredientInfoBox
+{
+    padding-bottom:5px;
+}
+.closePopBox:LINK, .closePopBox:VISITED
+{
+    float: right;
+    padding: 1px;
+    margin:2px;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F15723;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+	-webkit-border-radius:2px; 
+}

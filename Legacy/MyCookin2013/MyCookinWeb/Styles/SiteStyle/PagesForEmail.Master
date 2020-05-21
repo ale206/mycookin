@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PagesForEmail.master.cs" Inherits="MyCookinWeb.Styles.SiteStyle.PagesForEmail" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="EmailStyle.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:scriptmanager ID="MainScriptManager" runat="server">
+        <Scripts>
+        </Scripts>
+    </asp:scriptmanager>
+
+    <asp:Panel ID="pnlHeader" runat="server" style="text-align:center;">
+        <asp:HyperLink ID="lnkLogo" runat="server" ImageUrl="" NavigateUrl=""></asp:HyperLink>
+    </asp:Panel>
+
+    <div>
+        <asp:UpdatePanel ID="upnContent" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
+            <ContentTemplate>
+                <asp:ContentPlaceHolder ID="cphMainEmail" runat="server">
+                </asp:ContentPlaceHolder>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+
+    <asp:Panel ID="pnlBottom" ClientIDMode="Static" runat="server">
+        <hr />
+        <asp:Label ID="lblCopyright" runat="server" Text=""
+                style="font-size:0.8em; color:#70644F;"></asp:Label>
+    </asp:Panel>
+
+
+    </form>
+</body>
+</html>
