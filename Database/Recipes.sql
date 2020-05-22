@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `language`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `language` (
-  `Id` bigint NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) NOT NULL,
-  `Code` varchar(50) NOT NULL,
-  `Enabled` tinyint(1) NOT NULL DEFAULT '0',
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `code` varchar(50) NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
