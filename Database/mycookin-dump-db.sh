@@ -9,4 +9,4 @@ DBPASS=YOUR_PASSWORD # do this in a more secure fashion
 DBNAME=Recipes
 GITREPO=PATH_TO_YOUR_REPO
 cd $GITREPO
-mysqldump -h $DBHOST -u $DBUSER -p$DBPASS  $DBNAME > $GITREPO/Recipes.sql # if you don't want to include the data, add -d flag before $DBNAME
+mysqldump -h $DBHOST -u $DBUSER -p$DBPASS  $DBNAME > $GITREPO/recipes.sql # if you don't want to include the data, add -d flag before $DBNAME

@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Language`
+-- Table structure for table `language`
 --
 
-DROP TABLE IF EXISTS `Language`;
+DROP TABLE IF EXISTS `language`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Language` (
+CREATE TABLE `language` (
   `Id` bigint NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) NOT NULL,
   `Code` varchar(50) NOT NULL,
@@ -34,10 +34,9 @@ CREATE TABLE `Language` (
 --
 -- Dumping data for table `Language`
 --
-
-LOCK TABLES `Language` WRITE;
+LOCK TABLES `language` WRITE;
 /*!40000 ALTER TABLE `Language` DISABLE KEYS */;
-INSERT INTO `Language` VALUES (1,'English','En',1),(2,'Italiano','IT',1);
+INSERT INTO `language` VALUES (1,'English','En',1),(2,'Italiano','IT',1);
 /*!40000 ALTER TABLE `Language` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

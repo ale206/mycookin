@@ -31,7 +31,7 @@ namespace MyCookin.Infrastructure.Implementations
         public async Task<IEnumerable<Language>> GetSupportedLanguages()
         {
             Task<IEnumerable<Language>> languages;
-            const string sql = "SELECT * FROM `Recipes`.`Language` WHERE Enabled = 1;";
+            const string sql = "SELECT * FROM `recipes`.`language` WHERE Enabled = 1;";
 
             await using (var connection = _dbConnectionFactory.GetConnection(_connectionString))
             {
