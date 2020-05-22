@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TaechIdeas.Core.DbUsersBoard</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a336af60-7681-434b-b538-88da77d7e4f1}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TaechIdeas.Core.DbUsersBoard</RootNamespace>
+    <AssemblyName>TaechIdeas.Core.DbUsersBoard</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\UserActionsTypes.sql" />
+    <Build Include="dbo\Tables\UserActionsTypesLanguages.sql" />
+    <Build Include="dbo\Tables\UserActionsShared.sql" />
+    <Build Include="dbo\Tables\UsersActions.sql" />
+    <Build Include="dbo\Tables\UsersNotifications.sql" />
+    <Build Include="dbo\Functions\SDF_SplitString.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardFatherOrSons.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardInsertAction.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardBlockElement.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardBlockLoad.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardMyNewsBlockLoad.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NotificationInsert.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NotificationsGet.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NotificationsSetAsViewed.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NotificationsSetAsNotified.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckIfShared.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertActionShared.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetTemplateAccordingToTypeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckIfSharedOnPersonalBoard.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CountLikesOrComment.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CountNumberOfActionsByUserAndType.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteLike.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetActionOwnerByFather.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIdUserFromIdUserAction.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIdUserByActionTypeAndActionFather.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetObjectYouLike.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserActionInfoById.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteUserAction.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersBoardWithPagination.sql" />
+  </ItemGroup>
+</Project>

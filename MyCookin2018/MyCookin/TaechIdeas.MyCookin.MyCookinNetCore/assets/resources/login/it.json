@@ -1,0 +1,17 @@
+﻿{
+  "lblwelcome": "Benvenuto in MyCookin",
+  "lblWelcomeRow1": "Il nuovo Social Network internazionale sulla cucina",
+  "lblWelcomeRow2": "Scopri nuovi piatti da tutto il mondo e divertiti a conoscere nuovi amanti della cucina.",
+  "lblPageTitle": "Accedi o Registrati in MyCookin",
+  "lblEmailPlaceholder": "Email",
+  "lblPasswordPlaceholder": "Password",
+  "lblButtonSignIn": "Registrati",
+  "lblForgotPassword": "Dimenticato la Password?",
+  "lblRegistrationTitle": "Registrati",
+  "lblNamePlaceholder": "Nome",
+  "lblSurnamePlaceholder": "Cognome",
+  "lblUsernamePlaceholder": "Username",
+  "lblConditions": "Accetto le condizioni d'uso",
+  "lblButtonSignUp": "Registrati in MyCookin",
+  "lblLogin": "Accedi"
+}

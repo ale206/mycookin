@@ -1,0 +1,267 @@
+/*YOUR CUSTOM STYLES*/
+
+.top-area,
+.special-area { border-bottom: 2px solid #ed8323; }
+
+.searchbox {
+    width: 100%; /*SearchBox larger*/
+}
+
+.col-md-30 { /*Button Search*/
+    width: 18%;
+}
+
+.col-md-60 { /*For Bulletin Board*/
+    width: 50% !important;
+}
+
+.col-md-topSearchBox {
+    margin-top: 5px;
+    /*For Bulletin Board*/
+    width: 38% !important;
+}
+
+.col-md-TopUser { /*For Bulletin Board*/
+    width: 23% !important;
+}
+
+.messagesAndNotificationIcons {
+    margin-top: 10px;
+    width: 12% !important;
+}
+
+.messagesAndNotificationIcons a { margin: 0 10px; }
+
+.top-user-area .top-user-area-list > li > a { /* Color of the header font*/
+    color: #4D4B4B;
+}
+
+.bg-holder > .bg-blur {
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    /*No blur on background images*/
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    z-index: 0;
+}
+
+.bg-holder > .bg-mask, /*Reduced opacity for background images*/
+.bg-holder > .bg-mask-darken,
+.bg-holder > .bg-mask-lighten,
+.bg-holder > .bg-mask-white,
+.bg-holder > .bg-mask-color,
+.bg-holder > .bg-mask-color-invert {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    background: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.header-top { /*White Header*/
+    background: #FFF;
+}
+
+.main-header-search .form-control { /*Internal Search box color*/
+    background: #FFF;
+    border-color: #F7941E;
+    color: #F7941E;
+}
+
+.main-header-search .input-icon { /*Internal Search zoom icon*/
+    color: #F7941E;
+}
+
+.page-title {
+    color: orange;
+    /*Reduced Size for Page Titles*/
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+footer#main-footer { /*Reduced padding in the footer*/
+    background: #262626;
+    padding: 20px 0 30px 0;
+}
+
+
+.resetTop { /*Fixed for login and registration textboxes*/
+    top: 0 !important;
+}
+
+.text-hero { /*Replaced color for big text*/
+    color: #FFF;
+}
+
+.booking-item-payment { /*Added margin bottom for Suggested Recipes*/
+    margin-bottom: 10px;
+}
+
+.round { /* Fixed for little circle images: more text on its right*/
+    float: left;
+    margin-right: 5px;
+}
+
+.kcalNumber {
+    color: rgb(247, 148, 30);
+    font-size: 30px;
+    position: relative;
+}
+
+.suggestedListImg { width: 35% !important; }
+
+.booking-item-details .booking-item-header { /*Removed line*/
+    border-top: 0;
+}
+
+.booking-item-raiting-list-title { width: 26% !important; }
+
+/*Fixed for alignment checkboxes when return to new line*/
+
+.checkbox-small.checkbox-inline + .checkbox-small.checkbox-inline, .radio-small.radio-inline + .radio-small.radio-inline {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.socialLinkUserProfile {
+    margin-bottom: 0;
+    padding: 10px 30px;
+}
+
+.keyWords { border-bottom: 1px solid #ccc; }
+
+.date-pick { }
+
+/*Facebook Icon in Home Page for Registration or Login*/
+
+.imgFbLoginRegistration {
+    height: 16px;
+    margin-bottom: 2px;
+    width: 16px;
+}
+
+/* Normalize uppercase titles*/
+
+.normalised-text {
+    display: block;
+    text-transform: lowercase;
+}
+
+.normalised-text:first-letter { text-transform: uppercase }
+
+/*****************************/
+
+/* Fix Login Page Date picker*/
+
+.input-group-addon {
+    border: 0px solid #ccc;
+    padding: 0px 0px;
+}
+
+.datepicker.dropdown-menu { margin-top: 36px; }
+
+/*****************************/
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/fonts/glyphicons-halflings-regular.eot');
+    src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+/* FOR LOADING ICON */
+
+#loading-gif {
+    background-color: white !important;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    opacity: .6;
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    z-index: 5000;
+}
+
+#loading-gif img {
+    /*margin-left: -32px;*//* -1 * image width / 2 */
+    /*margin-top: -32px;*//* -1 * image height / 2 */
+    display: block;
+    height: 130px;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    width: 180px;
+}
+
+.loading-gif {
+    height: 130px;
+    margin: 0 auto;
+    width: 180px;
+}
+
+/*Override Noty background for modal. Mantain as #loading-gif */
+
+.noty_modal {
+    background-color: white !important;
+    opacity: .6 !important;
+}
+
+/*Fix for title in Login/Registration page*/
+
+.sectionTitle { color: white; }
+
+/*Fix for text in Login/Registration page*/
+
+.sectionText { color: white; }
+
+/*Fix for calendar textbox size*/
+
+.calendarParagraph { width: 100%; }
+
+.searchEngine {
+    background-color: white;
+    padding: 15px;
+}
+
+#user-image-and-text {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 120px;
+}
+
+#user-image-and-text img {
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+}
+
+#user-image-and-text .caption {
+    display: block;
+    text-align: center;
+}
+
+/*For Recipe Name box size in Search Result*/
+
+h5.thumb-title { height: 33px; }
+
+/*Default image before to load the slideshow in home page*/
+
+.defaultImage {
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Text above the Search Engine*/
+
+.search-tabs-bg h1 { color: #F7941E; }
+
+.form-group.form-group-lg.form-group-icon-left .form-control {
+    float: left;
+    margin-right: 5px;
+    width: 85%;
+}
+
+.search-tabs-abs { width: 57%; }

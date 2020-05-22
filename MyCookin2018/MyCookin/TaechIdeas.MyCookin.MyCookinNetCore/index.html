@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html ng-app="mycookin_main">
+<head>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCookin</title>
+
+    <!--To remove Angular # -->
+    <base href="/">
+
+    <!--Google Adsense-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    <!-- GOOGLE FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" rel="stylesheet" type="text/css">
+    <!-- /GOOGLE FONTS -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/icomoon.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/>
+
+    <!--Owl-->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.transitions.css"/>
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/mystyles.css"/>
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="MyCookin">
+    <meta name="application-name" content="MyCookin">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body ng-controller="mainController as main">
+
+
+<!--Loader-->
+<div id="loading-gif" ng-show="loading">
+    <img src="/assets/img/loading.gif" alt="loading-gif"/>
+</div>
+
+<div class="global-wrap">
+    <header id="main-header">
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="logo" ng-href="/">
+                            <img src="assets/img/MyCookin-Logo.png" alt="MyCookin" title="MyCookin"/>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-md-offset-2">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-user-area clearfix">
+
+                            <ul class="top-user-area-list list list-horizontal list-border">
+
+                                <!--THIS IF NOT LOGGED-->
+                                <li ng-show="!isLogged">
+                                    <facebook-button></facebook-button>
+                                </li>
+                                <li ng-show="!isLogged">
+                                    <a ng-href="/login">{{labels.lblLogIn}}</a>
+
+                                </li>
+                                <li ng-show="!isLogged">
+                                    <a ng-href="/login">{{labels.lblSignUp}}</a>
+                                </li>
+
+                                <li ng-show="isLogged">
+                                    <a href="/logout">Log out</a>
+                                </li>
+
+                                <li class="top-user-area-lang nav-drop">
+                                    <a href="#">
+                                        <img ng-src="{{flags[0].src}}" alt="{{flags[0].alt}}" title="{{flags[0].title}}"/>{{flags[0].content}}<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                    </a>
+                                    <ul class="list nav-drop-menu">
+                                        <li>
+                                            <a title="{{flags[1].title}}" href="#" ng-click="changeLang(flags[1].id)">
+                                                <img ng-src="{{flags[1].src}}" alt="{{flags[1].alt}}" title="{{flags[1].title}}"/><span class="right">{{flags[1].content}}</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="{{flags[2].title}}" href="#" ng-click="changeLang(flags[2].id)">
+                                                <img ng-src="{{flags[2].src}}" alt="{{flags[2].alt}}" title="{{flags[2].title}}"/><span class="right">{{flags[2].content}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!--<ul class="top-user-area-list list list-horizontal list-border" ng-show="isLogged">-->
+
+
+                            <!--THIS IF LOGGED-->
+                            <!--<li class="top-user-area-avatar">
+                                <a href="">
+                                    <img class="origin round" src="~/Content/images/40x40.png" alt="Image Alternative text" title="AMaze"/>Hi, John
+                                </a>
+                            </li>-->
+                            <!--THIS IF LOGGED-->
+
+                            <!--</ul>-->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+        </div>
+    </header>
+
+
+    <div ng-view autoscroll="true">
+
+    </div>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row row-wrap">
+                <div class="col-md-3">
+                    <h4>MyCookin</h4>
+                    <p class="mb20">
+                        <!--24a Mornington Avenue <br/> W14 8UJ <br/> London-->
+                    </p>
+                    <ul class="list list-horizontal list-space">
+                        <li>
+                            <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top"
+                               href="https://www.facebook.com/mycookin" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top"
+                               href="https://www.twitter.com/mycookin" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top"
+                               href="https://plus.google.com/+MycookinPlus/posts" target="_blank">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-linkedin box-icon-normal round animate-icon-bottom-to-top"
+                               href="https://www.linkedin.com/company/3104240" target="_blank">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <!-- <h4>Newsletter</h4>
+                    <form>
+                    <label>Enter your E-mail Address</label>
+                    <input type="text" class="form-control">
+                    <p class="mt5">
+                    <!--@*<small>*We Never Send Spam</small>*
+                    </p>
+                    <input type="submit" class="btn btn-primary" value="Subscribe">
+                    </form>-->
+                </div>
+                <div class="col-md-2">
+                    <ul class="list list-footer">
+                        <!--<li>
+                            <a href="/about">About Us</a>
+                        </li>-->
+                        <li>
+                            <!--<a href="http://blog.mycookin.it/" target="_blank">Blog (IT)</a>-->
+                        </li>
+                        <li>
+                            <!--<a id="hlPrivacyIubenda" class="iubenda-nostyle no-brand iubenda-embed" href="https://www.iubenda.com/privacy-policy/264657">Privacy</a>-->
+                        </li>
+                        <li>
+                            <a ng-href="/termsAndConditions">{{labels.lblTermsAndConditions}}</a>
+                        </li>
+                        <li>&copy; {{ main.currentYear}}</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <!--<h4>Questions?</h4>
+                    <h4>
+                        <a ng-href="/contact" class="text-color">Contact Us</a>
+                    </h4>-->
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!--Angular-->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-cookies.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/angular-resource.min.js"></script>
+
+<!--Jquery-->
+<script src="scripts/jquery-1.11.3.min.js"></script>
+
+<!--Owl Carousel-->
+<script src="assets/js/owl.carousel.min.js"></script>
+
+<!--Bootstrap-->
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/ui-bootstrap-tpls-1.1.2.min.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/bootstrap-timepicker.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/js/bootstrap-transition.js"></script>
+<script src="assets/js/bootstrap-tab.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+<!--Noty-->
+<script src="assets/js/angular-noty.js"></script>
+<script src="assets/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+
+<!--Facebook-->
+<script src="assets/js/angular-facebook.js"></script>
+
+<!--Config-->
+<script src="app/shared/config.js"></script>
+
+<!--Gulp Bundles-->
+<script src="scripts/bundle.js"></script>
+<script src="scripts/angular_bundle.js"></script>
+
+
+<script type="text/javascript">
+    (function(w, d) {
+        const loader = function() {
+            const s = d.createElement("script");
+            const tag = d.getElementsByTagName("script")[0];
+            s.src = "https://cdn.iubenda.com/iubenda.js";
+            tag.parentNode.insertBefore(s, tag);
+        };
+        if (w.addEventListener) {
+            w.addEventListener("load", loader, false);
+        } else if (w.attachEvent) {
+            w.attachEvent("onload", loader);
+        } else {
+            w.onload = loader;
+        }
+    })(window, document);
+</script>
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] ||
+            function() {
+                (i[r].q = i[r].q || []).push(arguments);
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-39281629-1', 'mycookin.com');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

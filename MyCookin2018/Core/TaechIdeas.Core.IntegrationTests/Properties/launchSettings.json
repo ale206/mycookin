@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TaechIdeas.Core.IntegrationTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Localhost"
+      }
+    }
+  }
+}

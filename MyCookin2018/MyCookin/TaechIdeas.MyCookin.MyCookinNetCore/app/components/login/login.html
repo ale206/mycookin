@@ -1,0 +1,90 @@
+﻿<div class="top-area show-onload">
+    <div class="bg-holder full">
+
+        <div class="bg-mask"></div>
+        <div class="bg-img" style="background-image: url(/assets/img/aglio-video.png);"></div>
+        <video class="bg-video hidden-sm hidden-xs" preload="auto" autoplay="true" loop="loop" muted="muted"
+               poster="/assets/img/aglio.png">
+            <source src="/assets/media/aglio.webm" type="video/webm"/>
+            <source src="/assets/media/aglio.mp4" type="video/mp4"/>
+        </video>
+
+
+        <div class="bg-content">
+            <div class="container">
+                <h1 class="page-title">{{labels.lblPageTitle}}</h1>
+
+            </div>
+            <div class="gap gap-small"></div>
+            <div class="container">
+                <div class="row" data-gutter="60">
+                    <div class="col-md-4">
+                        <h3 class="sectionTitle">{{labels.lblWelcome}}</h3>
+                        <p class="sectionText">{{labels.lblWelcomeRow1}}</p>
+                        <p class="sectionText">{{labels.lblWelcomeRow2}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="sectionTitle">{{labels.lblLogin}}</h3>
+
+                        <form name="loginForm" ng-submit="submitLogin()">
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-user input-icon input-icon-show resetTop"></i>
+                                <input name="email" type="email" class="form-control" placeholder="{{labels.lblEmailPlaceholder}}" ng-model="login.email" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-lock input-icon input-icon-show resetTop"></i>
+                                <input name="password" type="password" class="form-control" placeholder="{{labels.lblPasswordPlaceholder}}" ng-model="login.password" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <input class="btn btn-primary" type="submit" value="{{labels.lblButtonSignIn}}"/>
+
+                                <a href="/password/forgot">{{labels.lblForgotPassword}}</a>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="sectionTitle">{{labels.lblRegistrationTitle}}</h3>
+                        <form name="registrationForm" ng-submit="submitRegistration()">
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-user input-icon input-icon-show resetTop"></i>
+                                <input name="name" class="form-control" placeholder="{{labels.lblNamePlaceholder}}" ng-model="registration.name" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-user input-icon input-icon-show resetTop"></i>
+                                <input name="surname" class="form-control" placeholder="{{labels.lblSurnamePlaceholder}}" ng-model="registration.surname" required/>
+                            </div>
+                            <div class="form-group date form-group-icon-left">
+                                <div class="input-group-addon">
+                                    <span class="fa fa-calendar input-icon input-icon-show resetTop"></span>
+                                </div>
+                                <calendar-dob></calendar-dob>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-user input-icon input-icon-show resetTop"></i>
+                                <input name="username" class="form-control" placeholder="{{labels.lblUsernamePlaceholder}}" ng-model="registration.username" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-envelope input-icon input-icon-show resetTop"></i>
+                                <input name="email" type="email" class="form-control" placeholder="{{labels.lblEmailPlaceholder}}" ng-model="registration.email" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+                                <i class="fa fa-lock input-icon input-icon-show resetTop"></i>
+                                <input name="password" type="password" class="form-control" placeholder="{{labels.lblPasswordPlaceholder}}" ng-model="registration.password" required/>
+                            </div>
+                            <div class="form-group form-group-icon-left">
+
+                                <label class="sectionText">
+                                    <input class="i-check" name="contractSigned" type="checkbox" ng-model="registration.contractSigned" required/>
+                                    {{labels.lblConditions}}
+                                </label>
+                            </div>
+                            <input class="btn btn-primary" type="submit" value="{{labels.lblButtonSignUp}}"/>
+                        </form>
+                    </div>
+                    <div class="gap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

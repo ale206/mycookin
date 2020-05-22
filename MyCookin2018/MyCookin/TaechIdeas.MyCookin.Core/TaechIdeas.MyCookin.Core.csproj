@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\TaechIdeas.MyCookin.Core.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.S3" Version="0.12.4" />
+    <PackageReference Include="AWSSDK.Core" Version="3.3.29.13" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.31" />
+    <PackageReference Include="Google.Gdata.Client.Core" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations" Version="2.2.0" />
+    <PackageReference Include="ServiceStack" Version="5.4.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="TaechIdeas.Core.Core">
+      <HintPath>C:\Users\Alessio\.nuget\packages\taechideas.core.core\1.0.0\lib\netstandard2.0\TaechIdeas.Core.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TaechIdeas.Core.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Core\TaechIdeas.Core.Core\bin\Debug\netstandard2.0\TaechIdeas.Core.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

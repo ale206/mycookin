@@ -1,0 +1,206 @@
+﻿<!--@model MyCookin.Web.Models.Home.HomePageModel
+
+@{
+    ViewBag.Title = "Home Page";
+}-->
+<!-- TOP AREA -->
+<div class="top-area show-onload">
+    <div class="bg-holder full">
+        <div class="bg-front bg-front-mob-rel">
+            <div class="container">
+                <div class="search-tabs search-tabs-bg search-tabs-abs mt50">
+                    <h1>{{ mainTitle}}</h1>
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab-1">
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Vegan
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Vegetarian
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Gluten Free
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Light
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Quick
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input class="i-check" type="checkbox" />Empty Fridge
+                                    </label>
+                                </div>
+                                <form>
+                                    <div class="input-daterange" data-date-format="M d, D">
+                                        <div class="row">
+                                            <div class="col-md-6 searchbox">
+                                                <div class="form-group form-group-lg form-group-icon-left">
+                                                    <i class="fa fa-map-marker input-icon"></i>
+                                                    <label>&nbsp;</label>
+                                                    <input class="typeahead form-control" placeholder="What are you looking for?" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-md-30">
+                                                <div class="form-group form-group-lg form-group-icon-left">
+                                                    <label>&nbsp;</label>
+                                                    <button class="btn btn-primary btn-lg" type="submit">Search</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--@*<div class="gap"></div>
+                        <h3 style="color:#fff">Insert your recipes, share them and enjoy meeting food-lovers from all over the world</h3>*@-->
+
+                </div>
+
+            </div>
+        </div>
+        <div class="owl-carousel owl-slider owl-carousel-area visible-lg" id="owl-carousel-slider">
+
+            <!--@*Slideshow*@
+            @if (Model.TopRecipes != null)
+            {
+                foreach (var topRecipe in Model.TopRecipes)
+                {
+                    @Html.Partial("_TopRecipeCard", topRecipe)
+                }
+            }-->
+
+        </div>
+        <div class="bg-img hidden-lg" style="background-image: url(/Content/images/2048x1365_tortilla.jpg);"></div>
+        <div class="bg-mask hidden-lg"></div>
+    </div>
+</div>
+<!-- END TOP AREA -->
+<div class="gap-small gap"></div>
+
+
+<div class="container keyWords">
+    <div class="text-center row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row row-wrap" data-gutter="60">
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-cutlery box-icon-info box-icon-center  box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">Real Recipes</a>
+                            </h5>
+                            <p class="thumb-desc">All the recipes are inserted by food lovers like you. No editorial staff.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-users box-icon-to-normal box-icon-center box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">Social</a>
+                            </h5>
+                            <p class="thumb-desc">Share your recipes and vote the other ones. Follow new cooks and meet new people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-globe box-icon-info box-icon-center box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">International</a>
+                            </h5>
+                            <p class="thumb-desc">Discover new plates and flavours made by people from all around the world</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h1 class="text-center mb20">Last Recipes</h1>
+    <div class="row row-wrap">
+
+        <!--LAST RECIPES-->
+        <div ng-repeat="last in lastRecipes">
+
+            <div class="col-md-4">
+                <div class="thumb">
+                    <header class="thumb-header">
+                        <!--@Url.Action(" Detail", "Recipe" )-->
+                        <a class="hover-img" href="">
+                            <img ng-src="{{last.ImageUrl}}" alt="{{last.RecipeName}}" title="{{last.RecipeName}}"/>
+                        </a>
+                    </header>
+                    <div class="thumb-caption">
+                        <ul class="icon-group text-tiny text-color">
+
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                        </ul>
+                        <h5 class="thumb-title">
+                            <!--@Url.Action(" Detail", "Recipe" )-->
+                            <a class="text-darken" href="">
+                                <span class="normalised-text">{{last.RecipeName}}</span>
+                            </a>
+                        </h5>
+                        <p class="mb0">
+                            <!--@Model.Difficulty-->
+                            <small><i class="fa fa-map-marker"></i> </small>
+                        </p>
+                        <p class="mb0 text-darken">
+                            <!--@Model.Kcal-->
+                            <span class="text-lg lh1em text-color"></span> Kcal
+                        </p>
+                        <p class="mb0 text-darken">
+                            <!--@Model.PreparationTime-->
+                            <span class="text-lg lh1em text-color"></span> min
+                        </p>
+                        <p class="mb0 text-darken">
+                            <!--@Model.PropertiesJoined-->
+                        </p>
+                        <p class="mb0 text-darken">
+                            <!--@Url.Action(" ShowProfile", "User" )-->
+                            <!--@Model.RecipeOwnerName-->
+                            <a href=""></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap gap-small"></div>
+</div>
+
+<script>
+</script>

@@ -1,0 +1,2 @@
+﻿CREATE USER [MYCOOKIN01\sa.iisuser];
+

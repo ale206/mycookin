@@ -1,0 +1,33 @@
+﻿{
+  "mainTitle": "Di cosa hai voglia oggi?",
+  "lblCookItNow": "Guarda la ricetta",
+
+  "chkVegan": "Vegana",
+  "chkVegetarian": "Vegetariana",
+  "chkGluten": "Senza Glutine",
+  "chkLight": "Leggera",
+  "chkQuick": "Veloce",
+  "chkEmptyFridge": "Svuota Frigo",
+
+  "btnSearch": "Cerca",
+
+  "txtSearch": "Prova il nuovo modo di cercare ricette come: Vorrei qualcosa di dolce.",
+
+  "lblRealRecipes": "Vere Ricette",
+  "lblRealRecipesDescription":
+    "Tutte le ricette sono inserite da amanti della cucina proprio come te. Nessuna redazione!",
+
+  "lblSocial": "Social",
+  "lblSocialDescription":
+    "Condividi le tue ricette e vota quelle dei tuoi amici. Segui altri cuochi e fai nuove amicizie.",
+
+  "lblInternational": "Internazionale",
+  "lblInternationalDescription": "Scopri nuovi piatti e sapori inseriti da persone di tutte le parti del mondo",
+
+
+  "lblTopRec": "Le Migliori Ricette",
+
+  "recipe": "it/ricetta",
+
+  "noResults": "Nessun risultato per questa ricetta. Presto potrai inserirla tu!"
+}

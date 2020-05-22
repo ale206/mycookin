@@ -1,0 +1,29 @@
+﻿{
+  "mainTitle": "Fancy something delicious?",
+  "lblCookItNow": "Cook it now",
+
+  "chkVegan": "Vegan",
+  "chkVegetarian": "Vegetarian",
+  "chkGluten": "Gluten Free",
+  "chkLight": "Light",
+  "chkQuick": "Quick",
+  "chkEmptyFridge": "Empty Fridge",
+
+  "btnSearch": "Search",
+
+  "txtSearch": "Try the new way to find recipes such us: I want something sweet.",
+
+  "lblRealRecipes": "Real Recipes",
+  "lblRealRecipesDescription": "All the recipes are inserted by food lovers like you. No editorial staff.",
+
+  "lblSocial": "Social",
+  "lblSocialDescription": "Share your recipes and vote the other ones. Follow new cooks and meet new people.",
+
+  "lblInternational": "International",
+  "lblInternationalDescription": "Discover new plates and flavours made by people from all around the world",
+
+  "lblTopRec": "Top Recipes",
+  "recipe": "en/recipe",
+
+  "noResults": "No results for this search. You will be able to add it soon."
+}

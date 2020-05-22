@@ -1,0 +1,17 @@
+﻿{
+  "lblwelcome": "Welcome to MyCookin",
+  "lblWelcomeRow1": "The new international Social Network about food and recipes",
+  "lblWelcomeRow2": "Discover dishes from all over the world and enjoy meeting new friends",
+  "lblPageTitle": "Login/Register on MyCookin",
+  "lblEmailPlaceholder": "Email",
+  "lblPasswordPlaceholder": "Password",
+  "lblButtonSignIn": "Sign In",
+  "lblForgotPassword": "Forgot the Password?",
+  "lblRegistrationTitle": "New To MyCookin?",
+  "lblNamePlaceholder": "Name",
+  "lblSurnamePlaceholder": "Surname",
+  "lblUsernamePlaceholder": "Username",
+  "lblConditions": "Conditions Agreement",
+  "lblButtonSignUp": "Sign up for MyCookin",
+  "lblLogin": "Login"
+}

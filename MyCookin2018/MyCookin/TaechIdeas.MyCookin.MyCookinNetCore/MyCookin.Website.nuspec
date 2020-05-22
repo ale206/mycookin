@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MyCookinPackage</id>
+    <title>MyCookin</title>
+    <version>1.0</version>
+    <authors>Alessio Di Salvo</authors>
+    <owners>Alessio Di Salvo</owners>
+    <licenseUrl>http://www.mycookin.com</licenseUrl>
+    <projectUrl>http://www.mycookin.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MyCookin</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <!--<files>
+    <file src="..\MyCookin.Website\node_modules\**\*.*" target="MyCookin.Website" exclude="..\MyCookin.Website\node_modules\*" />
+  </files>-->
+</package>

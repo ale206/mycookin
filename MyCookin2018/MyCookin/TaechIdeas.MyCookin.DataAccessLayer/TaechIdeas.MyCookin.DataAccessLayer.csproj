@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaechIdeas.MyCookin.Core\TaechIdeas.MyCookin.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TaechIdeas.Core.Core">
+      <HintPath>C:\Users\Alessio\.nuget\packages\taechideas.core.core\1.0.0\lib\netstandard2.0\TaechIdeas.Core.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TaechIdeas.Core.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Core\TaechIdeas.Core.Core\bin\Debug\netstandard2.0\TaechIdeas.Core.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

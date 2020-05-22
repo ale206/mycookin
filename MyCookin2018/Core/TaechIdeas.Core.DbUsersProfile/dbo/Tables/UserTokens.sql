@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[UserTokens]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [UserToken] UNIQUEIDENTIFIER NOT NULL, 
+    [UserId] UNIQUEIDENTIFIER NOT NULL, 
+    [CreatedAt] DATETIME NOT NULL, 
+    [ExpireAt] DATETIME NOT NULL, 
+    [WebsiteId] INT NULL
+)

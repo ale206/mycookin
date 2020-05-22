@@ -1,0 +1,400 @@
+﻿<div class="container">
+
+<div class="booking-item-details">
+<header class="booking-item-header">
+    <div class="row">
+        <div class="col-md-9">
+
+            <h2 class="lh1em">
+                {{recipe.RecipeName}}
+            </h2>
+            <p class="lh1em text-small">
+                <!--<i class="fa fa-info"></i>-->
+                {{recipe.RecipeSuggestion}}
+            </p>
+
+        </div>
+        <div class="col-md-3">
+
+            <p class="booking-item-header-price">
+                <span class="text-lg">{{recipe.RecipePortionKcal | number : 2 }}</span> kcal
+            </p>
+            <!--@*<p class="booking-item-header-price">
+                <a href="#"><i class="fa fa-heart fa"></i> Aggiungila al tuo ricettario</a>
+            </p>*@-->
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <div class="tabbable booking-details-tabbable">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab-1">
+                    <div class="hover-img" data-allowfullscreen="true" data-nav="thumbs">
+                        <img ng-src="{{recipe.ImageUrl}}" alt="{{recipe.RecipeName}}" title="{{recipe.RecipeName}}"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+
+        <div class="col-md-8">
+            <div class="booking-item-meta">
+                <div class="booking-item-rating">
+                    <ul class="icon-list icon-group booking-item-rating-stars">
+                        <li ng-repeat="i in getAvgRating(recipe.RecipeAvgRating)  track by $index">
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li ng-repeat="n in getAvgRating(5 - recipe.RecipeAvgRating) track by $index">
+                            <i class="fa fa-star-o"></i>
+                        </li>
+                    </ul><span class="booking-item-rating-number"><b>{{recipe.RecipeAvgRating}}</b> / 5 <small class="text-smaller"></small></span>
+                    <p>
+                        <!--<a class="text-default" href="#">based on {{recipe.RecipeRated}} reviews</a>-->
+                    </p>
+
+                </div>
+
+                <h4 class="lh1em">
+                    <!--<span ng-show="recipe.IsVegetarian">{{labels.lblVegetarian}}</span>
+                    <span ng-show="recipe.IsVegan">{{labels.lblVegan}}</span>
+                    <span ng-show="recipe.IsGlutenFree">{{labels.lblGlutenFree}}</span>
+                    <span ng-show="recipe.IsHotSpicy">{{labels.lblHotSpicy}}</span>-->
+                    {{recipe.PropertiesJoined}}
+                </h4>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div id="user-image-and-text">
+                <!--<a href="/{{recipe.RecipeOwner.Username}}">-->
+                <a href="#">
+                    <img alt="{{recipe.RecipeOwner.Name | uppercase}} {{recipe.RecipeOwner.Surname| uppercase}}" class="origin round" ng-src="{{recipe.RecipeOwner.ImageUrl}}"/>
+                    <!--<span class="caption">{{recipe.RecipeOwner.Name | uppercase}} {{recipe.RecipeOwner.Surname| uppercase}}</span>-->
+                </a>
+                <!--<br/><small class="booking-item-last-booked">{{recipe.RecipeConsulted}} Recipes</small>-->
+            </div>
+
+            <!--<a href="#">
+                <i class="fa fa-plus fa-3x box-icon-big box-icon-border-dashed round" rel="tooltip" title="Salva nel tuo ricettario"></i>
+            </a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">
+                <i class="fa fa-cutlery fa-3x box-icon-big box-icon-border-dashed round" rel="tooltip" title="Dì che lo stai cucinando"></i>
+            </a>-->
+
+            <div class="gap gap-small"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="lh1em">{{labels.lblNutrition}}</h4>
+                <ul class="list booking-item-raiting-list">
+                    <li>
+                        <div class="booking-item-raiting-list-title">{{labels.lblProtein}}</div>
+                        <div class="booking-item-raiting-list-bar">
+                            <div ng-style="sizeBarProtein"></div>
+                        </div>
+                        <div class="booking-item-raiting-list-number">{{recipe.RecipePortionProteins | number : 2 }} g</div>
+                    </li>
+                    <li>
+                        <div class="booking-item-raiting-list-title">{{labels.lblFat}}</div>
+                        <div class="booking-item-raiting-list-bar">
+                            <div ng-style="sizeBarFats"></div>
+                        </div>
+                        <div class="booking-item-raiting-list-number">{{recipe.RecipePortionFats | number : 2 }} g</div>
+                    </li>
+                    <li>
+                        <div class="booking-item-raiting-list-title">{{labels.lblCarbohydrates}}</div>
+                        <div class="booking-item-raiting-list-bar">
+                            <div ng-style="sizeBarCarbohydrates"></div>
+                        </div>
+                        <div class="booking-item-raiting-list-number">{{recipe.RecipePortionCarbohydrates | number : 2 }} g</div>
+                    </li>
+                    <li>
+                        <div class="booking-item-raiting-list-title">{{labels.lblAlcohol}}</div>
+                        <div class="booking-item-raiting-list-bar">
+                            <div ng-style="sizeBarAlcohol"></div>
+                        </div>
+                        <div class="booking-item-raiting-list-number">{{recipe.RecipePortionAlcohol | number : 2 }} g</div>
+                    </li>
+
+                    <li ng-repeat="group in recipe.Properties.PropertiesByRecipeAndLanguageGroups">
+                        <b>{{group.RecipePropertyType}} </b><br/>
+                        <span ng-repeat="property in group.RecipeProperties">| {{property}} |</span>
+                    </li>
+
+                </ul>
+
+                <!--<div ng-hide="recipe.RecipeSuggestion == null">
+                    <h4 class="lh1em"><i class="fa fa-glass fa"></i> Bevande Consigliate</h4>
+                    <ul class="list booking-item-raiting-list">
+                        <li>
+                            {{recipe.RecipeSuggestion}}
+                        </li>
+                    </ul>
+                </div>-->
+
+            </div>
+            <div class="col-md-4">
+                <h4 class="lh1em">Info</h4>
+                <ul class="list booking-item-raiting-list">
+                    <li>
+                        <i class="fa fa-check-square-o"></i> {{labels.lblRecipeDifficulty}} {{recipe.RecipeDifficulty}}/3
+                    </li>
+                    <li>
+                        <i class="fa fa-users"></i> {{recipe.NumberOfPeople}} {{labels.lblNumberOfPeople}}
+                    </li>
+                    <li>
+                        <i class="fa fa-check"></i> {{labels.lblPreparationTime}} {{recipe.PreparationTimeMinutes}} min
+                    </li>
+                    <li>
+                        <i class="fa fa-clock-o"></i> {{labels.lblCookingTime}} {{recipe.CookingTimeMinutes}} min
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gap gap-small"></div>
+
+<!--@*<div class="col-md-8"><h3>Steps</h3></div>
+<div class="col-md-4"><h3>Ingredients</h3></div>*@-->
+
+<div class="row">
+<div class="col-md-8">
+    <h3>Steps</h3>
+    <ul class="booking-list">
+        <li ng-repeat="step in recipe.Steps | orderBy: 'StepNumber'">
+            <a class="booking-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img ng-src="{{step.ImageUrl}}" alt="{{step.StepNumber}}" title="{{step.StepNumber}}"/>
+                    </div>
+                    <div class="col-md-9">
+                        <h5 class="booking-item-title">{{step.StepNumber}}</h5>
+                        <p class="text-small">{{step.RecipeStep}}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="gap gap-small"></div>
+
+    <h3 ng-show="recipe.RecipeNote.length">Note</h3>
+    <p>{{recipe.RecipeNote}}</p>
+
+
+    <google-adsense-banner></google-adsense-banner>
+
+
+    <!--
+    <div class="gap gap-small"></div>
+
+    <h3>Comments</h3>
+    <ul class="booking-item-reviews list">
+        <li>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="booking-item-review-person">
+                        <a class="booking-item-review-person-avatar round" href="#">
+                            <img src="/Content/images/70x70.png" alt="Image Alternative text" title="Afro" />
+                        </a>
+                        <p class="booking-item-review-person-name">
+                            <a href="#">Alessio Di Salvo</a>
+                        </p>
+                        <small>
+                            <a href="#">92 Reripes</a>
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="booking-item-review-content">
+                        <p>
+                            Suspendisse velit venenatis facilisi velit quis volutpat enim ipsum mauris mus tortor leo augue non sociosqu ridiculus sagittis odio curabitur nostra maecenas nisi lectus platea mauris venenatis sed dui primis porttitor sit turpis litora<span class="booking-item-review-more"> Eu nisl volutpat nam per primis dictum hendrerit gravida facilisis porta pretium erat turpis erat vivamus torquent ornare bibendum vitae dui congue torquent aptent placerat in tortor arcu eu blandit sit fusce lorem eu tortor proin egestas neque senectus netus ac augue senectus pulvinar rutrum habitasse nostra montes aenean mauris lacinia sociosqu posuere curabitur vestibulum venenatis euismod habitasse litora rhoncus purus pretium nullam nibh montes gravida pharetra eu parturient semper</span>
+                        </p>
+                        <div class="booking-item-review-more-content">
+                            <p>Fringilla dictum montes eget senectus cras dictum dictum sollicitudin maecenas</p>
+                            <p>Aliquam quisque orci auctor auctor natoque ultrices elit quisque porta tortor sollicitudin bibendum proin facilisi duis magna risus fringilla donec velit justo pretium curabitur velit quis platea tristique libero iaculis velit scelerisque ullamcorper id proin placerat faucibus hac purus tristique consectetur interdum donec fames euismod consequat sodales egestas faucibus</p>
+                        </div>
+                        <div class="booking-item-review-expand">
+                            <span class="booking-item-review-expand-more">More <i class="fa fa-angle-down"></i></span><span class="booking-item-review-expand-less">Less <i class="fa fa-angle-up"></i></span>
+                        </div>
+                        <p class="booking-item-review-rate">
+                            Was this review helpful?
+                            <a class="fa fa-thumbs-o-up box-icon-inline round" href="#"></a><b class="text-color"> 7</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+    <div class="row wrap">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-7">
+            <ul class="pagination">
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li class="dots">...</li>
+                <li>
+                    <a href="#">43</a>
+                </li>
+                <li class="next">
+                    <a href="#">Next Page</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="gap gap-small"></div>
+    <div class="box bg-gray">
+        <h3>Write a Review</h3>
+        <form>
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="form-group">
+                        <label>Review Text</label>
+                        <textarea class="form-control" rows="6"></textarea>
+
+
+                    </div>
+                    <div class="gap gap-small"></div>
+                    <input class="btn btn-primary" type="submit" value="Leave a Review" />
+                </div>
+            </div>
+        </form>
+    </div> -->
+</div>
+
+<div class="col-md-4">
+    <h3>{{labels.lblIngredients}}</h3>
+    <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+        <li ng-repeat="ingredient in recipe.IngredientsForRecipes">
+            <span ng-show="ingredient.Quantity > 0">
+                <b>{{ingredient.Quantity}}</b>
+            </span> <a href=""> {{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+        </li>
+    </ul>
+
+    <div ng-hide="recipe.IngredientsForSauce.length == 0">
+        <h4>{{labels.lblIngredientsForSauce}}</h4>
+        <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+            <li ng-repeat="ingredient in recipe.IngredientsForSauce">
+                <span ng-show="ingredient.Quantity > 0">
+                    <b>{{ingredient.Quantity}}</b>
+                </span> <a href="">{{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-hide="recipe.IngredientsForDecoration.length == 0">
+        <h4>{{labels.lblIngredientsForDecoration}}</h4>
+        <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+            <li ng-repeat="ingredient in recipe.IngredientsForDecoration">
+                <span ng-show="ingredient.Quantity > 0">
+                    <b>{{ingredient.Quantity}}</b>
+                </span> <a href="">{{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-hide="recipe.IngredientsForDough.length == 0">
+        <h4>{{labels.lblIngredientsForDough}}</h4>
+        <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+            <li ng-repeat="ingredient in recipe.IngredientsForDough">
+                <span ng-show="ingredient.Quantity > 0">
+                    <b>{{ingredient.Quantity}}</b>
+                </span> <a href="">{{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-hide="recipe.IngredientsForDressing.length == 0">
+        <h4>{{labels.lblIngredientsForDressing}}</h4>
+        <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+            <li ng-repeat="ingredient in recipe.IngredientsForDressing">
+                <span ng-show="ingredient.Quantity > 0">
+                    <b>{{ingredient.Quantity}}</b>
+                </span> <a href="">{{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-hide="recipe.IngredientsForFilling.length == 0">
+        <h4>{{labels.lblIngredientsForFilling}}</h4>
+        <ul class="booking-item-features booking-item-features-expand mb30 clearfix">
+            <li ng-repeat="ingredient in recipe.IngredientsForFilling">
+                <span ng-show="ingredient.Quantity > 0">
+                    <b>{{ingredient.Quantity}}</b>
+                </span> <a href="">{{ingredient.QuantityType}} {{ingredient.IngredientName}}</a> <small class="text-smaller"></small>
+            </li>
+        </ul>
+    </div>
+
+    <div class="gap gap-small"></div>
+
+    <!--<h3>Similar Recipes</h3>
+    <ul class="booking-list">
+        <li>
+            <div class="booking-item booking-item-small">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="/Content/images/800x600.png" alt="Risotto ai Porcini" title="Risotto ai Porcini"/>
+                    </div>
+                    <div class="col-xs-5">
+                        <h5 class="booking-item-title">Risotto ai Porcini</h5>
+                        <ul class="icon-group booking-item-rating-stars">
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="booking-item-price-from">kcal</span><span class="booking-item-price">122</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>-->
+
+    <!--<google-adsense-banner></google-adsense-banner>-->
+
+</div>
+</div>
+
+
+</div>
+<div class="gap gap-small"></div>
+</div>

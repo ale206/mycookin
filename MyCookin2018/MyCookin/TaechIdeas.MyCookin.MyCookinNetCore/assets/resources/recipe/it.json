@@ -1,0 +1,26 @@
+﻿{
+  "lblVegetarian": "Vegetariana",
+  "lblVegan": "Vegana",
+  "lblGlutenFree": "No glutine",
+  "lblHotSpicy ": "Piccante",
+
+  "lblProtein": "Proteine",
+  "lblFat": "Grassi",
+  "lblCarbohydrates": "Carboidrati",
+  "lblAlcohol": "Alcohol",
+
+  "lblNutrition": "Valori Nutrizionali",
+
+  "lblRecipeDifficulty": "Difficoltà: ",
+  "lblNumberOfPeople": "persone",
+  "lblPreparationTime": "Preparazione: ",
+  "lblCookingTime": "Cottura: ",
+
+  "lblIngredients": "Ingredienti",
+  "lblIngredientsForSauce": "Per il condimento",
+  "lblIngredientsForDecoration": "Per la decorazione",
+  "lblIngredientsForDough": "Per l'impasto",
+  "lblIngredientsForDressing": "Per la farcitura",
+  "lblIngredientsForFilling": "Per il ripieno"
+
+}

@@ -1,0 +1,13 @@
+﻿using System;
+using TaechIdeas.Core.Core.Token.Dto;
+
+namespace TaechIdeas.Core.Core.UserBoard.Dto
+{
+    public class CheckIfSharedOnPersonalBoardRequest
+    {
+        public CheckTokenRequest CheckTokenRequest { get; set; }
+        public Guid UserId { get; set; }
+        public int UserActionTypeId { get; set; }
+        public Guid ActionRelatedObjectId { get; set; }
+    }
+}

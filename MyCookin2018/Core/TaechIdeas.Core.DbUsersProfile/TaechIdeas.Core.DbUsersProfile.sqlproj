@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TaechIdeas.Core.DbUsersProfile</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e925f5e8-d49e-4836-8ef4-f86424f8873f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TaechIdeas.Core.DbUsersProfile</RootNamespace>
+    <AssemblyName>TaechIdeas.Core.DbUsersProfile</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\UsersFriendsListsMembers.sql" />
+    <Build Include="dbo\Tables\SecurityGroups.sql" />
+    <Build Include="dbo\Tables\SecurityGroupsUserMembers.sql" />
+    <Build Include="dbo\Tables\UserConfigurationParameters.sql" />
+    <Build Include="dbo\Tables\UsersNotificationsLanguages.sql" />
+    <Build Include="dbo\Tables\UsersNotifications.sql" />
+    <Build Include="dbo\Tables\SecurityQuestionsLanguages.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesTypes.sql" />
+    <Build Include="dbo\Tables\UsersNotificationsTypes.sql" />
+    <Build Include="dbo\Tables\Visibility.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesLanguages.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesAllowedValues.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesAllowedValuesLanguages.sql" />
+    <Build Include="dbo\Tables\UsersInfoProperties.sql" />
+    <Build Include="dbo\Tables\Languages.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesCompiled.sql" />
+    <Build Include="dbo\Tables\SocialNetworks.sql" />
+    <Build Include="dbo\Tables\UsersCook.sql" />
+    <Build Include="dbo\Tables\UsersCorporate.sql" />
+    <Build Include="dbo\Tables\UsersPreferedObjects.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesCategories.sql" />
+    <Build Include="dbo\Tables\UsersInfoPropertiesCategoriesLanguages.sql" />
+    <Build Include="dbo\Tables\SocialFriends.sql" />
+    <Build Include="dbo\Tables\UsersFriends.sql" />
+    <Build Include="dbo\Tables\SocialUserFriends.sql" />
+    <Build Include="dbo\Tables\SecurityQuestions.sql" />
+    <Build Include="dbo\Tables\SocialLogins.sql" />
+    <Build Include="dbo\Tables\UsersFollowers.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\UsersFriendsLists.sql" />
+    <Build Include="dbo\Views\vGetUsersNotificationsByIDUserAndIDLanguage.sql" />
+    <Build Include="dbo\Views\vPotentialFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Stats_NumberOfNewUsers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_PeopleYouMayKnowByFollower.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetNewUsersForMailchimp.sql" />
+    <Build Include="dbo\Stored Procedures\USP_BlockUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RemoveBlock.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FindUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FollowUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DefollowUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetNotificationsByUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateUserNotification.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SuggestNewUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_IsNotificationEnabled.sql" />
+    <Build Include="dbo\Stored Procedures\USP_LogoutUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_LoginUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ActivateUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIDLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetCategoryInfo.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FindFriendsByWords.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RemoveFriendshipForUseWithFollow.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RequestOrAcceptFriendship.sql" />
+    <Build Include="dbo\Stored Procedures\USP_MemorizeSocialContactFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RemoveFriendship.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserInfoById.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserInfoByEmail.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetNewToken.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckToken.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ExpireToken.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UserNameAlreadyExist.sql" />
+    <Build Include="dbo\Stored Procedures\USP_EmailAlreadyExist.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Stats_MostFollowingUsers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Stats_MostFollowedUsers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateLastLogon.sql" />
+    <Build Include="dbo\Stored Procedures\USP_LogoutUserByToken.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIdUserFromSocialLogins.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserById.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateSocialTokens.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserByEmail.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertSocialLogin.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetUserIdByToken.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetLanguageCodeById.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SecurityQuestionsByLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetGenderByLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteAccount.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateUserInfo.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FollowingIn.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Followers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckFollowing.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NumberOfFollowers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NumberOfFollowing.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FriendshipRequests.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Friends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CommonFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_BlockedFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeclineFriendship.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckFriendship.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckUserBlocked.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FriendshipCompletedDate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NumberOfFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SocialFriendsByIdUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UserSocialInformation.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SocialFriends.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UsersIdWithOldFriendsRetrievedOn.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UserIdSocialFromIdUserAndIdSocialNetwork.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateFriendsRetrievedOn.sql" />
+    <Build Include="dbo\Stored Procedures\USP_IsUserRegisteredToThisSocial.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetSecurityUserGroups.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UserByUsername.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetLanguageList.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NumberOfUsers.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdatePassword.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetSecurityQuestion.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateLastProfileUpdateDate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateTemporarySecurityAnswer.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateSecurityAnswer.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIdGenderByGenderNameAndIdLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteSecurityQuestionAndAnswer.sql" />
+    <Build Include="dbo\Stored Procedures\USP_LoginUserById.sql" />
+    <Build Include="dbo\Tables\UserTokens.sql" />
+    <Build Include="dbo\Tables\UserMembership.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:28701/",
+      "sslPort": 44391
+    }
+  },
+  "profiles": {
+    "TaechIdeas.MyCookin.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger/",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Localhost"
+      },
+      "use64Bit": true,
+      "applicationUrl": "https://localhost:44391"
+    }
+  }
+}
