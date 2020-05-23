@@ -24,26 +24,26 @@ DROP TABLE IF EXISTS `ingredient`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ingredient` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `unitary_average_weight` double DEFAULT '0',
-  `kcal_100_gr` double DEFAULT '0',
-  `gr_proteins` double DEFAULT '0',
-  `gr_fats` double DEFAULT '0',
-  `gr_carbohydrates` double DEFAULT '0',
-  `gr_alcohol` double DEFAULT '0',
-  `is_for_baby` tinyint(1) DEFAULT '0',
-  `is_meat` tinyint(1) DEFAULT '0',
-  `is_fish` tinyint(1) DEFAULT '0',
+  `unitary_average_weight` double NOT NULL DEFAULT '0',
+  `kcal_100_gr` double NOT NULL DEFAULT '0',
+  `gr_proteins` double NOT NULL DEFAULT '0',
+  `gr_fats` double NOT NULL DEFAULT '0',
+  `gr_carbohydrates` double NOT NULL DEFAULT '0',
+  `gr_alcohol` double NOT NULL DEFAULT '0',
+  `is_for_baby` tinyint(1) NOT NULL DEFAULT '0',
+  `is_meat` tinyint(1) NOT NULL DEFAULT '0',
+  `is_fish` tinyint(1) NOT NULL DEFAULT '0',
   `is_vegetarian` tinyint(1) NOT NULL DEFAULT '0',
   `is_vegan` tinyint(1) NOT NULL DEFAULT '0',
   `is_gluten_free` tinyint(1) NOT NULL DEFAULT '0',
   `is_spicy` tinyint(1) NOT NULL DEFAULT '0',
   `has_been_verified` tinyint(1) NOT NULL DEFAULT '0',
-  `created_on` timestamp NULL DEFAULT NULL,
+  `created_on` timestamp NOT NULL,
   `modified_on` timestamp NULL DEFAULT NULL,
-  `is_enabled` tinyint(1) DEFAULT '0',
+  `is_enabled` tinyint(1) NOT NULL DEFAULT '0',
   `legacy_id` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24574 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8192 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `ingredient_detail` (
   `description` longtext,
   `is_auto_translated` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24575 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16384 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,7 +76,7 @@ CREATE TABLE `language` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `code` varchar(50) NOT NULL,
-  `enabled` tinyint(1) NOT NULL DEFAULT '0',
+  `is_enabled` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -90,4 +90,4 @@ CREATE TABLE `language` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-23 13:42:27
+-- Dump completed on 2020-05-23 16:13:48
