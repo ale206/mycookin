@@ -1,4 +1,5 @@
 using System.Data.Common;
+using Dapper;
 using MyCookin.Domain.Repositories;
 using MySql.Data.MySqlClient;
 
@@ -9,8 +10,8 @@ namespace MyCookin.Infrastructure.Implementations
         public DbConnection GetConnection(string connectionString)
         {
             // This is to return proper DateTime from MySql instead of 01-01-0001
-            Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
-            
+            DefaultTypeMap.MatchNamesWithUnderscores = true;
+
             return new MySqlConnection(connectionString);
         }
     }

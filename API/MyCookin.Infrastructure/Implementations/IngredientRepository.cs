@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
@@ -23,12 +22,12 @@ namespace MyCookin.Infrastructure.Implementations
         {
             IngredientDataMapper ingredientData;
             var sql = $"SELECT * FROM `recipes`.`ingredient` WHERE id = {id} AND is_enabled = 1;";
-            
+
             await using (var connection = _dbConnectionFactory.GetConnection(_connectionString))
             {
                 ingredientData = connection.QuerySingleAsync<IngredientDataMapper>(sql).Result;
             }
-            
+
             return ingredientData.CovertToEntity();
         }
     }

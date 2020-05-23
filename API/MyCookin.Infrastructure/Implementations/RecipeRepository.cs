@@ -41,7 +41,7 @@ namespace MyCookin.Infrastructure.Implementations
                 languages = await multi.ReadAsync<LanguageDataMapper>();
             }
 
-            return languages.Select(x=>x.CovertToEntity());
+            return languages.Select(x => x.CovertToEntity());
         }
     }
 }
