@@ -28,7 +28,7 @@ namespace MyCookin.Infrastructure.Implementations
                 ingredientData = connection.QuerySingleAsync<IngredientDataMapper>(sql).Result;
             }
 
-            return ingredientData.CovertToEntity();
+            return ingredientData.CovertToEntity(); 
         }
     }
 }
