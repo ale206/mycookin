@@ -16,6 +16,56 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `ingredient`
+--
+
+DROP TABLE IF EXISTS `ingredient`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ingredient` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `unitary_average_weight` double DEFAULT '0',
+  `kcal_100_gr` double DEFAULT '0',
+  `gr_proteins` double DEFAULT '0',
+  `gr_fats` double DEFAULT '0',
+  `gr_carbohydrates` double DEFAULT '0',
+  `gr_alcohol` double DEFAULT '0',
+  `is_for_baby` tinyint(1) DEFAULT '0',
+  `is_meat` tinyint(1) DEFAULT '0',
+  `is_fish` tinyint(1) DEFAULT '0',
+  `is_vegetarian` tinyint(1) NOT NULL DEFAULT '0',
+  `is_vegan` tinyint(1) NOT NULL DEFAULT '0',
+  `is_gluten_free` tinyint(1) NOT NULL DEFAULT '0',
+  `is_spicy` tinyint(1) NOT NULL DEFAULT '0',
+  `has_been_verified` tinyint(1) NOT NULL DEFAULT '0',
+  `created_on` timestamp NULL DEFAULT NULL,
+  `modified_on` timestamp NULL DEFAULT NULL,
+  `is_enabled` tinyint(1) DEFAULT '0',
+  `legacy_id` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24574 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ingredient_detail`
+--
+
+DROP TABLE IF EXISTS `ingredient_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ingredient_detail` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `ingredient_id` bigint NOT NULL,
+  `language_id` bigint NOT NULL,
+  `singular_name` varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `plural_name` varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `description` longtext,
+  `is_auto_translated` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24575 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `language`
 --
 
@@ -27,18 +77,9 @@ CREATE TABLE `language` (
   `name` varchar(100) NOT NULL,
   `code` varchar(50) NOT NULL,
   `enabled` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Language`
---
-LOCK TABLES `language` WRITE;
-/*!40000 ALTER TABLE `Language` DISABLE KEYS */;
-INSERT INTO `language` VALUES (1,'English','En',1),(2,'Italiano','IT',1);
-/*!40000 ALTER TABLE `Language` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -49,4 +90,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-20 18:36:13
+-- Dump completed on 2020-05-23 13:42:27
