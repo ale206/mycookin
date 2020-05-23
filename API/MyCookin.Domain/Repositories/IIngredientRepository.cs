@@ -4,9 +4,8 @@ using MyCookin.Domain.Entities;
 
 namespace MyCookin.Domain.Repositories
 {
-    public interface IRecipeRepository
+    public interface IIngredientRepository
     {
-        Task<Recipe> GetRecipeById(long id);
-        Task<IEnumerable<Language>> GetSupportedLanguages();
+        Task<Ingredient> GetIngredientById(long id);
     }
 }

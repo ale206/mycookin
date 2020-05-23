@@ -13,6 +13,8 @@ namespace MyCookin.IoC
             services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
             services.AddScoped<IRecipeService, RecipeService>();
             services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddScoped<IIngredientService, IngredientService>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
         }
     }
 }

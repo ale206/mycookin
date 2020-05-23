@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using MyCookin.Domain.Entities;
 using MyCookin.Domain.Repositories;
+using MyCookin.Infrastructure.DataMappers;
 
 namespace MyCookin.Infrastructure.Implementations
 {
@@ -18,7 +20,7 @@ namespace MyCookin.Infrastructure.Implementations
             _connectionString = configuration.GetConnectionString("RecipesConnectionString");
         }
 
-        public Task<Recipe> GetRecipeById(long recipeId)
+        public Task<Recipe> GetRecipeById(long id)
         {
             using (var connection = _dbConnectionFactory.GetConnection(_connectionString))
             {
@@ -30,16 +32,16 @@ namespace MyCookin.Infrastructure.Implementations
 
         public async Task<IEnumerable<Language>> GetSupportedLanguages()
         {
-            Task<IEnumerable<Language>> languages;
-            const string sql = "SELECT * FROM `recipes`.`language` WHERE Enabled = 1;";
+            IEnumerable<LanguageDataMapper> languages;
+            const string sql = "SELECT * FROM `recipes`.`language` WHERE is_enabled = 1;";
 
             await using (var connection = _dbConnectionFactory.GetConnection(_connectionString))
             {
                 var multi = connection.QueryMultipleAsync(sql).Result;
-                languages = multi.ReadAsync<Language>();
+                languages = await multi.ReadAsync<LanguageDataMapper>();
             }
 
-            return await languages;
+            return languages.Select(x=>x.CovertToEntity());
         }
     }
 }

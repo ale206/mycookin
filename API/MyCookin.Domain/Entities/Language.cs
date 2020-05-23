@@ -5,6 +5,6 @@ namespace MyCookin.Domain.Entities
         public long Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public bool Enabled { get; set; }
+        public bool IsEnabled { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace MyCookin.UnitTests.Helpers
             return new Language
             {
                 Code = "EN",
-                Enabled = true,
+                IsEnabled = true,
                 Id = 1,
                 Name = "English"
             };

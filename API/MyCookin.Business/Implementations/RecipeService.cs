@@ -15,9 +15,9 @@ namespace MyCookin.Business.Implementations
             _recipeRepository = recipeRepository;
         }
 
-        public async Task<Recipe> GetRecipeById(long recipeId)
+        public async Task<Recipe> GetRecipeById(long id)
         {
-            return await _recipeRepository.GetRecipeById(recipeId);
+            return await _recipeRepository.GetRecipeById(id);
         }
 
         public async Task<IEnumerable<Language>> GetSupportedLanguages()
