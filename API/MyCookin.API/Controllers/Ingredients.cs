@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyCookin.Business.Interfaces;
 using MyCookin.Domain.Entities;
@@ -21,6 +22,7 @@ namespace MyCookin.API.Controllers
         [Description("Get Ingredient By Id")]
         [ProducesResponseType(typeof(Ingredient), 200)]
         [Produces("application/json")]
+        [Authorize]
         public async Task<IActionResult> GetIngredientById(long id)
         {
             var ingredient = await _ingredientService.GetIngredientById(id);
