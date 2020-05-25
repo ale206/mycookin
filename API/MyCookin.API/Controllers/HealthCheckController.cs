@@ -1,5 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MyCookin.Domain.Entities;
 
 namespace MyCookin.API.Controllers
 {
@@ -8,9 +11,10 @@ namespace MyCookin.API.Controllers
     public class HealthCheckController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        [Produces("application/json")]
+        public IActionResult Get()
         {
-            return $"Alive! {DateTime.UtcNow}";
+            return Ok($"Alive! {DateTime.UtcNow}");
         }
     }
 }

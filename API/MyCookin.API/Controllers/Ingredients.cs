@@ -20,6 +20,7 @@ namespace MyCookin.API.Controllers
         [HttpGet("{id}", Name = "GetIngredientById")]
         [Description("Get Ingredient By Id")]
         [ProducesResponseType(typeof(Ingredient), 200)]
+        [Produces("application/json")]
         public async Task<IActionResult> GetIngredientById(long id)
         {
             var ingredient = await _ingredientService.GetIngredientById(id);
