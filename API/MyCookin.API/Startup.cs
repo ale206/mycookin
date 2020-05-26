@@ -9,7 +9,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MyCookin.IoC;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Swashbuckle.AspNetCore.Filters;
 
 namespace MyCookin.API
 {
@@ -32,58 +31,55 @@ namespace MyCookin.API
 
             Initializer.RegisterServices(services);
 
+            services.AddAuthentication(c =>
+                {
+                    c.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    c.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    c.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+                })
+                .AddCookie()
+                .AddOpenIdConnect(c =>
+                {
+                    c.ResponseType = Configuration["Authentication:Cognito:ResponseType"];
+                    c.MetadataAddress = Configuration["Authentication:Cognito:MetadataAddress"];
+                    c.ClientId = Configuration["Authentication:Cognito:ClientId"];
+                    c.Authority = "https://auth.mycookin.com";
+                });
+            
+            // Configure named auth policies that map directly to OAuth2.0 scopes
+            services.AddAuthorization(c =>
+            {
+                c.AddPolicy("readAccess", p => p.RequireClaim("scope", "mycookin/api"));
+            });
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc(ApiVersion, new OpenApiInfo
                 {
                     Title = "MyCookin", Version = ApiVersion
                 });
-                
-                c.OperationFilter<SecurityRequirementsOperationFilter>();
-                
-                // Security scheme
-                c.AddSecurityDefinition("OAuth2", //Name the security scheme
-                    new OpenApiSecurityScheme{
-                      Flows = new OpenApiOAuthFlows()
-                      {
-                          ClientCredentials = new OpenApiOAuthFlow()
-                          {
-                              TokenUrl = new Uri("https://auth.mycookin.com/oauth2/token"),
-                              Scopes = new Dictionary<string, string>(){ {"mycookin/api", "Access API"}},
-                              AuthorizationUrl = new Uri("https://auth.mycookin.com/oauth2/authorize")
-                          }
-                      }, 
-                      Type = SecuritySchemeType.OAuth2,
-                      OpenIdConnectUrl = new Uri("https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Zrq7io2kN/.well-known/openid-configuration")
-                    });
+                c.OperationFilter<AddAuthHeaderOperationFilter>();
 
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement{ 
-                    {
-                        new OpenApiSecurityScheme{
-                            Reference = new OpenApiReference{
-                                Id = "Bearer",
-                                Type = ReferenceType.SecurityScheme
-                            },
-                            //OpenIdConnectUrl = new Uri("https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Zrq7io2kN/.well-known/openid-configuration")
-                        },new List<string>(){"mycookin/api"}
-                    }
-                });
+                c.AddSecurityDefinition("bearer", //Name the security scheme
+                    new OpenApiSecurityScheme{
+                        Flows = new OpenApiOAuthFlows()
+                        {
+                            ClientCredentials = new OpenApiOAuthFlow()
+                            {
+                                TokenUrl = new Uri("https://auth.mycookin.com/oauth2/token"),
+                                Scopes = new Dictionary<string, string>(){ {"mycookin/api", "Access API"}},
+                                AuthorizationUrl = new Uri("https://auth.mycookin.com/oauth2/authorize")
+                            }
+                        }, 
+                        Type = SecuritySchemeType.OAuth2,
+                        OpenIdConnectUrl = new Uri("https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Zrq7io2kN/.well-known/openid-configuration"),
+                        BearerFormat = "JWT",
+                        In = ParameterLocation.Header,
+                        Scheme = "bearer"
+                    });
             });
 
-            services.AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-                })
-                .AddCookie()
-                .AddOpenIdConnect(options =>
-                {
-                    options.ResponseType = Configuration["Authentication:Cognito:ResponseType"];
-                    options.MetadataAddress = Configuration["Authentication:Cognito:MetadataAddress"];
-                    options.ClientId = Configuration["Authentication:Cognito:ClientId"];
-                });
-
+           
             services.AddOptions();
         }
 
@@ -100,6 +96,8 @@ namespace MyCookin.API
             app.UseAuthorization();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
             app.UseAuthentication();
+
+           
             
             app.UseSwagger();
             app.UseSwaggerUI(c => { 

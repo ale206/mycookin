@@ -1,12 +1,14 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using MyCookin.Business.Interfaces;
 using MyCookin.Domain.Entities;
 
 namespace MyCookin.API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "OpenIdConnect")]
     [ApiController]
     [Route("v1/[controller]")]
     public class IngredientsController : ControllerBase
