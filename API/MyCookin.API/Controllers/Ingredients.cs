@@ -8,7 +8,7 @@ using MyCookin.Domain.Entities;
 
 namespace MyCookin.API.Controllers
 {
-    [Authorize(AuthenticationSchemes = "OpenIdConnect")]
+    [Authorize]
     [ApiController]
     [Route("v1/[controller]")]
     public class IngredientsController : ControllerBase
@@ -24,7 +24,6 @@ namespace MyCookin.API.Controllers
         [Description("Get Ingredient By Id")]
         [ProducesResponseType(typeof(Ingredient), 200)]
         [Produces("application/json")]
-        [Authorize]
         public async Task<IActionResult> GetIngredientById(long id)
         {
             var ingredient = await _ingredientService.GetIngredientById(id);
