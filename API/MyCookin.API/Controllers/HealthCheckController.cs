@@ -1,8 +1,5 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using MyCookin.Domain.Entities;
 
 namespace MyCookin.API.Controllers
 {
