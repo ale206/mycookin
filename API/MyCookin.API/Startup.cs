@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyCookin.IoC;
 using Newtonsoft.Json;
+using Serilog;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace MyCookin.API
@@ -36,6 +37,7 @@ namespace MyCookin.API
             services.AddControllers();
 
             Initializer.RegisterServices(services);
+            services.AddLogging();
 
             services.AddAuthentication(o =>
                 {
@@ -58,7 +60,7 @@ namespace MyCookin.API
                         ValidateIssuerSigningKey = true,
                         ValidateIssuer = false,
                         ValidateLifetime = true,
-                        ValidateAudience = false,
+                        ValidateAudience = false
                     };
                     options.IncludeErrorDetails = true;
                     options.SaveToken = true;
@@ -71,9 +73,10 @@ namespace MyCookin.API
                     options.RequireHttpsMetadata = false;
                     options.ClientId = Configuration["Authentication:Cognito:ClientId"];
                     options.Scope.Add("mycookin/api");
-                });;
+                });
+            ;
 
-            services.AddAuthorization(options => 
+            services.AddAuthorization(options =>
             {
                 options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
                     .RequireAuthenticatedUser()
@@ -111,6 +114,8 @@ namespace MyCookin.API
             });
 
             services.AddOptions();
+
+            services.AddSingleton(Log.Logger);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,13 +125,14 @@ namespace MyCookin.API
                 app.UseDeveloperExceptionPage();
             else
                 app.UseHsts();
-            
+
             app.UseHttpsRedirection();
+
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
             app.UseAuthentication();
-            
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
