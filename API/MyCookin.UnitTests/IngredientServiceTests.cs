@@ -17,7 +17,7 @@ namespace MyCookin.UnitTests
         {
             // Configure
             var ingredient = IngredientsHelper.GetIngredient();
-            _mockILogger.Setup(x => x.Debug("Debug message"));
+            _mockILogger.Setup(x => x.Debug("Calling Get Ingredient By ID"));
             _mockIIngredientRepository.Setup(x => x.GetIngredientById(It.IsAny<long>())).ReturnsAsync(ingredient);
 
             // Act
@@ -25,7 +25,7 @@ namespace MyCookin.UnitTests
             var result = ingredientService.GetIngredientById(1);
 
             // Assert
-            _mockILogger.Verify(x=>x.Debug("Debug Message"), Times.Once);
+            _mockILogger.Verify(x=>x.Debug("Calling Get Ingredient By ID"), Times.Once);
             _mockIIngredientRepository.Verify(x => x.GetIngredientById(It.IsAny<long>()), Times.Once);
             Assert.NotNull(result);
         }
