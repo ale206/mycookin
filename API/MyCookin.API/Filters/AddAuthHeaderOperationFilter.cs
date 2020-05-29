@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MyCookin.API
+namespace MyCookin.API.Filters
 {
     public class AddAuthHeaderOperationFilter : IOperationFilter
     {

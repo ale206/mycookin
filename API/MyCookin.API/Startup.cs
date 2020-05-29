@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MyCookin.API.Filters;
+using MyCookin.API.Helpers;
 using MyCookin.IoC;
 using Newtonsoft.Json;
 using Serilog;
@@ -50,8 +52,7 @@ namespace MyCookin.API
                     {
                         IssuerSigningKeyResolver = (s, securityToken, identifier, parameters) =>
                         {
-                            var json = new WebClient().DownloadString(
-                                parameters.ValidIssuer + "/.well-known/jwks.json");
+                            var json = OpenIdHelper.GetJwks(parameters);
                             var keys = JsonConvert.DeserializeObject<JsonWebKeySet>(json).Keys;
                             return (IEnumerable<SecurityKey>) keys;
                         },
