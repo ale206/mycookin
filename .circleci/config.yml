@@ -13,7 +13,9 @@ jobs:
       - checkout
       - run:
           name: "Run Unit Tests"
-          command: dotnet.exe test ./API/MyCookin.UnitTests -v n /p:CollectCoverage=true && curl -s https://codecov.io/bash
+          command: |-
+            dotnet.exe test ./API/MyCookin.UnitTests -v n /p:CollectCoverage=true
+            curl -s https://codecov.io/bash
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
 
