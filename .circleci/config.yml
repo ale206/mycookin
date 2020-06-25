@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run:
           name: "Run Unit Tests"
-          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage" -r C:/Users/circleci/project
+          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage" -r ../../
       - store_test_results:
           path: ./API/MyCookin.UnitTests/TestResults
       - store_artifacts:
