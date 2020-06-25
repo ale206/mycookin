@@ -1,2 +1,2 @@
 fixes:
-   - "/home/circleci/::"
+   - "C:/Users/circleci/project::./API/MyCookin.UnitTests/TestResults"
