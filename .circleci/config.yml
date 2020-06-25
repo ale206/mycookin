@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run:
           name: "Run Unit Tests"
-          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage"
+          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage" -r C:/Users/circleci/project
       - store_test_results:
           path: ./API/MyCookin.UnitTests/TestResults
       - store_artifacts:
@@ -23,7 +23,7 @@ jobs:
           name: Upload Coverage Results
           command: curl.exe -s https://codecov.io/bash | bash -s --
           when: "always"
-      
+
 workflows:
   build_and_push_image:
     jobs:
