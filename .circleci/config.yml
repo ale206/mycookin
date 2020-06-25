@@ -17,7 +17,7 @@ jobs:
           command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage"
       - run:
           name: Upload Coverage Results
-          command: curl -s "https://codecov.io/bash" | bash -s -- \
+          command: curl -s 'https://codecov.io/bash' | bash -s -- \
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
 
