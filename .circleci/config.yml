@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   windows: circleci/windows@2.2.0
   aws-ecr: circleci/aws-ecr@6.8.2
+  codecov: codecov/codecov@1.1.0
 
 jobs:
   run-unit-test:
@@ -14,10 +15,8 @@ jobs:
       - run:
           name: "Run Unit Tests"
           command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage"
-      - run:
-          name: Upload CodeCov.io Data
-          command: curl -s https://codecov.io/bash | bash -s -- \
-          when: always # Uploads code coverage results, pass or fail
+      - codecov/upload:
+          file: coverage.cobertura.xml
       - store_artifacts:
           path: C:\Users\circleci\project\test_coverage
 
