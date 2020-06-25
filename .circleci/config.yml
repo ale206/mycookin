@@ -19,9 +19,10 @@ jobs:
           command: curl.exe -s https://codecov.io/bash | bash -s --
           when: "always"
       - store_test_results:
-          path: test-results
+          path: ./API/MyCookin.UnitTests/TestResults
       - store_artifacts:
-          path: C:\Users\circleci\project\test_coverage
+          path: ./API/MyCookin.UnitTests/TestResults
+          destination: circleci-docs
 
 workflows:
   build_and_push_image:
