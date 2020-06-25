@@ -13,7 +13,10 @@ jobs:
       - checkout
       - run:
           name: "Run Unit Tests"
-          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage" -r ../
+          command: dotnet.exe test ./API/MyCookin.UnitTests --collect:"XPlat Code Coverage"
+      - run:
+          name: "Copy code coverage file"
+          command: find -iname 'coverage.cobertura.xml' -exec cp {} ../ 
       - store_test_results:
           path: ./API/MyCookin.UnitTests/TestResults
       - store_artifacts:
