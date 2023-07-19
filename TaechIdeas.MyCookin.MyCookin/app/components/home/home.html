@@ -1,0 +1,213 @@
+﻿<!-- TOP AREA -->
+<div class="top-area show-onload">
+    <div class="bg-holder full">
+        <div class="bg-front bg-front-mob-rel">
+            <div class="container">
+                <div class="search-tabs search-tabs-bg search-tabs-abs mt50">
+                    <h1>{{ labels.mainTitle}}</h1>
+                    <div class="tabbable">
+                        <search-Engine></search-Engine>
+
+                    </div>
+
+                    <!--@*<div class="gap"></div>
+                    <h3 style="color:#fff">Insert your recipes, share them and enjoy meeting food-lovers from all over the world</h3>*@-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="defaultImage" ng-show="defaultImage">
+            <div class="bg-holder full">
+                <div class="bg-blur" style="background-image: url(/assets/img/1280x852_spuntino.jpg)"></div>
+                <div class="bg-content">
+                    <div class="container">
+                        <!--<div class="loc-info text-right hidden-xs hidden-sm">
+                            <h3 class="loc-info-title">
+                                <img src="/assets/img/flags/32/it.png" alt="" title="" />
+                                <span class="normalised-text"></span>
+                            </h3>
+                            <p class="loc-info-weather">
+                                <span class="kcalNumber"></span>
+                            </p>
+                            <ul class="loc-info-list">
+                                <li>
+                                    <i class="fa fa-check-square-o"></i> 
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-cutlery"></i>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-user"></i> 
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <a class="btn btn-white btn-ghost mt10" href=""><i class="fa fa-angle-right"></i> </a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="owl-carousel owl-slider owl-carousel-area visible-lg" id="owl-carousel-slider" ng-show="!defaultImage">
+
+            <!--Best Recipes Slideshow-->
+
+            <div class="bg-holder full" ng-repeat="best in bestRecipes">
+                <div class="bg-blur" style="background-image: url({{best.ImageUrl}})"></div>
+                <div class="bg-content">
+                    <div class="container">
+                        <div class="loc-info text-right hidden-xs hidden-sm">
+                            <h3 class="loc-info-title">
+                                <!--<img src="/assets/img/flags/32/it.png" alt="{{best.RecipeName}}" title="{{best.RecipeName}}"/>-->
+                                <span class="normalised-text">{{best.RecipeName}}</span>
+                            </h3>
+                            <p class="loc-info-weather">
+                                <span class="kcalNumber">{{best.RecipePortionKcal | number : 2}} Kcal</span>
+                            </p>
+                            <ul class="loc-info-list">
+                                <li>
+                                    <i class="fa fa-check-square-o"></i> {{best.RecipeDifficulty}}
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i> Ready in {{best.CookingTimeMinutes + best.PreparationTimeMinutes}} min
+                                </li>
+                                <li>
+                                    <i class="fa fa-cutlery"></i> {{best.PropertiesJoined}}
+                                </li>
+                                <li>
+                                    <a href="{{best.RecipeOwner.Username}}">
+                                        <i class="fa fa-user"></i> {{best.RecipeOwner.Name}} {{best.RecipeOwner.Surname}}
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <a class="btn btn-white btn-ghost mt10" href="/{{labels.recipe}}/{{best.FriendlyId}}"><i class="fa fa-angle-right"></i> {{labels.lblCookItNow}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--End Slideshow-->
+
+        <div class="bg-img hidden-lg" style="background-image: url(/assets/img/1280x852_spuntino.jpg);"></div>
+        <div class="bg-mask hidden-lg"></div>
+    </div>
+</div>
+<!-- END TOP AREA -->
+<div class="gap-small gap"></div>
+
+
+<div class="container keyWords">
+    <div class="text-center row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row row-wrap" data-gutter="60">
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-cutlery box-icon-info box-icon-center  box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">{{labels.lblRealRecipes}}</a>
+                            </h5>
+                            <p class="thumb-desc">{{labels.lblRealRecipesDescription}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-users box-icon-to-normal box-icon-center box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">{{labels.lblSocial}}</a>
+                            </h5>
+                            <p class="thumb-desc">{{labels.lblSocialDescription}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <i class="fa fa-globe box-icon-info box-icon-center box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                        </header>
+                        <div class="thumb-caption">
+                            <h5 class="thumb-title">
+                                <a class="text-darken" href="#">{{labels.lblInternational}}</a>
+                            </h5>
+                            <p class="thumb-desc">{{labels.lblInternationalDescription}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h1 class="text-center mb20">{{labels.lblTopRec}}</h1>
+    <div class="row row-wrap">
+
+        <!--Loader-->
+        <div class="loading-gif" ng-show="loadingGif">
+            <img src="/assets/img/loading.gif" alt="loading-gif"/>
+        </div>
+
+        <!--LAST RECIPES-->
+        <div ng-repeat="last in lastRecipes track by $index">
+            <div class="col-md-4">
+                <div class="thumb">
+                    <header class="thumb-header">
+                        <a class="hover-img" href="/{{labels.recipe}}/{{last.FriendlyId}}">
+                            <img ng-src="{{last.ImageUrl}}" alt="{{last.RecipeName}}" title="{{last.RecipeName}}"/>
+                        </a>
+                    </header>
+                    <div class="thumb-caption">
+
+                        <ul class="icon-group text-tiny text-color">
+                            <li ng-repeat="n in getNumber(last.RecipeAvgRating) track by $index">
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li ng-repeat="n in getNumber(5 - last.RecipeAvgRating) track by $index">
+                                <i class="fa fa-star-o"></i>
+                            </li>
+
+                        </ul>
+                        <h5 class="thumb-title">
+                            <a class="text-darken" href="/{{labels.recipe}}/{{last.FriendlyId}}">
+                                <span class="normalised-text">{{ last.RecipeName | limitTo: 38 }}{{last.RecipeName.length > 38 ? '...' : ''}}</span>
+                            </a>
+                        </h5>
+                        <p class="mb0 text-darken">
+                            <span class="text-lg lh1em text-color">{{last.RecipePortionKcal | number : 2}}</span> Kcal
+                        </p>
+                        <p class="mb0 text-darken">
+                            <span class="text-lg lh1em text-color">{{last.CookingTimeMinutes + last.PreparationTimeMinutes}}</span> min
+                        </p>
+                        <p class="mb0 text-darken">
+                            {{last.PropertiesJoined}}
+                        </p>
+                        <p class="mb0 text-darken">
+                            <a href=""> <i class="fa fa-user"></i> {{last.RecipeOwner.Username}}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gap gap-small" ng-show="($index%3)==2"></div>
+        </div>
+    </div>
+    <div class="gap gap-small"></div>
+</div>
+
+<script>
+</script>

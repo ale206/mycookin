@@ -1,0 +1,34 @@
+﻿var slimmenu = require("./slimmenu.js");
+var nicescroll = require("./nicescroll.js");
+var dropit = require("./dropit.js");
+var ionrangeslider = require("./ionrangeslider.js");
+var icheck = require("./icheck.js");
+var fotorama = require("./fotorama.js");
+var typeahead = require("./typeahead.js");
+var card_payment = require("./card-payment.js");
+var magnific = require("./magnific.js");
+var owl_carousel = require("./owl-carousel.js");
+var fitvids = require("./fitvids.js");
+var tweet = require("./tweet.js");
+var countdown = require("./countdown.js");
+var gridrotator = require("./gridrotator.js");
+var custom = require("./custom.js");
+var myScript = require("./myScript.js");
+
+
+slimmenu.init();
+nicescroll.init();
+dropit.init();
+ionrangeslider.init();
+icheck.init();
+fotorama.init();
+typeahead.init();
+card_payment.init();
+magnific.init();
+owl_carousel.init();
+fitvids.init();
+tweet.init();
+countdown.init();
+gridrotator.init();
+custom.init();
+myScript.init();

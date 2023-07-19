@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TaechIdeas.MyCookin.DbRecipes</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{dd9f8b38-2dd9-45ce-904b-f6da28a9b476}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TaechIdeas.MyCookin.Myc.DbRecipes</RootNamespace>
+    <AssemblyName>TaechIdeas.MyCookin.Myc.DbRecipes</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\IngredientsAllowedQuantityTypes.sql" />
+    <Build Include="dbo\Tables\Ingredients.sql" />
+    <Build Include="dbo\Tables\RecipesTags.sql" />
+    <Build Include="dbo\Tables\RecipesLanguagesTags.sql" />
+    <Build Include="dbo\Tables\RecipesIngredientsLanguages.sql" />
+    <Build Include="dbo\Tables\Beverages.sql" />
+    <Build Include="dbo\Tables\RecipesIngredients.sql" />
+    <Build Include="dbo\Tables\BeveragesLanguages.sql" />
+    <Build Include="dbo\Tables\BeveragesRecipes.sql" />
+    <Build Include="dbo\Tables\RecipesLanguages.sql" />
+    <Build Include="dbo\Tables\zzz_CalorieKcal.sql" />
+    <Build Include="dbo\Tables\DBRecipesConfigParameters.sql" />
+    <Build Include="dbo\Tables\RecipesBooksRecipes.sql" />
+    <Build Include="dbo\Tables\IngredientsCategoriesLanguages.sql" />
+    <Build Include="dbo\Tables\IngredientsLanguages.sql" />
+    <Build Include="dbo\Tables\BeveragesRecipesVotes.sql" />
+    <Build Include="dbo\Tables\RecipesIndex.sql" />
+    <Build Include="dbo\Tables\RecipePropertiesTypes.sql" />
+    <Build Include="dbo\Tables\KitchenTools.sql" />
+    <Build Include="dbo\Tables\IngredientsIngredientsCategories.sql" />
+    <Build Include="dbo\Tables\IngredientsCategories.sql" />
+    <Build Include="dbo\Tables\QuantityNotStd.sql" />
+    <Build Include="dbo\Tables\RecipesPresentations.sql" />
+    <Build Include="dbo\Tables\RecipeProperties.sql" />
+    <Build Include="dbo\Tables\RecipesPresentationsKitchenTools.sql" />
+    <Build Include="dbo\Tables\RecipesKitchenTools.sql" />
+    <Build Include="dbo\Tables\Languages.sql" />
+    <Build Include="dbo\Tables\QuantityTypesAllowedQuantityNotStd.sql" />
+    <Build Include="dbo\Tables\KitchenToolsLanguages.sql" />
+    <Build Include="dbo\Tables\RecipesPresentationsLanguages.sql" />
+    <Build Include="dbo\Tables\Recipes.sql" />
+    <Build Include="dbo\Tables\IngredientsAlternatives.sql" />
+    <Build Include="dbo\Tables\LastSeenObjects.sql" />
+    <Build Include="dbo\Tables\RecipesFeedbacks.sql" />
+    <Build Include="dbo\Tables\IngredientsQuantityTypesLanguages.sql" />
+    <Build Include="dbo\Tables\IngredientsQuantityTypes.sql" />
+    <Build Include="dbo\Tables\RecipesSteps.sql" />
+    <Build Include="dbo\Tables\RecipePropertiesLanguages.sql" />
+    <Build Include="dbo\Tables\RecipesPropertiesValues.sql" />
+    <Build Include="dbo\Tables\RecipesVotes.sql" />
+    <Build Include="dbo\Tables\QuantityNotStdLanguage.sql" />
+    <Build Include="dbo\Tables\RecipePropertiesTypesLanguages.sql" />
+    <Build Include="dbo\Views\vIndexedIngredientLang_Es.sql" />
+    <Build Include="dbo\Views\vViewAllRecipes.sql" />
+    <Build Include="dbo\Views\vIndexedIngredientLang_It.sql" />
+    <Build Include="dbo\Views\vIndexedRecipeLang_It.sql" />
+    <Build Include="dbo\Views\vIndexedRecipesLang_It.sql" />
+    <Build Include="dbo\Views\vIndexedRecipesLang_Es.sql" />
+    <Build Include="dbo\Views\vIndexedRecipesLang_En.sql" />
+    <Build Include="dbo\Views\vIngredientCategoryComplete.sql" />
+    <Build Include="dbo\Views\vIngredientModByUser.sql" />
+    <Build Include="dbo\Views\vRecipeProperty.sql" />
+    <Build Include="dbo\Views\zzzvIngredient_It.sql" />
+    <Build Include="dbo\Views\FigliSporchi.sql" />
+    <Build Include="dbo\Views\Padri.sql" />
+    <Build Include="dbo\Views\vIndexedIngredientLang_En.sql" />
+    <Build Include="Storage\RecipeStepsCatalog.sql" />
+    <Build Include="Storage\RecipeCatalog.sql" />
+    <Build Include="Storage\IngredientCatalog.sql" />
+    <Build Include="Storage\RecipeIndexing.sql" />
+    <Build Include="FullTextIndexes.sql" />
+    <Build Include="Security\F2-G6-HP_F2-G6.sql" />
+    <Build Include="Security\MYCOOKIN01_sa.iisuser.sql" />
+    <Build Include="dbo\Functions\udfReplaceSpecialChar.sql" />
+    <Build Include="dbo\Functions\udfCompareStringPercentage.sql" />
+    <Build Include="dbo\Functions\UDF_GetAllSbucategoryFromFather.sql" />
+    <Build Include="dbo\Functions\SplitString.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeWithLanguageInfo.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CalculateRecipeNutritionalFacts_withTableDirectUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CalculateRecipeNutritionalFact_Bulk.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CalculateRecipeTags.sql" />
+    <Build Include="dbo\Stored Procedures\zzz_USP_CalculateRecipeNutritionalFacts.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CalculateRecipeNutritionalFacts.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRandomIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRandomIngredientNotChecked.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchFreeFridgeRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipesInRecipeBook.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeBookRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetBeverageByNameContains.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientByIngredientName.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeBeverage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeIngredientNotesToTranslate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchRecipe_old2.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchRecipe_old.sql" />
+    <Build Include="dbo\Stored Procedures\USP_PopulateRecipesIndex.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeFatherByRecipeNameContains.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetAllCategoryByIDLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetAllCategoryByIDLanguageIDFatherCategory.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetSimilarRecipes.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientByIngredientNameContains.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipesByType.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientList.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageIngredientAlternative.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetHomeTopRecipes.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeFeedbacks.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeLikeForUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipesWithIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeFeedback.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientLanguageByIDIngredientIDLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeByIDRecipeIDLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetAllIngredientsQuantityTypesByIDLang.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientsQuantityTypesLangByID.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeIngredientLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeByRecipeNameLike.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchRecipePropertiesNameContains.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertOrUpdateIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientByIngredientNameContains_DEV.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipePropertyValue.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ClearRecipePropertyValue.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeStep.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientToTranslate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeVote.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeToTranslate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SiteMapIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetNoFatherRecipeByRecipeNameContains.sql" />
+    <Build Include="dbo\Stored Procedures\USP_ManageRecipeLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SiteMapRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertOrUpdateIngredientLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetNoFatherRecipeByRecipeNameLike.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeStepsToTranslate.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertOrUpdateIngredientIngredientCategory.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertOrDeleteIngredientAllowedQuantityType.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeById.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetStepsByIDRecipeLang.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetStepsForRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientsByIdRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetDetailedIngredientsByIdRecipeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetDetailedIngredientsByIdRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipePropertyByIdRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipePropertyByIdRecipeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetQuantityNotStdByIdAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GenerateFriendlyId.sql" />
+    <Build Include="dbo\Functions\urlencode.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GenerateAllFriendlyUrl.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FriendlyIdByRecipeLanguageId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetRecipeByFriendlyId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NewRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateRecipeLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateRecipeLanguageStep.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NewRecipeLanguageStep.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateRecipeIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AddNewIngredientToRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RecipeLanguageList.sql" />
+    <Build Include="dbo\Stored Procedures\USP_IngredientLanguageList.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchIngredientByLanguageAndName.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientQuantityTypeList.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_IngredientModifiedByUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetAllIngredientsChecked.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetPropertiesListByTypeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetPropertiesListByTypeLanguageAndRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AddOrUpdatePropertyValue.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeletePropertyValue.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AddRecipeBeverage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteRecipeBeverage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SuggestedBeverageByRecipe.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GenerateAllIngredientFriendlyUrl.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GenerateIngredientFriendlyId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_GetIngredientByFriendlyId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CategoriesByIngredientId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AllowedQuantitiesByIngredientId.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_UpdateIngredientLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_InsertIngredientLanguage.sql" />
+    <Build Include="dbo\Tables\BestRecipes.sql" />
+    <Build Include="dbo\Stored Procedures\USP_BestRecipesByLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_DeleteIngredient.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RecipesByOwner.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RecipeLanguageTags.sql" />
+    <Build Include="dbo\Stored Procedures\USP_TagsByRecipeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_NumberOfRecipesInsertedByUser.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CheckIfRecipeIsInBook.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RecipeVote.sql" />
+    <Build Include="dbo\Stored Procedures\USP_RecipeAvgVote.sql" />
+    <Build Include="dbo\Stored Procedures\USP_FeedbackInfo.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AddNewRecipeTranslation.sql" />
+    <Build Include="dbo\Stored Procedures\USP_AddNewIngredientTranslation.sql" />
+    <Build Include="dbo\Stored Procedures\USP_PropertiesByRecipeAndLanguage.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SitemapForRecipes.sql" />
+    <Build Include="dbo\Views\vAllRecipesNames_It.sql" />
+    <Build Include="dbo\Views\vAllRecipesNames_Es.sql" />
+    <Build Include="dbo\Views\vAllRecipesNames_En.sql" />
+    <Build Include="Storage\RecipeCatalog_It_v1.sql" />
+    <Build Include="Storage\RecipeCatalog_Es_v1.sql" />
+    <Build Include="Storage\RecipeCatalog_En_v1.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchRecipes.sql" />
+    <Build Include="dbo\Stored Procedures\USP_SearchRecipesWithEmptyFridge.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MyCookin.DbRecipes.refactorlog" />
+  </ItemGroup>
+</Project>

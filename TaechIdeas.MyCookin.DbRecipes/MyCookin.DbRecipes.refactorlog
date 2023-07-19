@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="2c952f07-d0d8-4b18-8754-dece9dbb037a" ChangeDateTime="12/07/2015 14:27:31">
+    <Property Name="ElementName" Value="[dbo].[RecipesLanguages].[RecipeUrl]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RecipesLanguages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FriendlyId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="57d11d6d-1cff-4528-a580-05680d5c0524" ChangeDateTime="02/11/2016 15:51:27">
+    <Property Name="ElementName" Value="[dbo].[BestRecipes].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BestRecipes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BestRecipeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e3bf2bab-acdb-4c24-b4d8-30118d03c334" ChangeDateTime="02/11/2016 16:15:00">
+    <Property Name="ElementName" Value="[dbo].[BestRecipes].[RecipeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BestRecipes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IDRecipe" />
+  </Operation>
+</Operations>

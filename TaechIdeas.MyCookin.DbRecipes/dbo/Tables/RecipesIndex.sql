@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[RecipesIndex] (
+    [IDRecipeIndex]         UNIQUEIDENTIFIER CONSTRAINT [DF_RecipesIndex_IDRecipeIndex] DEFAULT (newid()) NOT NULL,
+    [IDRecipeLanguage]      UNIQUEIDENTIFIER NOT NULL,
+    [IDRecipe]              UNIQUEIDENTIFIER NOT NULL,
+    [RecipeName]            NVARCHAR (MAX)   NULL,
+    [IDLanguage]            INT              NULL,
+    [SearchPreference]      INT              NULL,
+    [PreparationTimeMinute] INT              NULL,
+    [CookingTimeMinute]     INT              NULL,
+    [RecipeDifficulties]    INT              NULL,
+    [IDRecipeImage]         UNIQUEIDENTIFIER NULL,
+    [CreationDate]          SMALLDATETIME    NULL,
+    [LastUpdate]            SMALLDATETIME    NULL,
+    [RecipeConsulted]       INT              NULL,
+    [RecipeAvgRating]       FLOAT (53)       NULL,
+    [isStarterRecipe]       BIT              NULL,
+    [DeletedOn]             SMALLDATETIME    NULL,
+    [RecipeEnabled]         BIT              NULL,
+    [Checked]               BIT              NULL,
+    [RecipePortionKcal]     FLOAT (53)       NULL,
+    [Vegetarian]            BIT              NULL,
+    [Vegan]                 BIT              NULL,
+    [GlutenFree]            BIT              NULL,
+    [Draft]                 BIT              NULL,
+    [IndexInserted]         SMALLDATETIME    NULL,
+    CONSTRAINT [PK_RecipesIndex] PRIMARY KEY CLUSTERED ([IDRecipeIndex] ASC) WITH (FILLFACTOR = 80)
+);
+

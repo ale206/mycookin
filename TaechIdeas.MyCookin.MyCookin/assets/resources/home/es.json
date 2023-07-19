@@ -1,0 +1,29 @@
+﻿{
+  "mainTitle": "Quieres algo bueno?",
+  "lblCookItNow": "Cocinalo ya",
+
+  "chkVegan": "Veganas",
+  "chkVegetarian": "Vegetarianas",
+  "chkGluten": "Sin Gluten",
+  "chkLight": "Ligeras",
+  "chkQuick": "Rápidas",
+  "chkEmptyFridge": "Vacía Nevera",
+
+  "btnSearch": "Search",
+
+  "txtSearch": "Prueba un nuevo tipo de busqueada de recetas como: Quiero algo dulce.",
+
+  "lblRealRecipes": "Recetas Verdaderas",
+  "lblRealRecipesDescription": "Todas las recetas vienen desde los amantes de la comida como tu. Sin redacción!",
+
+  "lblSocial": "Social",
+  "lblSocialDescription": "Compartes tus recetas y vota las otras. Sigues nuevos cocineros y conoces nueva gente.",
+
+  "lblInternational": "Internacional",
+  "lblInternationalDescription": "Descubres nuevos platos y sabores hechos por gente de todo el mundo.",
+
+  "lblTopRec": "Las mejores recetas",
+  "recipe": "es/receta",
+
+  "noResults": "No existen resultados para esta receta. Pronto puede insertar su descripción!"
+}

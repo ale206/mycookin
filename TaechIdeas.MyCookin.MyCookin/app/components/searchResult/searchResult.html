@@ -1,0 +1,67 @@
+﻿<div class="container">
+
+    <div class="gap gap-small"></div>
+
+    <search-Engine ></search-Engine>
+
+    <div class="row row-wrap">
+
+
+        <span ng-show="noRecipesText">{{labels.noResults}}</span>
+
+        <div class="col-md-3" ng-repeat="recipe in recipes track by $index">
+            <div class="thumb">
+                <header class="thumb-header">
+                    <a class="hover-img" href="/{{labels.recipe}}/{{recipe.FriendlyId}}">
+                        <img ng-src={{recipe.ImageUrl}} alt="{{recipe.RecipeName}}" title="{{recipe.RecipeName}}"/>
+
+                    </a>
+                </header>
+                <div class="thumb-caption">
+                    <ul class="icon-group text-tiny text-color">
+                        <li ng-repeat="n in getFullStars(recipe.RecipeAvgRating) track by $index">
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li ng-repeat="n in getEmptyStars(recipe.RecipeAvgRating) track by $index">
+                            <i class="fa fa-star-o"></i>
+                        </li>
+
+                    </ul>
+                    <h5 class="thumb-title">
+                        <a class="text-darken" href="/{{labels.recipe}}/{{recipe.FriendlyId}}">
+                            <span class="normalised-text">{{ recipe.RecipeName | limitTo: 53 }}{{recipe.RecipeName.length > 53 ? '...' : ''}}</span>
+                        </a>
+                    </h5>
+                    <!--<p class="mb0">
+                        <small><i class="fa fa-map-marker"></i> {{recipe.RecipeDifficulty}}</small>
+                    </p>-->
+                    <p class="mb0 text-darken">
+                        <span class="text-lg lh1em text-color">{{recipe.RecipePortionKcal | number : 2}}</span> Kcal
+                    </p>
+                    <p class="mb0 text-darken">
+                        <span class="text-lg lh1em text-color">{{recipe.CookingTimeMinutes + recipe.PreparationTimeMinutes}}</span> min
+                    </p>
+                    <p class="mb0 text-darken">
+                        <!--<span ng-show="recipe.IsVegetarian">{{labels.lblVegetarian}}</span>
+                        <span ng-show="recipe.IsVegan">{{labels.lblVegan}}</span>
+                        <span ng-show="recipe.IsGlutenFree">{{labels.lblGlutenFree}}</span>
+                        <span ng-show="recipe.IsHotSpicy">{{labels.lblHotSpicy}}</span>-->
+                        <span>{{recipe.PropertiesJoined}}&nbsp;</span>
+                    </p>
+                    <p class="mb0 text-darken">
+                        <a href="#"> <i class="fa fa-user"></i> {{recipe.RecipeOwner.Name}} {{recipe.RecipeOwner.Surname}}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--<h3 class="mb20">Sponsored</h3>
+    <div class="row row-wrap">-->
+    <!--Same as above for sponsored-->
+    <!--</div>-->
+
+    <div class="gap gap-small"></div>
+</div>

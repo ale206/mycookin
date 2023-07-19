@@ -1,0 +1,39 @@
+﻿<div class="gap gap-small"></div>
+
+<div class="global-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <img src="../../../assets/img/BulletinBoardLeft.jpg"/>
+
+                <!--@* SUGGESTED RECIPES *@
+                @for (var i = 0; i < 3; i++)
+                {
+                @Html.Partial("_SuggestedRecipe")
+                }-->
+
+                <div class="gap"></div>
+
+                <!--@* FRIENDS YOU MAY KNOW *@
+                @for (var i = 0; i < 3; i++)
+                {
+                @Html.Partial("_PeopleYouMayKnow")
+                }-->
+
+            </div>
+            <div class="col-md-9">
+                <img src="../../../assets/img/BulletinBoardRight.jpg"/>
+
+                <ul class="booking-list booking-list-wishlist">
+
+                    <!--@* BULLETIN BOARD *@
+                    @for (var i = 0; i < 5; i++)
+                    {
+                    @Html.Partial("_BulletinBoardPost")
+                    }-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

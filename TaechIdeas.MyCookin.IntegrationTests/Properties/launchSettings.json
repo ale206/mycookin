@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TaechIdeas.MyCookin.IntegrationTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Localhost"
+      }
+    }
+  }
+}
