@@ -1,0 +1,7 @@
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\bin\MyCookin.BackOffice.dll.config
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\bin\MyCookin.BackOffice.dll
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\bin\MyCookin.BackOffice.pdb
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\obj\Debug\MyCookin.BackOffice.csproj.CoreCompileInputs.cache
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\obj\Debug\MyCookin.BackOffice.dll
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\obj\Debug\MyCookin.BackOffice.pdb
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.BackOffice\obj\Debug\MyCookin.BackOffice.csprojAssemblyReference.cache

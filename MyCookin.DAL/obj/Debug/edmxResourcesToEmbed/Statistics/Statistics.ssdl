@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBStatisticsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBStatisticsModelStoreContainer">
+    <EntitySet Name="UsersActionsStatistics" EntityType="DBStatisticsModel.Store.UsersActionsStatistics" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="UsersActionsStatistics">
+    <Key>
+      <PropertyRef Name="IDUserActionStatistic" />
+    </Key>
+    <Property Name="IDUserActionStatistic" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUser" Type="uniqueidentifier" />
+    <Property Name="IDRelatedObject" Type="uniqueidentifier" />
+    <Property Name="ActionType" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="DateAction" Type="datetime" Nullable="false" />
+    <Property Name="FileOrigin" Type="nvarchar(max)" />
+    <Property Name="SearchString" Type="nvarchar(max)" />
+    <Property Name="OtherInfo" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="USP_CountByIDRelatedObjectAndActionType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDRelatedObject" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ActionType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_CountByIDUserAndActionType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ActionType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertUserActionStatistic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDRelatedObject" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ActionType" Type="int" Mode="In" />
+    <Parameter Name="Comments" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="DateAction" Type="datetime" Mode="In" />
+    <Parameter Name="FileOrigin" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SearchString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OtherInfo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+</Schema>

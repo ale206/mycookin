@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBUsersProfileModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DBUserNotificationsEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UsersNotifications" EntityType="DBUsersProfileModel.UsersNotifications" />
+    <EntitySet Name="UsersNotificationsTypes" EntityType="DBUsersProfileModel.UsersNotificationsTypes" />
+    <EntitySet Name="vGetUsersNotificationsByIDUserAndIDLanguage" EntityType="DBUsersProfileModel.vGetUsersNotificationsByIDUserAndIDLanguage" />
+    <AssociationSet Name="FK_UsersNotifications_UsersNotificationsTypes" Association="DBUsersProfileModel.FK_UsersNotifications_UsersNotificationsTypes">
+      <End Role="UsersNotificationsTypes" EntitySet="UsersNotificationsTypes" />
+      <End Role="UsersNotifications" EntitySet="UsersNotifications" />
+    </AssociationSet>
+    <FunctionImport Name="USP_GetNotificationsByUser" EntitySet="vGetUsersNotificationsByIDUserAndIDLanguage" ReturnType="Collection(DBUsersProfileModel.vGetUsersNotificationsByIDUserAndIDLanguage)">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="IDLanguage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_IsNotificationEnabled" EntitySet="vGetUsersNotificationsByIDUserAndIDLanguage" ReturnType="Collection(DBUsersProfileModel.vGetUsersNotificationsByIDUserAndIDLanguage)">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserNotificationType" Mode="In" Type="Int32" />
+      <Parameter Name="IDLanguage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_UpdateUserNotification" EntitySet="vGetUsersNotificationsByIDUserAndIDLanguage" ReturnType="Collection(DBUsersProfileModel.vGetUsersNotificationsByIDUserAndIDLanguage)">
+      <Parameter Name="IDUserNotification" Mode="In" Type="Guid" />
+      <Parameter Name="IsEnabled" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="UsersNotifications">
+    <Key>
+      <PropertyRef Name="IDUserNotification" />
+    </Key>
+    <Property Name="IDUserNotification" Type="Guid" Nullable="false" />
+    <Property Name="IDUserNotificationType" Type="Int32" Nullable="false" />
+    <Property Name="IDUser" Type="Guid" Nullable="false" />
+    <Property Name="IsEnabled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UsersNotificationsTypes" Relationship="DBUsersProfileModel.FK_UsersNotifications_UsersNotificationsTypes" FromRole="UsersNotifications" ToRole="UsersNotificationsTypes" />
+  </EntityType>
+  <EntityType Name="UsersNotificationsTypes">
+    <Key>
+      <PropertyRef Name="IDUserNotificationType" />
+    </Key>
+    <Property Name="IDUserNotificationType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationType" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="NotificationTypeEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="NotificationTypeOrder" Type="Int32" Nullable="false" />
+    <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UsersNotifications" Relationship="DBUsersProfileModel.FK_UsersNotifications_UsersNotificationsTypes" FromRole="UsersNotificationsTypes" ToRole="UsersNotifications" />
+  </EntityType>
+  <EntityType Name="vGetUsersNotificationsByIDUserAndIDLanguage">
+    <Key>
+      <PropertyRef Name="IDUserNotification" />
+      <PropertyRef Name="IDUserNotificationType" />
+      <PropertyRef Name="IDUser" />
+      <PropertyRef Name="IsEnabled" />
+      <PropertyRef Name="NotificationType" />
+      <PropertyRef Name="NotificationTypeEnabled" />
+      <PropertyRef Name="NotificationTypeOrder" />
+      <PropertyRef Name="IDUserNotificationLanguage" />
+      <PropertyRef Name="IDLanguage" />
+      <PropertyRef Name="NotificationQuestion" />
+      <PropertyRef Name="IsVisible" />
+    </Key>
+    <Property Name="IDUserNotification" Type="Guid" Nullable="false" />
+    <Property Name="IDUserNotificationType" Type="Int32" Nullable="false" />
+    <Property Name="IDUser" Type="Guid" Nullable="false" />
+    <Property Name="IsEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="NotificationType" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="NotificationTypeEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="NotificationTypeOrder" Type="Int32" Nullable="false" />
+    <Property Name="IDUserNotificationLanguage" Type="Int32" Nullable="false" />
+    <Property Name="IDLanguage" Type="Int32" Nullable="false" />
+    <Property Name="NotificationQuestion" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="NotificationComment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Boolean" Name="IsVisible" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_UsersNotifications_UsersNotificationsTypes">
+    <End Role="UsersNotificationsTypes" Type="DBUsersProfileModel.UsersNotificationsTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UsersNotifications" Type="DBUsersProfileModel.UsersNotifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersNotificationsTypes">
+        <PropertyRef Name="IDUserNotificationType" />
+      </Principal>
+      <Dependent Role="UsersNotifications">
+        <PropertyRef Name="IDUserNotificationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

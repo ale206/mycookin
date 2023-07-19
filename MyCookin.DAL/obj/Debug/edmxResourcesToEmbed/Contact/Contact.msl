@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBErrorsAndMessagesModelStoreContainer" CdmEntityContainer="ContactEntities">
+    <EntitySetMapping Name="ContactRequests">
+      <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequests">
+        <MappingFragment StoreEntitySet="ContactRequests">
+          <ScalarProperty Name="IsRequestClosed" ColumnName="IsRequestClosed" />
+          <ScalarProperty Name="IDContactRequestType" ColumnName="IDContactRequestType" />
+          <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+          <ScalarProperty Name="IDLanguage" ColumnName="IDLanguage" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="PrivacyAccept" ColumnName="PrivacyAccept" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactRequestsReply">
+      <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequestsReply">
+        <MappingFragment StoreEntitySet="ContactRequestsReply">
+          <ScalarProperty Name="IDContactRequestReply" ColumnName="IDContactRequestReply" />
+          <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+          <ScalarProperty Name="IDUserWhoReplied" ColumnName="IDUserWhoReplied" />
+          <ScalarProperty Name="Reply" ColumnName="Reply" />
+          <ScalarProperty Name="ReplyDate" ColumnName="ReplyDate" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactRequestsType">
+      <EntityTypeMapping TypeName="DBErrorsAndMessagesModel.ContactRequestsType">
+        <MappingFragment StoreEntitySet="ContactRequestsType">
+          <ScalarProperty Name="IDContactRequestType" ColumnName="IDContactRequestType" />
+          <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+          <ScalarProperty Name="RequestTypeAddedOn" ColumnName="RequestTypeAddedOn" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_InsertContactRequest" FunctionName="DBErrorsAndMessagesModel.Store.USP_InsertContactRequest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_InsertContactRequestReply" FunctionName="DBErrorsAndMessagesModel.Store.USP_InsertContactRequestReply">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetContactRequests" FunctionName="DBErrorsAndMessagesModel.Store.USP_GetContactRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBErrorsAndMessagesModel.RequestMessages">
+          <ScalarProperty Name="IDContactRequest" ColumnName="IDContactRequest" />
+          <ScalarProperty Name="IDLanguage" ColumnName="IDLanguage" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

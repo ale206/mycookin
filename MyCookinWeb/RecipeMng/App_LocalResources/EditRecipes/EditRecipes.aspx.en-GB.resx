@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddBeverageRecipeResource1.Text" xml:space="preserve">
+    <value>Add beverage</value>
+  </data>
+  <data name="btnAddBeverageRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSaveRecipeResource1.Text" xml:space="preserve">
+    <value>Save Recipe</value>
+  </data>
+  <data name="btnSaveRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkHotSpicyResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlRecipeDifficultiesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgLoadingResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgLoadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgNoPhotoResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgNoPhotoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAddBeverageResource1.Text" xml:space="preserve">
+    <value>Suggest some beverages that matching this recipe</value>
+  </data>
+  <data name="lblAddBeverageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblChangeRecipeNameResource1.Text" xml:space="preserve">
+    <value>Recipe name</value>
+  </data>
+  <data name="lblChangeRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCookingTimeResource1.Text" xml:space="preserve">
+    <value>Cooking time</value>
+  </data>
+  <data name="lblCookingTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGeneralUploadErrorResource1.Text" xml:space="preserve">
+    <value>Photo too big</value>
+  </data>
+  <data name="lblGeneralUploadErrorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblHotSpicyResource1.Text" xml:space="preserve">
+    <value>Hot spicy recipe</value>
+  </data>
+  <data name="lblHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNumberOfPersonResource1.Text" xml:space="preserve">
+    <value>Number of people</value>
+  </data>
+  <data name="lblNumberOfPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPreparationTimeResource1.Text" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="lblPreparationTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeCompletePercResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeCompletePercResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeDifficultiesResource1.Text" xml:space="preserve">
+    <value>Recipe difficulty</value>
+  </data>
+  <data name="lblRecipeDifficultiesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeHistoryResource1.Text" xml:space="preserve">
+    <value>Recipe history</value>
+  </data>
+  <data name="lblRecipeHistoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeNameResource1.Text" xml:space="preserve">
+    <value>Recipe name</value>
+  </data>
+  <data name="lblRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeNoteResource1.Text" xml:space="preserve">
+    <value>Special notes</value>
+  </data>
+  <data name="lblRecipeNoteResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeStepsResource1.Text" xml:space="preserve">
+    <value>Write down here how to prepare your recipe</value>
+  </data>
+  <data name="lblRecipeStepsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeSuggestionResource1.Text" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="lblRecipeSuggestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSavingResource1.Text" xml:space="preserve">
+    <value>Saving your recipe</value>
+  </data>
+  <data name="lblSavingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Difficult</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lnkGeneralInfoResource1.Text" xml:space="preserve">
+    <value>Recipe</value>
+  </data>
+  <data name="lnkGeneralInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkIngredientsResource1.Text" xml:space="preserve">
+    <value>Ingredients</value>
+  </data>
+  <data name="lnkIngredientsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkOtherInfoResource1.Text" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="lnkOtherInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkRecipeStepsResource1.Text" xml:space="preserve">
+    <value>Preparation steps</value>
+  </data>
+  <data name="lnkRecipeStepsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkRecipeTagsResource1.Text" xml:space="preserve">
+    <value>Other Informations</value>
+  </data>
+  <data name="lnkRecipeTagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>MyCookin</value>
+  </data>
+  <data name="pnlAddResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAddResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlBackgroundResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlBackgroundResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlChangeImageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlChangeImageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContentResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlGeneralInfoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlGeneralInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngredientsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIngredientsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainTabResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainTabResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlManageRecipePhotoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlManageRecipePhotoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeHeadResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeHeadResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNameResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSaveRecipeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSaveRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCookingTimeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCookingTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNumberOfPersonResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNumberOfPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPreparationTimeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPreparationTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeHistoryResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeHistoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeNoteResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeNoteResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeStepResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeStepResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeSuggestionResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeSuggestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hfRecipePercentageCompleteBase.Value" xml:space="preserve">
+    <value>complete at {0}%</value>
+  </data>
+  <data name="lblHoursResource.Text" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="lblMinutesResource.Text" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="lblIngredientsTitleResource.Text" xml:space="preserve">
+    <value>Fill out all your ingredients with the right amount and we'll show you the nutritional values ​​of your recipe</value>
+  </data>
+  <data name="btnAddNoPhotoStep.Text" xml:space="preserve">
+    <value>Add no photo step</value>
+  </data>
+  <data name="DeleteStep.OnClientClick" xml:space="preserve">
+    <value>return JCOnfirm(this, 'Delete', 'Are you sure?', 'YES', 'NO');</value>
+  </data>
+  <data name="DragAndDrop.Tooltip" xml:space="preserve">
+    <value>Move this step</value>
+  </data>
+  <data name="lblCreatingSteps.Text" xml:space="preserve">
+    <value>Adding step</value>
+  </data>
+  <data name="SelectFilesText.Text" xml:space="preserve">
+    <value>Add step with photo</value>
+  </data>
+  <data name="ChangeRecipePhoto.Text" xml:space="preserve">
+    <value>Change photo</value>
+  </data>
+  <data name="ibtnDelete.OnClientClick" xml:space="preserve">
+    <value>return JCOnfirm(this, 'Delete Recipe', 'Are you sure?', 'YES', 'NO');</value>
+  </data>
+  <data name="ibtnDeleteResource1.ToolTip" xml:space="preserve">
+    <value>Delete this recipe</value>
+  </data>
+  <data name="hfPublicRecipe.Value" xml:space="preserve">
+    <value>Public Recipe, visible to all</value>
+  </data>
+  <data name="hfRecipeInDraft.Value" xml:space="preserve">
+    <value>Recipe in Draft, visible only to me</value>
+  </data>
+</root>

@@ -1,0 +1,1905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E73D7D7-4652-4174-90A4-16C210E8CDD8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCookinWeb</RootNamespace>
+    <AssemblyName>MyCookinWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AWS.Extensions, Version=1.5.16.1, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyCookin.ThirdPartAPI\Amazon\AWS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK, Version=1.5.16.1, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyCookin.ThirdPartAPI\Amazon\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net40-client\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Apps, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e6feebfe441b89cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Apps.2.2.0.0\lib\Google.GData.Apps.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.2.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Contacts, Version=2.2.0.0, Culture=neutral, PublicKeyToken=7e065189dd4b982f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Contacts.2.2.0.0\lib\Google.GData.Contacts.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Extensions.2.2.0.0\lib\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MailChimp, Version=1.1.92.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailChimp.NET.1.1.92\lib\net40\MailChimp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.0.5.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Auth\Auth.aspx" />
+    <Content Include="CustomControls\AddRemoveImage.ascx" />
+    <Content Include="CustomControls\AutoComplete.ascx" />
+    <Content Include="CustomControls\AutoSuggestMultiValue.ascx" />
+    <Content Include="CustomControls\ctrlEditImage.ascx" />
+    <Content Include="CustomControls\ctrlFileUploader.ascx" />
+    <Content Include="CustomControls\ctrlMultiUpload.ascx" />
+    <Content Include="CustomControls\ctrlMyRecipesBookBlock.ascx" />
+    <Content Include="CustomControls\ctrlRating.ascx" />
+    <Content Include="CustomControls\ctrlRecipeComplexity.ascx" />
+    <Content Include="CustomControls\ctrlRecipePolaroid.ascx" />
+    <Content Include="CustomControls\ctrlUserBoardPostOnFriendBoard.ascx" />
+    <Content Include="CustomControls\ctrlAddRecipeIngredient.ascx" />
+    <Content Include="CustomControls\ctrlBeverageRecipe.ascx" />
+    <Content Include="CustomControls\ctrlRecipeIngredient.ascx" />
+    <Content Include="CustomControls\ctrlShowRecipeIngredient.ascx" />
+    <Content Include="CustomControls\ctrlUserBoardBlock.ascx" />
+    <Content Include="CustomControls\ctrlUserBoardComments.ascx" />
+    <Content Include="CustomControls\ctrlUserBoardLikes.ascx" />
+    <Content Include="CustomControls\ctrlUserBoardStatus.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="FBRedirect.aspx" />
+    <Content Include="Images\attention_icon.png" />
+    <Content Include="Images\Backgrounds\bg_row_sheetCenterLeft.png" />
+    <Content Include="Images\Backgrounds\bg_row_sheetCenterRight.png" />
+    <Content Include="Images\Backgrounds\bg_row_sheetTopLeft.png" />
+    <Content Include="Images\Backgrounds\bg_row_sheetTopRight.png" />
+    <Content Include="Images\bell.png" />
+    <Content Include="Images\bg-polaroid.png" />
+    <Content Include="Images\calendarIcon.png" />
+    <Content Include="Images\colors.jpg" />
+    <Content Include="Images\Comment-Recipe-EN.png" />
+    <Content Include="Images\Comment-Recipe-ES.png" />
+    <Content Include="Images\Comment-Recipe-IT.png" />
+    <Content Include="Images\fb.jpg" />
+    <Content Include="Images\fb_icon.png" />
+    <Content Include="Images\fb_icon_64.png" />
+    <Content Include="Images\flag-de.png" />
+    <Content Include="Images\flag-es.png" />
+    <Content Include="Images\flag-fr.png" />
+    <Content Include="Images\flag-ita.png" />
+    <Content Include="Images\flag-uk.png" />
+    <Content Include="Images\food-blogger.png" />
+    <Content Include="Images\g.jpg" />
+    <Content Include="Images\gluten-free-gray.png" />
+    <Content Include="Images\glyphicons-halflings-white.png" />
+    <Content Include="Images\google_icon.png" />
+    <Content Include="Images\google_icon_64.png" />
+    <Content Include="Images\graffetta.png" />
+    <Content Include="Images\icn_rl.png" />
+    <Content Include="Images\ico-bilancia-off.png" />
+    <Content Include="Images\ico-bilancia-on.png" />
+    <Content Include="Images\ico-bilancia.png" />
+    <Content Include="Images\icon-add.png" />
+    <Content Include="Images\icon-AddRecipe-color.png" />
+    <Content Include="Images\icon-addRecipe-color2.png" />
+    <Content Include="Images\icon-AddRecipe.png" />
+    <Content Include="Images\icon-addToRecipeBook.png" />
+    <Content Include="Images\icon-back-big.png" />
+    <Content Include="Images\icon-back-off-big.png" />
+    <Content Include="Images\icon-back-off.png" />
+    <Content Include="Images\icon-back-on-big.png" />
+    <Content Include="Images\icon-back-on.png" />
+    <Content Include="Images\icon-back.png" />
+    <Content Include="Images\icon-beverage.png" />
+    <Content Include="Images\icon-circle-big.png" />
+    <Content Include="Images\icon-circle.png" />
+    <Content Include="Images\icon-cooking-time.png" />
+    <Content Include="Images\icon-cooking-type.png" />
+    <Content Include="Images\icon-cooking.png" />
+    <Content Include="Images\icon-dontfollow-big.png" />
+    <Content Include="Images\icon-dontfollow.png" />
+    <Content Include="Images\icon-drag-and-drop.png" />
+    <Content Include="Images\icon-empty-circle.png" />
+    <Content Include="Images\icon-follow-big.png" />
+    <Content Include="Images\icon-follow-cook.png" />
+    <Content Include="Images\icon-follow-people.png" />
+    <Content Include="Images\icon-follow.png" />
+    <Content Include="Images\icon-followActionLoading.gif" />
+    <Content Include="Images\icon-followers-big.png" />
+    <Content Include="Images\icon-followers.png" />
+    <Content Include="Images\icon-following-big.png" />
+    <Content Include="Images\icon-following-people.png" />
+    <Content Include="Images\icon-following.png" />
+    <Content Include="Images\icon-food-blogger.png" />
+    <Content Include="Images\icon-forward-big.png" />
+    <Content Include="Images\icon-forward-gray.png" />
+    <Content Include="Images\icon-forward.png" />
+    <Content Include="Images\icon-go-back.png" />
+    <Content Include="Images\icon-go-off-big.png" />
+    <Content Include="Images\icon-go-off.png" />
+    <Content Include="Images\icon-go-on-big.png" />
+    <Content Include="Images\icon-go-on.png" />
+    <Content Include="Images\icon-goBack.png" />
+    <Content Include="Images\icon-green-circle.png" />
+    <Content Include="Images\icon-group-big.png" />
+    <Content Include="Images\icon-group.png" />
+    <Content Include="Images\icon-groups.png" />
+    <Content Include="Images\icon-history.png" />
+    <Content Include="Images\icon-HotSpicy-off.png" />
+    <Content Include="Images\icon-HotSpicy-on.png" />
+    <Content Include="Images\icon-like-off-big.png" />
+    <Content Include="Images\icon-like-off.png" />
+    <Content Include="Images\icon-like-on-big.png" />
+    <Content Include="Images\icon-like-on.png" />
+    <Content Include="Images\icon-LoadMore.png" />
+    <Content Include="Images\icon-LoadMore_2.png" />
+    <Content Include="Images\icon-location.png" />
+    <Content Include="Images\icon-login.png" />
+    <Content Include="Images\icon-logout-big.png" />
+    <Content Include="Images\icon-logout-color-big.png" />
+    <Content Include="Images\icon-logout-color-green-big.png" />
+    <Content Include="Images\icon-logout-color-green.png" />
+    <Content Include="Images\icon-logout-color.png" />
+    <Content Include="Images\icon-logout-color2.png" />
+    <Content Include="Images\icon-logout-off-big.png" />
+    <Content Include="Images\icon-logout-off.png" />
+    <Content Include="Images\icon-logout-on-big.png" />
+    <Content Include="Images\icon-logout-on.png" />
+    <Content Include="Images\icon-logout.png" />
+    <Content Include="Images\icon-manageRecipe-color.png" />
+    <Content Include="Images\icon-MyRecipes.png" />
+    <Content Include="Images\icon-NewMessage.png" />
+    <Content Include="Images\icon-notifications-on.png" />
+    <Content Include="Images\icon-notifications.png" />
+    <Content Include="Images\icon-HotSpicy.png" />
+    <Content Include="Images\icon-num-peple.png" />
+    <Content Include="Images\icon-other-note.png" />
+    <Content Include="Images\icon-pencil-color.png" />
+    <Content Include="Images\icon-pencil1-color-big.png" />
+    <Content Include="Images\icon-pencil1-color.png" />
+    <Content Include="Images\icon-pencil2-color-big.png" />
+    <Content Include="Images\icon-pencil2-color.png" />
+    <Content Include="Images\icon-preparation-time.png" />
+    <Content Include="Images\icon-preservation.png" />
+    <Content Include="Images\icon-QuickNext.png" />
+    <Content Include="Images\icon-QuickPrev.png" />
+    <Content Include="Images\icon-quickRecipe-off.png" />
+    <Content Include="Images\icon-quickRecipe-on.png" />
+    <Content Include="Images\icon-recipe-big.png" />
+    <Content Include="Images\icon-recipe-color-big.png" />
+    <Content Include="Images\icon-recipe-color.png" />
+    <Content Include="Images\icon-recipe-grey.png" />
+    <Content Include="Images\icon-recipe.png" />
+    <Content Include="Images\icon-messages-on.png" />
+    <Content Include="Images\icon-messages.png" />
+    <Content Include="Images\icon-recipeBook-color.png" />
+    <Content Include="Images\icon-removeFromRecipeBook.png" />
+    <Content Include="Images\icon-search-engine.png" />
+    <Content Include="Images\icon-settings-color-big.png" />
+    <Content Include="Images\icon-settings-color.png" />
+    <Content Include="Images\icon-settings-color2.png" />
+    <Content Include="Images\icon-settings.png" />
+    <Content Include="Images\icon-share-recipe.png" />
+    <Content Include="Images\icon-share.png" />
+    <Content Include="Images\icon-spam-big.png" />
+    <Content Include="Images\icon-spam.png" />
+    <Content Include="Images\icon-suggestion.png" />
+    <Content Include="Images\icon-user-color-blackOrange-big.png" />
+    <Content Include="Images\icon-user-color-blackOrange.png" />
+    <Content Include="Images\icon-user-color-Orange-big.png" />
+    <Content Include="Images\icon-user-color-Orange.png" />
+    <Content Include="Images\icon-user-color2.png" />
+    <Content Include="Images\icon-user.png" />
+    <Content Include="Images\icon-userNoPic.png" />
+    <Content Include="Images\icon-vote-recipe.png" />
+    <Content Include="Images\iconDifficult_1.png" />
+    <Content Include="Images\iconDifficult_2.png" />
+    <Content Include="Images\iconDifficult_3.png" />
+    <Content Include="Images\IconFollowing.png" />
+    <Content Include="Images\delete-icon.png" />
+    <Content Include="Images\deleteX.png" />
+    <Content Include="Images\Down.png" />
+    <Content Include="Images\fb.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\comunityRecipes.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\MyRecipes.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-1.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-11.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-2.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-3.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-36.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-37.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-38.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-39.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-4.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-5.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-6.png" />
+    <Content Include="Images\IconRecipeProperty\50x50\RecipeProperty-8.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\comunityRecipes.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\MyRecipes.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-1.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-11.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-2.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-3.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-36.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-37.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-38.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-39.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-4.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-5.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-6.png" />
+    <Content Include="Images\IconRecipeProperty\80x80\RecipeProperty-8.png" />
+    <Content Include="Images\icon_Browse.jpg" />
+    <Content Include="Images\icon_follower.png" />
+    <Content Include="Images\icon_upload.png" />
+    <Content Include="Images\Left.png" />
+    <Content Include="Images\loadingLine.gif" />
+    <Content Include="Images\loadingLineOrange.gif" />
+    <Content Include="Images\Login-EN.png" />
+    <Content Include="Images\Login-ES.png" />
+    <Content Include="Images\Login-IT.png" />
+    <Content Include="Images\Message.png" />
+    <Content Include="Images\MessageIcon.png" />
+    <Content Include="Images\MyCookin-Logo.png" />
+    <Content Include="Images\MyCookin-Logo_NoBeta.png" />
+    <Content Include="Images\MyCookin-Messages.png" />
+    <Content Include="Images\MyCookinLogo-105x105.png" />
+    <Content Include="Images\MyCookinLogo-200x200.png" />
+    <Content Include="Images\MyCookinPageTabFacebook.jpg" />
+    <Content Include="Images\MyCookinTab1.jpg" />
+    <Content Include="Images\mymix-off.png" />
+    <Content Include="Images\mymix-on.png" />
+    <Content Include="Images\gluten-free-off.png" />
+    <Content Include="Images\gluten-free-on.png" />
+    <Content Include="Images\post-it.png" />
+    <Content Include="Images\post-it_2.png" />
+    <Content Include="Images\Rating\cancel-off.png" />
+    <Content Include="Images\Rating\cancel-on.png" />
+    <Content Include="Images\Rating\star-half.png" />
+    <Content Include="Images\Rating\star-off.png" />
+    <Content Include="Images\Rating\star-on.png" />
+    <Content Include="Images\Right.png" />
+    <Content Include="Images\Search-Engine-EN.png" />
+    <Content Include="Images\Search-Engine-ES.png" />
+    <Content Include="Images\Search-Engine-IT.png" />
+    <Content Include="Images\submit.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\acceptFriendship.png" />
+    <Content Include="Images\addUser.png" />
+    <Content Include="Images\antipasti.jpg" />
+    <Content Include="Images\appdotnet-connect.png" />
+    <Content Include="Images\bckg_tea.jpg" />
+    <Content Include="Images\bg-cerca.gif" />
+    <Content Include="Images\bgTextbox.jpg" />
+    <Content Include="Images\bgTextboxDate.jpg" />
+    <Content Include="Images\bgTextboxError.jpg" />
+    <Content Include="Images\bg_footer.png" />
+    <Content Include="Images\btnToLike.gif" />
+    <Content Include="Images\btnToUnlike.gif" />
+    <Content Include="Images\calendar.gif" />
+    <Content Include="Images\CheckIcon.png" />
+    <Content Include="Images\close-icon.png" />
+    <Content Include="Images\declineFriendship.png" />
+    <Content Include="Images\drink.jpg" />
+    <Content Include="Images\drinks.jpg" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\facebook_hover.png" />
+    <Content Include="Images\Form\iconWrite1.png" />
+    <Content Include="Images\google-signin.png" />
+    <Content Include="Images\go_newsletter.png" />
+    <Content Include="Images\IconAddFriend.png" />
+    <Content Include="Images\IconBlock.png" />
+    <Content Include="Images\IconEditProfile.png" />
+    <Content Include="Images\iconFacebook.png" />
+    <Content Include="Images\IconFollowers.png" />
+    <Content Include="Images\IconFriends.png" />
+    <Content Include="Images\iconGoogle.png" />
+    <Content Include="Images\IconIngredients.png" />
+    <Content Include="Images\IconJoin.png" />
+    <Content Include="Images\IconLogin.png" />
+    <Content Include="Images\IconLogout.png" />
+    <Content Include="Images\IconMyProfile.png" />
+    <Content Include="Images\IconNotificationsOff.png" />
+    <Content Include="Images\IconNotificationsOn.png" />
+    <Content Include="Images\IconRecipes.png" />
+    <Content Include="Images\IconRecoveryPsw.png" />
+    <Content Include="Images\IconRegister.png" />
+    <Content Include="Images\IconRemoveBlock.png" />
+    <Content Include="Images\IconRemoveFriend.png" />
+    <Content Include="Images\IconSave.png" />
+    <Content Include="Images\iconSave2.png" />
+    <Content Include="Images\IconSpam.png" />
+    <Content Include="Images\iconTwitter.png" />
+    <Content Include="Images\icon_appdotnet.png" />
+    <Content Include="Images\icon_facebook.png" />
+    <Content Include="Images\icon_gplus.png" />
+    <Content Include="Images\icon_linkedin.png" />
+    <Content Include="Images\icon_loader.gif" />
+    <Content Include="Images\icon_twitter.png" />
+    <Content Include="Images\img_index1.png" />
+    <Content Include="Images\img_index1_2.png" />
+    <Content Include="Images\img_index2.png" />
+    <Content Include="Images\img_index2_2.png" />
+    <Content Include="Images\img_index3.png" />
+    <Content Include="Images\img_index3_3.png" />
+    <Content Include="Images\Ingredient\20120823-1812185038_iconSave.png" />
+    <Content Include="Images\input.gif" />
+    <Content Include="Images\IRA_01.jpg" />
+    <Content Include="Images\lente.gif" />
+    <Content Include="Images\Loader\ajax-loader_black01.gif" />
+    <Content Include="Images\Loader\ajax-loader_black02.gif" />
+    <Content Include="Images\Loader\ajax-loader_blu01.gif" />
+    <Content Include="Images\Loader\loading-icon01.gif" />
+    <Content Include="Images\login-facebook-button.png" />
+    <Content Include="Images\login.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo1.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\myCookinLogo.png" />
+    <Content Include="Images\myCookinLogo1.png" />
+    <Content Include="Images\myCookinLogoSmall.png" />
+    <Content Include="Images\pac_fruit.jpg" />
+    <Content Include="Images\pianta.jpg" />
+    <Content Include="Images\pngbehavior.htc" />
+    <Content Include="Images\removeFriendship.png" />
+    <Content Include="Images\rss.png" />
+    <Content Include="Images\rss_hover.png" />
+    <Content Include="Images\sfondo_index.png" />
+    <Content Include="Images\showFriendProfile.png" />
+    <Content Include="Images\tagliere.jpg" />
+    <Content Include="Images\tazzaTe.jpg" />
+    <Content Include="Images\Tips-It-Votare-una-ricetta.png" />
+    <Content Include="Images\tw.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\twitter_hover.png" />
+    <Content Include="Images\twitter_signin.png" />
+    <Content Include="Images\ui-anim_basic_16x16.gif" />
+    <Content Include="Images\user_edit.png" />
+    <Content Include="Images\vegan-gray.png" />
+    <Content Include="Images\vegan-off.png" />
+    <Content Include="Images\vegan-on.png" />
+    <Content Include="Images\vegetarian-gray.png" />
+    <Content Include="Images\vegetarian-off.png" />
+    <Content Include="Images\vegetarian-on.png" />
+    <Content Include="Ingredient\IngredientDashBoard.aspx" />
+    <Content Include="Ingredient\IngredientsList.aspx" />
+    <Content Include="Ingredient\MngIngredients.aspx" />
+    <Content Include="Ingredient\ShowIngredient.aspx" />
+    <Content Include="Js\AutoSuggest\jquery.autoSuggest.js" />
+    <Content Include="Js\BigVideo\bigvideo.js" />
+    <Content Include="Js\BigVideo\bigvideo.min.js" />
+    <Content Include="Js\BigVideo\jquery.backstretch.js" />
+    <Content Include="Js\BigVideo\jquery.backstretch.min.js" />
+    <Content Include="Js\BigVideo\jquery.imagesloaded.min.js" />
+    <Content Include="Js\BigVideo\video.js" />
+    <Content Include="Js\BigVideo\video.min.js" />
+    <Content Include="Js\BootstrapDatePicker\bootstrap-datepicker.js" />
+    <Content Include="Js\BootstrapDatePicker\jsDate.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Js\BootstrapDatePicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Js\CustomControls\ctrlRating.js" />
+    <Content Include="Js\CustomControls\ctrlRecipeIngredient.js" />
+    <Content Include="Js\CustomControls\ctrlShowlRecipeIngredient.js" />
+    <Content Include="Js\CustomControls\ctrlUserBoardLikes.js" />
+    <Content Include="Js\DateFormat.js" />
+    <Content Include="Js\ddSlick\jquery.ddslick.min.js" />
+    <Content Include="Js\Forms\jquery.autogrow.js" />
+    <Content Include="Js\Forms\jquery.autosize.js" />
+    <Content Include="Js\Forms\jquery.autosize.min.js" />
+    <Content Include="Js\IEPatch\jquery.placeholder.js" />
+    <Content Include="Js\IEPatch\jquery.placeholder.min.js" />
+    <Content Include="Js\JCrop\jquery.color.js" />
+    <Content Include="Js\JCrop\jquery.Jcrop.js" />
+    <Content Include="Js\JCrop\jquery.Jcrop.min.js" />
+    <Content Include="Js\jquery-1.10.1.min.js" />
+    <Content Include="Js\jquery-migrate-1.1.0.js" />
+    <Content Include="Js\jquery-migrate-1.1.0.min.js" />
+    <Content Include="Js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Js\jquery.tools.min.js" />
+    <Content Include="Js\Messages\MessagesSetAsRead.min.js" />
+    <Content Include="Js\MyCookinFunctions_1.0.min.js" />
+    <Content Include="Js\Notifications\MyNotifications.min.js" />
+    <Content Include="Js\noty\jquery.noty.min.js" />
+    <Content Include="Js\noty\layouts\bottomCenter.min.js" />
+    <Content Include="Js\noty\layouts\bottomRight.min.js" />
+    <Content Include="Js\noty\layouts\centerRight.min.js" />
+    <Content Include="Js\noty\themes\MyCookinNoty.min.js" />
+    <Content Include="Js\Pages\AllRecipes.min.js" />
+    <Content Include="Js\Pages\IngredientsList.js" />
+    <Content Include="Js\Pages\AllRecipes.js" />
+    <Content Include="Js\Pages\Contact.js" />
+    <Content Include="Js\Pages\IngredientsList.min.js" />
+    <Content Include="Js\Pages\Messages.js" />
+    <Content Include="Js\MultiUpload\ajax.requester.js" />
+    <Content Include="Js\MultiUpload\button.js" />
+    <Content Include="Js\MultiUpload\deletefile.ajax.requester.js" />
+    <Content Include="Js\MultiUpload\dnd.js" />
+    <Content Include="Js\MultiUpload\features.js" />
+    <Content Include="Js\MultiUpload\handler.base.js" />
+    <Content Include="Js\MultiUpload\handler.form.js" />
+    <Content Include="Js\MultiUpload\handler.xhr.js" />
+    <Content Include="Js\MultiUpload\header.js" />
+    <Content Include="Js\MultiUpload\iframe.xss.response.js" />
+    <Content Include="Js\MultiUpload\jquery-dnd.js" />
+    <Content Include="Js\MultiUpload\jquery-plugin.js" />
+    <Content Include="Js\MultiUpload\paste.js" />
+    <Content Include="Js\MultiUpload\promise.js" />
+    <Content Include="Js\MultiUpload\uploader.basic.js" />
+    <Content Include="Js\MultiUpload\uploader.js" />
+    <Content Include="Js\MultiUpload\util.js" />
+    <Content Include="Js\MultiUpload\window.receive.message.js" />
+    <Content Include="Js\MyCookinFunctions_1.0.js" />
+    <Content Include="Js\MyCookinSlidePanel_1.0.js" />
+    <Content Include="Js\Messages\MessagesSetAsRead.js" />
+    <Content Include="Js\Notifications\MyNotifications.js" />
+    <Content Include="Js\noty\jquery.noty.js" />
+    <Content Include="Js\noty\layouts\bottom.js" />
+    <Content Include="Js\noty\layouts\bottomCenter.js" />
+    <Content Include="Js\noty\layouts\bottomLeft.js" />
+    <Content Include="Js\noty\layouts\bottomRight.js" />
+    <Content Include="Js\noty\layouts\center.js" />
+    <Content Include="Js\noty\layouts\centerLeft.js" />
+    <Content Include="Js\noty\layouts\centerRight.js" />
+    <Content Include="Js\noty\layouts\inline.js" />
+    <Content Include="Js\noty\layouts\top.js" />
+    <Content Include="Js\noty\layouts\topCenter.js" />
+    <Content Include="Js\noty\layouts\topLeft.js" />
+    <Content Include="Js\noty\layouts\topRight.js" />
+    <Content Include="Js\noty\promise.js" />
+    <Content Include="Js\noty\themes\MyCookinNoty.js" />
+    <Content Include="Js\noty\themes\default.js" />
+    <Content Include="Js\Pages\Default.js" />
+    <Content Include="Js\Pages\ForgotPassword.js" />
+    <Content Include="Js\Pages\Login.js" />
+    <Content Include="Js\Pages\MyNews.js" />
+    <Content Include="Js\Pages\MyNews.min.js" />
+    <Content Include="Js\Pages\PrivateMaster.js" />
+    <Content Include="Js\Pages\PrivateMaster.min.js" />
+    <Content Include="Js\Pages\PublicMaster.js" />
+    <Content Include="Js\Pages\PublicMaster.min.js" />
+    <Content Include="Js\Pages\RecipesBooks.js" />
+    <Content Include="Js\Pages\RecipesBooks.min.js" />
+    <Content Include="Js\Pages\Register.js" />
+    <Content Include="Js\Pages\ResetPassword.js" />
+    <Content Include="Js\Pages\ShowRecipe.js" />
+    <Content Include="Js\Pages\ShowRecipe.min.js" />
+    <Content Include="Js\Pages\TermsAndConditions.js" />
+    <Content Include="Js\PlUpload\i18n\cs.js" />
+    <Content Include="Js\PlUpload\i18n\da.js" />
+    <Content Include="Js\PlUpload\i18n\de.js" />
+    <Content Include="Js\PlUpload\i18n\el.js" />
+    <Content Include="Js\PlUpload\i18n\es.js" />
+    <Content Include="Js\PlUpload\i18n\et.js" />
+    <Content Include="Js\PlUpload\i18n\fa.js" />
+    <Content Include="Js\PlUpload\i18n\fi.js" />
+    <Content Include="Js\PlUpload\i18n\fr-ca.js" />
+    <Content Include="Js\PlUpload\i18n\fr.js" />
+    <Content Include="Js\PlUpload\i18n\hr.js" />
+    <Content Include="Js\PlUpload\i18n\hu.js" />
+    <Content Include="Js\PlUpload\i18n\it.js" />
+    <Content Include="Js\PlUpload\i18n\ja.js" />
+    <Content Include="Js\PlUpload\i18n\ko.js" />
+    <Content Include="Js\PlUpload\i18n\lv.js" />
+    <Content Include="Js\PlUpload\i18n\nl.js" />
+    <Content Include="Js\PlUpload\i18n\pl.js" />
+    <Content Include="Js\PlUpload\i18n\pt-br.js" />
+    <Content Include="Js\PlUpload\i18n\ro.js" />
+    <Content Include="Js\PlUpload\i18n\ru.js" />
+    <Content Include="Js\PlUpload\i18n\sk.js" />
+    <Content Include="Js\PlUpload\i18n\sr.js" />
+    <Content Include="Js\PlUpload\i18n\sv.js" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="Js\PlUpload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="Js\PlUpload\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="Js\PlUpload\jquery.ui.plupload\img\plupload-bw.png" />
+    <Content Include="Js\PlUpload\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="Js\PlUpload\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="Js\PlUpload\plupload.browserplus.js" />
+    <Content Include="Js\PlUpload\plupload.flash.js" />
+    <Content Include="Js\PlUpload\plupload.flash.swf" />
+    <Content Include="Js\PlUpload\plupload.full.js" />
+    <Content Include="Js\PlUpload\plupload.gears.js" />
+    <Content Include="Js\PlUpload\plupload.html4.js" />
+    <Content Include="Js\PlUpload\plupload.html5.js" />
+    <Content Include="Js\PlUpload\plupload.js" />
+    <Content Include="Js\PlUpload\plupload.silverlight.js" />
+    <Content Include="Js\PlUpload\plupload.silverlight.xap" />
+    <Content Include="Js\PopBox\popbox.js" />
+    <Content Include="Js\PopBox\popbox.min.js" />
+    <Content Include="Js\Rating\jquery.raty.js" />
+    <Content Include="Js\Rating\jquery.raty.min.js" />
+    <Content Include="Js\Scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Js\Tipsy\jquery.tipsy.js" />
+    <Content Include="Js\Tipsy\jquery.tipsy.min.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-en.js" />
+    <Content Include="Js\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Js\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Js\ui\jquery-ui.custom.js" />
+    <Content Include="Js\ui\jquery.ui.accordion.js" />
+    <Content Include="Js\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Js\ui\jquery.ui.button.js" />
+    <Content Include="Js\ui\jquery.ui.core.js" />
+    <Content Include="Js\ui\jquery.ui.datepicker.js" />
+    <Content Include="Js\ui\jquery.ui.dialog.js" />
+    <Content Include="Js\ui\jquery.ui.draggable.js" />
+    <Content Include="Js\ui\jquery.ui.droppable.js" />
+    <Content Include="Js\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Js\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Js\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Js\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Js\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Js\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Js\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Js\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Js\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Js\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Js\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Js\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Js\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Js\ui\jquery.ui.effect.js" />
+    <Content Include="Js\ui\jquery.ui.menu.js" />
+    <Content Include="Js\ui\jquery.ui.mouse.js" />
+    <Content Include="Js\ui\jquery.ui.position.js" />
+    <Content Include="Js\ui\jquery.ui.progressbar.js" />
+    <Content Include="Js\ui\jquery.ui.resizable.js" />
+    <Content Include="Js\ui\jquery.ui.selectable.js" />
+    <Content Include="Js\ui\jquery.ui.slider.js" />
+    <Content Include="Js\ui\jquery.ui.sortable.js" />
+    <Content Include="Js\ui\jquery.ui.spinner.js" />
+    <Content Include="Js\ui\jquery.ui.tabs.js" />
+    <Content Include="Js\ui\jquery.ui.tooltip.js" />
+    <Content Include="Js\ui\jquery.ui.widget.js" />
+    <Content Include="Js\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="Js\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="Js\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="Js\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="Landing\en\Default.aspx" />
+    <Content Include="Landing\css\landing.css" />
+    <Content Include="Landing\css\supersized.core.css" />
+    <Content Include="Landing\es\Default.aspx" />
+    <Content Include="Landing\images\facebook-button-es.png" />
+    <Content Include="Landing\images\facebook-button-it.png" />
+    <Content Include="Landing\it\Default.aspx" />
+    <Content Include="Landing\images\facebook_button.png" />
+    <Content Include="Landing\images\MyCookinLogo.png" />
+    <Content Include="Landing\images\spuntino.jpg" />
+    <Content Include="Landing\images\vellutata-di-carote.jpg" />
+    <Content Include="Landing\img\bg-black.png" />
+    <Content Include="Landing\img\progress.gif" />
+    <Content Include="Landing\img\supersized-logo.png" />
+    <Content Include="Landing\it\old\index.html" />
+    <Content Include="Landing\js\supersized.core.3.2.1.js" />
+    <Content Include="Landing\js\supersized.core.3.2.1.min.js" />
+    <Content Include="Link.aspx" />
+    <Content Include="Message\Messages.aspx" />
+    <Content Include="MyAdmin\AllIngredientChecked.aspx" />
+    <Content Include="MyAdmin\AuditCheckPhoto.aspx" />
+    <Content Include="MyAdmin\AuditSpammersList.aspx" />
+    <Content Include="MyAdmin\ErrorsList.aspx" />
+    <Content Include="MyAdmin\IngredientTranslations.aspx" />
+    <Content Include="MyAdmin\MailchimpUpdateLists.aspx" />
+    <Content Include="MyAdmin\MediaManager.aspx" />
+    <Content Include="MyAdmin\MyManager.aspx" />
+    <Content Include="MyAdmin\RecipeTranslations.aspx" />
+    <Content Include="MyAdmin\ScheduledTasks\GetSocialFriends.aspx" />
+    <Content Include="MyAdmin\UsersGroups.aspx" />
+    <Content Include="mycooking.aspx" />
+    <Content Include="Offline.aspx" />
+    <Content Include="ozHmYnuqzFHGdZh8Kf5fSgNMvNw.html" />
+    <Content Include="PagesForEmail\NewFriendshipAccept.aspx" />
+    <Content Include="PagesForEmail\NewFriendshipRequest.aspx" />
+    <Content Include="PagesForEmail\NewMessageReceived.aspx" />
+    <Content Include="PagesForEmail\PhotoRemovedTemplate.aspx" />
+    <Content Include="PagesForEmail\ResetUserPassword.aspx" />
+    <Content Include="PagesForEmail\WelcomeUser.aspx" />
+    <Content Include="Photo\User\Cropped\20130325-2022151453_Ale206.jpg" />
+    <Content Include="Photo\User\Original\20130325-2022151453_Ale206.jpg" />
+    <Content Include="PleaseUpdateYourBrowser.aspx" />
+    <Content Include="RecipeMng\AllRecipes.aspx" />
+    <Content Include="RecipeMng\CreateRecipe.aspx" />
+    <Content Include="RecipeMng\FindRecipes.aspx" />
+    <Content Include="RecipeMng\MngRecipes.aspx" />
+    <Content Include="RecipeMng\MyRecipesBook.aspx" />
+    <Content Include="RecipeMng\PrintRecipe.aspx" />
+    <Content Include="RecipeMng\RecipeDashBoard.aspx" />
+    <Content Include="RecipeMng\EditRecipes.aspx" />
+    <Content Include="RecipeMng\RecipesBooks.aspx" />
+    <Content Include="RecipeMng\ShowRecipe.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="sitemap-index.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sitemap-ingredients.aspx" />
+    <Content Include="sitemap-recipes.aspx" />
+    <Content Include="sitemap-static.xml" />
+    <Content Include="Styles\bigvideo.css" />
+    <Content Include="Styles\bigvideo.min.css" />
+    <Content Include="Styles\Bootstraps\bootstrap.css" />
+    <Content Include="Styles\Bootstraps\datepicker.css" />
+    <Content Include="Styles\jQueryUiCss\AutoSuggest\autoSuggest.css" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\animated-overlay.gif" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_diagonals-thick_18_F8931D_40x40.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_highlight-soft_100_fff_1x100.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_highlight-soft_20_666666_1x100.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-bg_inset-soft_50_F8931D_1x100.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-icons_F8931D_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\images\ui-icons_fff_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Styles\jQueryUiCss\mycookin-theme\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Styles\jQueryUiCss\PopBox\popbox.min.css" />
+    <Content Include="Styles\jQueryUiCss\Scrollbar\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Styles\jQueryUiCss\Scrollbar\Scrollbar.min.css" />
+    <Content Include="Styles\jQueryUiCss\UserControl\ctrlEditImage.css" />
+    <Content Include="Styles\jQueryUiCss\JCrop\Jcrop.gif" />
+    <Content Include="Styles\jQueryUiCss\JCrop\jquery.Jcrop.css" />
+    <Content Include="Styles\jQueryUiCss\JCrop\jquery.Jcrop.min.css" />
+    <Content Include="Styles\jQueryUiCss\MultiUpload\fineuploader.css" />
+    <Content Include="Styles\jQueryUiCss\MultiUpload\loading.gif" />
+    <Content Include="Styles\jQueryUiCss\MultiUpload\processing.gif" />
+    <Content Include="Styles\jQueryUiCss\MultiUpload\styles.css" />
+    <Content Include="Styles\jQueryUiCss\PopBox\popbox.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\application.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\common.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\demo.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\font-awesome.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\normalize.css" />
+    <Content Include="Styles\jQueryUiCss\Rating\pygments.css" />
+    <Content Include="Styles\jQueryUiCss\Scrollbar\jquery.mCustomScrollbar.css" />
+    <Content Include="Styles\jQueryUiCss\Scrollbar\Scrollbar.css" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Styles\jQueryUiCss\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Styles\PageStyle\AllRecipes.min.css" />
+    <Content Include="Styles\PageStyle\IngredientsList.css" />
+    <Content Include="Styles\PageStyle\AllRecipes.css" />
+    <Content Include="Styles\PageStyle\Contact.css" />
+    <Content Include="Styles\PageStyle\Contact.min.css" />
+    <Content Include="Styles\PageStyle\FindRecipes.css" />
+    <Content Include="Styles\PageStyle\FindRecipes.min.css" />
+    <Content Include="Styles\PageStyle\ImageCrop.css" />
+    <Content Include="Styles\PageStyle\ImageCrop.min.css" />
+    <Content Include="Styles\PageStyle\IngredientPopBox.css" />
+    <Content Include="Styles\PageStyle\IngredientPopBox.min.css" />
+    <Content Include="Styles\PageStyle\IngredientsList.min.css" />
+    <Content Include="Styles\PageStyle\Messages.css" />
+    <Content Include="Styles\PageStyle\Messages.min.css" />
+    <Content Include="Styles\PageStyle\MyManager.min.css" />
+    <Content Include="Styles\PageStyle\MyRecipesBook.css" />
+    <Content Include="Styles\PageStyle\MyRecipesBook.min.css" />
+    <Content Include="Styles\PageStyle\RecipesBooks.css" />
+    <Content Include="Styles\PageStyle\RecipesBooks.min.css" />
+    <Content Include="Styles\PageStyle\ShowIngredient.css" />
+    <Content Include="Styles\PageStyle\ShowIngredient.min.css" />
+    <Content Include="Styles\PageStyle\ShowRecipe.css" />
+    <Content Include="Styles\PageStyle\ShowRecipe.min.css" />
+    <Content Include="Styles\PageStyle\MyCooking.css" />
+    <Content Include="Styles\PageStyle\HowItWorks.css" />
+    <Content Include="Styles\PageStyle\TermsAndConditions.css" />
+    <Content Include="Styles\PageStyle\TermsAndConditions.min.css" />
+    <Content Include="Styles\PageStyle\UserBoard.css" />
+    <Content Include="Styles\PageStyle\UserBoard.min.css" />
+    <Content Include="Styles\PageStyle\UserBoardBlock.css" />
+    <Content Include="Styles\PageStyle\UserBoardBlock.min.css" />
+    <Content Include="Styles\PageStyle\UserNotifications.css" />
+    <Content Include="Styles\PageStyle\MyManager.css" />
+    <Content Include="Styles\PageStyle\UserNotifications.min.css" />
+    <Content Include="Styles\PageStyle\UserProfile.css" />
+    <Content Include="Styles\PageStyle\UserProfile.min.css" />
+    <Content Include="Styles\SiteStyle\JQueryUIOverride.min.css" />
+    <Content Include="Styles\SiteStyle\PrivateStyle.css" />
+    <Content Include="Styles\SiteStyle\EmailStyle.css" />
+    <Content Include="Styles\SiteStyle\JQueryUIOverride.css" />
+    <Content Include="Styles\SiteStyle\MyJQuery.css" />
+    <Content Include="Styles\SiteStyle\PrivateStyle.min.css" />
+    <Content Include="Styles\SiteStyle\PublicStyle.css" />
+    <Content Include="Styles\SiteStyle\PublicStyle.min.css" />
+    <Content Include="Styles\SiteStyle\reset.css" />
+    <Content Include="Styles\SiteStyle\reset.min.css" />
+    <Content Include="Styles\SiteStyle\style.css" />
+    <Content Include="Styles\SiteStyle\style.min.css" />
+    <Content Include="Styles\SiteStyle\User.css" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Profilo1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="MyAdmin\SendTestEmail.aspx" />
+    <Content Include="Styles\SiteStyle\User.min.css" />
+    <Content Include="Styles\SiteStyle\_OLD_\PageDefault.css" />
+    <Content Include="Styles\SiteStyle\_OLD_\PageLoginRegister.css" />
+    <Content Include="Styles\SiteStyle\_OLD_\Recipe.css" />
+    <Content Include="Styles\Tipsy\tipsy.css" />
+    <Content Include="Styles\Tipsy\tipsy.min.css" />
+    <Content Include="User\ActivateUser.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\HowItWorks.aspx" />
+    <Content Include="User\MyNews.aspx" />
+    <Content Include="User\ForgotPassword.aspx" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\Logout.aspx" />
+    <Content Include="User\TermsAndConditions.aspx" />
+    <Content Include="User\TestProperty001.aspx" />
+    <Content Include="User\UserBoardPost.aspx" />
+    <Content Include="User\UserFriends.aspx" />
+    <Content Include="User\EditProfile.aspx" />
+    <Content Include="User\Register.aspx" />
+    <Content Include="User\ResetPassword.aspx" />
+    <Content Include="User\UserNotifications.aspx" />
+    <Content Include="User\UserProfile.aspx" />
+    <Content Include="Utilities\ImageCrop.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Styles\SiteStyle\PagesForEmail.Master" />
+    <Content Include="Styles\SiteStyle\EmptyMasterPage.Master" />
+    <Content Include="Styles\SiteStyle\Public.Master" />
+    <Content Include="Utilities\MultiUploadImageHandler.ashx" />
+    <Content Include="Utilities\GetPhotoPath.ashx" />
+    <Content Include="Utilities\GetBackgroundPath.ashx" />
+    <Content Include="Styles\SiteStyle\Private.Master" />
+    <Content Include="Utilities\SetBgSessionVariable.ashx" />
+    <Content Include="Utilities\SetOffsetSessionVariable.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\Auth.aspx.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Auth.aspx.designer.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\AddRemoveImage.ascx.cs">
+      <DependentUpon>AddRemoveImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AddRemoveImage.ascx.designer.cs">
+      <DependentUpon>AddRemoveImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\AutoComplete.ascx.cs">
+      <DependentUpon>AutoComplete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AutoComplete.ascx.designer.cs">
+      <DependentUpon>AutoComplete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\AutoSuggestMultiValue.ascx.cs">
+      <DependentUpon>AutoSuggestMultiValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AutoSuggestMultiValue.ascx.designer.cs">
+      <DependentUpon>AutoSuggestMultiValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlEditImage.ascx.cs">
+      <DependentUpon>ctrlEditImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlEditImage.ascx.designer.cs">
+      <DependentUpon>ctrlEditImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlFileUploader.ascx.cs">
+      <DependentUpon>ctrlFileUploader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlFileUploader.ascx.designer.cs">
+      <DependentUpon>ctrlFileUploader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlMultiUpload.ascx.cs">
+      <DependentUpon>ctrlMultiUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlMultiUpload.ascx.designer.cs">
+      <DependentUpon>ctrlMultiUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlMyRecipesBookBlock.ascx.cs">
+      <DependentUpon>ctrlMyRecipesBookBlock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlMyRecipesBookBlock.ascx.designer.cs">
+      <DependentUpon>ctrlMyRecipesBookBlock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRating.ascx.cs">
+      <DependentUpon>ctrlRating.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRating.ascx.designer.cs">
+      <DependentUpon>ctrlRating.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipeComplexity.ascx.cs">
+      <DependentUpon>ctrlRecipeComplexity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipeComplexity.ascx.designer.cs">
+      <DependentUpon>ctrlRecipeComplexity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipePolaroid.ascx.cs">
+      <DependentUpon>ctrlRecipePolaroid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipePolaroid.ascx.designer.cs">
+      <DependentUpon>ctrlRecipePolaroid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardPostOnFriendBoard.ascx.cs">
+      <DependentUpon>ctrlUserBoardPostOnFriendBoard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardPostOnFriendBoard.ascx.designer.cs">
+      <DependentUpon>ctrlUserBoardPostOnFriendBoard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlAddRecipeIngredient.ascx.cs">
+      <DependentUpon>ctrlAddRecipeIngredient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlAddRecipeIngredient.ascx.designer.cs">
+      <DependentUpon>ctrlAddRecipeIngredient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlBeverageRecipe.ascx.cs">
+      <DependentUpon>ctrlBeverageRecipe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlBeverageRecipe.ascx.designer.cs">
+      <DependentUpon>ctrlBeverageRecipe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipeIngredient.ascx.cs">
+      <DependentUpon>ctrlRecipeIngredient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlRecipeIngredient.ascx.designer.cs">
+      <DependentUpon>ctrlRecipeIngredient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlShowRecipeIngredient.ascx.cs">
+      <DependentUpon>ctrlShowRecipeIngredient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlShowRecipeIngredient.ascx.designer.cs">
+      <DependentUpon>ctrlShowRecipeIngredient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardBlock.ascx.cs">
+      <DependentUpon>ctrlUserBoardBlock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardBlock.ascx.designer.cs">
+      <DependentUpon>ctrlUserBoardBlock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardComments.ascx.cs">
+      <DependentUpon>ctrlUserBoardComments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardComments.ascx.designer.cs">
+      <DependentUpon>ctrlUserBoardComments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardLikes.ascx.cs">
+      <DependentUpon>ctrlUserBoardLikes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardLikes.ascx.designer.cs">
+      <DependentUpon>ctrlUserBoardLikes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardStatus.ascx.cs">
+      <DependentUpon>ctrlUserBoardStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ctrlUserBoardStatus.ascx.designer.cs">
+      <DependentUpon>ctrlUserBoardStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBRedirect.aspx.cs">
+      <DependentUpon>FBRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBRedirect.aspx.designer.cs">
+      <DependentUpon>FBRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DynamicFormGenerator.cs" />
+    <Compile Include="Form\MyPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredient\IngredientDashBoard.aspx.cs">
+      <DependentUpon>IngredientDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredient\IngredientDashBoard.aspx.designer.cs">
+      <DependentUpon>IngredientDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredient\IngredientsList.aspx.cs">
+      <DependentUpon>IngredientsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredient\IngredientsList.aspx.designer.cs">
+      <DependentUpon>IngredientsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredient\MngIngredients.aspx.cs">
+      <DependentUpon>MngIngredients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredient\MngIngredients.aspx.designer.cs">
+      <DependentUpon>MngIngredients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredient\ShowIngredient.aspx.cs">
+      <DependentUpon>ShowIngredient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredient\ShowIngredient.aspx.designer.cs">
+      <DependentUpon>ShowIngredient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Landing\en\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Landing\en\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Landing\es\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Landing\es\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Landing\it\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Landing\it\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Link.aspx.cs">
+      <DependentUpon>Link.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Link.aspx.designer.cs">
+      <DependentUpon>Link.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Message\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Message\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\AllIngredientChecked.aspx.cs">
+      <DependentUpon>AllIngredientChecked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\AllIngredientChecked.aspx.designer.cs">
+      <DependentUpon>AllIngredientChecked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\AuditCheckPhoto.aspx.cs">
+      <DependentUpon>AuditCheckPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\AuditCheckPhoto.aspx.designer.cs">
+      <DependentUpon>AuditCheckPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\AuditSpammersList.aspx.cs">
+      <DependentUpon>AuditSpammersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\AuditSpammersList.aspx.designer.cs">
+      <DependentUpon>AuditSpammersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\ErrorsList.aspx.cs">
+      <DependentUpon>ErrorsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\ErrorsList.aspx.designer.cs">
+      <DependentUpon>ErrorsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\IngredientTranslations.aspx.cs">
+      <DependentUpon>IngredientTranslations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\IngredientTranslations.aspx.designer.cs">
+      <DependentUpon>IngredientTranslations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\MailchimpUpdateLists.aspx.cs">
+      <DependentUpon>MailchimpUpdateLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\MailchimpUpdateLists.aspx.designer.cs">
+      <DependentUpon>MailchimpUpdateLists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\MediaManager.aspx.cs">
+      <DependentUpon>MediaManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\MediaManager.aspx.designer.cs">
+      <DependentUpon>MediaManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\MyManager.aspx.cs">
+      <DependentUpon>MyManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\MyManager.aspx.designer.cs">
+      <DependentUpon>MyManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\RecipeTranslations.aspx.cs">
+      <DependentUpon>RecipeTranslations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\RecipeTranslations.aspx.designer.cs">
+      <DependentUpon>RecipeTranslations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\ScheduledTasks\GetSocialFriends.aspx.cs">
+      <DependentUpon>GetSocialFriends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\ScheduledTasks\GetSocialFriends.aspx.designer.cs">
+      <DependentUpon>GetSocialFriends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\UsersGroups.aspx.cs">
+      <DependentUpon>UsersGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\UsersGroups.aspx.designer.cs">
+      <DependentUpon>UsersGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mycooking.aspx.cs">
+      <DependentUpon>mycooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mycooking.aspx.designer.cs">
+      <DependentUpon>mycooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Offline.aspx.cs">
+      <DependentUpon>Offline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Offline.aspx.designer.cs">
+      <DependentUpon>Offline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\NewFriendshipAccept.aspx.cs">
+      <DependentUpon>NewFriendshipAccept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\NewFriendshipAccept.aspx.designer.cs">
+      <DependentUpon>NewFriendshipAccept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\NewFriendshipRequest.aspx.cs">
+      <DependentUpon>NewFriendshipRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\NewFriendshipRequest.aspx.designer.cs">
+      <DependentUpon>NewFriendshipRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\NewMessageReceived.aspx.cs">
+      <DependentUpon>NewMessageReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\NewMessageReceived.aspx.designer.cs">
+      <DependentUpon>NewMessageReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\PhotoRemovedTemplate.aspx.cs">
+      <DependentUpon>PhotoRemovedTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\PhotoRemovedTemplate.aspx.designer.cs">
+      <DependentUpon>PhotoRemovedTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\ResetUserPassword.aspx.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\ResetUserPassword.aspx.designer.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesForEmail\WelcomeUser.aspx.cs">
+      <DependentUpon>WelcomeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesForEmail\WelcomeUser.aspx.designer.cs">
+      <DependentUpon>WelcomeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseUpdateYourBrowser.aspx.cs">
+      <DependentUpon>PleaseUpdateYourBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PleaseUpdateYourBrowser.aspx.designer.cs">
+      <DependentUpon>PleaseUpdateYourBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\AllRecipes.aspx.cs">
+      <DependentUpon>AllRecipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\AllRecipes.aspx.designer.cs">
+      <DependentUpon>AllRecipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\CreateRecipe.aspx.cs">
+      <DependentUpon>CreateRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\CreateRecipe.aspx.designer.cs">
+      <DependentUpon>CreateRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\FindRecipes.aspx.cs">
+      <DependentUpon>FindRecipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\FindRecipes.aspx.designer.cs">
+      <DependentUpon>FindRecipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\MngRecipes.aspx.cs">
+      <DependentUpon>MngRecipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\MngRecipes.aspx.designer.cs">
+      <DependentUpon>MngRecipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\MyRecipesBook.aspx.cs">
+      <DependentUpon>MyRecipesBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\MyRecipesBook.aspx.designer.cs">
+      <DependentUpon>MyRecipesBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\PrintRecipe.aspx.cs">
+      <DependentUpon>PrintRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\PrintRecipe.aspx.designer.cs">
+      <DependentUpon>PrintRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\RecipeDashBoard.aspx.cs">
+      <DependentUpon>RecipeDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\RecipeDashBoard.aspx.designer.cs">
+      <DependentUpon>RecipeDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\EditRecipes.aspx.cs">
+      <DependentUpon>EditRecipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\EditRecipes.aspx.designer.cs">
+      <DependentUpon>EditRecipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\RecipesBooks.aspx.cs">
+      <DependentUpon>RecipesBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\RecipesBooks.aspx.designer.cs">
+      <DependentUpon>RecipesBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeMng\ShowRecipe.aspx.cs">
+      <DependentUpon>ShowRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipeMng\ShowRecipe.aspx.designer.cs">
+      <DependentUpon>ShowRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sitemap-ingredients.aspx.cs">
+      <DependentUpon>sitemap-ingredients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemap-ingredients.aspx.designer.cs">
+      <DependentUpon>sitemap-ingredients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sitemap-recipes.aspx.cs">
+      <DependentUpon>sitemap-recipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemap-recipes.aspx.designer.cs">
+      <DependentUpon>sitemap-recipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\EmptyMasterPage.Master.cs">
+      <DependentUpon>EmptyMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\EmptyMasterPage.Master.designer.cs">
+      <DependentUpon>EmptyMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\PagesForEmail.Master.cs">
+      <DependentUpon>PagesForEmail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\PagesForEmail.Master.designer.cs">
+      <DependentUpon>PagesForEmail.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdmin\SendTestEmail.aspx.cs">
+      <DependentUpon>SendTestEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdmin\SendTestEmail.aspx.designer.cs">
+      <DependentUpon>SendTestEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\Private.Master.cs">
+      <DependentUpon>Private.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\Private.Master.designer.cs">
+      <DependentUpon>Private.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\Public.Master.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Styles\SiteStyle\Public.Master.designer.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UrlRouting\Routing.cs" />
+    <Compile Include="User\ActivateUser.aspx.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ActivateUser.aspx.designer.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\HowItWorks.aspx.cs">
+      <DependentUpon>HowItWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\HowItWorks.aspx.designer.cs">
+      <DependentUpon>HowItWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyNews.aspx.cs">
+      <DependentUpon>MyNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyNews.aspx.designer.cs">
+      <DependentUpon>MyNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TestProperty001.aspx.cs">
+      <DependentUpon>TestProperty001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TestProperty001.aspx.designer.cs">
+      <DependentUpon>TestProperty001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserBoardPost.aspx.cs">
+      <DependentUpon>UserBoardPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserBoardPost.aspx.designer.cs">
+      <DependentUpon>UserBoardPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserFriends.aspx.cs">
+      <DependentUpon>UserFriends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserFriends.aspx.designer.cs">
+      <DependentUpon>UserFriends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserNotifications.aspx.cs">
+      <DependentUpon>UserNotifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserNotifications.aspx.designer.cs">
+      <DependentUpon>UserNotifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\GetBackgroundPath.ashx.cs">
+      <DependentUpon>GetBackgroundPath.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\GetPhotoPath.ashx.cs">
+      <DependentUpon>GetPhotoPath.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ImageCrop.aspx.cs">
+      <DependentUpon>ImageCrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\ImageCrop.aspx.designer.cs">
+      <DependentUpon>ImageCrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\MultiUploadImageHandler.ashx.cs">
+      <DependentUpon>MultiUploadImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\SelectSiteBackground.cs" />
+    <Compile Include="Utilities\SetBgSessionVariable.ashx.cs">
+      <DependentUpon>SetBgSessionVariable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\SetOffsetSessionVariable.ashx.cs">
+      <DependentUpon>SetOffsetSessionVariable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\UploadCheck.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Ingredient\Cropped\" />
+    <Folder Include="Images\Ingredient\Original\" />
+    <Folder Include="Photo\Ingredient\Cropped\" />
+    <Folder Include="Photo\Ingredient\Original\" />
+    <Folder Include="Photo\Recipe\Cropped\" />
+    <Folder Include="Photo\Recipe\Original\" />
+    <Folder Include="Styles\ProfileStyles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCookin.Common\MyCookin.Common.csproj">
+      <Project>{976E4474-C3D1-48E4-958D-9B00F8FEF3DD}</Project>
+      <Name>MyCookin.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyCookin.ObjectManager\MyCookin.ObjectManager.csproj">
+      <Project>{54E34E1A-F31F-40AF-BF72-944B910CB17E}</Project>
+      <Name>MyCookin.ObjectManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyCookin.ThirdPartAPI\MyCookin.ThirdPartAPI.csproj">
+      <Project>{93470587-B8AB-4EAE-A935-03AE3295A694}</Project>
+      <Name>MyCookin.ThirdPartAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyCookin.WebServices\MyCookin.WebServices.csproj">
+      <Project>{39E5F5E3-EC8F-4DCB-BA41-ABB96529FD70}</Project>
+      <Name>MyCookin.WebServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Default\Default.aspx.en-GB.resx" />
+    <Content Include="App_LocalResources\Default\Default.aspx.es-ES.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PublicMaster\Public.Master.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PublicMaster\Public.Master.it-IT.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PublicMaster\Public.Master.en-GB.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PublicMaster\Public.Master.es-ES.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PrivateMaster\Private.Master.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PrivateMaster\Private.Master.it-IT.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PrivateMaster\Private.Master.en-GB.resx" />
+    <Content Include="Styles\SiteStyle\App_LocalResources\PrivateMaster\Private.Master.es-ES.resx" />
+    <Content Include="Ingredient\App_LocalResources\ShowIngredient\ShowIngredient.aspx.it-IT.resx" />
+    <Content Include="Ingredient\App_LocalResources\ShowIngredient\ShowIngredient.aspx.resx" />
+    <Content Include="Ingredient\App_LocalResources\ShowIngredient\ShowIngredient.aspx.en-GB.resx" />
+    <Content Include="Ingredient\App_LocalResources\ShowIngredient\ShowIngredient.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\CreateRecipe\CreateRecipe.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\CreateRecipe\CreateRecipe.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\CreateRecipe\CreateRecipe.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\CreateRecipe\CreateRecipe.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\EditRecipes\EditRecipes.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\EditRecipes\EditRecipes.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\EditRecipes\EditRecipes.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\FindRecipes\FindRecipes.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\FindRecipes\FindRecipes.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\EditRecipes\EditRecipes.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\FindRecipes\FindRecipes.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\FindRecipes\FindRecipes.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\MyRecipesBook\MyRecipesBook.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\MyRecipesBook\MyRecipesBook.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\MyRecipesBook\MyRecipesBook.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\MyRecipesBook\MyRecipesBook.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\ShowRecipe\ShowRecipe.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\ShowRecipe\ShowRecipe.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\ShowRecipe\ShowRecipe.aspx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\EditImage\ctrlEditImage.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\MultiUpload\ctrlMultiUpload.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\MyRecipesBookBlock\ctrlMyRecipesBookBlock.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\Rating\ctrlRating.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\ShowRecipeIngredient\ctrlShowRecipeIngredient.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\EditImage\ctrlEditImage.ascx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\EditImage\ctrlEditImage.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\ShowRecipeIngredient\ctrlShowRecipeIngredient.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\AddRecipeIngredient\ctrlAddRecipeIngredient.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\AddRecipeIngredient\ctrlAddRecipeIngredient.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\AddRecipeIngredient\ctrlAddRecipeIngredient.ascx.en-GB.resx" />
+    <Content Include="CustomControls\App_LocalResources\AddRecipeIngredient\ctrlAddRecipeIngredient.ascx.es-ES.resx" />
+    <Content Include="App_LocalResources\Default\Default.aspx.it-IT.resx" />
+    <EmbeddedResource Include="CustomControls\App_LocalResources\EditImage\ctrlEditImage.ascx.en-GB.resx" />
+    <Content Include="CustomControls\App_LocalResources\MultiUpload\ctrlMultiUpload.ascx.en-GB.resx" />
+    <Content Include="CustomControls\App_LocalResources\MultiUpload\ctrlMultiUpload.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\MultiUpload\ctrlMultiUpload.ascx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\MyRecipesBookBlock\ctrlMyRecipesBookBlock.ascx.en-GB.resx" />
+    <Content Include="CustomControls\App_LocalResources\MyRecipesBookBlock\ctrlMyRecipesBookBlock.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\MyRecipesBookBlock\ctrlMyRecipesBookBlock.ascx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\ShowRecipeIngredient\ctrlShowRecipeIngredient.ascx.es-ES.resx" />
+    <EmbeddedResource Include="CustomControls\App_LocalResources\ShowRecipeIngredient\ctrlShowRecipeIngredient.ascx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\AllRecipes\AllRecipes.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\AllRecipes\AllRecipes.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\AllRecipes\AllRecipes.aspx.es-ES.resx" />
+    <Content Include="RecipeMng\App_LocalResources\AllRecipes\AllRecipes.aspx.it-IT.resx" />
+    <Content Include="Ingredient\App_LocalResources\IngredientsList\IngredientsList.aspx.resx" />
+    <Content Include="Ingredient\App_LocalResources\IngredientsList\IngredientsList.aspx.it-IT.resx" />
+    <Content Include="Ingredient\App_LocalResources\IngredientsList\IngredientsList.aspx.es-ES.resx" />
+    <Content Include="Ingredient\App_LocalResources\IngredientsList\IngredientsList.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\RecipesBooks\RecipesBooks.aspx.resx" />
+    <Content Include="RecipeMng\App_LocalResources\RecipesBooks\RecipesBooks.aspx.it-IT.resx" />
+    <Content Include="RecipeMng\App_LocalResources\RecipesBooks\RecipesBooks.aspx.en-GB.resx" />
+    <Content Include="RecipeMng\App_LocalResources\RecipesBooks\RecipesBooks.aspx.es-ES.resx" />
+    <EmbeddedResource Include="RecipeMng\App_LocalResources\ShowRecipe\ShowRecipe.aspx.en-GB.resx" />
+    <Content Include="Ingredient\App_LocalResources\MngIngredients.aspx.resx" />
+    <Content Include="User\App_LocalResources\Login\Login.aspx.resx" />
+    <Content Include="User\App_LocalResources\Login\Login.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\Login\Login.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\Login\Login.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\ActivateUser\ActivateUser.aspx.resx" />
+    <Content Include="User\App_LocalResources\ActivateUser\ActivateUser.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\ActivateUser\ActivateUser.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\ActivateUser\ActivateUser.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\Contact\Contact.aspx.resx" />
+    <Content Include="User\App_LocalResources\Contact\Contact.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\Contact\Contact.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\Contact\Contact.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\EditProfile\EditProfile.aspx.resx" />
+    <Content Include="User\App_LocalResources\EditProfile\EditProfile.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\EditProfile\EditProfile.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\EditProfile\EditProfile.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\ForgotPassword\ForgotPassword.aspx.resx" />
+    <Content Include="User\App_LocalResources\ForgotPassword\ForgotPassword.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\ForgotPassword\ForgotPassword.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\ForgotPassword\ForgotPassword.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\MyNews\MyNews.aspx.resx" />
+    <Content Include="User\App_LocalResources\MyNews\MyNews.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\MyNews\MyNews.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\MyNews\MyNews.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\Register\Register.aspx.resx" />
+    <Content Include="User\App_LocalResources\Register\Register.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\Register\Register.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\Register\Register.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\ResetPassword\ResetPassword.aspx.resx" />
+    <Content Include="User\App_LocalResources\ResetPassword\ResetPassword.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\ResetPassword\ResetPassword.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\ResetPassword\ResetPassword.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\UserBoardPost\UserBoardPost.aspx.resx" />
+    <Content Include="User\App_LocalResources\UserFriends\UserFriends.aspx.resx" />
+    <Content Include="User\App_LocalResources\UserNotifications\UserNotifications.aspx.resx" />
+    <Content Include="Message\App_LocalResources\Messages\Messages.aspx.resx" />
+    <Content Include="Message\App_LocalResources\Messages\Messages.aspx.it-IT.resx" />
+    <Content Include="Message\App_LocalResources\Messages\Messages.aspx.en-GB.resx" />
+    <Content Include="Message\App_LocalResources\Messages\Messages.aspx.es-ES.resx" />
+    <Content Include="User\App_LocalResources\UserProfile\UserProfile.aspx.resx" />
+    <Content Include="User\App_LocalResources\UserProfile\UserProfile.aspx.it-IT.resx" />
+    <Content Include="User\App_LocalResources\UserProfile\UserProfile.aspx.en-GB.resx" />
+    <Content Include="User\App_LocalResources\UserProfile\UserProfile.aspx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardBlock\ctrlUserBoardBlock.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardBlock\ctrlUserBoardBlock.ascx.it-IT.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardBlock\ctrlUserBoardBlock.ascx.en-GB.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardBlock\ctrlUserBoardBlock.ascx.es-ES.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardComments\ctrlUserBoardComments.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardLikes\ctrlUserBoardLikes.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardPostOnFriendBoard\ctrlUserBoardPostOnFriendBoard.ascx.resx" />
+    <Content Include="CustomControls\App_LocalResources\UserBoardStatus\ctrlUserBoardStatus.ascx.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>21275</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

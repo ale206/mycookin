@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2013-11-03T15:49:17.0999052+01:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>D:\Saverio\MyCookin\Deploy\Services</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Beverage/SearchBeverage.asmx">
+      <publishTime>04/14/2013 13:15:44</publishTime>
+    </File>
+    <File Include="bin/AWSSDK.dll">
+      <publishTime>04/21/2013 13:15:09</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Apps.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Client.dll">
+      <publishTime>03/23/2013 12:40:07</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Contacts.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Extensions.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/MyCookin.Common.dll">
+      <publishTime>05/21/2014 16:47:10</publishTime>
+    </File>
+    <File Include="bin/MyCookin.DAL.dll">
+      <publishTime>05/21/2014 16:47:08</publishTime>
+    </File>
+    <File Include="bin/MyCookin.ObjectManager.dll">
+      <publishTime>06/18/2014 15:37:31</publishTime>
+    </File>
+    <File Include="bin/MyCookin.ThirdPartAPI.dll">
+      <publishTime>05/21/2014 16:47:12</publishTime>
+    </File>
+    <File Include="bin/MyCookin.WebServices.dll">
+      <publishTime>06/18/2014 15:37:33</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/23/2013 12:39:20</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Text.dll">
+      <publishTime>04/06/2014 11:32:02</publishTime>
+    </File>
+    <File Include="City/FindCity.asmx">
+      <publishTime>04/14/2013 13:15:44</publishTime>
+    </File>
+    <File Include="Contact/ContactManager.asmx">
+      <publishTime>09/12/2013 19:57:39</publishTime>
+    </File>
+    <File Include="Ingredient/IngredientInfo.asmx">
+      <publishTime>04/14/2013 13:15:45</publishTime>
+    </File>
+    <File Include="Ingredient/SearchIngredient.asmx">
+      <publishTime>04/14/2013 13:15:45</publishTime>
+    </File>
+    <File Include="Message/MessageManager.asmx">
+      <publishTime>05/12/2013 18:58:10</publishTime>
+    </File>
+    <File Include="Recipe/GetRecipeInfo.asmx">
+      <publishTime>04/14/2013 13:15:45</publishTime>
+    </File>
+    <File Include="Recipe/GetRecipesByType.asmx">
+      <publishTime>02/06/2014 14:55:34</publishTime>
+    </File>
+    <File Include="Recipe/ManageRecipe.asmx">
+      <publishTime>05/04/2013 14:03:40</publishTime>
+    </File>
+    <File Include="Recipe/RecipeFeedbacks.asmx">
+      <publishTime>05/21/2014 15:24:39</publishTime>
+    </File>
+    <File Include="Statistics/SaveStats.asmx">
+      <publishTime>03/01/2014 11:32:46</publishTime>
+    </File>
+    <File Include="User/CheckUser.asmx">
+      <publishTime>04/14/2013 13:15:45</publishTime>
+    </File>
+    <File Include="User/FindUser.asmx">
+      <publishTime>04/14/2013 13:15:45</publishTime>
+    </File>
+    <File Include="UserBoard/UserNotifications.asmx">
+      <publishTime>05/01/2013 19:31:49</publishTime>
+    </File>
+    <File Include="UserBoard/UsersLikes.asmx">
+      <publishTime>04/21/2013 17:46:14</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/26/2014 15:38:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

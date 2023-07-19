@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /Error.aspx
+Disallow: /FBRedirect.aspx
+Disallow: /Link.aspx
+Disallow: /Offline.aspx
+Disallow: /PleaseUpdateYourBrowser.aspx
+Disallow: /Js/
+Disallow: /Auth/
+Disallow: /Message/
+Disallow: /PagesForEmail/
+Disallow: /Styles/
+Disallow: /CustomControls/
+Disallow: /Utilities/

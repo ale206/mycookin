@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93470587-B8AB-4EAE-A935-03AE3295A694}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCookin.ThirdPartAPI</RootNamespace>
+    <AssemblyName>MyCookin.ThirdPartAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>bin\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Web">
+      <HintPath>bin\Facebook.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.GData.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Apps, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e6feebfe441b89cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.GData.Apps.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Contacts, Version=2.1.0.0, Culture=neutral, PublicKeyToken=7e065189dd4b982f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.GData.Contacts.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.5.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MicrosoftTranslator\MicrosoftTranslationAPI.cs" />
+    <Compile Include="MicrosoftTranslator\TranslatorContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialNetworks\AppDotNetAuth.cs" />
+    <Compile Include="SocialNetworks\AppDotNetPost.cs" />
+    <Compile Include="SocialNetworks\AppDotNetUser.cs" />
+    <Compile Include="SocialNetworks\AppDotNetWrapperMeta.cs" />
+    <Compile Include="SocialNetworks\AuthUtilities.cs" />
+    <Compile Include="SocialNetworks\CombinationStream.cs" />
+    <Compile Include="SocialNetworks\DateTimeConvertor.cs" />
+    <Compile Include="SocialNetworks\FacebookApiEventArgs.cs" />
+    <Compile Include="SocialNetworks\FacebookApiException.cs" />
+    <Compile Include="SocialNetworks\FacebookApiLimitException.cs" />
+    <Compile Include="SocialNetworks\FacebookAuth.cs" />
+    <Compile Include="SocialNetworks\FacebookBatchParameter.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.Async.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.Batch.Async.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.Batch.Sync.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.OAuthResult.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.SignedRequest.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.Subscription.cs" />
+    <Compile Include="SocialNetworks\FacebookClient.Sync.cs" />
+    <Compile Include="SocialNetworks\FacebookData.cs" />
+    <Compile Include="SocialNetworks\FacebookMediaObject.cs" />
+    <Compile Include="SocialNetworks\FacebookMediaStream.cs" />
+    <Compile Include="SocialNetworks\FacebookOAuthException.cs" />
+    <Compile Include="SocialNetworks\FacebookOAuthResult.cs" />
+    <Compile Include="SocialNetworks\FacebookUploadProgressChangedEventArgs.cs" />
+    <Compile Include="SocialNetworks\FbUserInfo.cs" />
+    <Compile Include="SocialNetworks\GlobalSuppressions.cs" />
+    <Compile Include="SocialNetworks\GoogleAuth.cs" />
+    <Compile Include="SocialNetworks\GoogleLanguagesCode.cs" />
+    <Compile Include="SocialNetworks\GoogleTranslationAPI.cs" />
+    <Compile Include="SocialNetworks\HttpHelper.cs" />
+    <Compile Include="SocialNetworks\HttpMethod.cs" />
+    <Compile Include="SocialNetworks\HttpWebRequestCreatedEventArgs.cs" />
+    <Compile Include="SocialNetworks\Json.cs" />
+    <Compile Include="SocialNetworks\oAuth.cs" />
+    <Compile Include="SocialNetworks\oAuthLinkedIn.cs" />
+    <Compile Include="SocialNetworks\oAuthTwitter.cs" />
+    <Compile Include="SocialNetworks\SimpleJson.cs" />
+    <Compile Include="SocialNetworks\TaskExtensions.cs" />
+    <Compile Include="SocialNetworks\TwitterData.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Attributes\AuthorizedCommandAttribute.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Attributes\RateLimitedAttribute.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\AccessLevel.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\CommandPerformer.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\ConversionUtility.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\ICommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\ITwitterObject.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\NamespaceDoc.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\OptionalProperties.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\RateLimit.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\RequestResult.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\SerializationHelper.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterCursorPagedIdCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterDictionary.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterIdCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterImage.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterizerDateConverter.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Core\TwitterObject.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Exceptions\CommandValidationException.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Exceptions\TwitterErrorDetails.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Exceptions\TwitterizerException.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Information.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\RateLimitStatusCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\TwitterAccount.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\TwitterRateLimitStatus.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileBackgroundImageCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileBackgroundImageOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileColorsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileColorsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileImageCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\UpdateProfileOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\VerifyCredentialsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Account\VerifyCredentialsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\BlockingCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\BlockingIdsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\BlockingOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\CreateBlockCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\DestroyBlockCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\ExistsBlockCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Block\TwitterBlock.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\DeleteDirectMessageCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\DirectMessagesCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\DirectMessagesOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\DirectMessagesSentCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\DirectMessagesSentOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\SendDirectMessageCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\ShowDirectMessageCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\TwitterDirectMessage.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\DirectMessage\TwitterDirectMessageCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Favorites\CreateFavoriteCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Favorites\DeleteFavoriteCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Favorites\ListFavoritesCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Favorites\ListFavoritesOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Favorites\TwitterFavorite.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\CreateFriendshipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\CreateFriendshipOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\DeleteFriendshipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\FollowersIdsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\FriendsIdsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\IncomingFriendshipsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\IncomingFriendshipsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\NoRetweetIDsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\OutgoingFriendshipsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\OutgoingFriendshipsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\ShowFriendshipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\TwitterFriendship.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\TwitterRelationship.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\TwitterRelationshipUser.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\UpdateFriendshipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\UpdateFriendshipOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\UserIdCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Friendship\UsersIdsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\Coordinate.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\ReverseGeocodeCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\TwitterBoundingBox.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\TwitterGeo.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\TwitterPlace.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\TwitterPlaceCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Geo\TwitterPlaceLookupOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\AddListMemberCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\CheckListMembershipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\CreateListCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\CreateListMembershipCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\DeleteListCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\DestroyListSubscriber.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListMembersCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListMembersOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListSubscriptionsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\GetListSubscriptionsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\ListMembershipsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\ListMembershipsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\ListStatusesCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\ListStatusesOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\RemoveListMemberCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\TwitterList.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\TwitterListCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\UpdateListCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\List\UpdateListOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Notification\NotificationFollowCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Notification\NotificationLeaveCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Notification\TwitterNotification.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\SavedSearches\CreateSavedSearchCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\SavedSearches\DeleteSavedSearchCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\SavedSearches\SavedSearchesCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\SavedSearches\TwitterSavedSearch.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\SavedSearches\TwitterSavedSearchCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Search\SearchCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Search\SearchOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Search\TwitterSearch.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Search\TwitterSearchResult.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Search\TwitterSearchResultCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Spam\ReportSpamCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Spam\TwitterSpam.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\FriendsTimelineCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\HomeTimelineCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\MentionsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\PagedTimelineCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\PublicTimelineCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\RetweetedByMeCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\RetweetedToMeCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\TimelineOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\TwitterTimeline.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\UserTimelineCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Timeline\UserTimelineOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\AvailableTrendsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\AvailableTrendsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\DailyTrendsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\LocalTrendsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TrendsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TrendsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrend.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrendCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrendDictionary.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrendLocation.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrendLocationCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\TwitterTrendLocationPlaceType.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Trends\WeeklyTrendsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\DeleteStatusCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterEntity.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterEntityCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterHashTagEntity.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterMediaEntity.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterMentionEntity.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\Entities\TwitterUrlEntity.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RelatedResultsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RetweetCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RetweetsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RetweetsOfMeCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RetweetsOfMeOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\RetweetsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\ShowStatusCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\StatusUpdateOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\TwitterRelatedTweets.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\TwitterRelatedTweetsCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\TwitterStatus.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\TwitterStatusCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\UpdateStatusCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\Tweets\UpdateWithmediaCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\TwitterResultTypeEnum.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\FollowersCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\FollowersOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\FriendsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\FriendsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\LookupUsersCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\LookupUsersOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\RetweetedByCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\RetweetedByIdsCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\RetweetedByIdsOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\RetweetedByOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\ShowUserCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\SuggestedUserCategoriesCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\SuggestedUsersCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\TwitterUser.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\TwitterUserCategory.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\TwitterUserCollection.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\UserSearchCommand.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Methods\User\UserSearchOptions.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\OAuth\OAuthTokenResponse.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\OAuth\OAuthTokens.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\OAuth\OAuthUtility.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\OAuth\WebRequestBuilder.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\OAuth\XAuthUtility.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialNetworks\Twitterizer2\TwitterResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SocialNetworks\Twitterizer2\packages.config" />
+    <None Include="SocialNetworks\Twitterizer2\Settings.StyleCop" />
+    <None Include="SocialNetworks\Twitterizer2\Twitterizer2.cd" />
+    <None Include="SocialNetworks\Twitterizer2\Twitterizer2.nuspec" />
+    <None Include="SocialNetworks\Twitterizer2\Twitterizer2.snk" />
+    <None Include="SocialNetworks\Twitterizer2\Twitterizer2Inheritance.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Amazon\AWS.Extensions.dll" />
+    <Content Include="Amazon\AWS.Extensions.xml" />
+    <Content Include="Amazon\AWSSDK.dll" />
+    <Content Include="Amazon\AWSSDK.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\Core\OptionalProperties.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\Methods\Tweets\TwitterStatus.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\Methods\User\TwitterUser.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\OAuth\OAuthTokens.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\OAuth\OAuthUtility.xml" />
+    <Content Include="SocialNetworks\Twitterizer2\Twitterizer2.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCookin.Common\MyCookin.Common.csproj">
+      <Project>{976E4474-C3D1-48E4-958D-9B00F8FEF3DD}</Project>
+      <Name>MyCookin.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

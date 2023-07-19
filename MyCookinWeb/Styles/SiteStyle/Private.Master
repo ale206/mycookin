@@ -1,0 +1,367 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Private.master.cs" Inherits="MyCookinWeb.Styles.SiteStyle.Private" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>MyCookin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <!-- CSS -->
+    <link rel="Stylesheet" href="/Styles/SiteStyle/reset.min.css" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/Styles/jQueryUiCss/mycookin-theme/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/JQueryUIOverride.min.css" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/style.min.css?ver=140302" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/PublicStyle.min.css?ver=140302" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/Styles/SiteStyle/PrivateStyle.min.css?ver=140302" type="text/css"
+        media="screen" />
+    <link rel="stylesheet" href="/Styles/Tipsy/tipsy.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Styles/bigvideo.min.css" type="text/css" />
+    <%--For Private
+    *************************--%>
+    <link rel="Stylesheet" href="/Styles/SiteStyle/User.min.css" type="text/css" media="screen" />
+    <link href="/Styles/jQueryUiCss/JCrop/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
+    <%--For the Scrollbar--%>
+    <link href="/Styles/jQueryUiCss/Scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="/Styles/jQueryUiCss/Scrollbar/Scrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/jQueryUiCss/PopBox/popbox.min.css" rel="stylesheet" type="text/css" />
+    <%--For Private
+    *************************--%>
+    <meta name="msvalidate.01" content="50B3E1E1D715E13BA1B8CC04E4EEDEAC" />
+    <meta name="google-site-verification" content="HEaDx7X6A-KFU3cTha9FQFoZB1HUdYmh1DJwHuSKaH8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body" runat="server">
+    <form id="form1" runat="server">
+    <%--Offset--%>
+    <asp:HiddenField ID="hfIDLangage" ClientIDMode="Static" runat="server" />
+    <asp:HiddenField ID="hfOffset" ClientIDMode="Static" runat="server" />
+    <asp:HiddenField ID="hfBgPath" ClientIDMode="Static" runat="server" />
+    <script type="text/javascript" language="javascript">
+        try {
+            if (document.getElementById("hfOffset").value == "") {
+                var d = new Date();
+                document.getElementById("hfOffset").value = d.getTimezoneOffset();
+                $.get('/Utilities/SetOffsetSessionVariable.ashx?Offset=' + document.getElementById("hfOffset").value, function () { });
+            }
+        }
+        catch (err) {
+        }
+        if ($('#hfBgPath').val() == "") {
+            try {
+                $.get('/Utilities/GetBackgroundPath.ashx?OffSet=' + document.getElementById("hfOffset").value, function (data) {
+                    $('.result').html(data);
+                    if (data != "") {
+                        try {
+                            $('#hfBgPath').val(data);
+                            $.get('/Utilities/SetBgSessionVariable.ashx?BgPath=' + data, function () { });
+                        }
+                        catch (err) {
+                        }
+                        $('#hfBgPath').val(data);
+                        if (data.toLowerCase().indexOf(".jpg") > -1 || data.toLowerCase().indexOf(".jepg") > -1) {
+                            $.backstretch(data, { fade: 2000 });
+                        }
+                        else if (data.toLowerCase().indexOf(".mp4") > -1 || data.toLowerCase().indexOf(".ogv") > -1) {
+                            var BV = new $.BigVideo();
+                            BV.init();
+                            BV.show(data, { doLoop: true, ambient: true });
+                            //BV.show('/Photo/Background/river.mp4', { doLoop: true, ambient: true });
+                            $('#big-video-wrap').hide().fadeIn(2000);
+                        }
+                    }
+                    else {
+                        $.backstretch('/Photo/Background/spuntino5.jpg', { fade: 2000 });
+                    }
+                });
+            }
+            catch (err) {
+                try {
+                    $.backstretch('/Photo/Background/spuntino5.jpg', { fade: 2000 });
+                } catch (err) {
+                    $('body').css({ "background": 'url(/Photo/Background/ciliegia.jpg) no-repeat center center fixed' });
+                    $('body').css({ "margin": '0' });
+                    $('body').css({ "padding": '80px 0 20px 0' });
+                    $('body').css({ "-webkit-background-size": 'cover' });
+                    $('body').css({ "-moz-background-size": 'cover' });
+                    $('body').css({ "-o-background-size": 'cover' });
+                    $('body').css({ "background-size": 'cover' });
+                }
+            }
+        }
+        else {
+            try {
+                $.backstretch($('#hfBgPath').val());
+            }
+            catch (err) {
+                $('body').css({ "background": 'url(' + $('#hfBgPath').val() + ') no-repeat center center fixed' });
+                $('body').css({ "margin": '0' });
+                $('body').css({ "padding": '80px 0 20px 0' });
+                $('body').css({ "-webkit-background-size": 'cover' });
+                $('body').css({ "-moz-background-size": 'cover' });
+                $('body').css({ "-o-background-size": 'cover' });
+                $('body').css({ "background-size": 'cover' });
+            }
+        }
+    </script>
+    <asp:ScriptManager ID="MainScriptManager" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="/Js/jquery-1.10.1.min.js" />
+            <asp:ScriptReference Path="/Js/jquery-ui-1.10.3.custom.min.js" />
+            <asp:ScriptReference Path="/Js/Pages/PrivateMaster.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.core.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.widget.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.mouse.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.draggable.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.position.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.autocomplete.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.dialog.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.resizable.min.js" />
+            <asp:ScriptReference Path="/Js/ui/minified/jquery.ui.tabs.min.js" />
+            <asp:ScriptReference Path="/Js/Forms/jquery.autosize.min.js" />
+            <asp:ScriptReference Path="/Js/jquery-migrate-1.1.0.min.js" />
+            <asp:ScriptReference Path="/Js/IEPatch/jquery.placeholder.min.js" />
+            <%--<asp:ScriptReference Path="/Js/jquery.tools.min.js" />--%>
+            <%--PopBox--%>
+            <asp:ScriptReference Path="/Js/PopBox/popbox.min.js" />
+            <%--Noty--%>
+            <asp:ScriptReference Path="/Js/noty/jquery.noty.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/bottomRight.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/centerRight.min.js" />
+            <asp:ScriptReference Path="/Js/noty/layouts/bottomCenter.min.js" />
+            <asp:ScriptReference Path="/Js/noty/themes/MyCookinNoty.min.js" />
+            <%--Tipsy--%>
+            <asp:ScriptReference Path="/Js/Tipsy/jquery.tipsy.min.js" />
+            <%--BigVideo--%>
+            <asp:ScriptReference Path="/Js/BigVideo/bigvideo.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/jquery.imagesloaded.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/video.min.js" />
+            <asp:ScriptReference Path="/Js/BigVideo/jquery.backstretch.min.js" />
+            <%--For Private
+            *************************--%>
+            <%--Header Functions--%>
+            <asp:ScriptReference Path="/Js/Notifications/MyNotifications.min.js" />
+            <asp:ScriptReference Path="/Js/Messages/MessagesSetAsRead.min.js" />
+            <%--For Private
+            *************************--%>
+            <%--MyCookinFunctions--%>
+            <asp:ScriptReference Path="/Js/MyCookinFunctions_1.0.min.js?ver=140316" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div>
+        <div id="header" class="header">
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('input, textarea').placeholder();
+                });     
+            </script>
+            <div id="pnlCenterHeader">
+                <div id="logo">
+                    <asp:ImageButton ID="btnLogo" AlternateText="MyCookin" runat="server" OnClick="btnLogo_Click"
+                        ImageUrl="/Images/MyCookin-Logo.png" CausesValidation="False" Width="220px" Height="55px"
+                        meta:resourcekey="btnLogoResource1" />
+                </div>
+                <asp:Panel ID="pnlUserPicAndName" CssClass="pnlUserPicAndName" runat="server">
+                    <asp:HyperLink ID="hlUserImage" runat="server" CssClass="hlUserImage popbox">
+                        <asp:Image ID="ProfilePic" ImageAlign="Left" Height="30px" Width="30px" runat="server"/>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="hlUser" runat="server" CssClass="hlUser popbox" meta:resourcekey="hlUserResource1"></asp:HyperLink>
+                    <asp:Panel ID="pnlUserSettings" runat="server" CssClass="popbox pnlUserSettings">
+                        <asp:HyperLink ID="hlSettings" runat="server" CssClass="linkPopBox hlSettings">
+                            <asp:Image ID="imgSettings" CssClass="imgSettings" runat="server" ImageUrl="/Images/icon-settings.png"
+                                Height="30px" Width="30px"></asp:Image>
+                        </asp:HyperLink>
+                        <div class="collapse" style="overflow: visible;">
+                            <asp:Panel ID="pnlUserSettingsPopBox" runat="server" CssClass="box pnlUserSettingsPopBox"
+                                meta:resourcekey="pnlUserSettingsPopBoxResource1">
+                                <asp:Panel ID="pnlButtonContainer" runat="server" CssClass="pnlButtonContainer" meta:resourcekey="pnlButtonContainerResource1">
+                                    <asp:Panel ID="Panel0" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption0Resource1">
+                                        <asp:ImageButton ID="btnAddRecipe" CssClass="UserSettingsButtonsImage" ToolTip="Add Recipe"
+                                            AlternateText="Add Recipe" runat="server" OnClick="btnAddRecipe_Click"
+                                            ImageUrl="/Images/icon-AddRecipe-color2.png" CausesValidation="False" Width="40px"
+                                            Height="40px" meta:resourcekey="btnIngredientsResource" />
+                                        <asp:LinkButton ID="lnkAddRecipe" runat="server" CssClass="UserSettingsLink" OnClick="lnkAddRecipe_Click"
+                                            meta:resourcekey="lnkAddRecipeResource">Add Recipe</asp:LinkButton>
+                                    </asp:Panel>
+                                    <%--<asp:Panel ID="pnlOption1" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption1Resource1">
+                                        <asp:ImageButton ID="btnIngredients" CssClass="UserSettingsButtonsImage" ToolTip="Manage Recipe"
+                                            AlternateText="Manage Recipes" runat="server" OnClick="btnIngredients_Click"
+                                            ImageUrl="/Images/icon-manageRecipe-color.png" CausesValidation="False" Width="40px"
+                                            Height="40px" meta:resourcekey="btnIngredientsResource1" />
+                                        <asp:LinkButton ID="lnkIngrdient" runat="server" CssClass="UserSettingsLink" OnClick="lnkIngrdient_Click"
+                                            meta:resourcekey="lnkIngrdientResource1">Manage Recipes</asp:LinkButton>
+                                    </asp:Panel>--%>
+                                    <asp:Panel ID="pnlOption2" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption2Resource1">
+                                        <asp:ImageButton ID="btnMyRecipeBook" CssClass="UserSettingsButtonsImage" ToolTip="My Recipe Book"
+                                            AlternateText="My Recipe Book" runat="server" OnClick="btnMyRecipeBook_Click"
+                                            ImageUrl="/Images/icon-recipeBook-color.png" CausesValidation="False" Width="40px"
+                                            Height="40px" meta:resourcekey="btnMyRecipeBookResource" />
+                                        <asp:LinkButton ID="lnkMyRecipeBook" runat="server" CssClass="UserSettingsLink" OnClick="lnkMyRecipeBook_Click"
+                                            meta:resourcekey="lnkMyRecipeBookResource">My Recipe Book</asp:LinkButton>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlOption3" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption3Resource1">
+                                        <asp:ImageButton ID="btnMyProfile" CssClass="UserSettingsButtonsImage" ToolTip="Bacheca"
+                                            AlternateText="Bacheca" runat="server" OnClick="btnMyProfile_Click" ImageUrl="/Images/icon-user-color2.png"
+                                            CausesValidation="False" Width="40px" Height="40px" meta:resourcekey="btnMyProfileResource1" />
+                                        <asp:LinkButton ID="lnkMyProfile" runat="server" CssClass="UserSettingsLink" OnClick="lnkMyProfile_Click"
+                                            meta:resourcekey="lnkMyProfileResource1">Bacheca</asp:LinkButton>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlOption4" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption4Resource1">
+                                        <asp:ImageButton ID="ibtnSettings" CssClass="UserSettingsButtonsImage" ToolTip="Modifica Profilo"
+                                            AlternateText="Modifica Profilo" runat="server" OnClick="btnSettings_Click" ImageUrl="/Images/icon-settings-color2.png"
+                                            CausesValidation="False" Width="40px" Height="40px" meta:resourcekey="ibtnSettingsResource1" />
+                                        <asp:LinkButton ID="lnkSettings" runat="server" CssClass="UserSettingsLink" OnClick="lnkSettings_Click"
+                                            meta:resourcekey="lnkSettingsResource1">Settings</asp:LinkButton>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlOption5" runat="server" CssClass="pnlOptions" meta:resourcekey="pnlOption5Resource1">
+                                        <asp:ImageButton ID="btnLogout" CssClass="UserSettingsButtonsImage" ToolTip="Logout"
+                                            AlternateText="logout" runat="server" OnClick="btnLogout_Click" ImageUrl="/Images/icon-logout-color2.png"
+                                            CausesValidation="False" Width="40px" Height="40px" meta:resourcekey="btnLogoutResource1" />
+                                        <asp:LinkButton ID="lnkLogOut" runat="server" CssClass="UserSettingsLink" OnClick="lnkLogOut_Click"
+                                            meta:resourcekey="lnkLogOutResource1">LogOut</asp:LinkButton>
+                                    </asp:Panel>
+                                </asp:Panel>
+                            </asp:Panel>
+                        </div>
+                    </asp:Panel>
+                </asp:Panel>
+                <asp:Panel ID="pnlButtonsForLogged" ClientIDMode="Static" runat="server" CssClass="pnlButtonsForLogged"
+                    meta:resourcekey="pnlButtonsForLoggedResource1">
+                    <asp:UpdatePanel ID="upnlNotifications" ClientIDMode="Static" runat="server" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:Panel ID="pnlNotifications" runat="server" CssClass="popbox pnlNotifications"
+                                meta:resourcekey="pnlNotificationsResource1">
+                                <asp:HyperLink ID="hlImageNotification" runat="server" CssClass="linkPopBox hlImageNotification"
+                                    NavigateUrl="#" meta:resourcekey="hlImageNotificationResource1"></asp:HyperLink>
+                                <asp:Label ID="lblCountNotifications" ClientIDMode="Static" runat="server" meta:resourcekey="lblCountNotificationsResource1"></asp:Label>
+                                <div class="collapse">
+                                    <asp:Panel ID="pnlBoxInternal" CssClass="box pnlUserSettingsPopBox" runat="server"
+                                        meta:resourcekey="pnlBoxInternalResource1">
+                                        <asp:Panel ID="pnlContainerNotificationList" CssClass="pnlContainerNotificationList"
+                                            runat="server" meta:resourcekey="pnlContainerNotificationListResource1">
+                                            <asp:Image ID="imgLoader" ClientIDMode="Static" ImageUrl="/Images/loadingLineOrange.gif"
+                                                Width="180px" Height="12px" AlternateText="Loading" ToolTip="Loading" runat="server"
+                                                meta:resourcekey="imgLoaderResource1" />
+                                            <asp:HyperLink ID="hlAllNotifications" NavigateUrl="/User/UserNotifications.aspx"
+                                                runat="server" meta:resourcekey="hlAllNotificationsResource1">Visualizza tutte le notifiche</asp:HyperLink>
+                                            <hr />
+                                            <ul>
+                                            </ul>
+                                        </asp:Panel>
+                                    </asp:Panel>
+                                </div>
+                            </asp:Panel>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <asp:UpdatePanel ID="upnlMessagesNotifications" ClientIDMode="Static" runat="server"
+                        UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:Panel ID="pnlMessages" runat="server" CssClass="popbox" meta:resourcekey="pnlMessagesResource1">
+                                <asp:HyperLink ID="hlImageMessageNotification" runat="server" CssClass="hlImageMessageNotification"
+                                    NavigateUrl="#" meta:resourcekey="hlImageMessageNotificationResource1"></asp:HyperLink>
+                                <asp:Label ID="lblCountMessages" ClientIDMode="Static" runat="server" meta:resourcekey="lblCountMessagesResource1"></asp:Label>
+                            </asp:Panel>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <asp:Panel ID="pnlSearch" ClientIDMode="Static" runat="server" CssClass="pnlSearch popbox"
+                        meta:resourcekey="pnlSearchResource1">
+                        <asp:Label for="tbAuto" ID="Label1" runat="server" meta:resourcekey="Label1Resource1"></asp:Label>
+                        <asp:TextBox ID="tbAuto" class="tb Padding8" runat="server" PlaceHolder="Cerca un Utente"
+                            Width="250px" meta:resourcekey="tbAutoResource1"></asp:TextBox>
+                        <script type="text/javascript">
+                            $(function () {
+
+                                function ShowItemSelected(itemSelected) {
+                                    //Redirect to Profile User Selected
+                                    location.href = "/User/UserProfile.aspx?IDUserRequested=" + itemSelected
+
+                                    //To change this path with string "/User/UserProfile.aspx/" + AppConfig.GetValue("RoutingUser", AppDomain.CurrentDomain) + "/" + User.UserName;
+                                    //Change also value: item.IDUser....
+                                }
+
+                                $(".tb").autocomplete({
+                                    source: function (request, response) {
+                                        $.ajax({
+                                            data: "{ 'words': '" + request.term + "' }",
+                                            dataType: "json",
+                                            contentType: "application/json; charset=utf-8",
+                                            type: "POST",
+                                            url: "http://" + WebServicesPath + "/User/FindUser.asmx/SearchUser",
+                                            crossDomain: true,
+                                            dataFilter: function (data) { return data; },
+                                            success: function (data) {
+                                                response($.map(data.d, function (item) {
+                                                    return {
+                                                        label: item.Name + ' ' + item.Surname,
+                                                        value: item.IDUser
+                                                    }
+                                                }))
+                                            },
+                                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                                //alert(textStatus);
+                                            }
+                                        });
+                                    },
+                                    minLength: 1,
+
+                                    //Triggered when an item is selected from the menu.
+                                    select: function (event, ui) {
+                                        //If item selected, return his value, else return input (what has been written in the textbox)
+                                        ShowItemSelected(ui.item ? ui.item.value : this.value)
+
+                                        // The default action is to replace the text field's value with the value of the selected item.
+                                        //return false disable this default option ;)
+                                        return false;
+                                    }
+                                });
+                            });
+                        </script>
+                    </asp:Panel>
+                </asp:Panel>
+            </div>
+        </div>
+        <div style="width: 100%;">
+            <asp:UpdatePanel ID="upnContent" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                    </asp:ContentPlaceHolder>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div id="footer">
+            <div id="pnlCenterFooter">
+                <asp:Label ID="lblCopyright" runat="server" meta:resourcekey="lblCopyrightResource1"></asp:Label>
+                -
+                <div id="policy">
+                    <asp:HyperLink ID="hlPrivacyIubenda" NavigateUrl="https://www.iubenda.com/privacy-policy/264657"
+                        CssClass="iubenda-nostyle no-brand iubenda-embed" runat="server" meta:resourcekey="hlPrivacyIubendaResource1">Privacy</asp:HyperLink>
+                </div>
+                -
+                <asp:HyperLink ID="hlConditions" runat="server" NavigateUrl="/User/TermsAndConditions.aspx"
+                    Text="Termini e Condizioni" meta:resourcekey="hlConditionsResource1"></asp:HyperLink>
+                -
+                <asp:HyperLink ID="hlContact" runat="server" NavigateUrl="/User/Contact.aspx" Text="Contattaci"
+                    meta:resourcekey="hlContactResource1"></asp:HyperLink>
+            </div>
+        </div>
+    </div>
+    <asp:HiddenField ID="hfIpAddress" ClientIDMode="Static" runat="server" />
+    </form>
+    <script type="text/javascript">
+        (function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-39281629-1', 'mycookin.com');
+        ga('send', 'pageview');
+
+</script>
+</body>
+</html>

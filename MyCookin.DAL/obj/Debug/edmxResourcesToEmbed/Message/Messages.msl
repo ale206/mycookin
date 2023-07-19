@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBMessageChatModelStoreContainer" CdmEntityContainer="DBMessageChatEntity">
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="DBMessageChatModel.Messages">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="IDMessageType" ColumnName="IDMessageType" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessagesRecipients">
+      <EntityTypeMapping TypeName="DBMessageChatModel.MessagesRecipients">
+        <MappingFragment StoreEntitySet="MessagesRecipients">
+          <ScalarProperty Name="SentOn" ColumnName="SentOn" />
+          <ScalarProperty Name="IDUserSender" ColumnName="IDUserSender" />
+          <ScalarProperty Name="IDUserConversation" ColumnName="IDUserConversation" />
+          <ScalarProperty Name="IDMessageRecipient" ColumnName="IDMessageRecipient" />
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="IDUserRecipient" ColumnName="IDUserRecipient" />
+          <ScalarProperty Name="ViewedOn" ColumnName="ViewedOn" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessagesTypes">
+      <EntityTypeMapping TypeName="DBMessageChatModel.MessagesTypes">
+        <MappingFragment StoreEntitySet="MessagesTypes">
+          <ScalarProperty Name="IDMessageType" ColumnName="IDMessageType" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="MessageMaxLength" ColumnName="MessageMaxLength" />
+          <ScalarProperty Name="MessageTypeEnabled" ColumnName="MessageTypeEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetTypeOfMessageInfoByID" FunctionName="DBMessageChatModel.Store.USP_GetTypeOfMessageInfoByID" />
+    <FunctionImportMapping FunctionImportName="USP_InsertMessageRecipient" FunctionName="DBMessageChatModel.Store.USP_InsertMessageRecipient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMessageInfoByID" FunctionName="DBMessageChatModel.Store.USP_GetMessageInfoByID" />
+    <FunctionImportMapping FunctionImportName="USP_InsertMessage" FunctionName="DBMessageChatModel.Store.USP_InsertMessage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_MessageSetAsDeleted" FunctionName="DBMessageChatModel.Store.USP_MessageSetAsDeleted">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UsersConversations">
+      <EntityTypeMapping TypeName="DBMessageChatModel.UsersConversations">
+        <MappingFragment StoreEntitySet="UsersConversations">
+          <ScalarProperty Name="ArchivedOn" ColumnName="ArchivedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IDConversation" ColumnName="IDConversation" />
+          <ScalarProperty Name="IDUserConversation" ColumnName="IDUserConversation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_InsertConversation" FunctionName="DBMessageChatModel.Store.USP_InsertConversation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_UserConversationSetAsArchived" FunctionName="DBMessageChatModel.Store.USP_UserConversationSetAsArchived">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetUsersOfAConversation" FunctionName="DBMessageChatModel.Store.USP_GetUsersOfAConversation" />
+    <FunctionImportMapping FunctionImportName="USP_IsUserPartOfAConversation" FunctionName="DBMessageChatModel.Store.USP_IsUserPartOfAConversation" />
+    <FunctionImportMapping FunctionImportName="USP_MessageSetAsViewed" FunctionName="DBMessageChatModel.Store.USP_MessageSetAsViewed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetConversationIdBetweenTwoUsers" FunctionName="DBMessageChatModel.Store.USP_GetConversationIdBetweenTwoUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.Conversation">
+          <ScalarProperty Name="IDConversation" ColumnName="IDConversation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMessagesOfAConversation" FunctionName="DBMessageChatModel.Store.USP_GetMessagesOfAConversation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.MessagesOfConversation">
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IDMessageRecipient" ColumnName="IDMessageRecipient" />
+          <ScalarProperty Name="IDUserConversation" ColumnName="IDUserConversation" />
+          <ScalarProperty Name="IDUserSender" ColumnName="IDUserSender" />
+          <ScalarProperty Name="SentOn" ColumnName="SentOn" />
+          <ScalarProperty Name="IDConversation" ColumnName="IDConversation" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_UserConversationSetAsActive" FunctionName="DBMessageChatModel.Store.USP_UserConversationSetAsActive">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMyConversations" FunctionName="DBMessageChatModel.Store.USP_GetMyConversations">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.ListOfConversations">
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IDUserConversation" ColumnName="IDUserConversation" />
+          <ScalarProperty Name="IDConversation" ColumnName="IDConversation" />
+          <ScalarProperty Name="Friend" ColumnName="Friend" />
+          <ScalarProperty Name="LastDateMessage" ColumnName="LastDateMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMessagesToRead" FunctionName="DBMessageChatModel.Store.USP_GetMessagesToRead">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.MessagesToRead">
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IDUserSender" ColumnName="IDUserSender" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_MessagesOfAConversationSetAsViewed" FunctionName="DBMessageChatModel.Store.USP_MessagesOfAConversationSetAsViewed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.USPResult">
+          <ScalarProperty Name="isError" ColumnName="isError" />
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMessagesOfAConversationPaged" FunctionName="DBMessageChatModel.Store.USP_GetMessagesOfAConversationPaged">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.MessagesOfConversation">
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IDMessageRecipient" ColumnName="IDMessageRecipient" />
+          <ScalarProperty Name="IDUserConversation" ColumnName="IDUserConversation" />
+          <ScalarProperty Name="IDUserSender" ColumnName="IDUserSender" />
+          <ScalarProperty Name="SentOn" ColumnName="SentOn" />
+          <ScalarProperty Name="IDConversation" ColumnName="IDConversation" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_MessagesNumberOfAConversation" FunctionName="DBMessageChatModel.Store.USP_MessagesNumberOfAConversation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.NumberOfMessages">
+          <ScalarProperty Name="MessagesNumber" ColumnName="MessagesNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetMessagesToReadByUser" FunctionName="DBMessageChatModel.Store.USP_GetMessagesToReadByUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.MessagesToRead">
+          <ScalarProperty Name="IDMessage" ColumnName="IDMessage" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IDUserSender" ColumnName="IDUserSender" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_CountMessagesNotRead" FunctionName="DBMessageChatModel.Store.USP_CountMessagesNotRead">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMessageChatModel.NumberOfMessages">
+          <ScalarProperty Name="MessagesNumber" ColumnName="MessagesNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

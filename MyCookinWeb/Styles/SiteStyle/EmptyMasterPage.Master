@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EmptyMasterPage.master.cs" Inherits="MyCookinWeb.Styles.SiteStyle.EmptyMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MyCookin</title>
+
+    <!-- CSS -->
+    <link rel="Stylesheet" href="reset.css" />
+
+    <link rel="Stylesheet" href="../jQueryUiCss/mycookin-theme/jquery.ui.all.css" />
+    <link rel="Stylesheet" href="User.css" />
+    <link rel="Stylesheet" href="Recipe.css" />
+    <link href="/Styles/jQueryUiCss/JCrop/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/jQueryUiCss/JCrop/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+
+    <link rel="Stylesheet" href="JQueryUIOverride.css" />
+    <link rel="Stylesheet" href="style.css" />
+    <link rel="Stylesheet" href="PageDefault.css" />
+    <link rel="Stylesheet" href="PageLoginRegister.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:scriptmanager ID="MainScriptManager" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/Js/jquery-1.7.2.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.core.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.widget.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.mouse.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.draggable.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.position.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.autocomplete.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.dialog.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.datepicker.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.resizable.js" />
+            <asp:ScriptReference Path="~/Js/ui/jquery.ui.tabs.js" />
+            <asp:ScriptReference Path="~/Js/MyCookinFunctions_1.0.js" />
+        </Scripts>
+    </asp:scriptmanager>
+    <div>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

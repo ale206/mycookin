@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\F2-G6\Desktop\Service" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profilo1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Ingredient/SearchIngredient.asmx" publishTime="04/14/2013 13:15:45" />
+    <file relUrl="Recipe/ManageRecipe.asmx" publishTime="05/04/2013 14:03:40" />
+    <file relUrl="bin/MyCookin.Common.dll" publishTime="11/03/2013 15:49:08" />
+    <file relUrl="City/FindCity.asmx" publishTime="04/14/2013 13:15:44" />
+    <file relUrl="Message/MessageManager.asmx" publishTime="05/12/2013 18:58:10" />
+    <file relUrl="bin/MyCookin.WebServices.dll" publishTime="11/03/2013 15:49:11" />
+    <file relUrl="Beverage/SearchBeverage.asmx" publishTime="04/14/2013 13:15:44" />
+    <file relUrl="bin/Google.GData.Extensions.dll" publishTime="03/23/2013 12:40:09" />
+    <file relUrl="Contact/ContactManager.asmx" publishTime="09/12/2013 19:57:39" />
+    <file relUrl="Ingredient/IngredientInfo.asmx" publishTime="04/14/2013 13:15:45" />
+    <file relUrl="Recipe/GetRecipeInfo.asmx" publishTime="04/14/2013 13:15:45" />
+    <file relUrl="UserBoard/UsersLikes.asmx" publishTime="04/21/2013 17:46:14" />
+    <file relUrl="bin/MyCookin.DAL.dll" publishTime="11/03/2013 15:49:03" />
+    <file relUrl="bin/MyCookin.ThirdPartAPI.dll" publishTime="11/03/2013 15:49:09" />
+    <file relUrl="bin/Google.GData.Apps.dll" publishTime="03/23/2013 12:40:09" />
+    <file relUrl="bin/Google.GData.Client.dll" publishTime="03/23/2013 12:40:07" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="03/23/2013 12:39:20" />
+    <file relUrl="bin/MyCookin.ObjectManager.dll" publishTime="11/03/2013 15:49:11" />
+    <file relUrl="User/CheckUser.asmx" publishTime="04/14/2013 13:15:45" />
+    <file relUrl="Web.config" publishTime="11/03/2013 15:49:14" />
+    <file relUrl="User/FindUser.asmx" publishTime="04/14/2013 13:15:45" />
+    <file relUrl="UserBoard/UserNotifications.asmx" publishTime="05/01/2013 19:31:49" />
+    <file relUrl="bin/Google.GData.Contacts.dll" publishTime="03/23/2013 12:40:09" />
+  </publishProfile>
+</publishData>

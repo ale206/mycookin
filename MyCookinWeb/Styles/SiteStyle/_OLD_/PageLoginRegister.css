@@ -1,0 +1,259 @@
+﻿
+/********************************************************* BUTTONS ***********************************************************/
+.btnUserLogin { height:60px;}
+.btnForgotPsw { height:60px;}
+.ibtnResetPsw { height:60px;}
+/********************************************************* BUTTONS ***********************************************************/
+
+#contentLeft{
+	float:left;
+	border: 1px solid #336;
+	width:45%;
+	margin-left:4%;
+}
+
+#contentRight{
+	float:right;
+	border: 1px solid #336;
+	width:45%;
+	margin-right:4%;
+}
+
+/*****************************************************************************************
+REGISTRATION PAGE
+*****************************************************************************************/
+#pnlWrapperMainRegistrationContent{
+    height:650px; border:0px solid #70644F; margin:15px 15px; padding:10px; overflow:hidden; border: 0px solid Green; width:1300px; 
+    /*background-image:url(/images/pac_fruit.jpg); background-repeat:no-repeat; */
+    background-position:center; position:relative;
+}
+
+#pnlMainRegistrationContent {width:65%; float:left; margin:15px 15px;}
+
+#pnlRegistrationForm {
+    float:right;
+    width:50%;
+    border:0px solid #70644F;
+}
+#firstRegistrationColumn {
+    float:left;
+    width:45%;
+    height:400px;
+    border:0px solid #70644F;
+    padding: 0px 10px 0 10px;
+    font-family: Verdana;
+    letter-spacing: 0.2em;
+}
+#secondRegistrationColumn {
+    float:right;
+    width:30%;
+    height:400px;
+    border:0px solid #70644F;
+    margin:0px 0;
+    padding: 80px 0 0 0;
+    font-family: Verdana;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+#pnlRegistrationForm .fieldtitle
+{
+    width: 140px;
+    display:block;
+    float:left;
+    font-size:1.0em; color:#70644F;
+    margin-left:15px;
+}
+
+#pnlRegistrationForm p
+{
+    margin: -3px 0;
+}
+
+#secondRegistrationColumn p
+{
+    margin-top:5px;
+}
+ 
+#lblPasswordStrenght { color: #F8931D;}
+#lblUsernameNotAvailable { color: Navy; }
+#lblMailNotAvailable { color: #70644F;}
+
+.ButtonRow{ text-align:right;}
+
+/*****************************************************************************************
+REGISTRATION PAGE
+*****************************************************************************************/
+
+
+/*****************************************************************************************
+LOGIN PAGE
+*****************************************************************************************/
+#pnlWrapperMainLoginContent{
+    height:650px; border:0px solid #70644F; margin:15px 15px; padding:10px; overflow:hidden; border: 0px solid Green; width:1300px; 
+    background-image:url(/images/tagliere.jpg); background-repeat:no-repeat; 
+    background-position:center; position:relative;
+}
+
+#pnlMainLoginContent {width:65%; float:left; margin:15px 15px;}
+
+#pnlLoginForm {
+    float:right;
+    width:50%;
+    border:0px solid #70644F;
+}
+#firstLoginColumn {
+    float:left;
+    width:45%;
+    height:400px;
+    border:0px solid #70644F;
+    padding: 90px 10px 0 10px;
+    font-family: Verdana;
+    letter-spacing: 0.2em;
+}
+#secondLoginColumn {
+    float:right;
+    width:30%;
+    height:400px;
+    border:0px solid #70644F;
+    margin:15px 0;
+    padding: 80px 0 0 0;
+    font-family: Verdana;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+}
+
+#pnlLoginForm .fieldtitle
+{
+    width: 140px;
+    display:block;
+    float:left;
+    margin-left:15px;
+}
+
+#pnlLoginForm p
+{
+    margin: -3px 0;
+}
+
+#secondLoginColumn p
+{
+    margin-top:5px;
+}
+/*****************************************************************************************
+LOGIN PAGE
+*****************************************************************************************/
+
+/*****************************************************************************************
+FORGOT PASSWORD PAGE
+*****************************************************************************************/
+#pnlWrapperMainForgotPswContent1,#pnlWrapperMainForgotPswContent2{
+    height:650px; border:0px solid #70644F; margin:15px 15px; padding:10px; overflow:hidden; 
+    background-image:url(/images/tazzaTe.jpg); background-repeat:no-repeat; 
+    background-position:center; position:relative;
+}
+
+#pnlMainForgotPswContent1, #pnlMainForgotPswContent2 {width:65%; float:left; margin:15px 15px;}
+
+#pnlForgotPswForm1, #pnlForgotPswForm2 {
+    float:right;
+    width:50%;
+    border:0px solid #70644F;
+}
+#firstForgotPswColumn1, #firstForgotPswColumn2 {
+    float:left;
+    width:45%;
+    height:400px;
+    border:0px solid #70644F;
+    padding: 90px 10px 0 10px;
+    font-family: Verdana;
+    letter-spacing: 0.2em;
+}
+#secondForgotPswColumn1, #secondForgotPswColumn2 {
+    float:right;
+    width:30%;
+    height:400px;
+    border:0px solid #70644F;
+    margin:15px 0;
+    padding: 80px 0 0 0;
+    font-family: Verdana;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+}
+
+#pnlForgotPswForm1 .fieldtitle, #pnlForgotPswForm2 .fieldtitle
+{
+    width: 160px;
+    display:block;
+    float:left;
+}
+
+#pnlForgotPswForm1 p, #pnlForgotPswForm2 p
+{
+    margin: -3px 0;
+}
+
+#secondForgotPswColumn1 p, #secondForgotPswColumn2 p
+{
+    margin-top:5px;
+}
+/*****************************************************************************************
+FORGOT PASSWORD PAGE
+*****************************************************************************************/
+
+/*****************************************************************************************
+RESET PASSWORD PAGE
+*****************************************************************************************/
+#pnlWrapperMainResetPswContent{
+    height:650px; border:0px solid #70644F; margin:15px 15px; padding:10px; overflow:hidden; 
+    background-image:url(/images/tazzaTe.jpg); background-repeat:no-repeat; 
+    background-position:center; position:relative;
+}
+
+#pnlMainResetPswContent {width:65%; float:left; margin:15px 15px;}
+
+#pnlResetPswForm {
+    float:right;
+    width:50%;
+    border:0px solid #70644F;
+}
+#firstResetPswColumn {
+    float:left;
+    width:45%;
+    height:400px;
+    border:0px solid #70644F;
+    padding: 90px 10px 0 10px;
+    font-family: Verdana;
+    letter-spacing: 0.2em;
+}
+#secondResetPswColumn {
+    float:right;
+    width:30%;
+    height:400px;
+    border:0px solid #70644F;
+    margin:15px 0;
+    padding: 80px 0 0 0;
+    font-family: Verdana;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+}
+
+#pnlResetPswForm .fieldtitle
+{
+    width: 160px;
+    display:block;
+    float:left;
+}
+
+#pnlResetPswForm p
+{
+    margin: -3px 0;
+}
+
+#secondResetPswColumn p
+{
+    margin-top:5px;
+}
+/*****************************************************************************************
+RESET PASSWORD PAGE
+*****************************************************************************************/

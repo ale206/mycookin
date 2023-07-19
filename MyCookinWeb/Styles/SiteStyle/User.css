@@ -1,0 +1,43 @@
+﻿/*
+USER PROFILE CSS
+*/
+
+/*Panel for the User Profile*/
+.UserInfoPanel
+{
+    margin: auto auto 20px 20px;
+    padding: 10px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+/*Title of the section (Panel Category Name)*/
+.UserInfoSectionTitle
+{
+    font: bold 12px Georgia, "Times New Roman", serif;
+}
+
+/*Field Title in the form*/
+.UserInfoFieldTitle
+{
+    width: 300px;
+    display:block;
+    float:left;
+}
+
+/*Field Title in the form*/
+.UserInfoFirstColumn
+{
+    width: 300px;
+    height: 300px;
+    display:block;
+    float:left;
+    margin:0 20px;
+}
+
+
+/*Description of the field*/
+.UserInfoFieldDescription
+{
+    margin-left:30px;    
+}

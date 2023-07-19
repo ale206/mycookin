@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddToRecipeBookResource1.AlternateText" xml:space="preserve">
+    <value>Add to your Recipe Book</value>
+  </data>
+  <data name="btnAddToRecipeBookResource1.ToolTip" xml:space="preserve">
+    <value>Add to your Recipe Book</value>
+  </data>
+  <data name="btnAddYourRecipeResource1.AlternateText" xml:space="preserve">
+    <value>Add your version of this recipe</value>
+  </data>
+  <data name="btnAddYourRecipeResource1.ToolTip" xml:space="preserve">
+    <value>Add your version of this recipe </value>
+  </data>
+  <data name="btnGoBackResource1.AlternateText" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="btnGoBackResource1.ToolTip" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="btnRemoveFromRecipeBookResource1.AlternateText" xml:space="preserve">
+    <value>Remove from your Recipe Book</value>
+  </data>
+  <data name="btnRemoveFromRecipeBookResource1.ToolTip" xml:space="preserve">
+    <value>Remove from your Recipe Book</value>
+  </data>
+  <data name="btnShareFacebookResource1.AlternateText" xml:space="preserve">
+    <value>Share on Facebook</value>
+  </data>
+  <data name="btnShareFacebookResource1.ToolTip" xml:space="preserve">
+    <value>Share on Facebook</value>
+  </data>
+  <data name="btnShareTwitterResource1.AlternateText" xml:space="preserve">
+    <value>Share on Twitter</value>
+  </data>
+  <data name="btnShareTwitterResource1.ToolTip" xml:space="preserve">
+    <value>Share on Twitter</value>
+  </data>
+  <data name="btnUserCookingResource1.AlternateText" xml:space="preserve">
+    <value>I'm cooking it</value>
+  </data>
+  <data name="btnUserCookingResource1.ToolTip" xml:space="preserve">
+    <value>I'm cooking it</value>
+  </data>
+  <data name="imgCookingTimeResource1.AlternateText" xml:space="preserve">
+    <value>Cooking Time</value>
+  </data>
+  <data name="imgCookingTimeResource1.ToolTip" xml:space="preserve">
+    <value>Cooking Time</value>
+  </data>
+  <data name="imgCookingTypeResource1.AlternateText" xml:space="preserve">
+    <value>Cooking Type</value>
+  </data>
+  <data name="imgCookingTypeResource1.ToolTip" xml:space="preserve">
+    <value>Cooking Type</value>
+  </data>
+  <data name="imgGlutenFreeResource1.AlternateText" xml:space="preserve">
+    <value>Gluten Free</value>
+  </data>
+  <data name="imgGlutenFreeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgHotSpicyResource1.AlternateText" xml:space="preserve">
+    <value>Hot Spicy</value>
+  </data>
+  <data name="imgHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgKcalResource1.AlternateText" xml:space="preserve">
+    <value>Portion Kcal</value>
+  </data>
+  <data name="imgKcalResource1.ToolTip" xml:space="preserve">
+    <value>Portion Kcal</value>
+  </data>
+  <data name="imgNumPeopleResource1.AlternateText" xml:space="preserve">
+    <value>Serving Size</value>
+  </data>
+  <data name="imgNumPeopleResource1.ToolTip" xml:space="preserve">
+    <value>Recipe for</value>
+  </data>
+  <data name="imgPreparationResource1.AlternateText" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="imgPreparationResource1.ToolTip" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="imgRecipeBeverageResource1.AlternateText" xml:space="preserve">
+    <value>Suggested beverages</value>
+  </data>
+  <data name="imgRecipeBeverageResource1.ToolTip" xml:space="preserve">
+    <value>Suggested beverages</value>
+  </data>
+  <data name="imgRecipeHistoryResource1.AlternateText" xml:space="preserve">
+    <value>Recipe History</value>
+  </data>
+  <data name="imgRecipeHistoryResource1.ToolTip" xml:space="preserve">
+    <value>Recipe History</value>
+  </data>
+  <data name="imgRecipeOwnerResource1.AlternateText" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="imgRecipeOwnerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgRecipeResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgRecipeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgRecipeSuggestionResource1.AlternateText" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="imgRecipeSuggestionResource1.ToolTip" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="imgRegionResource1.AlternateText" xml:space="preserve">
+    <value>Recipe country</value>
+  </data>
+  <data name="imgRegionResource1.ToolTip" xml:space="preserve">
+    <value>Recipe country</value>
+  </data>
+  <data name="imgVeganResource1.AlternateText" xml:space="preserve">
+    <value>Vegan</value>
+  </data>
+  <data name="imgVeganResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgVegetarianResource1.AlternateText" xml:space="preserve">
+    <value>Vegetarian</value>
+  </data>
+  <data name="imgVegetarianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAlcoholResource1.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="lblAlcoholResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAlcoholTitleResource1.Text" xml:space="preserve">
+    <value>gr. di Alcohol</value>
+  </data>
+  <data name="lblAlcoholTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarbohydratesResource1.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="lblCarbohydratesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCarbohydratesTitleResource1.Text" xml:space="preserve">
+    <value>gr. Carbohydrates</value>
+  </data>
+  <data name="lblCarbohydratesTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblComplexityResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblComplexityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCookingTimeResource1.Text" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="lblCookingTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCookingTypeResource1.Text" xml:space="preserve">
+    <value>Not Specified</value>
+  </data>
+  <data name="lblCookingTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFatsResource1.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="lblFatsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFatsTitleResource1.Text" xml:space="preserve">
+    <value>gr. Fats</value>
+  </data>
+  <data name="lblFatsTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGlutenFreeResource1.Text" xml:space="preserve">
+    <value>Gluten Free</value>
+  </data>
+  <data name="lblGlutenFreeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblHotSpicyResource1.Text" xml:space="preserve">
+    <value>Hot Spicy</value>
+  </data>
+  <data name="lblHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblKcalLabelResource1.Text" xml:space="preserve">
+    <value>Kcal</value>
+  </data>
+  <data name="lblKcalLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblKcalResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblKcalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNumPeoplePluralResource1.Text" xml:space="preserve">
+    <value>{0} People</value>
+  </data>
+  <data name="lblNumPeoplePluralResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNumPeopleSingularResource1.Text" xml:space="preserve">
+    <value>{0} Person</value>
+  </data>
+  <data name="lblNumPeopleSingularResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPreparationResource1.Text" xml:space="preserve">
+    <value>{0} minutes</value>
+  </data>
+  <data name="lblPreparationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPreparationStepsTitleResource1.Text" xml:space="preserve">
+    <value>Preparation</value>
+  </data>
+  <data name="lblPreparationStepsTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProteinsResource1.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="lblProteinsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProteinsTitleResource1.Text" xml:space="preserve">
+    <value>gr. Proteins</value>
+  </data>
+  <data name="lblProteinsTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeBeverageResource1.Text" xml:space="preserve">
+    <value>Suggested Beverages</value>
+  </data>
+  <data name="lblRecipeBeverageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeHistoryResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeHistoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeSuggestionResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRecipeSuggestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRegionResource1.Text" xml:space="preserve">
+    <value>Not Specified</value>
+  </data>
+  <data name="lblRegionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSimilarRecipesHeadResource1.Text" xml:space="preserve">
+    <value>Other recipes you might like</value>
+  </data>
+  <data name="lblSimilarRecipesHeadResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblVeganResource1.Text" xml:space="preserve">
+    <value>Vegan</value>
+  </data>
+  <data name="lblVeganResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblVegetarianResource1.Text" xml:space="preserve">
+    <value>Vegetarian</value>
+  </data>
+  <data name="lblVegetarianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkRecipeOwnerResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkRecipeOwnerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>MyCookin</value>
+  </data>
+  <data name="pnlAlcoholResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlAlcoholResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlBackgroundResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlBackgroundResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCarbohydratesResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCarbohydratesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContentResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCookingTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCookingTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCookingTypeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCookingTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlFatsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlFatsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlGlutenFreeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlGlutenFreeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHotSpicyResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHotSpicyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlLeftPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlLeftPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNumPeopleResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNumPeopleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPortionKcalResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPortionKcalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationStepsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationStepsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationStepsTitleResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationStepsTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPreparationTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProteinsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProteinsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe2Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe3Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe4Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipe4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeBeverageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeBeverageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeBookManageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeBookManageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeComplexityResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeComplexityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeHistoryResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeHistoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeImageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeImageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeIngredientsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeIngredientsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNameResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNutritionalInfoIconResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNutritionalInfoIconResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNutritionalInfoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeNutritionalInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeOwnerResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeOwnerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeRegionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeRegionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeSuggestionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRecipeSuggestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRightPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlRightPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSimilarRecipesHeadResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSimilarRecipesHeadResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSimilarRecipesResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSimilarRecipesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlVeganResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlVeganResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlVegetarianResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlVegetarianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAutoTranslateResource1.Text" xml:space="preserve">
+    <value>This recipe has been translated automatically</value>
+  </data>
+  <data name="imgSpecialNoteResource1.ToolTip" xml:space="preserve">
+    <value>Other info</value>
+  </data>
+  <data name="KcalSEO.Value" xml:space="preserve">
+    <value>nutritional facts</value>
+  </data>
+  <data name="hfRecipeOf.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hfRecipeOf2.Value" xml:space="preserve">
+    <value>'s recipe</value>
+  </data>
+  <data name="lblBanner1Resource1.Text" xml:space="preserve">
+    <value>How It Works</value>
+  </data>
+  <data name="lblBanner2Resource1.Text" xml:space="preserve">
+    <value>Banner2</value>
+  </data>
+  <data name="lblRecipesListResource1.Text" xml:space="preserve">
+    <value>Other Recipes</value>
+  </data>
+  <data name="lblUsersResource1.Text" xml:space="preserve">
+    <value>User Suggested</value>
+  </data>
+  <data name="lnkOtherRecipesResource1.Text" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="btnLikeResource1.AlternateText" xml:space="preserve">
+    <value>Like it</value>
+  </data>
+  <data name="btnLikeResource1.ToolTip" xml:space="preserve">
+    <value>Like it</value>
+  </data>
+  <data name="hfLikeDetailBaseText.Value" xml:space="preserve">
+    <value>Like a {0} cookers</value>
+  </data>
+  <data name="imgPreservationResource1.AlternateText" xml:space="preserve">
+    <value>Preservation</value>
+  </data>
+  <data name="imgPreservationResource1.ToolTip" xml:space="preserve">
+    <value>Preservation</value>
+  </data>
+</root>

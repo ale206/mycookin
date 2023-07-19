@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnChangeAnswerResource1.AlternateText" xml:space="preserve">
+    <value>Cambiar la pregunta de seguridad y respuesta</value>
+  </data>
+  <data name="btnChangeAnswerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnChangePasswordResource1.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="btnChangePasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDeleteAccountResource1.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="btnDeleteAccountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnFacebookResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnFacebookResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGoogleResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnGoogleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMyAccountUpdateResource1.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="btnMyAccountUpdateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTwitterResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTwitterResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnUpdateNotificationSettingResource1.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="btnUpdateNotificationSettingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvCheckUsernameResource1.ErrorMessage" xml:space="preserve">
+    <value>El nombre de usuario no está disponible</value>
+  </data>
+  <data name="cvCheckUsernameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvCheckUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvPassword1Password2Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Las contraseñas deben ser la misma</value>
+  </data>
+  <data name="cvPassword1Password2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cvPassword1Password2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlGenderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlLanguageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlSecurityQuestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="facebook_loginResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="facebook_loginResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="google_loginResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="google_loginResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlChangePasswordResource1.Text" xml:space="preserve">
+    <value>Cambiar contraseña</value>
+  </data>
+  <data name="hlChangePasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlMyAccountResource1.Text" xml:space="preserve">
+    <value>MyAccount</value>
+  </data>
+  <data name="hlMyAccountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlNotificationSettingsResource1.Text" xml:space="preserve">
+    <value>Notificaciones</value>
+  </data>
+  <data name="hlNotificationSettingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlPersonalInfoResource1.Text" xml:space="preserve">
+    <value>Informaciónes Personales</value>
+  </data>
+  <data name="hlPersonalInfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hlSocialIntegrationsResource1.Text" xml:space="preserve">
+    <value>Redes Sociales</value>
+  </data>
+  <data name="hlSocialIntegrationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBirthDateResource1.Text" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+  <data name="lblBirthDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblChangePswTextResource1.Text" xml:space="preserve">
+    <value>Después de cambiar la contraseña, tendrás que hacer de nuevo el login</value>
+  </data>
+  <data name="lblChangePswTextResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCityResource1.Text" xml:space="preserve">
+    <value>ciudad</value>
+  </data>
+  <data name="lblCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEmptyResource1.Text" xml:space="preserve">
+    <value>Cambiar la pregunta y respuesta de seguridad</value>
+  </data>
+  <data name="lblEmptyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGenderResource1.Text" xml:space="preserve">
+    <value>Género</value>
+  </data>
+  <data name="lblGenderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblGeneralUploadErrorResource1.Text" xml:space="preserve">
+    <value>La foto es demasiado grande</value>
+  </data>
+  <data name="lblGeneralUploadErrorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLanguageResource1.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="lblLanguageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMobileResource1.Text" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="lblMobileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNameResource1.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="lblNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOldPasswordResource1.Text" xml:space="preserve">
+    <value>Contraseña anterior</value>
+  </data>
+  <data name="lblOldPasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPassword1Resource1.Text" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
+  <data name="lblPassword1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPassword2Resource1.Text" xml:space="preserve">
+    <value>Confirme su nueva contraseña</value>
+  </data>
+  <data name="lblPassword2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPhotoResource1.Text" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="lblPhotoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSecurityAnswerResource1.Text" xml:space="preserve">
+    <value>Respuesta</value>
+  </data>
+  <data name="lblSecurityAnswerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSecurityQuestionResource1.Text" xml:space="preserve">
+    <value>Pregunta</value>
+  </data>
+  <data name="lblSecurityQuestionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSocialConnectResource1.Text" xml:space="preserve">
+    <value>Conecte su Red Social</value>
+  </data>
+  <data name="lblSocialConnectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSurnameResource1.Text" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+  <data name="lblSurnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUsernameNotAvailableResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUsernameNotAvailableResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUserNameResource1.Text" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+  <data name="lblUserNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>MyCookin</value>
+  </data>
+  <data name="pnlMainTabResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlMainTabResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNotificationsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlNotificationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPictureResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlPictureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlResultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSecurityQuestionAndAnswerResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSecurityQuestionAndAnswerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSocialConnectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSocialConnectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revMinLengthPswResource1.ErrorMessage" xml:space="preserve">
+    <value>Introduzca por lo menos 6 caracteres para la contraseña.</value>
+  </data>
+  <data name="revMinLengthPswResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="revMinLengthPswResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revMobileResource1.ErrorMessage" xml:space="preserve">
+    <value>Escriba sólo números en el campo Teléfono</value>
+  </data>
+  <data name="revMobileResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revMobileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialCharsNameResource1.ErrorMessage" xml:space="preserve">
+    <value>No insertar caracteres especiales en el nombre</value>
+  </data>
+  <data name="revSpecialCharsNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialCharsNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialCharsSurnameResource1.ErrorMessage" xml:space="preserve">
+    <value>No insertar caracteres especiales en el apellido</value>
+  </data>
+  <data name="revSpecialCharsSurnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialCharsSurnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialcharsUsernameResource1.ErrorMessage" xml:space="preserve">
+    <value>No insertar caracteres especiales en el nombre de usuario</value>
+  </data>
+  <data name="revSpecialcharsUsernameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revSpecialcharsUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvBirthDateResource1.ErrorMessage" xml:space="preserve">
+    <value>* Introduzca su fecha de nacimiento</value>
+  </data>
+  <data name="rfvBirthDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvBirthDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvNameResource1.ErrorMessage" xml:space="preserve">
+    <value>* Escriba su nombre</value>
+  </data>
+  <data name="rfvNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvOldPasswordResource1.ErrorMessage" xml:space="preserve">
+    <value>* Introduzca la contraseña antigua</value>
+  </data>
+  <data name="rfvOldPasswordResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvOldPasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvPassword1Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Introduzca su nueva contraseña</value>
+  </data>
+  <data name="rfvPassword1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvPassword1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvPassword2Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Vuelva a escribir la contraseña</value>
+  </data>
+  <data name="rfvPassword2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvPassword2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvSurnameResource1.ErrorMessage" xml:space="preserve">
+    <value>* Introduzca su apellido</value>
+  </data>
+  <data name="rfvSurnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvSurnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvUsernameResource1.ErrorMessage" xml:space="preserve">
+    <value>Introduzca un nombre de usuario</value>
+  </data>
+  <data name="rfvUsernameResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="rfvUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="twitter_loginResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="twitter_loginResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBirthDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBirthDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCheckUsernameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCheckUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCityIDResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCityIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCurrentUsernameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCurrentUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMobileResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMobileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOldPasswordResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOldPasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPassword1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPassword1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPassword2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPassword2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPasswordStrenghtResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPasswordStrenghtResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSecurityAnswerResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSecurityAnswerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSurnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSurnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUserNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUserNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="vsChangePasswordResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="vsChangePasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="vsEditProfileResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="vsEditProfileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

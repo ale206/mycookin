@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMessageChatModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DBMessageChatEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Messages" EntityType="DBMessageChatModel.Messages" />
+    <EntitySet Name="MessagesRecipients" EntityType="DBMessageChatModel.MessagesRecipients" />
+    <EntitySet Name="MessagesTypes" EntityType="DBMessageChatModel.MessagesTypes" />
+    <AssociationSet Name="FK_Messages_MessagesTypes" Association="DBMessageChatModel.FK_Messages_MessagesTypes">
+      <End Role="MessagesTypes" EntitySet="MessagesTypes" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessagesRecipients_Messages" Association="DBMessageChatModel.FK_MessagesRecipients_Messages">
+      <End Role="Messages" EntitySet="Messages" />
+      <End Role="MessagesRecipients" EntitySet="MessagesRecipients" />
+    </AssociationSet>
+    <FunctionImport Name="USP_GetTypeOfMessageInfoByID" EntitySet="MessagesTypes" ReturnType="Collection(DBMessageChatModel.MessagesTypes)">
+      <Parameter Name="IDMessageType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_InsertMessageRecipient" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDMessage" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserConversation" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserSender" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserRecipient" Mode="In" Type="Guid" />
+      <Parameter Name="SentOn" Mode="In" Type="DateTime" />
+      <Parameter Name="ViewedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="DeletedOn" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMessageInfoByID" EntitySet="Messages" ReturnType="Collection(DBMessageChatModel.Messages)">
+      <Parameter Name="IDMessage" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_InsertMessage" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDMessageType" Mode="In" Type="Int32" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_MessageSetAsDeleted" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDMessageRecipient" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <EntitySet Name="UsersConversations" EntityType="DBMessageChatModel.UsersConversations" />
+    <AssociationSet Name="FK_MessagesRecipients_UsersConversations" Association="DBMessageChatModel.FK_MessagesRecipients_UsersConversations">
+      <End Role="UsersConversations" EntitySet="UsersConversations" />
+      <End Role="MessagesRecipients" EntitySet="MessagesRecipients" />
+    </AssociationSet>
+    <FunctionImport Name="USP_InsertConversation" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+      <Parameter Name="CreatedOn" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_UserConversationSetAsArchived" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDUserConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetUsersOfAConversation" EntitySet="UsersConversations" ReturnType="Collection(DBMessageChatModel.UsersConversations)">
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_IsUserPartOfAConversation" EntitySet="UsersConversations" ReturnType="Collection(DBMessageChatModel.UsersConversations)">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_MessageSetAsViewed" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetConversationIdBetweenTwoUsers" ReturnType="Collection(DBMessageChatModel.Conversation)">
+      <Parameter Name="user1" Mode="In" Type="Guid" />
+      <Parameter Name="user2" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMessagesOfAConversation" ReturnType="Collection(DBMessageChatModel.MessagesOfConversation)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_UserConversationSetAsActive" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMyConversations" ReturnType="Collection(DBMessageChatModel.ListOfConversations)">
+      <Parameter Name="me" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMessagesToRead" ReturnType="Collection(DBMessageChatModel.MessagesToRead)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_MessagesOfAConversationSetAsViewed" ReturnType="Collection(DBMessageChatModel.USPResult)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMessagesOfAConversationPaged" ReturnType="Collection(DBMessageChatModel.MessagesOfConversation)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+      <Parameter Name="Offset" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_MessagesNumberOfAConversation" ReturnType="Collection(DBMessageChatModel.NumberOfMessages)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+      <Parameter Name="IDConversation" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMessagesToReadByUser" ReturnType="Collection(DBMessageChatModel.MessagesToRead)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserSender" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="USP_CountMessagesNotRead" ReturnType="Collection(DBMessageChatModel.NumberOfMessages)">
+      <Parameter Name="IDUserConversationOwner" Mode="In" Type="Guid" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="IDMessage" />
+    </Key>
+    <Property Name="IDMessage" Type="Guid" Nullable="false" />
+    <Property Name="IDMessageType" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="MessagesTypes" Relationship="DBMessageChatModel.FK_Messages_MessagesTypes" FromRole="Messages" ToRole="MessagesTypes" />
+    <NavigationProperty Name="MessagesRecipients" Relationship="DBMessageChatModel.FK_MessagesRecipients_Messages" FromRole="Messages" ToRole="MessagesRecipients" />
+  </EntityType>
+  <EntityType Name="MessagesRecipients">
+    <Key>
+      <PropertyRef Name="IDMessageRecipient" />
+    </Key>
+    <Property Name="IDMessageRecipient" Type="Guid" Nullable="false" />
+    <Property Name="IDMessage" Type="Guid" Nullable="false" />
+    <Property Name="IDUserRecipient" Type="Guid" Nullable="false" />
+    <Property Name="ViewedOn" Type="DateTime" />
+    <Property Name="DeletedOn" Type="DateTime" />
+    <NavigationProperty Name="Messages" Relationship="DBMessageChatModel.FK_MessagesRecipients_Messages" FromRole="MessagesRecipients" ToRole="Messages" />
+    <Property Type="Guid" Name="IDUserConversation" Nullable="false" />
+    <Property Type="Guid" Name="IDUserSender" Nullable="false" />
+    <Property Type="DateTime" Name="SentOn" Nullable="false" />
+    <NavigationProperty Name="UsersConversations" Relationship="DBMessageChatModel.FK_MessagesRecipients_UsersConversations" FromRole="MessagesRecipients" ToRole="UsersConversations" />
+  </EntityType>
+  <EntityType Name="MessagesTypes">
+    <Key>
+      <PropertyRef Name="IDMessageType" />
+    </Key>
+    <Property Name="IDMessageType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MessageMaxLength" Type="Int32" Nullable="false" />
+    <Property Name="MessageTypeEnabled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Messages" Relationship="DBMessageChatModel.FK_Messages_MessagesTypes" FromRole="MessagesTypes" ToRole="Messages" />
+  </EntityType>
+  <Association Name="FK_Messages_MessagesTypes">
+    <End Role="MessagesTypes" Type="DBMessageChatModel.MessagesTypes" Multiplicity="1" />
+    <End Role="Messages" Type="DBMessageChatModel.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessagesTypes">
+        <PropertyRef Name="IDMessageType" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="IDMessageType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessagesRecipients_Messages">
+    <End Role="Messages" Type="DBMessageChatModel.Messages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MessagesRecipients" Type="DBMessageChatModel.MessagesRecipients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Messages">
+        <PropertyRef Name="IDMessage" />
+      </Principal>
+      <Dependent Role="MessagesRecipients">
+        <PropertyRef Name="IDMessage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="USPResult">
+    <Property Type="Boolean" Name="isError" Nullable="false" />
+    <Property Type="String" Name="ResultExecutionCode" Nullable="false" />
+    <Property Type="String" Name="USPReturnValue" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ListOfUserSender">
+    <Property Type="Guid" Name="IDUserSender" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="UsersConversations">
+    <Key>
+      <PropertyRef Name="IDUserConversation" />
+    </Key>
+    <Property Type="Guid" Name="IDUserConversation" Nullable="false" />
+    <Property Type="Guid" Name="IDConversation" Nullable="false" />
+    <Property Type="Guid" Name="IDUser" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+    <Property Type="DateTime" Name="ArchivedOn" />
+    <NavigationProperty Name="MessagesRecipients" Relationship="DBMessageChatModel.FK_MessagesRecipients_UsersConversations" FromRole="UsersConversations" ToRole="MessagesRecipients" />
+  </EntityType>
+  <Association Name="FK_MessagesRecipients_UsersConversations">
+    <End Type="DBMessageChatModel.UsersConversations" Role="UsersConversations" Multiplicity="1" />
+    <End Type="DBMessageChatModel.MessagesRecipients" Role="MessagesRecipients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersConversations">
+        <PropertyRef Name="IDUserConversation" />
+      </Principal>
+      <Dependent Role="MessagesRecipients">
+        <PropertyRef Name="IDUserConversation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="Conversation">
+    <Property Type="Guid" Name="IDConversation" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="MessagesOfConversation">
+    <Property Type="Guid" Name="IDMessage" Nullable="false" />
+    <Property Type="String" Name="Message" Nullable="false" />
+    <Property Type="Guid" Name="IDMessageRecipient" Nullable="false" />
+    <Property Type="Guid" Name="IDUserConversation" Nullable="false" />
+    <Property Type="Guid" Name="IDUserSender" Nullable="false" />
+    <Property Type="DateTime" Name="SentOn" Nullable="false" />
+    <Property Type="Guid" Name="IDConversation" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ListOfConversations">
+    <Property Type="Guid" Name="IDUser" Nullable="false" />
+    <Property Type="Guid" Name="IDUserConversation" Nullable="false" />
+    <Property Type="Guid" Name="IDConversation" Nullable="false" />
+    <Property Type="Guid" Name="Friend" Nullable="false" />
+    <Property Type="DateTime" Name="LastDateMessage" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MessagesToRead">
+    <Property Type="Guid" Name="IDMessage" Nullable="false" />
+    <Property Type="String" Name="Message" Nullable="false" />
+    <Property Type="Guid" Name="IDUserSender" Nullable="false" />
+    <Property Type="DateTime" Name="SentOn" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="NumberOfMessages">
+    <Property Type="Int32" Name="MessagesNumber" Nullable="false" />
+  </ComplexType>
+</Schema>

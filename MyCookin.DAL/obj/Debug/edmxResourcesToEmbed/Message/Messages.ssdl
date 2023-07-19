@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMessageChatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBMessageChatModelStoreContainer">
+    <EntitySet Name="Messages" EntityType="DBMessageChatModel.Store.Messages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessagesRecipients" EntityType="DBMessageChatModel.Store.MessagesRecipients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessagesTypes" EntityType="DBMessageChatModel.Store.MessagesTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsersConversations" EntityType="DBMessageChatModel.Store.UsersConversations" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Messages_MessagesTypes" Association="DBMessageChatModel.Store.FK_Messages_MessagesTypes">
+      <End Role="MessagesTypes" EntitySet="MessagesTypes" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessagesRecipients_Messages" Association="DBMessageChatModel.Store.FK_MessagesRecipients_Messages">
+      <End Role="Messages" EntitySet="Messages" />
+      <End Role="MessagesRecipients" EntitySet="MessagesRecipients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessagesRecipients_UsersConversations" Association="DBMessageChatModel.Store.FK_MessagesRecipients_UsersConversations">
+      <End Role="UsersConversations" EntitySet="UsersConversations" />
+      <End Role="MessagesRecipients" EntitySet="MessagesRecipients" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="IDMessage" />
+    </Key>
+    <Property Name="IDMessage" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDMessageType" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MessagesRecipients">
+    <Key>
+      <PropertyRef Name="IDMessageRecipient" />
+    </Key>
+    <Property Name="IDMessageRecipient" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDMessage" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserConversation" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserSender" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserRecipient" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SentOn" Type="datetime" Nullable="false" />
+    <Property Name="ViewedOn" Type="datetime" />
+    <Property Name="DeletedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MessagesTypes">
+    <Key>
+      <PropertyRef Name="IDMessageType" />
+    </Key>
+    <Property Name="IDMessageType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MessageType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MessageMaxLength" Type="int" Nullable="false" />
+    <Property Name="MessageTypeEnabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersConversations">
+    <Key>
+      <PropertyRef Name="IDUserConversation" />
+    </Key>
+    <Property Name="IDUserConversation" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDConversation" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ArchivedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Messages_MessagesTypes">
+    <End Role="MessagesTypes" Type="DBMessageChatModel.Store.MessagesTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Messages" Type="DBMessageChatModel.Store.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessagesTypes">
+        <PropertyRef Name="IDMessageType" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="IDMessageType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessagesRecipients_Messages">
+    <End Role="Messages" Type="DBMessageChatModel.Store.Messages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MessagesRecipients" Type="DBMessageChatModel.Store.MessagesRecipients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Messages">
+        <PropertyRef Name="IDMessage" />
+      </Principal>
+      <Dependent Role="MessagesRecipients">
+        <PropertyRef Name="IDMessage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessagesRecipients_UsersConversations">
+    <End Role="UsersConversations" Type="DBMessageChatModel.Store.UsersConversations" Multiplicity="1" />
+    <End Role="MessagesRecipients" Type="DBMessageChatModel.Store.MessagesRecipients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersConversations">
+        <PropertyRef Name="IDUserConversation" />
+      </Principal>
+      <Dependent Role="MessagesRecipients">
+        <PropertyRef Name="IDUserConversation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="USP_CountMessagesNotRead" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetConversationIdBetweenTwoUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user1" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="user2" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMessageInfoByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMessage" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMessagesOfAConversation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMessagesOfAConversationPaged" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Offset" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMessagesToRead" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMessagesToReadByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserSender" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMyConversations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="me" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_GetTypeOfMessageInfoByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMessageType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetUsersOfAConversation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertConversation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="CreatedOn" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMessageType" Type="int" Mode="In" />
+    <Parameter Name="Message" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertMessageRecipient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMessage" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserConversation" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserSender" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserRecipient" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="SentOn" Type="datetime" Mode="In" />
+    <Parameter Name="ViewedOn" Type="datetime" Mode="In" />
+    <Parameter Name="DeletedOn" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="USP_IsUserPartOfAConversation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_MessageSetAsDeleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMessageRecipient" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_MessageSetAsViewed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_MessagesNumberOfAConversation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_MessagesOfAConversationSetAsViewed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversationOwner" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_UserConversationSetAsActive" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_UserConversationSetAsArchived" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserConversation" Type="uniqueidentifier" Mode="In" />
+  </Function>
+</Schema>

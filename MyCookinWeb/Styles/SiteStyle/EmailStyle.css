@@ -1,0 +1,13 @@
+﻿/*WHEN YOU SEND EMAIL, PUT CSS INLINE.. */
+
+body {background-color: #fff; margin: 10px; font-family:Verdana; font-size:1.1em; color:#70644F;}
+
+/********************************************************* LINKS ************************************************************/
+A:LINK {color : #70644F; text-decoration: none;}
+
+A:VISITED {color : #70644F; text-decoration: none}
+
+A:HOVER {color: #F8931D; text-decoration:none;}
+
+A:ACTIVE {color: #70644F; text-decoration:none;}
+/********************************************************* LINKS ************************************************************/

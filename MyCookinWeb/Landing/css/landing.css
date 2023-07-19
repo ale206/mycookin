@@ -1,0 +1,21 @@
+body {font-family:Verdana; font-size:1.0em; color:#70644F; width: 900px; margin: 0 auto;}
+
+A:LINK {color : #70644F; text-decoration: none;}
+
+A:VISITED {color : #70644F; text-decoration: none}
+
+A:HOVER {color: #F8931D; text-decoration:none;}
+
+A:ACTIVE {color: #70644F; text-decoration:none;}
+
+#content{  margin:0px auto; text-align:left; width: 900px; height:500px }
+
+table {
+
+    background-color:rgba(255,255,255,0.9);
+}
+
+p{ padding:0 20px 20px 20px; color:#999; font:18px "Helvetica Neue", "Helvetica", Arial, sans-serif; line-height:120%; }
+p a{ color:#eee; font-weight:bold; }
+h3{ padding:20px 20px 10px 20px; }
+			

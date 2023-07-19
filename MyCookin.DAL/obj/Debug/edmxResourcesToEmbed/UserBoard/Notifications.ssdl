@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBUsersBoardModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBUsersBoardModelStoreContainer">
+    <EntitySet Name="UsersNotifications" EntityType="DBUsersBoardModel.Store.UsersNotifications" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="UsersNotifications">
+    <Key>
+      <PropertyRef Name="IDUserNotification" />
+    </Key>
+    <Property Name="IDUserNotification" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserActionType" Type="int" Nullable="false" />
+    <Property Name="URLNotification" Type="nvarchar(max)" />
+    <Property Name="IDRelatedObject" Type="uniqueidentifier" />
+    <Property Name="NotificationImage" Type="uniqueidentifier" />
+    <Property Name="UserNotification" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ViewedOn" Type="datetime" />
+    <Property Name="NotifiedOn" Type="datetime" />
+    <Property Name="IDUserOwnerRelatedObject" Type="uniqueidentifier" />
+  </EntityType>
+  <Function Name="USP_NotificationInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserActionType" Type="int" Mode="In" />
+    <Parameter Name="URLNotification" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IDRelatedObject" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="NotificationImage" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="UserNotification" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CreatedOn" Type="datetime" Mode="In" />
+    <Parameter Name="IDUserOwnerRelatedObject" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_NotificationsGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserOwnerRelatedObject" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserActionType" Type="int" Mode="In" />
+    <Parameter Name="NotificationsRead" Type="int" Mode="In" />
+    <Parameter Name="AllNotification" Type="bit" Mode="In" />
+    <Parameter Name="MaxNotificationsNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_NotificationsSetAsNotified" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserNotification" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="USP_NotificationsSetAsViewed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserOwnerRelatedObject" Type="uniqueidentifier" Mode="In" />
+  </Function>
+</Schema>

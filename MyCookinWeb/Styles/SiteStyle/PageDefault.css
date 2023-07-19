@@ -1,0 +1,62 @@
+﻿
+/*Sezione per il Login*/
+#header{float:right; margin:2% 5%;}
+
+/*------ Logo index -------*/
+#logo_index { margin:0 auto; display:block; padding: 5px 0 0;position:relative; top:-60px; margin:0 auto; z-index:100;}
+/*------ fine Logo index -------*/
+
+/*------ Logo -------*/
+#logo {padding:1px 0 0 5px; background:url(/Images/logo.png) no-repeat left top; float:left}
+#logo a {display:block;width:210px;height:71px;}
+/*------ fine Logo -------*/sezioni
+
+/*--------- sezioni ---------*/
+#sezioni { height:60px; width:100%;  }
+#sezioni ul { height:60px; width:430px;list-style: none; margin: 0 auto;  position:relative; top:-100px; }
+#sezioni ul li {float:left;  margin: 0 5px; height:60px; width:130px; max-width:150px;  }
+#sezioni ul li a {}
+#sezioni ul li a:hover {}
+/*--------- fine sezioni ---------*/
+
+/*---- box cerca index -----*/
+#search_index {background: url(/Images/bg-cerca.gif) no-repeat right bottom;height: 47px;width: 268px;padding: 5px 0 0;position:relative; top:0px; margin:0 auto; }
+#search_index form {display: inline-block;margin: 0;padding: 5px 4px 4px;}
+#search_index input {float: left;line-height: 38px;}
+#search_index .txtfield {color: #6e6e6e;font-size: 15px;font-style: italic;height: 28px;width: 225px;border: 0;margin-left: 9px; margin-top: 10px;padding: 0;}
+#search_index .button {background: url(/Images/lente.gif) no-repeat right center;border: 0;cursor: pointer;height: 38px;width: 20px;margin: 0;padding: 0;}
+/*---- fine box cerca index -----*/
+
+/*------------------------------------------------------- CONTENT ------*/
+#contents {height:auto;padding: 0px 0 50px 0;}
+#contents div.body {width: 960px;margin: 0 auto  ;padding: 0px 0 0px 0;height:auto;}
+#contents div.index {width: 960px;margin: 0 auto; padding-top:10px; height:420px; background: url(/Images/sfondo_index.png) no-repeat center bottom; opacity: 0.95; filter: alpha(opacity=95);}
+/*-------------------------------------------------- FINE CONTENT ------*/
+
+
+/*-------------------------------------------------------------- FOOTER ---------*/
+
+/*---- box footer index ----*/
+#footer_index span.copyright {clear: both; display: block; width:350px; font-size: 12px; color: #456f7f; margin:0 auto; padding-top:60px }
+/*---- fine box footer index ----*/
+
+/*--------------------------------------------------------- FINE FOOTER ---------*/
+
+
+/*********************************************************** SLIDESHOW ************************************************************/
+
+#slideshow {margin:0 auto;width:640px;height:263px;position:relative; top:-60px;}
+#slideshow #slidesContainer {margin:0 auto;width:560px;height:263px;overflow:auto; position:relative;}
+#slideshow #slidesContainer .slide {margin:0 auto;width:540px;height:263px;}
+
+/* Controllo*/
+.control {display:block;width:39px;height:263px;text-indent:-10000px;position:absolute;cursor: pointer;}
+#leftControl {top:100px;left:0;background:transparent url(/Images/slide/prev.png) no-repeat 0 0;}
+#rightControl {top:100px;right:0;background:transparent url(/Images/slide/next.png) no-repeat 0 0;}
+
+.slide{font-size:1em; font-family:"Courier New", Courier, monospace; padding-top:25px; letter-spacing:0.1em;}
+.h2, .slide p {margin-top:10px;}
+.slide h2 {letter-spacing:-1px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:3em;}
+.slide img {float:right;margin:0 15px;}
+
+/*********************************************************** SLIDESHOW ************************************************************/

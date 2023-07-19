@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBStatisticsModelStoreContainer" CdmEntityContainer="DBStatisticsEntities">
+    <EntitySetMapping Name="UsersActionsStatistics">
+      <EntityTypeMapping TypeName="DBStatisticsModel.UsersActionsStatistics">
+        <MappingFragment StoreEntitySet="UsersActionsStatistics">
+          <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+          <ScalarProperty Name="SearchString" ColumnName="SearchString" />
+          <ScalarProperty Name="FileOrigin" ColumnName="FileOrigin" />
+          <ScalarProperty Name="IDUserActionStatistic" ColumnName="IDUserActionStatistic" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IDRelatedObject" ColumnName="IDRelatedObject" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateAction" ColumnName="DateAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_InsertUserActionStatistic" FunctionName="DBStatisticsModel.Store.USP_InsertUserActionStatistic" />
+    <FunctionImportMapping FunctionImportName="USP_CountByIDRelatedObjectAndActionType" FunctionName="DBStatisticsModel.Store.USP_CountByIDRelatedObjectAndActionType" />
+    <FunctionImportMapping FunctionImportName="USP_CountByIDUserAndActionType" FunctionName="DBStatisticsModel.Store.USP_CountByIDUserAndActionType" />
+  </EntityContainerMapping>
+</Mapping>

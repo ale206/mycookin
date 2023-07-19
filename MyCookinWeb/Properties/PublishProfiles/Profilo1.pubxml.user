@@ -1,0 +1,3292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2013-12-02T14:53:29.4079559+01:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>D:\Saverio\MyCookin\Deploy\WebApp</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_LocalResources/Default/Default.aspx.en-GB.resx">
+      <publishTime>03/04/2014 08:40:23</publishTime>
+    </File>
+    <File Include="App_LocalResources/Default/Default.aspx.es-ES.resx">
+      <publishTime>03/04/2014 08:41:30</publishTime>
+    </File>
+    <File Include="App_LocalResources/Default/Default.aspx.it-IT.resx">
+      <publishTime>03/04/2014 08:41:57</publishTime>
+    </File>
+    <File Include="App_LocalResources/Default/Default.aspx.resx">
+      <publishTime>03/04/2014 08:41:59</publishTime>
+    </File>
+    <File Include="Auth/Auth.aspx">
+      <publishTime>04/14/2013 13:15:46</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>03/23/2013 12:39:27</publishTime>
+    </File>
+    <File Include="bin/Amazon/AWS.Extensions.dll">
+      <publishTime>04/21/2013 13:15:10</publishTime>
+    </File>
+    <File Include="bin/Amazon/AWSSDK.dll">
+      <publishTime>04/21/2013 13:15:09</publishTime>
+    </File>
+    <File Include="bin/AWS.Extensions.dll">
+      <publishTime>04/21/2013 13:15:10</publishTime>
+    </File>
+    <File Include="bin/AWSSDK.dll">
+      <publishTime>04/21/2013 13:15:09</publishTime>
+    </File>
+    <File Include="bin/en-GB/MyCookinWeb.resources.dll">
+      <publishTime>06/18/2014 15:38:30</publishTime>
+    </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>03/23/2013 12:39:20</publishTime>
+    </File>
+    <File Include="bin/Facebook.Web.dll">
+      <publishTime>03/23/2013 12:39:18</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Apps.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Client.dll">
+      <publishTime>03/23/2013 12:40:07</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Contacts.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/Google.GData.Extensions.dll">
+      <publishTime>03/23/2013 12:40:09</publishTime>
+    </File>
+    <File Include="bin/MyCookin.Common.dll">
+      <publishTime>05/21/2014 16:47:10</publishTime>
+    </File>
+    <File Include="bin/MyCookin.DAL.dll">
+      <publishTime>05/21/2014 16:47:08</publishTime>
+    </File>
+    <File Include="bin/MyCookin.ObjectManager.dll">
+      <publishTime>06/18/2014 15:37:31</publishTime>
+    </File>
+    <File Include="bin/MyCookin.ThirdPartAPI.dll">
+      <publishTime>05/21/2014 16:47:12</publishTime>
+    </File>
+    <File Include="bin/MyCookin.WebServices.dll">
+      <publishTime>06/18/2014 15:37:33</publishTime>
+    </File>
+    <File Include="bin/MyCookinWeb.dll">
+      <publishTime>06/18/2014 15:38:30</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/23/2013 12:39:20</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Text.dll">
+      <publishTime>04/06/2014 11:32:02</publishTime>
+    </File>
+    <File Include="CustomControls/AddRemoveImage.ascx">
+      <publishTime>04/14/2013 13:15:47</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/AddRecipeIngredient/ctrlAddRecipeIngredient.ascx.en-GB.resx">
+      <publishTime>10/29/2013 11:50:38</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/AddRecipeIngredient/ctrlAddRecipeIngredient.ascx.es-ES.resx">
+      <publishTime>10/29/2013 11:52:55</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/AddRecipeIngredient/ctrlAddRecipeIngredient.ascx.it-IT.resx">
+      <publishTime>10/29/2013 11:50:37</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/AddRecipeIngredient/ctrlAddRecipeIngredient.ascx.resx">
+      <publishTime>10/29/2013 11:50:37</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/EditImage/ctrlEditImage.ascx.es-ES.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/EditImage/ctrlEditImage.ascx.it-IT.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/EditImage/ctrlEditImage.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MultiUpload/ctrlMultiUpload.ascx.en-GB.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MultiUpload/ctrlMultiUpload.ascx.es-ES.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MultiUpload/ctrlMultiUpload.ascx.it-IT.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MultiUpload/ctrlMultiUpload.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MyRecipesBookBlock/ctrlMyRecipesBookBlock.ascx.en-GB.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MyRecipesBookBlock/ctrlMyRecipesBookBlock.ascx.es-ES.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MyRecipesBookBlock/ctrlMyRecipesBookBlock.ascx.it-IT.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/MyRecipesBookBlock/ctrlMyRecipesBookBlock.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/Rating/ctrlRating.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/ShowRecipeIngredient/ctrlShowRecipeIngredient.ascx.es-ES.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/ShowRecipeIngredient/ctrlShowRecipeIngredient.ascx.it-IT.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/ShowRecipeIngredient/ctrlShowRecipeIngredient.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardBlock/ctrlUserBoardBlock.ascx.en-GB.resx">
+      <publishTime>11/02/2013 19:17:56</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardBlock/ctrlUserBoardBlock.ascx.es-ES.resx">
+      <publishTime>11/02/2013 19:19:32</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardBlock/ctrlUserBoardBlock.ascx.it-IT.resx">
+      <publishTime>11/02/2013 19:18:01</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardBlock/ctrlUserBoardBlock.ascx.resx">
+      <publishTime>11/02/2013 19:19:34</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardComments/ctrlUserBoardComments.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardLikes/ctrlUserBoardLikes.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardPostOnFriendBoard/ctrlUserBoardPostOnFriendBoard.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/App_LocalResources/UserBoardStatus/ctrlUserBoardStatus.ascx.resx">
+      <publishTime>10/19/2013 19:15:28</publishTime>
+    </File>
+    <File Include="CustomControls/AutoComplete.ascx">
+      <publishTime>10/12/2013 10:43:49</publishTime>
+    </File>
+    <File Include="CustomControls/AutoSuggestMultiValue.ascx">
+      <publishTime>09/15/2013 10:55:04</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlAddRecipeIngredient.ascx">
+      <publishTime>04/06/2014 13:36:15</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlBeverageRecipe.ascx">
+      <publishTime>10/19/2013 21:13:14</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlEditImage.ascx">
+      <publishTime>10/19/2013 19:15:25</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlFileUploader.ascx">
+      <publishTime>06/09/2013 11:28:34</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlMultiUpload.ascx">
+      <publishTime>11/03/2013 13:59:09</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlMyRecipesBookBlock.ascx">
+      <publishTime>02/25/2014 16:50:49</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlRating.ascx">
+      <publishTime>10/19/2013 19:17:50</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlRecipeComplexity.ascx">
+      <publishTime>09/11/2013 16:01:02</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlRecipeIngredient.ascx">
+      <publishTime>04/26/2013 19:53:14</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlRecipePolaroid.ascx">
+      <publishTime>03/01/2014 20:57:23</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlShowRecipeIngredient.ascx">
+      <publishTime>03/07/2014 17:10:02</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlUserBoardBlock.ascx">
+      <publishTime>11/03/2013 15:28:18</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlUserBoardComments.ascx">
+      <publishTime>05/23/2014 15:16:46</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlUserBoardLikes.ascx">
+      <publishTime>10/20/2013 13:42:40</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlUserBoardPostOnFriendBoard.ascx">
+      <publishTime>10/18/2013 22:51:26</publishTime>
+    </File>
+    <File Include="CustomControls/ctrlUserBoardStatus.ascx">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/16/2014 16:50:06</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>10/24/2013 11:48:31</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/09/2013 15:36:46</publishTime>
+    </File>
+    <File Include="FBRedirect.aspx">
+      <publishTime>06/14/2014 11:36:55</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/14/2013 13:15:46</publishTime>
+    </File>
+    <File Include="Images/acceptFriendship.png">
+      <publishTime>04/14/2013 13:15:48</publishTime>
+    </File>
+    <File Include="Images/addUser.png">
+      <publishTime>04/14/2013 13:15:48</publishTime>
+    </File>
+    <File Include="Images/antipasti.jpg">
+      <publishTime>04/14/2013 13:15:48</publishTime>
+    </File>
+    <File Include="Images/appdotnet-connect.png">
+      <publishTime>04/14/2013 13:15:48</publishTime>
+    </File>
+    <File Include="Images/attention_icon.png">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/bg_row_sheetCenterLeft.png">
+      <publishTime>09/29/2013 11:38:38</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/bg_row_sheetCenterRight.png">
+      <publishTime>08/23/2013 21:07:58</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/bg_row_sheetTopLeft.png">
+      <publishTime>09/29/2013 11:39:08</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/bg_row_sheetTopRight.png">
+      <publishTime>08/23/2013 21:07:58</publishTime>
+    </File>
+    <File Include="Images/bckg_tea.jpg">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/bell.png">
+      <publishTime>05/01/2013 19:31:52</publishTime>
+    </File>
+    <File Include="Images/bg-cerca.gif">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/bg-polaroid.png">
+      <publishTime>08/24/2013 16:27:01</publishTime>
+    </File>
+    <File Include="Images/bgTextbox.jpg">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/bgTextboxDate.jpg">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/bgTextboxError.jpg">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/bg_footer.png">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/btnToLike.gif">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/btnToUnlike.gif">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/calendar.gif">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/calendarIcon.png">
+      <publishTime>06/09/2013 18:02:58</publishTime>
+    </File>
+    <File Include="Images/CheckIcon.png">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/close-icon.png">
+      <publishTime>04/14/2013 13:15:49</publishTime>
+    </File>
+    <File Include="Images/colors.jpg">
+      <publishTime>04/14/2013 13:13:37</publishTime>
+    </File>
+    <File Include="Images/Comment-Recipe-EN.png">
+      <publishTime>06/14/2014 11:37:12</publishTime>
+    </File>
+    <File Include="Images/Comment-Recipe-ES.png">
+      <publishTime>06/14/2014 11:37:13</publishTime>
+    </File>
+    <File Include="Images/Comment-Recipe-IT.png">
+      <publishTime>06/14/2014 11:37:15</publishTime>
+    </File>
+    <File Include="Images/declineFriendship.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/delete-icon.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/deleteX.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/Down.png">
+      <publishTime>04/14/2013 17:57:18</publishTime>
+    </File>
+    <File Include="Images/drink.jpg">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/drinks.jpg">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/facebook.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/facebook_hover.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/fb.jpg">
+      <publishTime>06/09/2013 15:36:46</publishTime>
+    </File>
+    <File Include="Images/fb.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/fb_icon.png">
+      <publishTime>08/10/2013 17:47:28</publishTime>
+    </File>
+    <File Include="Images/fb_icon_64.png">
+      <publishTime>02/23/2014 11:00:59</publishTime>
+    </File>
+    <File Include="Images/flag-de.png">
+      <publishTime>10/12/2013 13:19:36</publishTime>
+    </File>
+    <File Include="Images/flag-es.png">
+      <publishTime>10/12/2013 13:22:10</publishTime>
+    </File>
+    <File Include="Images/flag-fr.png">
+      <publishTime>10/12/2013 13:21:03</publishTime>
+    </File>
+    <File Include="Images/flag-ita.png">
+      <publishTime>10/12/2013 13:24:23</publishTime>
+    </File>
+    <File Include="Images/flag-uk.png">
+      <publishTime>10/12/2013 13:23:21</publishTime>
+    </File>
+    <File Include="Images/food-blogger.png">
+      <publishTime>06/14/2014 11:37:11</publishTime>
+    </File>
+    <File Include="Images/Form/iconWrite1.png">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/g.jpg">
+      <publishTime>06/09/2013 15:36:46</publishTime>
+    </File>
+    <File Include="Images/gluten-free-gray.png">
+      <publishTime>08/25/2013 18:39:11</publishTime>
+    </File>
+    <File Include="Images/gluten-free-off.png">
+      <publishTime>08/19/2013 19:35:43</publishTime>
+    </File>
+    <File Include="Images/gluten-free-on.png">
+      <publishTime>08/19/2013 19:35:43</publishTime>
+    </File>
+    <File Include="Images/glyphicons-halflings-white.png">
+      <publishTime>06/09/2013 18:02:58</publishTime>
+    </File>
+    <File Include="Images/google-signin.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/google_icon.png">
+      <publishTime>08/10/2013 17:47:28</publishTime>
+    </File>
+    <File Include="Images/google_icon_64.png">
+      <publishTime>02/23/2014 11:00:58</publishTime>
+    </File>
+    <File Include="Images/go_newsletter.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/graffetta.png">
+      <publishTime>09/15/2013 17:26:15</publishTime>
+    </File>
+    <File Include="Images/icn_rl.png">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Images/ico-bilancia-off.png">
+      <publishTime>09/22/2013 16:12:56</publishTime>
+    </File>
+    <File Include="Images/ico-bilancia-on.png">
+      <publishTime>09/29/2013 11:29:35</publishTime>
+    </File>
+    <File Include="Images/ico-bilancia.png">
+      <publishTime>08/24/2013 12:18:05</publishTime>
+    </File>
+    <File Include="Images/icon-add.png">
+      <publishTime>10/26/2013 18:01:28</publishTime>
+    </File>
+    <File Include="Images/icon-AddRecipe-color.png">
+      <publishTime>10/12/2013 17:11:51</publishTime>
+    </File>
+    <File Include="Images/icon-addRecipe-color2.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-AddRecipe.png">
+      <publishTime>09/03/2013 18:50:45</publishTime>
+    </File>
+    <File Include="Images/icon-addToRecipeBook.png">
+      <publishTime>10/02/2013 16:25:19</publishTime>
+    </File>
+    <File Include="Images/icon-back-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-back-off-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-back-off.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-back-on-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-back-on.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-back.png">
+      <publishTime>08/26/2013 21:30:11</publishTime>
+    </File>
+    <File Include="Images/icon-beverage.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-circle-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-circle.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-cooking-time.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-cooking-type.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-cooking.png">
+      <publishTime>10/07/2013 19:09:49</publishTime>
+    </File>
+    <File Include="Images/icon-dontfollow-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-dontfollow.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-drag-and-drop.png">
+      <publishTime>10/30/2013 11:17:58</publishTime>
+    </File>
+    <File Include="Images/icon-empty-circle.png">
+      <publishTime>10/04/2013 19:18:42</publishTime>
+    </File>
+    <File Include="Images/icon-follow-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-follow-cook.png">
+      <publishTime>06/14/2014 11:37:11</publishTime>
+    </File>
+    <File Include="Images/icon-follow-people.png">
+      <publishTime>06/14/2014 11:37:12</publishTime>
+    </File>
+    <File Include="Images/icon-follow.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-followActionLoading.gif">
+      <publishTime>09/21/2013 16:25:43</publishTime>
+    </File>
+    <File Include="Images/icon-followers-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-followers.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-following-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-following-people.png">
+      <publishTime>06/14/2014 11:37:11</publishTime>
+    </File>
+    <File Include="Images/icon-following.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-food-blogger.png">
+      <publishTime>06/18/2014 14:59:53</publishTime>
+    </File>
+    <File Include="Images/icon-forward-big.png">
+      <publishTime>09/21/2013 16:32:30</publishTime>
+    </File>
+    <File Include="Images/icon-forward-gray.png">
+      <publishTime>09/30/2013 09:55:13</publishTime>
+    </File>
+    <File Include="Images/icon-forward.png">
+      <publishTime>09/21/2013 16:32:56</publishTime>
+    </File>
+    <File Include="Images/icon-go-back.png">
+      <publishTime>10/02/2013 15:56:01</publishTime>
+    </File>
+    <File Include="Images/icon-go-off-big.png">
+      <publishTime>09/21/2013 16:32:43</publishTime>
+    </File>
+    <File Include="Images/icon-go-off.png">
+      <publishTime>09/21/2013 16:32:37</publishTime>
+    </File>
+    <File Include="Images/icon-go-on-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-go-on.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-goBack.png">
+      <publishTime>10/02/2013 17:19:55</publishTime>
+    </File>
+    <File Include="Images/icon-green-circle.png">
+      <publishTime>10/04/2013 19:18:42</publishTime>
+    </File>
+    <File Include="Images/icon-group-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-group.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-groups.png">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="Images/icon-history.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-HotSpicy-off.png">
+      <publishTime>02/24/2014 18:29:44</publishTime>
+    </File>
+    <File Include="Images/icon-HotSpicy-on.png">
+      <publishTime>10/02/2013 15:59:18</publishTime>
+    </File>
+    <File Include="Images/icon-HotSpicy.png">
+      <publishTime>08/25/2013 18:39:11</publishTime>
+    </File>
+    <File Include="Images/icon-like-off-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-like-off.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-like-on-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-like-on.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-LoadMore.png">
+      <publishTime>10/07/2013 19:09:49</publishTime>
+    </File>
+    <File Include="Images/icon-LoadMore_2.png">
+      <publishTime>10/08/2013 08:37:14</publishTime>
+    </File>
+    <File Include="Images/icon-location.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-login.png">
+      <publishTime>06/14/2014 11:37:13</publishTime>
+    </File>
+    <File Include="Images/icon-logout-big.png">
+      <publishTime>09/15/2013 16:56:48</publishTime>
+    </File>
+    <File Include="Images/icon-logout-color-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-logout-color-green-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-logout-color-green.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-logout-color.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-logout-color2.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-logout-off-big.png">
+      <publishTime>09/15/2013 16:56:32</publishTime>
+    </File>
+    <File Include="Images/icon-logout-off.png">
+      <publishTime>09/15/2013 16:56:39</publishTime>
+    </File>
+    <File Include="Images/icon-logout-on-big.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-logout-on.png">
+      <publishTime>09/15/2013 17:25:34</publishTime>
+    </File>
+    <File Include="Images/icon-logout.png">
+      <publishTime>09/15/2013 16:56:54</publishTime>
+    </File>
+    <File Include="Images/icon-manageRecipe-color.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-messages-on.png">
+      <publishTime>08/25/2013 18:30:37</publishTime>
+    </File>
+    <File Include="Images/icon-messages.png">
+      <publishTime>08/25/2013 18:36:51</publishTime>
+    </File>
+    <File Include="Images/icon-MyRecipes.png">
+      <publishTime>10/02/2013 16:26:46</publishTime>
+    </File>
+    <File Include="Images/icon-NewMessage.png">
+      <publishTime>09/08/2013 14:52:49</publishTime>
+    </File>
+    <File Include="Images/icon-notifications-on.png">
+      <publishTime>08/25/2013 18:34:53</publishTime>
+    </File>
+    <File Include="Images/icon-notifications.png">
+      <publishTime>08/25/2013 18:34:53</publishTime>
+    </File>
+    <File Include="Images/icon-num-peple.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-other-note.png">
+      <publishTime>10/30/2013 15:46:50</publishTime>
+    </File>
+    <File Include="Images/icon-pencil-color.png">
+      <publishTime>06/14/2014 11:37:12</publishTime>
+    </File>
+    <File Include="Images/icon-pencil1-color-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-pencil1-color.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-pencil2-color-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-pencil2-color.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-preparation-time.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-preservation.png">
+      <publishTime>05/27/2014 14:39:23</publishTime>
+    </File>
+    <File Include="Images/icon-QuickNext.png">
+      <publishTime>10/18/2013 20:31:12</publishTime>
+    </File>
+    <File Include="Images/icon-QuickPrev.png">
+      <publishTime>10/18/2013 20:31:12</publishTime>
+    </File>
+    <File Include="Images/icon-quickRecipe-off.png">
+      <publishTime>09/22/2013 16:13:54</publishTime>
+    </File>
+    <File Include="Images/icon-quickRecipe-on.png">
+      <publishTime>09/22/2013 16:02:08</publishTime>
+    </File>
+    <File Include="Images/icon-recipe-big.png">
+      <publishTime>09/12/2013 19:55:15</publishTime>
+    </File>
+    <File Include="Images/icon-recipe-color-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-recipe-color.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-recipe-grey.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Images/icon-recipe.png">
+      <publishTime>08/26/2013 21:30:25</publishTime>
+    </File>
+    <File Include="Images/icon-recipeBook-color.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-removeFromRecipeBook.png">
+      <publishTime>10/02/2013 16:24:14</publishTime>
+    </File>
+    <File Include="Images/icon-search-engine.png">
+      <publishTime>06/14/2014 11:37:13</publishTime>
+    </File>
+    <File Include="Images/icon-settings-color-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-settings-color.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-settings-color2.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-settings.png">
+      <publishTime>09/03/2013 18:50:45</publishTime>
+    </File>
+    <File Include="Images/icon-share-recipe.png">
+      <publishTime>06/14/2014 11:37:15</publishTime>
+    </File>
+    <File Include="Images/icon-share.png">
+      <publishTime>09/21/2013 21:34:43</publishTime>
+    </File>
+    <File Include="Images/icon-spam-big.png">
+      <publishTime>10/07/2013 19:37:58</publishTime>
+    </File>
+    <File Include="Images/icon-spam.png">
+      <publishTime>10/07/2013 19:37:58</publishTime>
+    </File>
+    <File Include="Images/icon-suggestion.png">
+      <publishTime>09/12/2013 19:55:18</publishTime>
+    </File>
+    <File Include="Images/icon-user-color-blackOrange-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-user-color-blackOrange.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-user-color-Orange-big.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-user-color-Orange.png">
+      <publishTime>10/14/2013 21:43:08</publishTime>
+    </File>
+    <File Include="Images/icon-user-color2.png">
+      <publishTime>10/18/2013 20:19:07</publishTime>
+    </File>
+    <File Include="Images/icon-user.png">
+      <publishTime>09/04/2013 23:20:28</publishTime>
+    </File>
+    <File Include="Images/icon-userNoPic.png">
+      <publishTime>09/21/2013 16:25:43</publishTime>
+    </File>
+    <File Include="Images/icon-vote-recipe.png">
+      <publishTime>06/14/2014 11:37:13</publishTime>
+    </File>
+    <File Include="Images/IconAddFriend.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconBlock.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/iconDifficult_1.png">
+      <publishTime>08/24/2013 17:29:46</publishTime>
+    </File>
+    <File Include="Images/iconDifficult_2.png">
+      <publishTime>08/24/2013 17:29:46</publishTime>
+    </File>
+    <File Include="Images/iconDifficult_3.png">
+      <publishTime>08/24/2013 17:29:46</publishTime>
+    </File>
+    <File Include="Images/IconEditProfile.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/iconFacebook.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconFollowers.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconFollowing.png">
+      <publishTime>04/21/2013 13:15:36</publishTime>
+    </File>
+    <File Include="Images/IconFriends.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/iconGoogle.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconIngredients.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconJoin.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconLogin.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconLogout.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconMyProfile.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconNotificationsOff.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconNotificationsOn.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/comunityRecipes.png">
+      <publishTime>02/28/2014 19:44:23</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/MyRecipes.png">
+      <publishTime>02/28/2014 19:44:23</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-1.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-11.png">
+      <publishTime>02/23/2014 12:37:17</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-2.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-3.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-36.png">
+      <publishTime>02/23/2014 12:37:17</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-37.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-38.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-39.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-4.png">
+      <publishTime>02/23/2014 12:37:18</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-5.png">
+      <publishTime>02/23/2014 12:37:17</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-6.png">
+      <publishTime>02/23/2014 12:37:17</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/50x50/RecipeProperty-8.png">
+      <publishTime>02/23/2014 12:37:17</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/comunityRecipes.png">
+      <publishTime>02/28/2014 19:44:38</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/MyRecipes.png">
+      <publishTime>02/28/2014 19:44:38</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-1.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-11.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-2.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-3.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-36.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-37.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-38.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-39.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-4.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-5.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-6.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipeProperty/80x80/RecipeProperty-8.png">
+      <publishTime>02/23/2014 12:19:02</publishTime>
+    </File>
+    <File Include="Images/IconRecipes.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconRecoveryPsw.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconRegister.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconRemoveBlock.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconRemoveFriend.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconSave.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/iconSave2.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/IconSpam.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/iconTwitter.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/icon_appdotnet.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/icon_Browse.jpg">
+      <publishTime>06/02/2013 17:43:05</publishTime>
+    </File>
+    <File Include="Images/icon_facebook.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/icon_follower.png">
+      <publishTime>06/14/2014 11:37:12</publishTime>
+    </File>
+    <File Include="Images/icon_gplus.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/icon_linkedin.png">
+      <publishTime>04/14/2013 13:15:50</publishTime>
+    </File>
+    <File Include="Images/icon_loader.gif">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/icon_twitter.png">
+      <publishTime>04/14/2013 13:15:51</publishTime>
+    </File>
+    <File Include="Images/icon_upload.png">
+      <publishTime>06/02/2013 17:43:05</publishTime>
+    </File>
+    <File Include="Images/img_index1.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/img_index1_2.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/img_index2.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/img_index2_2.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/img_index3.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/img_index3_3.png">
+      <publishTime>04/14/2013 13:15:52</publishTime>
+    </File>
+    <File Include="Images/Ingredient/20120823-1812185038_iconSave.png">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/input.gif">
+      <publishTime>04/14/2013 13:15:53</publishTime>
+    </File>
+    <File Include="Images/IRA_01.jpg">
+      <publishTime>04/14/2013 13:15:53</publishTime>
+    </File>
+    <File Include="Images/Left.png">
+      <publishTime>04/14/2013 13:13:37</publishTime>
+    </File>
+    <File Include="Images/lente.gif">
+      <publishTime>04/14/2013 13:15:53</publishTime>
+    </File>
+    <File Include="Images/Loader/ajax-loader_black01.gif">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/Loader/ajax-loader_black02.gif">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/Loader/ajax-loader_blu01.gif">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/Loader/loading-icon01.gif">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/loadingLine.gif">
+      <publishTime>04/14/2013 17:57:18</publishTime>
+    </File>
+    <File Include="Images/loadingLineOrange.gif">
+      <publishTime>04/14/2013 17:57:18</publishTime>
+    </File>
+    <File Include="Images/Login-EN.png">
+      <publishTime>06/14/2014 11:37:15</publishTime>
+    </File>
+    <File Include="Images/Login-ES.png">
+      <publishTime>06/14/2014 11:37:20</publishTime>
+    </File>
+    <File Include="Images/login-facebook-button.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/Login-IT.png">
+      <publishTime>06/14/2014 11:37:20</publishTime>
+    </File>
+    <File Include="Images/login.gif">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/logo1.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/logout.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/Message.png">
+      <publishTime>05/12/2013 18:55:33</publishTime>
+    </File>
+    <File Include="Images/MessageIcon.png">
+      <publishTime>05/12/2013 10:43:15</publishTime>
+    </File>
+    <File Include="Images/MyCookin-Logo.png">
+      <publishTime>09/22/2013 19:29:49</publishTime>
+    </File>
+    <File Include="Images/MyCookin-Logo_NoBeta.png">
+      <publishTime>09/22/2013 19:29:51</publishTime>
+    </File>
+    <File Include="Images/MyCookin-Messages.png">
+      <publishTime>06/14/2014 11:37:26</publishTime>
+    </File>
+    <File Include="Images/MyCookinLogo-105x105.png">
+      <publishTime>09/15/2013 13:11:17</publishTime>
+    </File>
+    <File Include="Images/MyCookinLogo-200x200.png">
+      <publishTime>10/20/2013 18:45:18</publishTime>
+    </File>
+    <File Include="Images/myCookinLogo.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/myCookinLogo1.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/myCookinLogoSmall.png">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/MyCookinPageTabFacebook.jpg">
+      <publishTime>06/14/2014 11:37:20</publishTime>
+    </File>
+    <File Include="Images/MyCookinTab1.jpg">
+      <publishTime>10/19/2013 18:42:08</publishTime>
+    </File>
+    <File Include="Images/mymix-off.png">
+      <publishTime>08/19/2013 19:35:43</publishTime>
+    </File>
+    <File Include="Images/mymix-on.png">
+      <publishTime>08/19/2013 19:35:43</publishTime>
+    </File>
+    <File Include="Images/pac_fruit.jpg">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/pianta.jpg">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/pngbehavior.htc">
+      <publishTime>04/14/2013 13:15:54</publishTime>
+    </File>
+    <File Include="Images/post-it.png">
+      <publishTime>09/28/2013 20:39:14</publishTime>
+    </File>
+    <File Include="Images/post-it_2.png">
+      <publishTime>10/07/2013 18:59:42</publishTime>
+    </File>
+    <File Include="Images/Rating/cancel-off.png">
+      <publishTime>05/03/2013 19:56:27</publishTime>
+    </File>
+    <File Include="Images/Rating/cancel-on.png">
+      <publishTime>05/03/2013 19:56:27</publishTime>
+    </File>
+    <File Include="Images/Rating/star-half.png">
+      <publishTime>05/03/2013 19:56:28</publishTime>
+    </File>
+    <File Include="Images/Rating/star-off.png">
+      <publishTime>05/03/2013 19:56:28</publishTime>
+    </File>
+    <File Include="Images/Rating/star-on.png">
+      <publishTime>05/03/2013 19:56:27</publishTime>
+    </File>
+    <File Include="Images/removeFriendship.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/Right.png">
+      <publishTime>04/14/2013 13:13:37</publishTime>
+    </File>
+    <File Include="Images/rss.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/rss_hover.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/Search-Engine-EN.png">
+      <publishTime>06/14/2014 11:37:19</publishTime>
+    </File>
+    <File Include="Images/Search-Engine-ES.png">
+      <publishTime>06/14/2014 11:37:19</publishTime>
+    </File>
+    <File Include="Images/Search-Engine-IT.png">
+      <publishTime>06/14/2014 11:37:22</publishTime>
+    </File>
+    <File Include="Images/sfondo_index.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/showFriendProfile.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/submit.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/tagliere.jpg">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/tazzaTe.jpg">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/Tips-It-Votare-una-ricetta.png">
+      <publishTime>06/14/2014 11:37:22</publishTime>
+    </File>
+    <File Include="Images/tw.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/twitter.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/twitter_hover.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/twitter_signin.png">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/ui-anim_basic_16x16.gif">
+      <publishTime>04/14/2013 13:15:55</publishTime>
+    </File>
+    <File Include="Images/user_edit.png">
+      <publishTime>04/14/2013 13:15:56</publishTime>
+    </File>
+    <File Include="Images/vegan-gray.png">
+      <publishTime>09/29/2013 11:42:27</publishTime>
+    </File>
+    <File Include="Images/vegan-off.png">
+      <publishTime>09/29/2013 11:27:05</publishTime>
+    </File>
+    <File Include="Images/vegan-on.png">
+      <publishTime>09/29/2013 11:28:35</publishTime>
+    </File>
+    <File Include="Images/vegetarian-gray.png">
+      <publishTime>09/29/2013 11:41:34</publishTime>
+    </File>
+    <File Include="Images/vegetarian-off.png">
+      <publishTime>09/29/2013 11:30:45</publishTime>
+    </File>
+    <File Include="Images/vegetarian-on.png">
+      <publishTime>09/29/2013 11:31:40</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/IngredientsList/IngredientsList.aspx.en-GB.resx">
+      <publishTime>02/26/2014 19:29:52</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/IngredientsList/IngredientsList.aspx.es-ES.resx">
+      <publishTime>02/26/2014 19:27:51</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/IngredientsList/IngredientsList.aspx.it-IT.resx">
+      <publishTime>02/26/2014 19:22:58</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/IngredientsList/IngredientsList.aspx.resx">
+      <publishTime>02/26/2014 19:29:45</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/MngIngredients.aspx.resx">
+      <publishTime>10/18/2013 19:14:03</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/ShowIngredient/ShowIngredient.aspx.en-GB.resx">
+      <publishTime>03/01/2014 20:25:59</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/ShowIngredient/ShowIngredient.aspx.es-ES.resx">
+      <publishTime>03/01/2014 20:02:02</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/ShowIngredient/ShowIngredient.aspx.it-IT.resx">
+      <publishTime>03/01/2014 20:25:33</publishTime>
+    </File>
+    <File Include="Ingredient/App_LocalResources/ShowIngredient/ShowIngredient.aspx.resx">
+      <publishTime>03/01/2014 20:24:21</publishTime>
+    </File>
+    <File Include="Ingredient/IngredientDashBoard.aspx">
+      <publishTime>09/03/2013 09:12:27</publishTime>
+    </File>
+    <File Include="Ingredient/IngredientsList.aspx">
+      <publishTime>03/02/2014 18:41:44</publishTime>
+    </File>
+    <File Include="Ingredient/MngIngredients.aspx">
+      <publishTime>10/18/2013 19:17:10</publishTime>
+    </File>
+    <File Include="Ingredient/ShowIngredient.aspx">
+      <publishTime>03/07/2014 15:35:57</publishTime>
+    </File>
+    <File Include="Js/AutoSuggest/jquery.autoSuggest.js">
+      <publishTime>09/05/2013 17:08:11</publishTime>
+    </File>
+    <File Include="Js/BigVideo/bigvideo.js">
+      <publishTime>08/28/2013 10:22:20</publishTime>
+    </File>
+    <File Include="Js/BigVideo/bigvideo.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/BigVideo/jquery.backstretch.js">
+      <publishTime>08/28/2013 14:17:32</publishTime>
+    </File>
+    <File Include="Js/BigVideo/jquery.backstretch.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/BigVideo/jquery.imagesloaded.min.js">
+      <publishTime>08/28/2013 10:22:20</publishTime>
+    </File>
+    <File Include="Js/BigVideo/video.js">
+      <publishTime>08/28/2013 10:22:20</publishTime>
+    </File>
+    <File Include="Js/BigVideo/video.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/bootstrap-datepicker.js">
+      <publishTime>08/10/2013 19:38:38</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/jsDate.js">
+      <publishTime>06/09/2013 18:02:58</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ar.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.bg.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ca.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.cs.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.da.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.de.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.el.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.es.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.et.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.fi.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.fr.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.he.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.hr.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.hu.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.id.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.is.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.it.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ja.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ka.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.kr.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.lt.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.lv.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.mk.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ms.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.nb.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.nl.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.no.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.pl.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.pt-BR.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.pt.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ro.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.rs-latin.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.rs.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.ru.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.sk.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.sl.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.sq.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.sv.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.sw.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.th.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.tr.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.uk.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.zh-CN.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/BootstrapDatePicker/locales/bootstrap-datepicker.zh-TW.js">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Js/CustomControls/ctrlRating.js">
+      <publishTime>05/04/2013 16:44:19</publishTime>
+    </File>
+    <File Include="Js/CustomControls/ctrlRecipeIngredient.js">
+      <publishTime>10/27/2013 16:57:55</publishTime>
+    </File>
+    <File Include="Js/CustomControls/ctrlShowlRecipeIngredient.js">
+      <publishTime>09/26/2013 14:49:47</publishTime>
+    </File>
+    <File Include="Js/CustomControls/ctrlUserBoardLikes.js">
+      <publishTime>10/13/2013 17:20:46</publishTime>
+    </File>
+    <File Include="Js/DateFormat.js">
+      <publishTime>05/12/2013 19:14:29</publishTime>
+    </File>
+    <File Include="Js/ddSlick/jquery.ddslick.min.js">
+      <publishTime>02/23/2014 12:23:23</publishTime>
+    </File>
+    <File Include="Js/Forms/jquery.autogrow.js">
+      <publishTime>04/14/2013 17:16:18</publishTime>
+    </File>
+    <File Include="Js/Forms/jquery.autosize.js">
+      <publishTime>10/01/2013 11:56:12</publishTime>
+    </File>
+    <File Include="Js/Forms/jquery.autosize.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/IEPatch/jquery.placeholder.js">
+      <publishTime>08/10/2013 17:47:28</publishTime>
+    </File>
+    <File Include="Js/IEPatch/jquery.placeholder.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/JCrop/jquery.color.js">
+      <publishTime>04/14/2013 13:15:58</publishTime>
+    </File>
+    <File Include="Js/JCrop/jquery.Jcrop.js">
+      <publishTime>08/22/2013 17:46:33</publishTime>
+    </File>
+    <File Include="Js/JCrop/jquery.Jcrop.min.js">
+      <publishTime>04/14/2013 13:15:58</publishTime>
+    </File>
+    <File Include="Js/jquery-1.10.1.min.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/jquery-migrate-1.1.0.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/jquery-migrate-1.1.0.min.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/jquery-ui-1.10.3.custom.min.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/jquery.tools.min.js">
+      <publishTime>06/09/2013 18:02:56</publishTime>
+    </File>
+    <File Include="Js/Messages/MessagesSetAsRead.js">
+      <publishTime>09/08/2013 15:00:01</publishTime>
+    </File>
+    <File Include="Js/Messages/MessagesSetAsRead.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/ajax.requester.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/button.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/deletefile.ajax.requester.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/dnd.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/features.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/handler.base.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/handler.form.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/handler.xhr.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/header.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/iframe.xss.response.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/jquery-dnd.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/jquery-plugin.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/paste.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/promise.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/uploader.basic.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/uploader.js">
+      <publishTime>05/12/2013 17:12:06</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/util.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MultiUpload/window.receive.message.js">
+      <publishTime>05/12/2013 11:02:52</publishTime>
+    </File>
+    <File Include="Js/MyCookinFunctions_1.0.js">
+      <publishTime>03/12/2014 19:11:02</publishTime>
+    </File>
+    <File Include="Js/MyCookinFunctions_1.0.min.js">
+      <publishTime>03/12/2014 19:13:49</publishTime>
+    </File>
+    <File Include="Js/MyCookinSlidePanel_1.0.js">
+      <publishTime>04/14/2013 13:15:57</publishTime>
+    </File>
+    <File Include="Js/Notifications/MyNotifications.js">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="Js/Notifications/MyNotifications.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/noty/jquery.noty.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/jquery.noty.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottom.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottomCenter.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottomCenter.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottomLeft.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottomRight.js">
+      <publishTime>09/22/2013 17:30:45</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/bottomRight.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/center.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/centerLeft.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/centerRight.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/centerRight.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/inline.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/top.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/topCenter.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/topLeft.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/layouts/topRight.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/promise.js">
+      <publishTime>05/03/2013 19:34:41</publishTime>
+    </File>
+    <File Include="Js/noty/themes/default.js">
+      <publishTime>09/12/2013 19:57:34</publishTime>
+    </File>
+    <File Include="Js/noty/themes/MyCookinNoty.js">
+      <publishTime>09/22/2013 17:30:45</publishTime>
+    </File>
+    <File Include="Js/noty/themes/MyCookinNoty.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/Pages/AllRecipes.js">
+      <publishTime>02/23/2014 16:24:58</publishTime>
+    </File>
+    <File Include="Js/Pages/AllRecipes.min.js">
+      <publishTime>03/02/2014 18:29:24</publishTime>
+    </File>
+    <File Include="Js/Pages/Contact.js">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="Js/Pages/Default.js">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="Js/Pages/ForgotPassword.js">
+      <publishTime>08/11/2013 14:06:51</publishTime>
+    </File>
+    <File Include="Js/Pages/IngredientsList.js">
+      <publishTime>02/24/2014 19:10:05</publishTime>
+    </File>
+    <File Include="Js/Pages/IngredientsList.min.js">
+      <publishTime>03/02/2014 18:40:23</publishTime>
+    </File>
+    <File Include="Js/Pages/Login.js">
+      <publishTime>08/11/2013 14:06:48</publishTime>
+    </File>
+    <File Include="Js/Pages/Messages.js">
+      <publishTime>11/03/2013 15:28:18</publishTime>
+    </File>
+    <File Include="Js/Pages/MyNews.js">
+      <publishTime>06/18/2014 10:29:27</publishTime>
+    </File>
+    <File Include="Js/Pages/MyNews.min.js">
+      <publishTime>06/18/2014 15:31:36</publishTime>
+    </File>
+    <File Include="Js/Pages/PrivateMaster.js">
+      <publishTime>10/07/2013 19:41:03</publishTime>
+    </File>
+    <File Include="Js/Pages/PrivateMaster.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/Pages/PublicMaster.js">
+      <publishTime>10/07/2013 19:41:03</publishTime>
+    </File>
+    <File Include="Js/Pages/PublicMaster.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/Pages/RecipesBooks.js">
+      <publishTime>03/01/2014 17:49:23</publishTime>
+    </File>
+    <File Include="Js/Pages/RecipesBooks.min.js">
+      <publishTime>03/02/2014 18:51:11</publishTime>
+    </File>
+    <File Include="Js/Pages/Register.js">
+      <publishTime>10/19/2013 15:38:53</publishTime>
+    </File>
+    <File Include="Js/Pages/ResetPassword.js">
+      <publishTime>08/11/2013 14:06:51</publishTime>
+    </File>
+    <File Include="Js/Pages/ShowRecipe.js">
+      <publishTime>05/27/2014 12:29:48</publishTime>
+    </File>
+    <File Include="Js/Pages/ShowRecipe.min.js">
+      <publishTime>06/18/2014 15:32:23</publishTime>
+    </File>
+    <File Include="Js/Pages/TermsAndConditions.js">
+      <publishTime>10/07/2013 19:37:58</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/cs.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/da.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/de.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/el.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/es.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/et.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/fa.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/fi.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/fr-ca.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/fr.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/hr.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/hu.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/it.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/ja.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/ko.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/lv.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/nl.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/pl.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/pt-br.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/ro.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/ru.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/sk.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/sr.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/i18n/sv.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/css/jquery.plupload.queue.css">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/backgrounds.gif">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/buttons-disabled.png">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/buttons.png">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/delete.gif">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/done.gif">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/error.gif">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/throbber.gif">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/img/transp50.png">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.plupload.queue/jquery.plupload.queue.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.ui.plupload/css/jquery.ui.plupload.css">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.ui.plupload/img/plupload-bw.png">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.ui.plupload/img/plupload.png">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/jquery.ui.plupload/jquery.ui.plupload.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.browserplus.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.flash.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.flash.swf">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.full.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.gears.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.html4.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.html5.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.silverlight.js">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PlUpload/plupload.silverlight.xap">
+      <publishTime>06/02/2013 17:24:39</publishTime>
+    </File>
+    <File Include="Js/PopBox/popbox.js">
+      <publishTime>09/08/2013 12:09:54</publishTime>
+    </File>
+    <File Include="Js/PopBox/popbox.min.js">
+      <publishTime>10/20/2013 13:41:29</publishTime>
+    </File>
+    <File Include="Js/Rating/jquery.raty.js">
+      <publishTime>09/21/2013 20:25:10</publishTime>
+    </File>
+    <File Include="Js/Rating/jquery.raty.min.js">
+      <publishTime>05/03/2013 19:53:24</publishTime>
+    </File>
+    <File Include="Js/Scrollbar/jquery.mCustomScrollbar.concat.min.js">
+      <publishTime>04/14/2013 13:13:37</publishTime>
+    </File>
+    <File Include="Js/Tipsy/jquery.tipsy.js">
+      <publishTime>09/08/2013 11:52:01</publishTime>
+    </File>
+    <File Include="Js/Tipsy/jquery.tipsy.min.js">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery-ui-i18n.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-af.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ar-DZ.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ar.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-az.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-be.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-bg.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-bs.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ca.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-cs.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-cy-GB.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-da.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-de.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-el.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-en-AU.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-en-GB.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-en-NZ.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-en.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-eo.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-es.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-et.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-eu.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fa.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fi.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fo.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fr-CA.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fr-CH.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-fr.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-gl.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-he.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-hi.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-hr.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-hu.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-hy.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-id.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-is.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-it.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ja.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ka.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-kk.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-km.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ko.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ky.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-lb.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-lt.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-lv.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-mk.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ml.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ms.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-nb.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-nl-BE.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-nl.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-nn.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-no.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-pl.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-pt-BR.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-pt.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-rm.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ro.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ru.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sk.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sl.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sq.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sr-SR.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sr.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-sv.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-ta.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-th.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-tj.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-tr.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-uk.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-vi.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-zh-CN.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-zh-HK.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/i18n/jquery.ui.datepicker-zh-TW.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery-ui.custom.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.accordion.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.autocomplete.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.button.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.core.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.datepicker.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.dialog.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.draggable.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.droppable.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-blind.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-bounce.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-clip.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-drop.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-explode.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-fade.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-fold.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-highlight.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-pulsate.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-scale.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-shake.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-slide.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect-transfer.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.effect.js">
+      <publishTime>06/09/2013 15:36:47</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.menu.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.mouse.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.position.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.progressbar.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.resizable.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.selectable.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.slider.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.sortable.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.spinner.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.tabs.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.tooltip.js">
+      <publishTime>09/08/2013 11:58:25</publishTime>
+    </File>
+    <File Include="Js/ui/jquery.ui.widget.js">
+      <publishTime>06/09/2013 15:37:33</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery-ui-i18n.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-af.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ar-DZ.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ar.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-az.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-be.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-bg.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-bs.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ca.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-cs.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-cy-GB.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-da.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-de.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-el.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-en-AU.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-en-GB.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-en-NZ.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-eo.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-es.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-et.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-eu.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fa.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fi.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fo.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fr-CA.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fr-CH.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-fr.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-gl.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-he.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-hi.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-hr.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-hu.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-hy.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-id.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-is.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-it.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ja.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ka.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-kk.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-km.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ko.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ky.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-lb.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-lt.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-lv.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-mk.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ml.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ms.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-nb.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-nl-BE.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-nl.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-nn.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-no.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-pl.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-pt-BR.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-pt.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-rm.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ro.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ru.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sk.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sl.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sq.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sr-SR.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sr.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-sv.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-ta.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-th.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-tj.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-tr.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-uk.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-vi.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-zh-CN.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-zh-HK.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/i18n/jquery.ui.datepicker-zh-TW.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery-ui.custom.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.accordion.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.autocomplete.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.button.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.core.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.datepicker.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.dialog.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.draggable.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.droppable.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-blind.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-bounce.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-clip.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-drop.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-explode.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-fade.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-fold.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-highlight.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-pulsate.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-scale.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-shake.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-slide.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect-transfer.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.effect.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.menu.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.mouse.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.position.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.progressbar.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.resizable.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.selectable.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.slider.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.sortable.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.spinner.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.tabs.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.tooltip.min.js">
+      <publishTime>06/09/2013 15:36:48</publishTime>
+    </File>
+    <File Include="Js/ui/minified/jquery.ui.widget.min.js">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Landing/css/landing.css">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/css/supersized.core.css">
+      <publishTime>04/16/2014 11:12:48</publishTime>
+    </File>
+    <File Include="Landing/en/Default.aspx">
+      <publishTime>06/14/2014 11:34:37</publishTime>
+    </File>
+    <File Include="Landing/es/Default.aspx">
+      <publishTime>06/14/2014 11:34:38</publishTime>
+    </File>
+    <File Include="Landing/images/facebook-button-es.png">
+      <publishTime>06/14/2014 11:34:44</publishTime>
+    </File>
+    <File Include="Landing/images/facebook-button-it.png">
+      <publishTime>06/14/2014 11:34:44</publishTime>
+    </File>
+    <File Include="Landing/images/facebook_button.png">
+      <publishTime>04/16/2014 11:12:50</publishTime>
+    </File>
+    <File Include="Landing/images/MyCookinLogo.png">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/images/spuntino.jpg">
+      <publishTime>04/16/2014 11:12:52</publishTime>
+    </File>
+    <File Include="Landing/images/vellutata-di-carote.jpg">
+      <publishTime>04/16/2014 11:12:57</publishTime>
+    </File>
+    <File Include="Landing/img/bg-black.png">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/img/progress.gif">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/img/supersized-logo.png">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/it/Default.aspx">
+      <publishTime>06/14/2014 11:34:44</publishTime>
+    </File>
+    <File Include="Landing/it/old/index.html">
+      <publishTime>04/16/2014 11:12:49</publishTime>
+    </File>
+    <File Include="Landing/js/supersized.core.3.2.1.js">
+      <publishTime>04/16/2014 11:12:50</publishTime>
+    </File>
+    <File Include="Landing/js/supersized.core.3.2.1.min.js">
+      <publishTime>04/16/2014 11:12:50</publishTime>
+    </File>
+    <File Include="Link.aspx">
+      <publishTime>03/02/2014 15:24:53</publishTime>
+    </File>
+    <File Include="Message/App_LocalResources/Messages/Messages.aspx.en-GB.resx">
+      <publishTime>11/03/2013 15:28:19</publishTime>
+    </File>
+    <File Include="Message/App_LocalResources/Messages/Messages.aspx.es-ES.resx">
+      <publishTime>11/03/2013 15:28:19</publishTime>
+    </File>
+    <File Include="Message/App_LocalResources/Messages/Messages.aspx.it-IT.resx">
+      <publishTime>11/03/2013 15:28:19</publishTime>
+    </File>
+    <File Include="Message/App_LocalResources/Messages/Messages.aspx.resx">
+      <publishTime>11/03/2013 15:28:19</publishTime>
+    </File>
+    <File Include="Message/Messages.aspx">
+      <publishTime>11/03/2013 15:28:19</publishTime>
+    </File>
+    <File Include="MyAdmin/AllIngredientChecked.aspx">
+      <publishTime>04/14/2013 13:16:09</publishTime>
+    </File>
+    <File Include="MyAdmin/AuditCheckPhoto.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="MyAdmin/AuditSpammersList.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="MyAdmin/ErrorsList.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="MyAdmin/IngredientTranslations.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="MyAdmin/MailchimpUpdateLists.aspx">
+      <publishTime>04/06/2014 11:31:15</publishTime>
+    </File>
+    <File Include="MyAdmin/MediaManager.aspx">
+      <publishTime>05/12/2014 16:37:37</publishTime>
+    </File>
+    <File Include="MyAdmin/MyManager.aspx">
+      <publishTime>04/06/2014 11:31:15</publishTime>
+    </File>
+    <File Include="MyAdmin/RecipeTranslations.aspx">
+      <publishTime>10/30/2013 14:34:39</publishTime>
+    </File>
+    <File Include="MyAdmin/ScheduledTasks/GetSocialFriends.aspx">
+      <publishTime>04/21/2013 16:24:37</publishTime>
+    </File>
+    <File Include="MyAdmin/SendTestEmail.aspx">
+      <publishTime>10/19/2013 18:41:57</publishTime>
+    </File>
+    <File Include="MyAdmin/UsersGroups.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="mycooking.aspx">
+      <publishTime>03/18/2014 08:38:02</publishTime>
+    </File>
+    <File Include="Offline.aspx">
+      <publishTime>10/27/2013 17:01:01</publishTime>
+    </File>
+    <File Include="ozHmYnuqzFHGdZh8Kf5fSgNMvNw.html">
+      <publishTime>03/17/2014 07:29:54</publishTime>
+    </File>
+    <File Include="PagesForEmail/NewFriendshipAccept.aspx">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="PagesForEmail/NewFriendshipRequest.aspx">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="PagesForEmail/NewMessageReceived.aspx">
+      <publishTime>09/15/2013 13:11:17</publishTime>
+    </File>
+    <File Include="PagesForEmail/PhotoRemovedTemplate.aspx">
+      <publishTime>10/10/2013 19:09:42</publishTime>
+    </File>
+    <File Include="PagesForEmail/ResetUserPassword.aspx">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="PagesForEmail/WelcomeUser.aspx">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="Photo/User/Cropped/20130325-2022151453_Ale206.jpg">
+      <publishTime>04/14/2013 13:13:40</publishTime>
+    </File>
+    <File Include="Photo/User/Original/20130325-2022151453_Ale206.jpg">
+      <publishTime>04/14/2013 13:13:40</publishTime>
+    </File>
+    <File Include="PleaseUpdateYourBrowser.aspx">
+      <publishTime>10/06/2013 14:13:19</publishTime>
+    </File>
+    <File Include="RecipeMng/AllRecipes.aspx">
+      <publishTime>03/02/2014 18:29:56</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/AllRecipes/AllRecipes.aspx.en-GB.resx">
+      <publishTime>02/23/2014 17:04:01</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/AllRecipes/AllRecipes.aspx.es-ES.resx">
+      <publishTime>03/01/2014 17:36:53</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/AllRecipes/AllRecipes.aspx.it-IT.resx">
+      <publishTime>03/01/2014 17:31:24</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/AllRecipes/AllRecipes.aspx.resx">
+      <publishTime>03/01/2014 17:35:17</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/CreateRecipe/CreateRecipe.aspx.en-GB.resx">
+      <publishTime>10/16/2013 16:55:18</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/CreateRecipe/CreateRecipe.aspx.es-ES.resx">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/CreateRecipe/CreateRecipe.aspx.it-IT.resx">
+      <publishTime>10/16/2013 16:54:24</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/CreateRecipe/CreateRecipe.aspx.resx">
+      <publishTime>10/16/2013 16:56:11</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/EditRecipes/EditRecipes.aspx.en-GB.resx">
+      <publishTime>03/16/2014 18:15:31</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/EditRecipes/EditRecipes.aspx.es-ES.resx">
+      <publishTime>03/16/2014 18:17:20</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/EditRecipes/EditRecipes.aspx.it-IT.resx">
+      <publishTime>03/16/2014 18:15:59</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/EditRecipes/EditRecipes.aspx.resx">
+      <publishTime>03/16/2014 19:55:25</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/FindRecipes/FindRecipes.aspx.en-GB.resx">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/FindRecipes/FindRecipes.aspx.es-ES.resx">
+      <publishTime>10/19/2013 18:41:57</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/FindRecipes/FindRecipes.aspx.it-IT.resx">
+      <publishTime>10/17/2013 11:14:17</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/FindRecipes/FindRecipes.aspx.resx">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/MyRecipesBook/MyRecipesBook.aspx.en-GB.resx">
+      <publishTime>10/17/2013 11:25:56</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/MyRecipesBook/MyRecipesBook.aspx.es-ES.resx">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/MyRecipesBook/MyRecipesBook.aspx.it-IT.resx">
+      <publishTime>10/17/2013 11:24:04</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/MyRecipesBook/MyRecipesBook.aspx.resx">
+      <publishTime>10/17/2013 11:25:48</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/RecipesBooks/RecipesBooks.aspx.en-GB.resx">
+      <publishTime>03/01/2014 20:45:57</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/RecipesBooks/RecipesBooks.aspx.es-ES.resx">
+      <publishTime>03/01/2014 17:46:31</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/RecipesBooks/RecipesBooks.aspx.it-IT.resx">
+      <publishTime>03/01/2014 17:31:49</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/RecipesBooks/RecipesBooks.aspx.resx">
+      <publishTime>03/01/2014 20:45:45</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/ShowRecipe/ShowRecipe.aspx.es-ES.resx">
+      <publishTime>06/18/2014 15:15:22</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/ShowRecipe/ShowRecipe.aspx.it-IT.resx">
+      <publishTime>06/18/2014 15:10:23</publishTime>
+    </File>
+    <File Include="RecipeMng/App_LocalResources/ShowRecipe/ShowRecipe.aspx.resx">
+      <publishTime>06/18/2014 15:14:34</publishTime>
+    </File>
+    <File Include="RecipeMng/CreateRecipe.aspx">
+      <publishTime>03/12/2014 19:35:59</publishTime>
+    </File>
+    <File Include="RecipeMng/EditRecipes.aspx">
+      <publishTime>03/16/2014 19:49:46</publishTime>
+    </File>
+    <File Include="RecipeMng/FindRecipes.aspx">
+      <publishTime>03/16/2014 16:51:09</publishTime>
+    </File>
+    <File Include="RecipeMng/MngRecipes.aspx">
+      <publishTime>12/02/2013 14:52:13</publishTime>
+    </File>
+    <File Include="RecipeMng/MyRecipesBook.aspx">
+      <publishTime>10/23/2013 11:24:40</publishTime>
+    </File>
+    <File Include="RecipeMng/PrintRecipe.aspx">
+      <publishTime>05/07/2014 11:22:22</publishTime>
+    </File>
+    <File Include="RecipeMng/RecipeDashBoard.aspx">
+      <publishTime>09/21/2013 12:26:58</publishTime>
+    </File>
+    <File Include="RecipeMng/RecipesBooks.aspx">
+      <publishTime>03/02/2014 18:52:30</publishTime>
+    </File>
+    <File Include="RecipeMng/ShowRecipe.aspx">
+      <publishTime>06/18/2014 15:32:53</publishTime>
+    </File>
+    <File Include="robots.txt">
+      <publishTime>06/14/2014 11:37:10</publishTime>
+    </File>
+    <File Include="sitemap-index.xml">
+      <publishTime>03/04/2014 14:59:49</publishTime>
+    </File>
+    <File Include="sitemap-ingredients.aspx">
+      <publishTime>03/04/2014 11:57:24</publishTime>
+    </File>
+    <File Include="sitemap-recipes.aspx">
+      <publishTime>03/04/2014 11:56:56</publishTime>
+    </File>
+    <File Include="sitemap-static.xml">
+      <publishTime>03/18/2014 08:39:14</publishTime>
+    </File>
+    <File Include="sitemap.xml">
+      <publishTime>02/26/2014 19:52:06</publishTime>
+    </File>
+    <File Include="Styles/bigvideo.css">
+      <publishTime>08/28/2013 10:24:25</publishTime>
+    </File>
+    <File Include="Styles/bigvideo.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/Bootstraps/bootstrap.css">
+      <publishTime>06/09/2013 18:02:59</publishTime>
+    </File>
+    <File Include="Styles/Bootstraps/datepicker.css">
+      <publishTime>08/04/2013 15:40:10</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/AutoSuggest/autoSuggest.css">
+      <publishTime>09/12/2013 19:57:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/JCrop/Jcrop.gif">
+      <publishTime>04/14/2013 13:16:13</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/JCrop/jquery.Jcrop.css">
+      <publishTime>04/14/2013 13:16:13</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/JCrop/jquery.Jcrop.min.css">
+      <publishTime>04/14/2013 13:16:13</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/MultiUpload/fineuploader.css">
+      <publishTime>05/12/2013 11:03:24</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/MultiUpload/loading.gif">
+      <publishTime>05/12/2013 11:03:24</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/MultiUpload/processing.gif">
+      <publishTime>05/12/2013 11:03:24</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/MultiUpload/styles.css">
+      <publishTime>05/12/2013 11:03:24</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/animated-overlay.gif">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_diagonals-thick_18_F8931D_40x40.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_highlight-soft_100_fff_1x100.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_highlight-soft_20_666666_1x100.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-bg_inset-soft_50_F8931D_1x100.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-icons_222222_256x240.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-icons_F8931D_256x240.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-icons_ffffff_256x240.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/images/ui-icons_fff_256x240.png">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/jquery-ui-1.10.3.custom.css">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/mycookin-theme/jquery-ui-1.10.3.custom.min.css">
+      <publishTime>09/15/2013 18:56:56</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/PopBox/popbox.css">
+      <publishTime>09/08/2013 12:08:59</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/PopBox/popbox.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/application.css">
+      <publishTime>05/03/2013 20:02:13</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/common.css">
+      <publishTime>09/22/2013 19:13:26</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/demo.css">
+      <publishTime>05/03/2013 19:52:37</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/font-awesome.css">
+      <publishTime>05/03/2013 19:52:37</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/normalize.css">
+      <publishTime>05/03/2013 19:52:38</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Rating/pygments.css">
+      <publishTime>05/03/2013 19:52:38</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Scrollbar/jquery.mCustomScrollbar.css">
+      <publishTime>04/14/2013 13:13:39</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Scrollbar/jquery.mCustomScrollbar.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Scrollbar/Scrollbar.css">
+      <publishTime>04/14/2013 17:16:15</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/Scrollbar/Scrollbar.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/animated-overlay.gif">
+      <publishTime>06/09/2013 15:36:49</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-icons_222222_256x240.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-icons_228ef1_256x240.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/images/ui-icons_ffffff_256x240.png">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/jquery-ui-1.10.3.custom.css">
+      <publishTime>06/09/2013 15:36:49</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/ui-lightness/jquery-ui-1.10.3.custom.min.css">
+      <publishTime>06/09/2013 15:36:49</publishTime>
+    </File>
+    <File Include="Styles/jQueryUiCss/UserControl/ctrlEditImage.css">
+      <publishTime>03/02/2014 16:57:25</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/AllRecipes.css">
+      <publishTime>03/01/2014 19:52:49</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/AllRecipes.min.css">
+      <publishTime>03/02/2014 18:28:02</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/Contact.css">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/Contact.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/FindRecipes.css">
+      <publishTime>03/01/2014 19:54:08</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/FindRecipes.min.css">
+      <publishTime>03/01/2014 19:54:30</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/HowItWorks.css">
+      <publishTime>06/14/2014 11:37:20</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ImageCrop.css">
+      <publishTime>09/29/2013 16:02:02</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ImageCrop.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/IngredientPopBox.css">
+      <publishTime>10/29/2013 11:30:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/IngredientPopBox.min.css">
+      <publishTime>10/29/2013 11:30:04</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/IngredientsList.css">
+      <publishTime>03/01/2014 19:54:50</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/IngredientsList.min.css">
+      <publishTime>03/02/2014 18:39:36</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/Messages.css">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/Messages.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/MyCooking.css">
+      <publishTime>03/18/2014 08:25:23</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/MyManager.css">
+      <publishTime>10/18/2013 22:51:27</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/MyManager.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/MyRecipesBook.css">
+      <publishTime>10/24/2013 20:25:04</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/MyRecipesBook.min.css">
+      <publishTime>10/24/2013 20:24:58</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/RecipesBooks.css">
+      <publishTime>03/01/2014 19:53:22</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/RecipesBooks.min.css">
+      <publishTime>03/02/2014 18:52:08</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ShowIngredient.css">
+      <publishTime>03/01/2014 20:22:14</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ShowIngredient.min.css">
+      <publishTime>03/01/2014 20:22:28</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ShowRecipe.css">
+      <publishTime>05/27/2014 12:28:13</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/ShowRecipe.min.css">
+      <publishTime>06/18/2014 15:25:14</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/TermsAndConditions.css">
+      <publishTime>10/19/2013 12:26:54</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/TermsAndConditions.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserBoard.css">
+      <publishTime>06/18/2014 10:12:45</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserBoard.min.css">
+      <publishTime>06/18/2014 15:27:08</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserBoardBlock.css">
+      <publishTime>10/27/2013 19:21:23</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserBoardBlock.min.css">
+      <publishTime>10/27/2013 19:21:29</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserNotifications.css">
+      <publishTime>09/12/2013 19:53:33</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserNotifications.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserProfile.css">
+      <publishTime>10/26/2013 20:08:59</publishTime>
+    </File>
+    <File Include="Styles/PageStyle/UserProfile.min.css">
+      <publishTime>10/26/2013 20:08:59</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PrivateMaster/Private.Master.en-GB.resx">
+      <publishTime>11/02/2013 17:08:36</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PrivateMaster/Private.Master.es-ES.resx">
+      <publishTime>11/02/2013 17:08:36</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PrivateMaster/Private.Master.it-IT.resx">
+      <publishTime>11/02/2013 17:08:36</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PrivateMaster/Private.Master.resx">
+      <publishTime>11/02/2013 17:08:36</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PublicMaster/Public.Master.en-GB.resx">
+      <publishTime>03/02/2014 16:10:25</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PublicMaster/Public.Master.es-ES.resx">
+      <publishTime>03/02/2014 16:10:42</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PublicMaster/Public.Master.it-IT.resx">
+      <publishTime>03/02/2014 16:09:52</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/App_LocalResources/PublicMaster/Public.Master.resx">
+      <publishTime>03/02/2014 16:10:17</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/EmailStyle.css">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/EmptyMasterPage.Master">
+      <publishTime>09/15/2013 18:57:26</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/JQueryUIOverride.css">
+      <publishTime>04/14/2013 13:16:15</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/JQueryUIOverride.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/MyJQuery.css">
+      <publishTime>04/14/2013 13:16:15</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/PagesForEmail.Master">
+      <publishTime>09/15/2013 13:11:12</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/Private.Master">
+      <publishTime>06/18/2014 14:56:03</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/PrivateStyle.css">
+      <publishTime>10/17/2013 12:17:59</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/PrivateStyle.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/Public.Master">
+      <publishTime>06/14/2014 11:37:21</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/PublicStyle.css">
+      <publishTime>03/01/2014 20:52:23</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/PublicStyle.min.css">
+      <publishTime>03/01/2014 20:52:58</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/reset.css">
+      <publishTime>06/09/2013 15:37:34</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/reset.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/style.css">
+      <publishTime>02/26/2014 19:11:14</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/style.min.css">
+      <publishTime>02/26/2014 19:10:51</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/User.css">
+      <publishTime>04/14/2013 13:16:16</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/User.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/_OLD_/PageDefault.css">
+      <publishTime>09/22/2013 19:19:41</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/_OLD_/PageLoginRegister.css">
+      <publishTime>09/22/2013 19:19:41</publishTime>
+    </File>
+    <File Include="Styles/SiteStyle/_OLD_/Recipe.css">
+      <publishTime>09/22/2013 19:19:41</publishTime>
+    </File>
+    <File Include="Styles/Tipsy/tipsy.css">
+      <publishTime>08/10/2013 19:38:38</publishTime>
+    </File>
+    <File Include="Styles/Tipsy/tipsy.min.css">
+      <publishTime>10/20/2013 13:32:06</publishTime>
+    </File>
+    <File Include="User/ActivateUser.aspx">
+      <publishTime>10/18/2013 19:17:10</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ActivateUser/ActivateUser.aspx.en-GB.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ActivateUser/ActivateUser.aspx.es-ES.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ActivateUser/ActivateUser.aspx.it-IT.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ActivateUser/ActivateUser.aspx.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Contact/Contact.aspx.en-GB.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Contact/Contact.aspx.es-ES.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Contact/Contact.aspx.it-IT.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Contact/Contact.aspx.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/EditProfile/EditProfile.aspx.en-GB.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/EditProfile/EditProfile.aspx.es-ES.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/EditProfile/EditProfile.aspx.it-IT.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/EditProfile/EditProfile.aspx.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ForgotPassword/ForgotPassword.aspx.en-GB.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ForgotPassword/ForgotPassword.aspx.es-ES.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ForgotPassword/ForgotPassword.aspx.it-IT.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ForgotPassword/ForgotPassword.aspx.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Login/Login.aspx.en-GB.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Login/Login.aspx.es-ES.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Login/Login.aspx.it-IT.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Login/Login.aspx.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/MyNews/MyNews.aspx.en-GB.resx">
+      <publishTime>06/18/2014 15:18:57</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/MyNews/MyNews.aspx.es-ES.resx">
+      <publishTime>06/18/2014 15:19:16</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/MyNews/MyNews.aspx.it-IT.resx">
+      <publishTime>06/18/2014 15:23:03</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/MyNews/MyNews.aspx.resx">
+      <publishTime>06/18/2014 15:18:57</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Register/Register.aspx.en-GB.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Register/Register.aspx.es-ES.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Register/Register.aspx.it-IT.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/Register/Register.aspx.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ResetPassword/ResetPassword.aspx.en-GB.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ResetPassword/ResetPassword.aspx.es-ES.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ResetPassword/ResetPassword.aspx.it-IT.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/ResetPassword/ResetPassword.aspx.resx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserBoardPost/UserBoardPost.aspx.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserFriends/UserFriends.aspx.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserNotifications/UserNotifications.aspx.resx">
+      <publishTime>10/18/2013 22:51:29</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserProfile/UserProfile.aspx.en-GB.resx">
+      <publishTime>10/19/2013 12:07:30</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserProfile/UserProfile.aspx.es-ES.resx">
+      <publishTime>10/19/2013 12:07:21</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserProfile/UserProfile.aspx.it-IT.resx">
+      <publishTime>10/19/2013 12:06:51</publishTime>
+    </File>
+    <File Include="User/App_LocalResources/UserProfile/UserProfile.aspx.resx">
+      <publishTime>10/19/2013 12:07:10</publishTime>
+    </File>
+    <File Include="User/Contact.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="User/EditProfile.aspx">
+      <publishTime>10/20/2013 18:59:30</publishTime>
+    </File>
+    <File Include="User/ForgotPassword.aspx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/HowItWorks.aspx">
+      <publishTime>06/14/2014 11:37:21</publishTime>
+    </File>
+    <File Include="User/Login.aspx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/Logout.aspx">
+      <publishTime>04/14/2013 13:16:18</publishTime>
+    </File>
+    <File Include="User/MyNews.aspx">
+      <publishTime>06/18/2014 15:31:56</publishTime>
+    </File>
+    <File Include="User/Register.aspx">
+      <publishTime>10/19/2013 15:38:53</publishTime>
+    </File>
+    <File Include="User/ResetPassword.aspx">
+      <publishTime>10/19/2013 00:00:17</publishTime>
+    </File>
+    <File Include="User/TermsAndConditions.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="User/TestProperty001.aspx">
+      <publishTime>04/14/2013 13:16:20</publishTime>
+    </File>
+    <File Include="User/UserBoardPost.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="User/UserFriends.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="User/UserNotifications.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="User/UserProfile.aspx">
+      <publishTime>02/23/2014 18:46:53</publishTime>
+    </File>
+    <File Include="Utilities/GetBackgroundPath.ashx">
+      <publishTime>08/25/2013 20:43:15</publishTime>
+    </File>
+    <File Include="Utilities/GetPhotoPath.ashx">
+      <publishTime>08/23/2013 09:07:00</publishTime>
+    </File>
+    <File Include="Utilities/ImageCrop.aspx">
+      <publishTime>10/20/2013 13:32:01</publishTime>
+    </File>
+    <File Include="Utilities/MultiUploadImageHandler.ashx">
+      <publishTime>08/18/2013 14:22:03</publishTime>
+    </File>
+    <File Include="Utilities/SetBgSessionVariable.ashx">
+      <publishTime>09/15/2013 13:46:38</publishTime>
+    </File>
+    <File Include="Utilities/SetOffsetSessionVariable.ashx">
+      <publishTime>09/21/2013 14:46:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/23/2014 09:46:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

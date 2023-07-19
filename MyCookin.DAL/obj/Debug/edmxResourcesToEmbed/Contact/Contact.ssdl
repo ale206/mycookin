@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBErrorsAndMessagesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBErrorsAndMessagesModelStoreContainer">
+    <EntitySet Name="ContactRequests" EntityType="DBErrorsAndMessagesModel.Store.ContactRequests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactRequestsReply" EntityType="DBErrorsAndMessagesModel.Store.ContactRequestsReply" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactRequestsType" EntityType="DBErrorsAndMessagesModel.Store.ContactRequestsType" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ContactRequests">
+    <Key>
+      <PropertyRef Name="IDContactRequest" />
+    </Key>
+    <Property Name="IDContactRequest" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDLanguage" Type="int" Nullable="false" />
+    <Property Name="IDContactRequestType" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="RequestText" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="PrivacyAccept" Type="bit" Nullable="false" />
+    <Property Name="RequestDate" Type="datetime" Nullable="false" />
+    <Property Name="IpAddress" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="IsRequestClosed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactRequestsReply">
+    <Key>
+      <PropertyRef Name="IDContactRequestReply" />
+    </Key>
+    <Property Name="IDContactRequestReply" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDContactRequest" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserWhoReplied" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Reply" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReplyDate" Type="datetime" Nullable="false" />
+    <Property Name="IpAddress" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="ContactRequestsType">
+    <Key>
+      <PropertyRef Name="IDContactRequestType" />
+    </Key>
+    <Property Name="IDContactRequestType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestType" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="RequestTypeAddedOn" Type="datetime" Nullable="false" />
+    <Property Name="Enabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="USP_GetContactRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDContactRequestType" Type="int" Mode="In" />
+    <Parameter Name="JustNotClosedRequests" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertContactRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDLanguage" Type="int" Mode="In" />
+    <Parameter Name="IDContactRequestType" Type="int" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestText" Type="nvarchar" Mode="In" />
+    <Parameter Name="PrivacyAccept" Type="bit" Mode="In" />
+    <Parameter Name="RequestDate" Type="datetime" Mode="In" />
+    <Parameter Name="IpAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsRequestClosed" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertContactRequestReply" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDContactRequest" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserWhoReplied" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Reply" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ReplyDate" Type="datetime" Mode="In" />
+    <Parameter Name="IpAddress" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

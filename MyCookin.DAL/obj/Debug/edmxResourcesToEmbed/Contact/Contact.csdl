@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBErrorsAndMessagesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ContactEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ContactRequests" EntityType="DBErrorsAndMessagesModel.ContactRequests" />
+    <EntitySet Name="ContactRequestsReply" EntityType="DBErrorsAndMessagesModel.ContactRequestsReply" />
+    <EntitySet Name="ContactRequestsType" EntityType="DBErrorsAndMessagesModel.ContactRequestsType" />
+    <FunctionImport Name="USP_InsertContactRequest" ReturnType="Collection(DBErrorsAndMessagesModel.USPResult)">
+      <Parameter Name="IDLanguage" Mode="In" Type="Int32" />
+      <Parameter Name="IDContactRequestType" Mode="In" Type="Int32" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="RequestText" Mode="In" Type="String" />
+      <Parameter Name="PrivacyAccept" Mode="In" Type="Boolean" />
+      <Parameter Name="RequestDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IpAddress" Mode="In" Type="String" />
+      <Parameter Name="IsRequestClosed" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="USP_InsertContactRequestReply" ReturnType="Collection(DBErrorsAndMessagesModel.USPResult)">
+      <Parameter Name="IDContactRequest" Mode="In" Type="Guid" />
+      <Parameter Name="IDUserWhoReplied" Mode="In" Type="Guid" />
+      <Parameter Name="Reply" Mode="In" Type="String" />
+      <Parameter Name="ReplyDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IpAddress" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetContactRequests" ReturnType="Collection(DBErrorsAndMessagesModel.RequestMessages)">
+      <Parameter Name="IDContactRequestType" Mode="In" Type="Int32" />
+      <Parameter Name="JustNotClosedRequests" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ContactRequests">
+    <Key>
+      <PropertyRef Name="IDContactRequest" />
+    </Key>
+    <Property Name="IDContactRequest" Type="Guid" Nullable="false" />
+    <Property Name="IDLanguage" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="RequestText" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="PrivacyAccept" Type="Boolean" Nullable="false" />
+    <Property Name="RequestDate" Type="DateTime" Nullable="false" />
+    <Property Name="IpAddress" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="IDContactRequestType" Nullable="false" />
+    <Property Type="Boolean" Name="IsRequestClosed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactRequestsReply">
+    <Key>
+      <PropertyRef Name="IDContactRequestReply" />
+    </Key>
+    <Property Name="IDContactRequestReply" Type="Guid" Nullable="false" />
+    <Property Name="IDContactRequest" Type="Guid" Nullable="false" />
+    <Property Name="IDUserWhoReplied" Type="Guid" Nullable="false" />
+    <Property Name="Reply" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ReplyDate" Type="DateTime" Nullable="false" />
+    <Property Name="IpAddress" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ContactRequestsType">
+    <Key>
+      <PropertyRef Name="IDContactRequestType" />
+    </Key>
+    <Property Name="IDContactRequestType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestType" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="RequestTypeAddedOn" Type="DateTime" Nullable="false" />
+    <Property Name="Enabled" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="USPResult">
+    <Property Type="Boolean" Name="isError" Nullable="false" />
+    <Property Type="String" Name="ResultExecutionCode" Nullable="false" />
+    <Property Type="String" Name="USPReturnValue" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="RequestMessages">
+    <Property Type="Guid" Name="IDContactRequest" Nullable="false" />
+    <Property Type="Int32" Name="IDLanguage" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" />
+    <Property Type="String" Name="LastName" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="String" Name="RequestText" Nullable="false" />
+    <Property Type="DateTime" Name="RequestDate" Nullable="false" />
+    <Property Type="String" Name="IpAddress" Nullable="false" />
+    <Property Type="Int32" Name="IDContactRequestType" Nullable="false" />
+  </ComplexType>
+</Schema>

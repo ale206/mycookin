@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBStatisticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DBStatisticsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UsersActionsStatistics" EntityType="DBStatisticsModel.UsersActionsStatistics" />
+    <FunctionImport Name="USP_InsertUserActionStatistic">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="IDRelatedObject" Mode="In" Type="Guid" />
+      <Parameter Name="ActionType" Mode="In" Type="Int32" />
+      <Parameter Name="Comments" Mode="In" Type="String" />
+      <Parameter Name="DateAction" Mode="In" Type="DateTime" />
+      <Parameter Name="FileOrigin" Mode="In" Type="String" />
+      <Parameter Name="SearchString" Mode="In" Type="String" />
+      <Parameter Name="OtherInfo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_CountByIDRelatedObjectAndActionType" ReturnType="Collection(Int32)">
+      <Parameter Name="IDRelatedObject" Mode="In" Type="Guid" />
+      <Parameter Name="ActionType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_CountByIDUserAndActionType" ReturnType="Collection(Int32)">
+      <Parameter Name="IDUser" Mode="In" Type="Guid" />
+      <Parameter Name="ActionType" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="UsersActionsStatistics">
+    <Key>
+      <PropertyRef Name="IDUserActionStatistic" />
+    </Key>
+    <Property Name="IDUserActionStatistic" Type="Guid" Nullable="false" />
+    <Property Name="IDUser" Type="Guid" />
+    <Property Name="IDRelatedObject" Type="Guid" />
+    <Property Name="ActionType" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DateAction" Type="DateTime" Nullable="false" />
+    <Property Type="String" Name="FileOrigin" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SearchString" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

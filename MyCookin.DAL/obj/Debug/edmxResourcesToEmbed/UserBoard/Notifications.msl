@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBUsersBoardModelStoreContainer" CdmEntityContainer="DBUsersBoardNotificationsEntities">
+    <EntitySetMapping Name="UsersNotifications">
+      <EntityTypeMapping TypeName="DBUsersBoardModel.UsersNotifications">
+        <MappingFragment StoreEntitySet="UsersNotifications">
+          <ScalarProperty Name="IDUserOwnerRelatedObject" ColumnName="IDUserOwnerRelatedObject" />
+          <ScalarProperty Name="IDUserNotification" ColumnName="IDUserNotification" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IDUserActionType" ColumnName="IDUserActionType" />
+          <ScalarProperty Name="URLNotification" ColumnName="URLNotification" />
+          <ScalarProperty Name="IDRelatedObject" ColumnName="IDRelatedObject" />
+          <ScalarProperty Name="NotificationImage" ColumnName="NotificationImage" />
+          <ScalarProperty Name="UserNotification" ColumnName="UserNotification" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ViewedOn" ColumnName="ViewedOn" />
+          <ScalarProperty Name="NotifiedOn" ColumnName="NotifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_NotificationsGet" FunctionName="DBUsersBoardModel.Store.USP_NotificationsGet" />
+    <FunctionImportMapping FunctionImportName="USP_NotificationInsert" FunctionName="DBUsersBoardModel.Store.USP_NotificationInsert">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBUsersBoardModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_NotificationsSetAsNotified" FunctionName="DBUsersBoardModel.Store.USP_NotificationsSetAsNotified">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBUsersBoardModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_NotificationsSetAsViewed" FunctionName="DBUsersBoardModel.Store.USP_NotificationsSetAsViewed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBUsersBoardModel.USPResult">
+          <ScalarProperty Name="ResultExecutionCode" ColumnName="ResultExecutionCode" />
+          <ScalarProperty Name="USPReturnValue" ColumnName="USPReturnValue" />
+          <ScalarProperty Name="isError" ColumnName="isError" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

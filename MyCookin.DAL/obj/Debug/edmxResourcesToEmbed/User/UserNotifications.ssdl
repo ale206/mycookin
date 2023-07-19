@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBUsersProfileModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBUsersProfileModelStoreContainer">
+    <EntitySet Name="UsersNotifications" EntityType="DBUsersProfileModel.Store.UsersNotifications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsersNotificationsTypes" EntityType="DBUsersProfileModel.Store.UsersNotificationsTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vGetUsersNotificationsByIDUserAndIDLanguage" EntityType="DBUsersProfileModel.Store.vGetUsersNotificationsByIDUserAndIDLanguage" store:Type="Views" store:Schema="dbo" store:Name="vGetUsersNotificationsByIDUserAndIDLanguage">
+      <DefiningQuery>SELECT 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IDUserNotification] AS [IDUserNotification], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IDUserNotificationType] AS [IDUserNotificationType], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IDUser] AS [IDUser], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IsEnabled] AS [IsEnabled], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[NotificationType] AS [NotificationType], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[NotificationTypeEnabled] AS [NotificationTypeEnabled], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[NotificationTypeOrder] AS [NotificationTypeOrder], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IDUserNotificationLanguage] AS [IDUserNotificationLanguage], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IDLanguage] AS [IDLanguage], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[NotificationQuestion] AS [NotificationQuestion], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[NotificationComment] AS [NotificationComment], 
+      [vGetUsersNotificationsByIDUserAndIDLanguage].[IsVisible] AS [IsVisible]
+      FROM [dbo].[vGetUsersNotificationsByIDUserAndIDLanguage] AS [vGetUsersNotificationsByIDUserAndIDLanguage]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_UsersNotifications_UsersNotificationsTypes" Association="DBUsersProfileModel.Store.FK_UsersNotifications_UsersNotificationsTypes">
+      <End Role="UsersNotificationsTypes" EntitySet="UsersNotificationsTypes" />
+      <End Role="UsersNotifications" EntitySet="UsersNotifications" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UsersNotifications">
+    <Key>
+      <PropertyRef Name="IDUserNotification" />
+    </Key>
+    <Property Name="IDUserNotification" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserNotificationType" Type="int" Nullable="false" />
+    <Property Name="IDUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsEnabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersNotificationsTypes">
+    <Key>
+      <PropertyRef Name="IDUserNotificationType" />
+    </Key>
+    <Property Name="IDUserNotificationType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationType" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="NotificationTypeEnabled" Type="bit" Nullable="false" />
+    <Property Name="NotificationTypeOrder" Type="int" Nullable="false" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBUsersProfile.dbo.vGetUsersNotificationsByIDUserAndIDLanguage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vGetUsersNotificationsByIDUserAndIDLanguage">
+    <Key>
+      <PropertyRef Name="IDUserNotification" />
+      <PropertyRef Name="IDUserNotificationType" />
+      <PropertyRef Name="IDUser" />
+      <PropertyRef Name="IsEnabled" />
+      <PropertyRef Name="NotificationType" />
+      <PropertyRef Name="NotificationTypeEnabled" />
+      <PropertyRef Name="NotificationTypeOrder" />
+      <PropertyRef Name="IDUserNotificationLanguage" />
+      <PropertyRef Name="IDLanguage" />
+      <PropertyRef Name="NotificationQuestion" />
+      <PropertyRef Name="IsVisible" />
+    </Key>
+    <Property Name="IDUserNotification" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUserNotificationType" Type="int" Nullable="false" />
+    <Property Name="IDUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsEnabled" Type="bit" Nullable="false" />
+    <Property Name="NotificationType" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="NotificationTypeEnabled" Type="bit" Nullable="false" />
+    <Property Name="NotificationTypeOrder" Type="int" Nullable="false" />
+    <Property Name="IDUserNotificationLanguage" Type="int" Nullable="false" />
+    <Property Name="IDLanguage" Type="int" Nullable="false" />
+    <Property Name="NotificationQuestion" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="NotificationComment" Type="nvarchar(max)" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_UsersNotifications_UsersNotificationsTypes">
+    <End Role="UsersNotificationsTypes" Type="DBUsersProfileModel.Store.UsersNotificationsTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UsersNotifications" Type="DBUsersProfileModel.Store.UsersNotifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersNotificationsTypes">
+        <PropertyRef Name="IDUserNotificationType" />
+      </Principal>
+      <Dependent Role="UsersNotifications">
+        <PropertyRef Name="IDUserNotificationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="USP_GetNotificationsByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDLanguage" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_IsNotificationEnabled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUser" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IDUserNotificationType" Type="int" Mode="In" />
+    <Parameter Name="IDLanguage" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateUserNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUserNotification" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="IsEnabled" Type="bit" Mode="In" />
+  </Function>
+</Schema>

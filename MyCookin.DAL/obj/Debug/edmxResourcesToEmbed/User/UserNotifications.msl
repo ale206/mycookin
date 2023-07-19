@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBUsersProfileModelStoreContainer" CdmEntityContainer="DBUserNotificationsEntity">
+    <EntitySetMapping Name="UsersNotifications">
+      <EntityTypeMapping TypeName="DBUsersProfileModel.UsersNotifications">
+        <MappingFragment StoreEntitySet="UsersNotifications">
+          <ScalarProperty Name="IDUserNotification" ColumnName="IDUserNotification" />
+          <ScalarProperty Name="IDUserNotificationType" ColumnName="IDUserNotificationType" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersNotificationsTypes">
+      <EntityTypeMapping TypeName="DBUsersProfileModel.UsersNotificationsTypes">
+        <MappingFragment StoreEntitySet="UsersNotificationsTypes">
+          <ScalarProperty Name="IDUserNotificationType" ColumnName="IDUserNotificationType" />
+          <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+          <ScalarProperty Name="NotificationTypeEnabled" ColumnName="NotificationTypeEnabled" />
+          <ScalarProperty Name="NotificationTypeOrder" ColumnName="NotificationTypeOrder" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vGetUsersNotificationsByIDUserAndIDLanguage">
+      <EntityTypeMapping TypeName="DBUsersProfileModel.vGetUsersNotificationsByIDUserAndIDLanguage">
+        <MappingFragment StoreEntitySet="vGetUsersNotificationsByIDUserAndIDLanguage">
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="IDUserNotification" ColumnName="IDUserNotification" />
+          <ScalarProperty Name="IDUserNotificationType" ColumnName="IDUserNotificationType" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+          <ScalarProperty Name="NotificationTypeEnabled" ColumnName="NotificationTypeEnabled" />
+          <ScalarProperty Name="NotificationTypeOrder" ColumnName="NotificationTypeOrder" />
+          <ScalarProperty Name="IDUserNotificationLanguage" ColumnName="IDUserNotificationLanguage" />
+          <ScalarProperty Name="IDLanguage" ColumnName="IDLanguage" />
+          <ScalarProperty Name="NotificationQuestion" ColumnName="NotificationQuestion" />
+          <ScalarProperty Name="NotificationComment" ColumnName="NotificationComment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetNotificationsByUser" FunctionName="DBUsersProfileModel.Store.USP_GetNotificationsByUser" />
+    <FunctionImportMapping FunctionImportName="USP_IsNotificationEnabled" FunctionName="DBUsersProfileModel.Store.USP_IsNotificationEnabled" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateUserNotification" FunctionName="DBUsersProfileModel.Store.USP_UpdateUserNotification" />
+  </EntityContainerMapping>
+</Mapping>

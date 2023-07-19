@@ -1,0 +1,285 @@
+﻿/*
+RECIPE PROFILE CSS
+*/
+
+.CommentoDiAiuto
+{
+    font-family: Verdana;
+    font-size:12px;
+    color: Maroon;
+    }
+
+/*Panel for the User Profile*/
+.IngredientInfoPanel
+{
+    margin: auto auto 20px 20px;
+    padding: 10px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+/*Title of the section (Panel Category Name)*/
+.IngredientInfoSectionTitle
+{
+    font: bold 12px Georgia, "Times New Roman", serif;
+}
+
+/*Field Title in the form*/
+.IngredientInfoFieldTitle
+{
+    width: 400px;
+    display:block;
+    float:left;
+}
+
+/*Description of the field*/
+.IngredientInfoFieldDescription
+{
+    margin-left:30px;    
+}
+
+/*Label Class Section === BEGIN ===*/
+
+.lblIngredientTitle
+{
+	font-weight: bold;
+	font-size: 14pt;
+	color: Navy;
+	font-family: Arial; 
+}
+
+.lblIngredientTitle2
+{
+	font-weight: bold;
+	font-size: 12pt;
+	color: Navy;
+	font-family: Arial; 
+}
+
+.lblRecipeIngredientTitle
+{
+	font-weight: bold;
+	font-size: 14pt;
+	color:Black;
+	font-family: Arial; 
+}
+
+.lblRecipeIngredientLink
+{
+	font-weight: bold;
+	font-size: 14pt;
+	color:Orange;
+	text-decoration:underline;
+	font-family: Arial; 
+}
+
+.lblRecipeIngredientBasicInfo
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color:Blue;
+	font-family: Arial; 
+}
+
+.lblRecipeIngredientQtaTitle
+{
+	font-weight:normal;
+	font-size: 10pt;
+	color:Gray;
+	font-family: Arial; 
+}
+
+.lblRecipeIngredientNote
+{
+	font-weight:normal;
+	font-size: 10pt;
+	color:Black;
+	font-family: Arial; 
+}
+
+/*Label Class Section === END ===*/
+
+
+/*Link Class Section === BEGIN ===*/
+.linkStandard
+{
+    font-family: Arial;
+    font-size: 11pt;
+    font-weight:bold;
+    color:#959595;
+    text-decoration:underline;
+}
+.linkStandard:hover {  color:Orange; }
+
+.linkPopBox
+{
+    font-family: Arial;
+    font-size: 14pt;
+    font-weight:bold;
+    color:#000;
+    text-decoration:underline;
+}
+.linkPopBox:hover {  color:Orange; }
+
+/*Link Class Section === END ===*/
+
+
+/*GridView Class Section === BEGIN ===*/
+
+.mGrid { background-color: #fff; margin: 5px 0 10px 0; border: 0px; border-collapse:collapse; }
+.mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+.mGrid th { padding: 4px 2px; color: #fff; background: #424242; background: #424242; border-left: solid 1px #525252; font-size: 0.9em; }
+.mGrid .alt { background: #fcfcfc repeat-x top; }
+.mGrid .pgr {background: #424242 repeat-x top; }
+.mGrid .pgr table { margin: 5px 0; }
+.mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }   
+.mGrid .pgr a { color: #666; text-decoration: none; }
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+.mGrid .gridSelectedRow {background:#adccfd}
+
+/*GridView Class Section === END ===*/
+
+
+/*Panel Class Section === BEGIN ===*/
+
+.pnlValidRecipeIngredient
+{
+    background-color:inherit; 
+    display:inline-block;
+    float:left;
+    clear:left;
+}
+
+.pnlNotValidRecipeIngredient
+{
+	 background-color:Red;  
+	 display:inline-block;
+	 float:left;
+	 clear:left;
+}
+
+.pnlIngredientBasicInfo
+{
+	 display:inline-block;
+	 float:left;
+	 clear:left;
+	 position:relative;
+}
+.pnlIngredientQtaType
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlIngredientQta
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlQtaNotStd
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlQtaStd
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlPrincipalForRecipe
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlAddIngrRecipeButton
+{
+    display:block;
+	float:left;
+	clear:left;
+}
+.pnlIngredientInfoBox
+{
+   
+}
+
+.pnlBoxInternal
+{
+
+}
+
+.pnlAltIngredient
+{
+    padding:5 5 5 5;
+    display:inline-block;
+    position:relative;
+}
+
+.pnlIngredientGroupSeparator
+{
+    padding-top:10px;
+    padding-bottom:5px;
+}
+
+.pnlContainerLeftRight
+{
+    display:table-row;
+}
+.pnlFloatLeft
+{
+    display:table-column;
+    width:50%;
+    display:block;
+	float:left;
+	clear:left;
+}
+
+.pnlFloatRight
+{
+    display:table-column;
+    width:50%;
+    display:block;
+	float:right;
+	clear:right;
+}
+
+.pnlTable{display:table; border:0px solid #ffaf4b;}
+.pnlTable500px{display:table; border:0px solid #ffaf4b; width:500px;}
+.pnlTable400px{display:table; border:0px solid #ffaf4b; width:400px;}
+.pnlTable800px{display:table; border:0px solid #ffaf4b; width:800px;}
+.pnlTableCaption
+{
+    display:table-caption; 
+    background: #ffaf4b; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffaf4b 42%, #ff920a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,#ffaf4b), color-stop(100%,#ff920a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffaf4b 42%,#ff920a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffaf4b 42%,#ff920a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffaf4b 42%,#ff920a 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffaf4b 42%,#ff920a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */ 
+    padding: 5px;
+    color:#000;
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+ }
+.pnlTableRow{display:table-row;}
+.pnlTableCol{display:table-cell; padding: 5px; vertical-align:middle;}
+
+/*Panel Class Section === END ===*/
+
+/*Image Class Section === BEGIN ===*/
+
+.IngredientInfoBoxImage
+{
+    width:52px;
+    height:52px;
+}
+
+/*Image Class Section === END ===*/

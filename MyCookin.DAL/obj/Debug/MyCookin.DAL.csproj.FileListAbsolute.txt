@@ -1,0 +1,7 @@
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\bin\Debug\MyCookin.DAL.dll.config
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\bin\Debug\MyCookin.DAL.dll
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\bin\Debug\MyCookin.DAL.pdb
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\obj\Debug\MyCookin.DAL.csproj.CoreCompileInputs.cache
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\obj\Debug\MyCookin.DAL.dll
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\obj\Debug\MyCookin.DAL.pdb
+C:\Users\alessio.disalvo\Downloads\MyCookin\MyCookin.DAL\obj\Debug\MyCookin.DAL.csprojAssemblyReference.cache
